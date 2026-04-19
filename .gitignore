@@ -1,0 +1,12 @@
+.DS_Store
+.Rhistory
+.RData
+.Rproj.user
+.quarto
+_freeze
+*.log
+/.cache/
+/.quarto-home/
+
+/.quarto/
+**/*.quarto_ipynb

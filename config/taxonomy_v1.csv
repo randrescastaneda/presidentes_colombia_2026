@@ -1,0 +1,43 @@
+topic_id,parent_topic_id,label_public,slug,description,is_core,sort_order
+economia,,Economía,economia,"Marco fiscal, inflación, crecimiento, impuestos y gasto público.",TRUE,1
+fiscal,economia,Fiscal,fiscal,"Impuestos, gasto, deuda, déficit y reglas fiscales.",TRUE,2
+productividad,economia,Productividad y crecimiento,productividad,"Competitividad, innovación, industria y crecimiento.",FALSE,3
+empleo-empresa,,Empleo y empresa,empleo-empresa,"Trabajo, emprendimiento, formalización, salarios y regulación empresarial.",TRUE,4
+mercado-laboral,empleo-empresa,Mercado laboral,mercado-laboral,"Reforma laboral, salarios, formalización y negociación colectiva.",TRUE,5
+emprendimiento,empleo-empresa,Emprendimiento y empresa,emprendimiento,"Creación de empresas, pymes, crédito y entorno regulatorio.",FALSE,6
+salud,,Salud,salud,"Sistema de salud, aseguramiento, hospitales, prevención y medicamentos.",TRUE,7
+salud-preventiva,salud,Prevención y atención primaria,salud-preventiva,"Promoción, prevención y atención primaria.",FALSE,8
+aseguramiento-salud,salud,Aseguramiento y financiación,aseguramiento-salud,"EPS, aseguramiento, pagos y financiación del sistema.",FALSE,9
+educacion,,Educación,educacion,"Primera infancia, colegios, educación superior, calidad y financiación.",TRUE,10
+educacion-basica,educacion,Educación básica,educacion-basica,"Colegio, currículo, infraestructura y jornada escolar.",FALSE,11
+educacion-superior,educacion,Educación superior,educacion-superior,"Universidades, SENA, técnica, becas y créditos.",FALSE,12
+seguridad-justicia,,Seguridad y justicia,seguridad-justicia,"Seguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.",TRUE,13
+seguridad-ciudadana,seguridad-justicia,Seguridad ciudadana,seguridad-ciudadana,"Policía, delitos urbanos, convivencia y prevención.",FALSE,14
+justicia,seguridad-justicia,Justicia e instituciones penales,justicia,"Fiscalía, jueces, cárceles y proceso penal.",FALSE,15
+"pobreza-desigualdad",,"Pobreza, desigualdad y protección social",pobreza-desigualdad,"Transferencias, hambre, movilidad social, protección y redistribución.",TRUE,16
+proteccion-social,pobreza-desigualdad,Protección social,proteccion-social,"Transferencias, subsidios, pensiones y cuidado.",FALSE,17
+desigualdad,pobreza-desigualdad,Desigualdad y movilidad,desigualdad,"Redistribución, oportunidades, regiones y equidad.",FALSE,18
+agro-rural,,Agro y ruralidad,agro-rural,"Campo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.",TRUE,19
+tierras,agro-rural,Tierras y desarrollo rural,tierras,"Propiedad, formalización, acceso a tierra y reforma rural.",FALSE,20
+seguridad-alimentaria,agro-rural,Seguridad alimentaria,seguridad-alimentaria,"Producción, abastecimiento, precios y compras públicas.",FALSE,21
+ambiente-energia,,Ambiente y energía,ambiente-energia,"Transición energética, licencias, agua, clima y biodiversidad.",TRUE,22
+transicion-energetica,ambiente-energia,Transición energética,transicion-energetica,"Matriz energética, hidrocarburos, renovables y tarifas.",FALSE,23
+agua-ambiente,ambiente-energia,Agua y ambiente,agua-ambiente,"Deforestación, minería, agua, páramos y biodiversidad.",FALSE,24
+vivienda-infraestructura,,Vivienda e infraestructura,vivienda-infraestructura,"Vivienda, transporte, conectividad y obras públicas.",TRUE,25
+vivienda,vivienda-infraestructura,Vivienda,vivienda,"Subsidios, arriendo, VIS y mejoramiento.",FALSE,26
+transporte,vivienda-infraestructura,Transporte e infraestructura,transporte,"Carreteras, transporte público, logística y conectividad.",FALSE,27
+"derechos-genero",,"Derechos, aborto y género",derechos-genero,"Aborto, identidad de género, familia, libertades civiles e igualdad.",TRUE,28
+aborto,derechos-genero,Aborto y salud sexual,aborto,"Interrupción voluntaria del embarazo, prevención y salud reproductiva.",FALSE,29
+genero-diversidad,derechos-genero,Género y diversidad,genero-diversidad,"Identidad de género, igualdad, discriminación y derechos LGBTIQ+.",FALSE,30
+instituciones-anticorrupcion,,Instituciones y anticorrupción,instituciones-anticorrupcion,"Reforma política, transparencia, contratación, ramas del poder y controles.",TRUE,31
+reforma-politica,instituciones-anticorrupcion,Reforma política,reforma-politica,"Congreso, partidos, reglas electorales y sistema político.",FALSE,32
+anticorrupcion,instituciones-anticorrupcion,Anticorrupción y transparencia,anticorrupcion,"Contratación, controles, veeduría y conflicto de interés.",FALSE,33
+politica-internacional-paz,,Política internacional y paz,politica-internacional-paz,"Relaciones exteriores, comercio, migración, defensa y paz total.",TRUE,34
+relaciones-exteriores,politica-internacional-paz,Relaciones exteriores,relaciones-exteriores,"Diplomacia, integración regional, alianzas y comercio exterior.",FALSE,35
+migracion,politica-internacional-paz,Migración,migracion,"Migración, refugio, frontera y política con Venezuela.",FALSE,36
+defensa,politica-internacional-paz,Defensa y soberanía,defensa,"Política de defensa, fronteras y cooperación militar.",FALSE,37
+paz,politica-internacional-paz,Paz y conflicto armado,paz,"Negociaciones, implementación, víctimas y seguridad territorial.",FALSE,38
+vida-publica,,Vida pública y trayectoria,vida-publica,"Trayectoria pública, redes de poder, controversias y antecedentes de interés público.",FALSE,39
+trayectoria-publica,vida-publica,Trayectoria pública,trayectoria-publica,"Cargos, carrera, formación y experiencia pública o privada relevante.",FALSE,40
+redes-poder,vida-publica,Redes políticas y familiares,redes-poder,"Alianzas, clanes políticos, redes partidarias y capital político heredado o construido.",FALSE,41
+controversias-publicas,vida-publica,Controversias públicas,controversias-publicas,"Procesos, polémicas, conflictos de interés o hechos de interés público verificable.",FALSE,42

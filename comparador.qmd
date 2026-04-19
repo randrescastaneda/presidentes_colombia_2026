@@ -1,0 +1,18 @@
+---
+title: "Comparador temático"
+---
+
+```{r}
+#| results: asis
+source("R/site_helpers.R")
+
+claims <- read_processed_table("claim_records.csv")
+candidates <- read_candidate_registry_public()
+dossiers <- read_processed_table("candidate_dossiers.csv")
+sources <- read_processed_table("source_records.csv")
+taxonomy <- read_taxonomy_public()
+
+cat('<p class="section-intro">La comparación se organiza por ámbitos de política pública. Cada sección conserva el detalle de lo dicho por cada candidatura, con enlaces directos a las fuentes y una lectura rápida del lugar ideológico en que ese conjunto de propuestas la va ubicando.</p>')
+
+emit_comparison_sections(claims, candidates, taxonomy, sources, dossiers)
+```

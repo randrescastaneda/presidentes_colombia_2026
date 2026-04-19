@@ -1,0 +1,95 @@
+---
+title: "Monitor público de candidatos presidenciales"
+---
+
+```{r}
+#| results: asis
+source("R/site_helpers.R")
+
+candidates <- read_candidate_registry_public()
+claims <- read_processed_table("claim_records.csv")
+sources <- read_processed_table("source_records.csv")
+analysis_notes <- read_processed_table("analysis_notes.csv")
+dossiers <- read_processed_table("candidate_dossiers.csv")
+daily_digest <- read_processed_table("daily_digest.csv")
+site_metadata <- read_processed_table("site_metadata.csv")
+
+watchlist_total <- sum(candidates$watchlist_active, na.rm = TRUE)
+latest_digest_date <- if (nrow(daily_digest) == 0) "Sin corridas todavía" else as.character(max(daily_digest$digest_date, na.rm = TRUE))
+last_updated_text <- if (nrow(site_metadata) == 0) "Sin corridas todavía" else site_metadata$updated_at[[1]]
+
+cat(
+  paste0(
+    '<div class="hero-shell">',
+    '<p class="eyebrow">Colombia 2026</p>',
+    '<h1>Seguimiento trazable, comparativo y crítico de las campañas presidenciales</h1>',
+    '<p class="section-intro">El proyecto prioriza evidencia verificable, una taxonomía pública entendible y análisis conservadores de consistencia lógica. No produce puntajes ni rankings globales.</p>',
+    '<p class="candidate-card__meta"><strong>Última actualización de la aplicación:</strong> ', last_updated_text, '</p>',
+    '</div>'
+  )
+)
+
+cat(
+  paste0(
+    '<div class="metric-grid">',
+    '<div class="metric-card"><div class="metric-card__label">Fórmulas inscritas</div><div class="metric-card__value">', nrow(candidates), '</div></div>',
+    '<div class="metric-card"><div class="metric-card__label">Watchlist activa</div><div class="metric-card__value">', watchlist_total, '</div></div>',
+    '<div class="metric-card"><div class="metric-card__label">Claims públicos</div><div class="metric-card__value">', nrow(claims), '</div></div>',
+    '<div class="metric-card"><div class="metric-card__label">Fuentes públicas</div><div class="metric-card__value">', nrow(sources), '</div></div>',
+    '<div class="metric-card"><div class="metric-card__label">Notas analíticas IA</div><div class="metric-card__value">', nrow(analysis_notes), '</div></div>',
+    '<div class="metric-card"><div class="metric-card__label">Último digest</div><div class="metric-card__value" style="font-size:1.1rem;">', latest_digest_date, '</div></div>',
+    '</div>'
+  )
+)
+```
+
+## Qué encontrarás aquí
+
+- Fichas por candidato con trazabilidad a fuentes.
+- Comparación por categorías y subcategorías de política pública.
+- Cronología de cambios de postura y hallazgos recientes.
+- Biblioteca de fuentes enlazadas para auditoría manual.
+
+## Watchlist activa
+
+```{r}
+#| results: asis
+watchlist <- candidates |>
+  dplyr::filter(.data$watchlist_active) |>
+  dplyr::arrange(.data$watchlist_priority)
+
+if (nrow(watchlist) == 0) {
+  emit_callout("La watchlist todavía no se ha configurado.", "warning")
+} else {
+  cards <- purrr::pmap_chr(watchlist, function(candidate_id, slug, president_name, vicepresident_name, ballot_position, watchlist_active, watchlist_priority, ...) {
+    dossier <- dossiers |> dplyr::filter(.data$candidate_id == candidate_id)
+    ideology_label <- if (nrow(dossier) == 0) "Evidencia insuficiente" else dossier$ideology_label[[1]]
+    paste0(
+      '<div class="candidate-card">',
+      '<span class="candidate-badge">Watchlist #', watchlist_priority, '</span>',
+      '<h3><a href="candidatos/', slug, '.html">', president_name, '</a></h3>',
+      '<div class="candidate-card__meta">Vice: ', vicepresident_name, '</div>',
+      '<div class="candidate-card__meta">Posición en tarjetón: ', ballot_position, '</div>',
+      '<div class="candidate-card__meta"><strong>Espectro analítico:</strong> ', ideology_label, '</div>',
+      '</div>'
+    )
+  })
+
+  cat(paste0('<div class="candidate-grid">', paste(cards, collapse = ""), '</div>'))
+}
+```
+
+## Estado del pipeline
+
+```{r}
+#| results: asis
+if (nrow(claims) == 0) {
+  emit_callout("Todavía no hay claims públicos cargados. La estructura del sitio y del pipeline ya está lista para recibir investigación diaria.", "note")
+} else {
+  safe_kable(
+    dossiers |>
+      dplyr::select(.data$president_name, .data$total_claims, .data$total_sources, .data$total_analysis_notes, .data$top_topics),
+    col.names = c("Candidato", "Claims", "Fuentes", "Notas IA", "Temas destacados")
+  )
+}
+```

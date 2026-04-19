@@ -1,0 +1,13 @@
+library(readr)
+library(dplyr)
+library(tibble)
+library(purrr)
+library(stringr)
+library(tidyr)
+library(lubridate)
+library(jsonlite)
+
+project_root <- normalizePath(file.path("..", ".."), winslash = "/", mustWork = TRUE)
+r_dir <- file.path(project_root, "R")
+r_files <- list.files(r_dir, pattern = "[.][Rr]$", full.names = TRUE)
+purrr::walk(r_files, ~ source(.x, local = FALSE))

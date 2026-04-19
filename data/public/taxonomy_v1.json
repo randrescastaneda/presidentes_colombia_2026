@@ -1,0 +1,422 @@
+[
+  {
+    "topic_id": "economia",
+    "parent_topic_id": null,
+    "label_public": "Economía",
+    "slug": "economia",
+    "description": "Marco fiscal, inflación, crecimiento, impuestos y gasto público.",
+    "is_core": true,
+    "sort_order": 1,
+    "level": 1
+  },
+  {
+    "topic_id": "fiscal",
+    "parent_topic_id": "economia",
+    "label_public": "Fiscal",
+    "slug": "fiscal",
+    "description": "Impuestos, gasto, deuda, déficit y reglas fiscales.",
+    "is_core": true,
+    "sort_order": 2,
+    "level": 2
+  },
+  {
+    "topic_id": "productividad",
+    "parent_topic_id": "economia",
+    "label_public": "Productividad y crecimiento",
+    "slug": "productividad",
+    "description": "Competitividad, innovación, industria y crecimiento.",
+    "is_core": false,
+    "sort_order": 3,
+    "level": 2
+  },
+  {
+    "topic_id": "empleo-empresa",
+    "parent_topic_id": null,
+    "label_public": "Empleo y empresa",
+    "slug": "empleo-empresa",
+    "description": "Trabajo, emprendimiento, formalización, salarios y regulación empresarial.",
+    "is_core": true,
+    "sort_order": 4,
+    "level": 1
+  },
+  {
+    "topic_id": "mercado-laboral",
+    "parent_topic_id": "empleo-empresa",
+    "label_public": "Mercado laboral",
+    "slug": "mercado-laboral",
+    "description": "Reforma laboral, salarios, formalización y negociación colectiva.",
+    "is_core": true,
+    "sort_order": 5,
+    "level": 2
+  },
+  {
+    "topic_id": "emprendimiento",
+    "parent_topic_id": "empleo-empresa",
+    "label_public": "Emprendimiento y empresa",
+    "slug": "emprendimiento",
+    "description": "Creación de empresas, pymes, crédito y entorno regulatorio.",
+    "is_core": false,
+    "sort_order": 6,
+    "level": 2
+  },
+  {
+    "topic_id": "salud",
+    "parent_topic_id": null,
+    "label_public": "Salud",
+    "slug": "salud",
+    "description": "Sistema de salud, aseguramiento, hospitales, prevención y medicamentos.",
+    "is_core": true,
+    "sort_order": 7,
+    "level": 1
+  },
+  {
+    "topic_id": "salud-preventiva",
+    "parent_topic_id": "salud",
+    "label_public": "Prevención y atención primaria",
+    "slug": "salud-preventiva",
+    "description": "Promoción, prevención y atención primaria.",
+    "is_core": false,
+    "sort_order": 8,
+    "level": 2
+  },
+  {
+    "topic_id": "aseguramiento-salud",
+    "parent_topic_id": "salud",
+    "label_public": "Aseguramiento y financiación",
+    "slug": "aseguramiento-salud",
+    "description": "EPS, aseguramiento, pagos y financiación del sistema.",
+    "is_core": false,
+    "sort_order": 9,
+    "level": 2
+  },
+  {
+    "topic_id": "educacion",
+    "parent_topic_id": null,
+    "label_public": "Educación",
+    "slug": "educacion",
+    "description": "Primera infancia, colegios, educación superior, calidad y financiación.",
+    "is_core": true,
+    "sort_order": 10,
+    "level": 1
+  },
+  {
+    "topic_id": "educacion-basica",
+    "parent_topic_id": "educacion",
+    "label_public": "Educación básica",
+    "slug": "educacion-basica",
+    "description": "Colegio, currículo, infraestructura y jornada escolar.",
+    "is_core": false,
+    "sort_order": 11,
+    "level": 2
+  },
+  {
+    "topic_id": "educacion-superior",
+    "parent_topic_id": "educacion",
+    "label_public": "Educación superior",
+    "slug": "educacion-superior",
+    "description": "Universidades, SENA, técnica, becas y créditos.",
+    "is_core": false,
+    "sort_order": 12,
+    "level": 2
+  },
+  {
+    "topic_id": "seguridad-justicia",
+    "parent_topic_id": null,
+    "label_public": "Seguridad y justicia",
+    "slug": "seguridad-justicia",
+    "description": "Seguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.",
+    "is_core": true,
+    "sort_order": 13,
+    "level": 1
+  },
+  {
+    "topic_id": "seguridad-ciudadana",
+    "parent_topic_id": "seguridad-justicia",
+    "label_public": "Seguridad ciudadana",
+    "slug": "seguridad-ciudadana",
+    "description": "Policía, delitos urbanos, convivencia y prevención.",
+    "is_core": false,
+    "sort_order": 14,
+    "level": 2
+  },
+  {
+    "topic_id": "justicia",
+    "parent_topic_id": "seguridad-justicia",
+    "label_public": "Justicia e instituciones penales",
+    "slug": "justicia",
+    "description": "Fiscalía, jueces, cárceles y proceso penal.",
+    "is_core": false,
+    "sort_order": 15,
+    "level": 2
+  },
+  {
+    "topic_id": "pobreza-desigualdad",
+    "parent_topic_id": null,
+    "label_public": "Pobreza, desigualdad y protección social",
+    "slug": "pobreza-desigualdad",
+    "description": "Transferencias, hambre, movilidad social, protección y redistribución.",
+    "is_core": true,
+    "sort_order": 16,
+    "level": 1
+  },
+  {
+    "topic_id": "proteccion-social",
+    "parent_topic_id": "pobreza-desigualdad",
+    "label_public": "Protección social",
+    "slug": "proteccion-social",
+    "description": "Transferencias, subsidios, pensiones y cuidado.",
+    "is_core": false,
+    "sort_order": 17,
+    "level": 2
+  },
+  {
+    "topic_id": "desigualdad",
+    "parent_topic_id": "pobreza-desigualdad",
+    "label_public": "Desigualdad y movilidad",
+    "slug": "desigualdad",
+    "description": "Redistribución, oportunidades, regiones y equidad.",
+    "is_core": false,
+    "sort_order": 18,
+    "level": 2
+  },
+  {
+    "topic_id": "agro-rural",
+    "parent_topic_id": null,
+    "label_public": "Agro y ruralidad",
+    "slug": "agro-rural",
+    "description": "Campo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.",
+    "is_core": true,
+    "sort_order": 19,
+    "level": 1
+  },
+  {
+    "topic_id": "tierras",
+    "parent_topic_id": "agro-rural",
+    "label_public": "Tierras y desarrollo rural",
+    "slug": "tierras",
+    "description": "Propiedad, formalización, acceso a tierra y reforma rural.",
+    "is_core": false,
+    "sort_order": 20,
+    "level": 2
+  },
+  {
+    "topic_id": "seguridad-alimentaria",
+    "parent_topic_id": "agro-rural",
+    "label_public": "Seguridad alimentaria",
+    "slug": "seguridad-alimentaria",
+    "description": "Producción, abastecimiento, precios y compras públicas.",
+    "is_core": false,
+    "sort_order": 21,
+    "level": 2
+  },
+  {
+    "topic_id": "ambiente-energia",
+    "parent_topic_id": null,
+    "label_public": "Ambiente y energía",
+    "slug": "ambiente-energia",
+    "description": "Transición energética, licencias, agua, clima y biodiversidad.",
+    "is_core": true,
+    "sort_order": 22,
+    "level": 1
+  },
+  {
+    "topic_id": "transicion-energetica",
+    "parent_topic_id": "ambiente-energia",
+    "label_public": "Transición energética",
+    "slug": "transicion-energetica",
+    "description": "Matriz energética, hidrocarburos, renovables y tarifas.",
+    "is_core": false,
+    "sort_order": 23,
+    "level": 2
+  },
+  {
+    "topic_id": "agua-ambiente",
+    "parent_topic_id": "ambiente-energia",
+    "label_public": "Agua y ambiente",
+    "slug": "agua-ambiente",
+    "description": "Deforestación, minería, agua, páramos y biodiversidad.",
+    "is_core": false,
+    "sort_order": 24,
+    "level": 2
+  },
+  {
+    "topic_id": "vivienda-infraestructura",
+    "parent_topic_id": null,
+    "label_public": "Vivienda e infraestructura",
+    "slug": "vivienda-infraestructura",
+    "description": "Vivienda, transporte, conectividad y obras públicas.",
+    "is_core": true,
+    "sort_order": 25,
+    "level": 1
+  },
+  {
+    "topic_id": "vivienda",
+    "parent_topic_id": "vivienda-infraestructura",
+    "label_public": "Vivienda",
+    "slug": "vivienda",
+    "description": "Subsidios, arriendo, VIS y mejoramiento.",
+    "is_core": false,
+    "sort_order": 26,
+    "level": 2
+  },
+  {
+    "topic_id": "transporte",
+    "parent_topic_id": "vivienda-infraestructura",
+    "label_public": "Transporte e infraestructura",
+    "slug": "transporte",
+    "description": "Carreteras, transporte público, logística y conectividad.",
+    "is_core": false,
+    "sort_order": 27,
+    "level": 2
+  },
+  {
+    "topic_id": "derechos-genero",
+    "parent_topic_id": null,
+    "label_public": "Derechos, aborto y género",
+    "slug": "derechos-genero",
+    "description": "Aborto, identidad de género, familia, libertades civiles e igualdad.",
+    "is_core": true,
+    "sort_order": 28,
+    "level": 1
+  },
+  {
+    "topic_id": "aborto",
+    "parent_topic_id": "derechos-genero",
+    "label_public": "Aborto y salud sexual",
+    "slug": "aborto",
+    "description": "Interrupción voluntaria del embarazo, prevención y salud reproductiva.",
+    "is_core": false,
+    "sort_order": 29,
+    "level": 2
+  },
+  {
+    "topic_id": "genero-diversidad",
+    "parent_topic_id": "derechos-genero",
+    "label_public": "Género y diversidad",
+    "slug": "genero-diversidad",
+    "description": "Identidad de género, igualdad, discriminación y derechos LGBTIQ+.",
+    "is_core": false,
+    "sort_order": 30,
+    "level": 2
+  },
+  {
+    "topic_id": "instituciones-anticorrupcion",
+    "parent_topic_id": null,
+    "label_public": "Instituciones y anticorrupción",
+    "slug": "instituciones-anticorrupcion",
+    "description": "Reforma política, transparencia, contratación, ramas del poder y controles.",
+    "is_core": true,
+    "sort_order": 31,
+    "level": 1
+  },
+  {
+    "topic_id": "reforma-politica",
+    "parent_topic_id": "instituciones-anticorrupcion",
+    "label_public": "Reforma política",
+    "slug": "reforma-politica",
+    "description": "Congreso, partidos, reglas electorales y sistema político.",
+    "is_core": false,
+    "sort_order": 32,
+    "level": 2
+  },
+  {
+    "topic_id": "anticorrupcion",
+    "parent_topic_id": "instituciones-anticorrupcion",
+    "label_public": "Anticorrupción y transparencia",
+    "slug": "anticorrupcion",
+    "description": "Contratación, controles, veeduría y conflicto de interés.",
+    "is_core": false,
+    "sort_order": 33,
+    "level": 2
+  },
+  {
+    "topic_id": "politica-internacional-paz",
+    "parent_topic_id": null,
+    "label_public": "Política internacional y paz",
+    "slug": "politica-internacional-paz",
+    "description": "Relaciones exteriores, comercio, migración, defensa y paz total.",
+    "is_core": true,
+    "sort_order": 34,
+    "level": 1
+  },
+  {
+    "topic_id": "relaciones-exteriores",
+    "parent_topic_id": "politica-internacional-paz",
+    "label_public": "Relaciones exteriores",
+    "slug": "relaciones-exteriores",
+    "description": "Diplomacia, integración regional, alianzas y comercio exterior.",
+    "is_core": false,
+    "sort_order": 35,
+    "level": 2
+  },
+  {
+    "topic_id": "migracion",
+    "parent_topic_id": "politica-internacional-paz",
+    "label_public": "Migración",
+    "slug": "migracion",
+    "description": "Migración, refugio, frontera y política con Venezuela.",
+    "is_core": false,
+    "sort_order": 36,
+    "level": 2
+  },
+  {
+    "topic_id": "defensa",
+    "parent_topic_id": "politica-internacional-paz",
+    "label_public": "Defensa y soberanía",
+    "slug": "defensa",
+    "description": "Política de defensa, fronteras y cooperación militar.",
+    "is_core": false,
+    "sort_order": 37,
+    "level": 2
+  },
+  {
+    "topic_id": "paz",
+    "parent_topic_id": "politica-internacional-paz",
+    "label_public": "Paz y conflicto armado",
+    "slug": "paz",
+    "description": "Negociaciones, implementación, víctimas y seguridad territorial.",
+    "is_core": false,
+    "sort_order": 38,
+    "level": 2
+  },
+  {
+    "topic_id": "vida-publica",
+    "parent_topic_id": null,
+    "label_public": "Vida pública y trayectoria",
+    "slug": "vida-publica",
+    "description": "Trayectoria pública, redes de poder, controversias y antecedentes de interés público.",
+    "is_core": false,
+    "sort_order": 39,
+    "level": 1
+  },
+  {
+    "topic_id": "trayectoria-publica",
+    "parent_topic_id": "vida-publica",
+    "label_public": "Trayectoria pública",
+    "slug": "trayectoria-publica",
+    "description": "Cargos, carrera, formación y experiencia pública o privada relevante.",
+    "is_core": false,
+    "sort_order": 40,
+    "level": 2
+  },
+  {
+    "topic_id": "redes-poder",
+    "parent_topic_id": "vida-publica",
+    "label_public": "Redes políticas y familiares",
+    "slug": "redes-poder",
+    "description": "Alianzas, clanes políticos, redes partidarias y capital político heredado o construido.",
+    "is_core": false,
+    "sort_order": 41,
+    "level": 2
+  },
+  {
+    "topic_id": "controversias-publicas",
+    "parent_topic_id": "vida-publica",
+    "label_public": "Controversias públicas",
+    "slug": "controversias-publicas",
+    "description": "Procesos, polémicas, conflictos de interés o hechos de interés público verificable.",
+    "is_core": false,
+    "sort_order": 42,
+    "level": 2
+  }
+]

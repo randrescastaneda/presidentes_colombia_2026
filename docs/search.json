@@ -1,0 +1,800 @@
+[
+  {
+    "objectID": "metodologia.html",
+    "href": "metodologia.html",
+    "title": "Metodología y advertencias",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "metodologia.html#qué-publica-el-sistema",
+    "href": "metodologia.html#qué-publica-el-sistema",
+    "title": "Metodología y advertencias",
+    "section": "Qué publica el sistema",
+    "text": "Qué publica el sistema\n\nClaims públicos con fecha, candidato, tema y fuente verificable.\nNotas analíticas IA únicamente cuando existe sustento suficiente y explícito.\nFuentes con URL navegable para revisión independiente."
+  },
+  {
+    "objectID": "metodologia.html#qué-no-publica-el-sistema",
+    "href": "metodologia.html#qué-no-publica-el-sistema",
+    "title": "Metodología y advertencias",
+    "section": "Qué no publica el sistema",
+    "text": "Qué no publica el sistema\n\nJuicios morales o partidistas.\nRankings globales de candidatos.\nCríticas lógicas que dependan de evidencia débil o ambigua."
+  },
+  {
+    "objectID": "metodologia.html#cómo-se-estima-el-espectro-ideológico",
+    "href": "metodologia.html#cómo-se-estima-el-espectro-ideológico",
+    "title": "Metodología y advertencias",
+    "section": "Cómo se estima el espectro ideológico",
+    "text": "Cómo se estima el espectro ideológico\n\nLa etiqueta izquierda, centro o derecha no viene de la autodefinición del candidato.\nSe calcula a partir de policy_key ya mapeados a señales ideológicas públicas y auditables.\nCada señal se pondera por el sentido de la postura y la confianza de la fuente.\nSi hay muy poca evidencia mapeada, la app muestra Evidencia insuficiente."
+  },
+  {
+    "objectID": "metodologia.html#tiers-de-fuente",
+    "href": "metodologia.html#tiers-de-fuente",
+    "title": "Metodología y advertencias",
+    "section": "Tiers de fuente",
+    "text": "Tiers de fuente\n\n\n\n\n\n\n\n\n\n\nTier\nEtiqueta pública\nConfianza base\nRegla editorial\nDescripción\n\n\n\n\nofficial\nOficial\n0.95\nUna sola fuente oficial puede bastar\nProgramas de gobierno, documentos oficiales, cuentas oficiales, ruedas de prensa y discursos publicados por campaña o autoridad.\n\n\ninterview\nEntrevista directa\n0.85\nUna sola entrevista directa puede bastar si la cita es inequívoca\nEntrevistas donde el candidato habla en primera persona y hay enlace verificable.\n\n\nestablished-media\nPrensa reconocida\n0.75\nMejor con corroboración adicional si el hallazgo es sensible\nCobertura de medios establecidos con estándares editoriales y fuente trazable.\n\n\nthird-party\nFuente de terceros\n0.55\nNo basta sola para análisis crítico sensible\nResúmenes, comentarios, podcast, video de terceros o cobertura de menor control editorial.\n\n\nsocial\nRed social\n0.65\nÚtil como apoyo; si es sensible debe corroborarse\nPublicaciones en redes de la campaña o del candidato; se usa con cautela."
+  },
+  {
+    "objectID": "metodologia.html#taxonomía-pública-inicial",
+    "href": "metodologia.html#taxonomía-pública-inicial",
+    "title": "Metodología y advertencias",
+    "section": "Taxonomía pública inicial",
+    "text": "Taxonomía pública inicial\n\n\n\n\n\n\n\n\n\nCategoría\nCategoría padre\nDescripción\nEs núcleo\n\n\n\n\nEconomía\nNA\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\nTRUE\n\n\nFiscal\neconomia\nImpuestos, gasto, deuda, déficit y reglas fiscales.\nTRUE\n\n\nProductividad y crecimiento\neconomia\nCompetitividad, innovación, industria y crecimiento.\nFALSE\n\n\nEmpleo y empresa\nNA\nTrabajo, emprendimiento, formalización, salarios y regulación empresarial.\nTRUE\n\n\nMercado laboral\nempleo-empresa\nReforma laboral, salarios, formalización y negociación colectiva.\nTRUE\n\n\nEmprendimiento y empresa\nempleo-empresa\nCreación de empresas, pymes, crédito y entorno regulatorio.\nFALSE\n\n\nSalud\nNA\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\nTRUE\n\n\nPrevención y atención primaria\nsalud\nPromoción, prevención y atención primaria.\nFALSE\n\n\nAseguramiento y financiación\nsalud\nEPS, aseguramiento, pagos y financiación del sistema.\nFALSE\n\n\nEducación\nNA\nPrimera infancia, colegios, educación superior, calidad y financiación.\nTRUE\n\n\nEducación básica\neducacion\nColegio, currículo, infraestructura y jornada escolar.\nFALSE\n\n\nEducación superior\neducacion\nUniversidades, SENA, técnica, becas y créditos.\nFALSE\n\n\nSeguridad y justicia\nNA\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\nTRUE\n\n\nSeguridad ciudadana\nseguridad-justicia\nPolicía, delitos urbanos, convivencia y prevención.\nFALSE\n\n\nJusticia e instituciones penales\nseguridad-justicia\nFiscalía, jueces, cárceles y proceso penal.\nFALSE\n\n\nPobreza, desigualdad y protección social\nNA\nTransferencias, hambre, movilidad social, protección y redistribución.\nTRUE\n\n\nProtección social\npobreza-desigualdad\nTransferencias, subsidios, pensiones y cuidado.\nFALSE\n\n\nDesigualdad y movilidad\npobreza-desigualdad\nRedistribución, oportunidades, regiones y equidad.\nFALSE\n\n\nAgro y ruralidad\nNA\nCampo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.\nTRUE\n\n\nTierras y desarrollo rural\nagro-rural\nPropiedad, formalización, acceso a tierra y reforma rural.\nFALSE\n\n\nSeguridad alimentaria\nagro-rural\nProducción, abastecimiento, precios y compras públicas.\nFALSE\n\n\nAmbiente y energía\nNA\nTransición energética, licencias, agua, clima y biodiversidad.\nTRUE\n\n\nTransición energética\nambiente-energia\nMatriz energética, hidrocarburos, renovables y tarifas.\nFALSE\n\n\nAgua y ambiente\nambiente-energia\nDeforestación, minería, agua, páramos y biodiversidad.\nFALSE\n\n\nVivienda e infraestructura\nNA\nVivienda, transporte, conectividad y obras públicas.\nTRUE\n\n\nVivienda\nvivienda-infraestructura\nSubsidios, arriendo, VIS y mejoramiento.\nFALSE\n\n\nTransporte e infraestructura\nvivienda-infraestructura\nCarreteras, transporte público, logística y conectividad.\nFALSE\n\n\nDerechos, aborto y género\nNA\nAborto, identidad de género, familia, libertades civiles e igualdad.\nTRUE\n\n\nAborto y salud sexual\nderechos-genero\nInterrupción voluntaria del embarazo, prevención y salud reproductiva.\nFALSE\n\n\nGénero y diversidad\nderechos-genero\nIdentidad de género, igualdad, discriminación y derechos LGBTIQ+.\nFALSE\n\n\nInstituciones y anticorrupción\nNA\nReforma política, transparencia, contratación, ramas del poder y controles.\nTRUE\n\n\nReforma política\ninstituciones-anticorrupcion\nCongreso, partidos, reglas electorales y sistema político.\nFALSE\n\n\nAnticorrupción y transparencia\ninstituciones-anticorrupcion\nContratación, controles, veeduría y conflicto de interés.\nFALSE\n\n\nPolítica internacional y paz\nNA\nRelaciones exteriores, comercio, migración, defensa y paz total.\nTRUE\n\n\nRelaciones exteriores\npolitica-internacional-paz\nDiplomacia, integración regional, alianzas y comercio exterior.\nFALSE\n\n\nMigración\npolitica-internacional-paz\nMigración, refugio, frontera y política con Venezuela.\nFALSE\n\n\nDefensa y soberanía\npolitica-internacional-paz\nPolítica de defensa, fronteras y cooperación militar.\nFALSE\n\n\nPaz y conflicto armado\npolitica-internacional-paz\nNegociaciones, implementación, víctimas y seguridad territorial.\nFALSE\n\n\nVida pública y trayectoria\nNA\nTrayectoria pública, redes de poder, controversias y antecedentes de interés público.\nFALSE\n\n\nTrayectoria pública\nvida-publica\nCargos, carrera, formación y experiencia pública o privada relevante.\nFALSE\n\n\nRedes políticas y familiares\nvida-publica\nAlianzas, clanes políticos, redes partidarias y capital político heredado o construido.\nFALSE\n\n\nControversias públicas\nvida-publica\nProcesos, polémicas, conflictos de interés o hechos de interés público verificable.\nFALSE"
+  },
+  {
+    "objectID": "metodologia.html#reglas-públicas-del-índice-ideológico",
+    "href": "metodologia.html#reglas-públicas-del-índice-ideológico",
+    "title": "Metodología y advertencias",
+    "section": "Reglas públicas del índice ideológico",
+    "text": "Reglas públicas del índice ideológico\n\n\n\n\n\n\n\n\n\nPolicy key\nPeso base\nSeñal\nLectura pública\n\n\n\n\npaz-total\n-0.8\npaz negociada\nFavorece una lectura de izquierda o centroizquierda por priorizar negociación y justicia social.\n\n\ntransicion-energetica\n-0.4\ntransicion energetica\nTiende hacia izquierda o centroizquierda cuando desplaza el eje hacia transición y regulación ambiental.\n\n\nacceso-tierra\n-0.7\nreforma rural\nAcerca a la izquierda por priorizar redistribución o acceso a tierra.\n\n\nsistema-cuidado\n-0.8\nsistema de cuidado\nAcerca a la centroizquierda o izquierda por ampliar el rol social del Estado en cuidados.\n\n\nviolencias-de-genero\n-0.7\nderechos de genero\nAcerca a la centroizquierda o izquierda por expansión explícita de derechos y protección de género.\n\n\nbecas-y-sena\n-0.4\nexpansion educativa publica\nApunta hacia centroizquierda cuando la expansión estatal de educación es eje programático.\n\n\nregla-fiscal\n0.4\ndisciplina fiscal\nAcerca al centro o centroderecha cuando prioriza disciplina fiscal y señales proempresa.\n\n\nmodelo-mixto-salud\n0.1\nmodelo mixto\nSe ubica cerca del centro al defender arreglos mixtos público-privados.\n\n\nfuerza-publica\n0.5\nfortalecimiento fuerza publica\nAcerca a centroderecha o derecha cuando el énfasis principal es expansión de Fuerza Pública.\n\n\njusticia-restaurativa\n-0.2\njusticia restaurativa\nDesplaza ligeramente al centroizquierda por preferir enfoques restaurativos sobre castigo duro.\n\n\nbonos-escolares\n0.7\nbonos escolares\nAcerca a la derecha por introducir cuasimercados o elección privada con financiación pública.\n\n\nformalizacion-empresarial\n0.5\ndesregulacion proempresa\nAcerca a centroderecha o derecha por simplificación regulatoria y alivio para empresas.\n\n\nrevolucion-energetica\n0.3\nmatriz energetica procrecimiento\nDesplaza ligeramente a centroderecha si prioriza oferta energética amplia con foco productivo.\n\n\nampliacion-pie-fuerza\n0.6\nexpansion del pie de fuerza\nAcerca a la derecha por crecimiento marcado del gasto en defensa y seguridad.\n\n\ncarceles-agricolas\n0.6\nendurecimiento penal\nAcerca a la derecha por énfasis punitivo y expansión penitenciaria.\n\n\nreconstruir-fuerza-publica\n0.4\norden y seguridad\nDesplaza al centro o centroderecha por priorizar orden público y control territorial.\n\n\ndialogos-paz-condicionados\n0.2\npaz condicionada\nSe mueve hacia el centro o centroderecha cuando subordina la paz a exigencias de seguridad.\n\n\nprotagonismo-mujeres\n-0.4\nagenda de genero\nAcerca a centroizquierda por priorizar agenda explícita de género.\n\n\ndesarrollo-talento\n-0.3\nmovilidad educativa\nAcerca a centroizquierda cuando el eje es ampliar oportunidades por educación.\n\n\ndesarrollo-regiones-olvidadas\n-0.4\ncorreccion territorial\nAcerca a centroizquierda por enfoque redistributivo territorial.\n\n\nseguridad-focalizada\n0.2\nseguridad territorial focalizada\nSe mueve al centro cuando combina seguridad con enfoque territorial y comunitario.\n\n\npuertos-comercio-exterior\n0.2\napertura comercial\nSe mueve levemente al centro o centroderecha por su énfasis en comercio e infraestructura.\n\n\nalianza-empresa-estado-comunidades\n0.1\nconcertacion productiva\nQueda cerca del centro por equilibrar mercado, Estado y comunidades.\n\n\nrecorte-del-estado\n0.9\nrecorte del Estado\nAcerca claramente a la derecha por reducción fuerte del aparato estatal.\n\n\njep\n-0.8\njusticia transicional\nEl apoyo a la justicia transicional tiende a izquierda o centroizquierda; el rechazo la mueve a derecha.\n\n\nbaja-de-impuestos\n0.8\nbaja de impuestos\nAcerca a la derecha por alivio tributario como eje programático.\n\n\nmegacarceles\n0.9\nexpansion carcelaria\nAcerca claramente a la derecha por endurecimiento penal e infraestructura penitenciaria masiva.\n\n\nalianza-seguridad-exterior\n0.7\nseguridad exterior dura\nAcerca a la derecha por énfasis securitario e internacionalización militar.\n\n\nactivar-sectores-productivos\n0.4\ncrecimiento por oferta\nAcerca a centroderecha cuando prioriza expansión de sectores extractivos y de inversión.\n\n\nreactivar-productividad\n0.2\nreactivacion productiva\nSe ubica cerca del centro con leve sesgo procrecimiento.\n\n\npaz-con-metodo\n0.2\npaz judicializada\nTiende al centro por combinar paz con sometimiento judicial.\n\n\nproductividad-tecnologica\n0.1\ncrecimiento tecnologico\nSe ubica cerca del centro al priorizar productividad y tecnología.\n\n\nseguridad-tecnologica\n0.5\nseguridad tecnologica\nAcerca a centroderecha por énfasis fuerte en control y seguridad.\n\n\npagar-por-estudiar\n-0.5\ntransferencia educativa\nAcerca a centroizquierda por expandir transferencias públicas para acceso educativo.\n\n\npena-de-muerte\n1.0\npena de muerte\nAcerca fuertemente a la derecha por maximalismo punitivo.\n\n\nfortalecer-fuerza-publica\n0.5\nfortalecimiento militar y policial\nAcerca a centroderecha o derecha por énfasis de orden y coerción."
+  },
+  {
+    "objectID": "fuentes.html",
+    "href": "fuentes.html",
+    "title": "Biblioteca de fuentes",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones.\n  \n\n\n\n\n\n\nToda afirmación pública debe rastrearse hasta aquí. Esta tabla es la capa mínima de auditabilidad del proyecto.\n\n\n\n\nFecha\nCandidato\nFuente\nTier\nTítulo\nURL\n\n\n\n\n2026-04-18 23:44:00\nPaloma Susana Valencia Laserna\nEL PAÍS\nestablished-media\nEl camino a las elecciones presidenciales de Colombia 2026, en vivo\nenlace\n\n\n2026-04-18 23:44:00\nAbelardo Gabriel de la Espriella\nEL PAÍS\nestablished-media\nEl camino a las elecciones presidenciales de Colombia 2026, en vivo\nenlace\n\n\n2026-04-18 23:30:00\nSergio Fajardo Valderrama\nEL PAÍS\nestablished-media\nEl camino a las elecciones presidenciales de Colombia 2026, en vivo\nenlace\n\n\n2026-04-18 22:31:00\nIván Cepeda Castro\nEL PAÍS\nestablished-media\nEl camino a las elecciones presidenciales de Colombia 2026, en vivo\nenlace\n\n\n2026-04-18 12:00:00\nSergio Fajardo Valderrama\nSergio Fajardo\nofficial\nCambio Seguro\nenlace\n\n\n2026-04-18 01:37:00\nClaudia Nayibe López Hernández\nEL PAÍS\nestablished-media\nValencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético\nenlace\n\n\n2026-04-18 01:37:00\nPaloma Susana Valencia Laserna\nEL PAÍS\nestablished-media\nValencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético\nenlace\n\n\n2026-04-18 01:37:00\nSergio Fajardo Valderrama\nEL PAÍS\nestablished-media\nValencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético\nenlace\n\n\n2026-04-16 06:00:00\nLuis Gilberto Murillo Urrutia\nEL ESPECTADOR\ninterview\nLuis G. Murillo: Quiero una Colombia que mire al futuro y las oportunidades\nenlace\n\n\n2026-04-15 12:00:00\nIván Cepeda Castro\nPacto Histórico\nofficial\nVisita de Iván Cepeda a Tunja: Transformación Energética y Ferroviaria para Boyacá\nenlace\n\n\n2026-04-14 12:00:00\nPaloma Susana Valencia Laserna\nPaloma Valencia\nofficial\nPrograma de Gobierno\nenlace\n\n\n2026-04-14 10:30:00\nPaloma Susana Valencia Laserna\nEL PAÍS\nestablished-media\nMás fracking, más militares, menos impuestos\nenlace\n\n\n2026-04-13 12:00:00\nIván Cepeda Castro\nPacto Histórico\nofficial\nIván Cepeda y su propuesta política para transformar Colombia\nenlace\n\n\n2026-04-07 17:00:00\nClara Eugenia López Obregón\nInfobae\nestablished-media\nClara López renuncia a su candidatura presidencial 2026 y anuncia alianza con Iván Cepeda\nenlace\n\n\n2026-03-31 12:00:00\nCarlos Eduardo Caicedo Omar\nNoticias Caracol\ninterview\nCarlos Caicedo plantea su propuesta central como candidato\nenlace\n\n\n2026-03-26 08:39:00\nAbelardo Gabriel de la Espriella\nInfobae\ninterview\nAbelardo de la Espriella promete reducir el Estado, eliminar la JEP y construir diez megacárceles\nenlace\n\n\n2026-03-24 23:14:00\nLuis Gilberto Murillo Urrutia\nEl País Cali\nestablished-media\nLuis Gilberto Murillo, el candidato chocoano que busca llegar a la Casa de Nariño\nenlace\n\n\n2026-03-24 12:04:00\nIván Cepeda Castro\nInfobae\ninterview\nIván Cepeda confirmó que mantendrá la política económica de Gustavo Petro\nenlace\n\n\n2026-03-19 20:44:00\nIván Cepeda Castro\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nAbelardo Gabriel de la Espriella\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nPaloma Susana Valencia Laserna\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nSergio Fajardo Valderrama\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nClaudia Nayibe López Hernández\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nRoy Leonardo Barreras Montealegre\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nLuis Gilberto Murillo Urrutia\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nÓscar Mauricio Lizcano Arango\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nMiguel Uribe Londoño\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nClara Eugenia López Obregón\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nRaúl Santiago Botero Jaramillo\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nSondra Macollins Garvin Pinto\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nCarlos Eduardo Caicedo Omar\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-19 20:44:00\nGustavo Matamoros Camacho\nRTVC Noticias\nestablished-media\nQuiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030\nenlace\n\n\n2026-03-08 23:37:00\nPaloma Susana Valencia Laserna\nEL TIEMPO\nestablished-media\nPaloma Valencia gana la Gran Consulta: estas son sus propuestas\nenlace\n\n\n2026-03-04 15:41:14\nClaudia Nayibe López Hernández\nForbes Colombia\ninterview\nContinuar lo que funciona y trabajar en seguridad, salud y productividad\nenlace\n\n\n2026-03-01 05:00:00\nIván Cepeda Castro\nPacto Histórico\nofficial\nIván Cepeda: Candidato Presidencial del Pacto Histórico 2026\nenlace\n\n\n2026-02-27 12:00:00\nÓscar Mauricio Lizcano Arango\nNoticias Caracol\ninterview\nMauricio Lizcano habla de sus propuestas y por qué no participó en consultas\nenlace\n\n\n2026-02-27 12:00:00\nRaúl Santiago Botero Jaramillo\nNoticias Caracol\ninterview\nSantiago Botero habla de sus propuestas\nenlace\n\n\n2026-02-18 15:00:00\nClaudia Nayibe López Hernández\nClaudia López\nofficial\nClaudia López presenta su programa de gobierno\nenlace\n\n\n2026-02-18 12:00:00\nRoy Leonardo Barreras Montealegre\nEFE\ninterview\nRoy Barreras: La inmensa mayoría de los colombianos no quiere un país con extremistas\nenlace\n\n\n2026-01-15 05:00:00\nÓscar Mauricio Lizcano Arango\nEL ESPECTADOR\ninterview\nMauricio Lizcano: Yo quiero dejar a Colombia duplicando el ingreso de todos\nenlace"
+  },
+  {
+    "objectID": "comparador.html",
+    "href": "comparador.html",
+    "title": "Comparador temático",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones.\n  \n\n\n\n\n\n\nLa comparación se organiza por ámbitos de política pública. Cada sección conserva el detalle de lo dicho por cada candidatura, con enlaces directos a las fuentes y una lectura rápida del lugar ideológico en que ese conjunto de propuestas la va ubicando.\n\n\n\nAgro y ruralidad\n\n\nCampo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n15 de abril de 2026. En tierras y desarrollo rural, Garantizar que quienes trabajan el campo sean dueños de su territorio. La agenda en Boyacá incluye tierra para los campesinos. Fuente: Pacto Histórico.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Claudia Nayibe López Hernández, Sergio Fajardo Valderrama, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nAmbiente y energía\n\n\nTransición energética, licencias, agua, clima y biodiversidad.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de abril de 2026. En agua y ambiente, Propone incorporar a las comunidades con un mecanismo de construcción de confianza y licenciamiento social para que la minería no quede en manos criminales. En el foro energético, Claudia López defendió formalizar la relación entre minería y comunidades. Fuente: EL PAÍS.\n\n\n18 de febrero de 2026. En agua y ambiente, Llevar agua potable a los territorios y usar regalías para alcantarillado. La campaña de Claudia López trata el agua como derecho y bien común. Fuente: Claudia López.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n24 de marzo de 2026. En transición energética, Avanzar en transición energética dialogando con empresarios, trabajadores y comunidades. Cepeda plantea una transición energética concertada con actores productivos y sociales. Fuente: Infobae.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n18 de abril de 2026. En transición energética, Pide inversión pública, una solución estructural de largo plazo para la Costa y uso de todos los tipos de energía para evitar un apagón. En el foro de Cartagena, Paloma Valencia insistió en reactivar la oferta energética. Fuente: EL PAÍS.\n\n\n8 de marzo de 2026. En transición energética, Usar energía eólica, solar, hídrica, nuclear y geotérmica como motor de desarrollo y empleo. El Tiempo resume que Paloma Valencia impulsa una revolución energética multisource. Fuente: EL TIEMPO.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En transición energética, Sostiene que el desarrollo energético debe ser sostenible y legal, y que la minería ilegal no puede seguir financiando a las mafias. Fajardo vinculó la agenda energética con sostenibilidad y control criminal. Fuente: EL PAÍS.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Abelardo Gabriel de la Espriella, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nDerechos, aborto y género\n\n\nAborto, identidad de género, familia, libertades civiles e igualdad.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de febrero de 2026. En género y diversidad, Garantizar protección efectiva contra violencias de género y feminicidios. La campaña de Claudia López conecta el sistema de cuidado con protección contra violencias. Fuente: Claudia López.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En género y diversidad, Garantizar voz, protección frente a violencias basadas en género y más oportunidades para las mujeres. La página de campaña de Fajardo dedica un eje específico a mujeres. Fuente: Sergio Fajardo.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n\nAbelardo Gabriel de la Espriella\n\n\nDerecha\n\n\n26 de marzo de 2026. En fiscal, Recortar hasta 40 % del Estado eliminando cargos y contratos que considera sobrantes. Infobae reporta que de la Espriella quiere reducir drásticamente la estructura estatal. Fuente: Infobae.\n\n\n26 de marzo de 2026. En fiscal, Reducir impuestos como el cuatro por mil y los gravámenes a la gasolina. De la Espriella enlaza recorte del Estado con alivios tributarios. Fuente: Infobae.\n\n\n26 de marzo de 2026. En productividad y crecimiento, Impulsar infraestructura, hidrocarburos, minería, energía, turismo, agro e innovación con inversión extranjera. De la Espriella promete reactivar varios sectores como base del crecimiento. Fuente: Infobae.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n4 de marzo de 2026. En fiscal, Crear una nueva regla fiscal y bajar gradualmente renta empresarial si crecen PIB e inversión. Forbes reporta que Claudia López propone una nueva regla fiscal con reducción tributaria condicionada. Fuente: Forbes Colombia.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n24 de marzo de 2026. En fiscal, Mantener los principales lineamientos de la política económica de Petro con responsabilidad fiscal. Infobae reporta que Cepeda promete continuidad macroeconómica frente al gobierno Petro. Fuente: Infobae.\n\n\n\n\nLuis Gilberto Murillo Urrutia\n\n\nCentro\n\n\n16 de abril de 2026. En productividad y crecimiento, Construir desarrollo regional con coordinación entre empresa, Estado y comunidades. Murillo enfatiza la relación empresa-Estado-comunidades para el desarrollo. Fuente: EL ESPECTADOR.\n\n\n\n\nÓscar Mauricio Lizcano Arango\n\n\nCentroderecha\n\n\n15 de enero de 2026. En productividad y crecimiento, Hacer de Colombia un país productor de tecnología y crecer al 6 % para duplicar ingresos. El Espectador reporta que Lizcano quiere duplicar el ingreso per cápita. Fuente: EL ESPECTADOR.\n\n\n\n\nRoy Leonardo Barreras Montealegre\n\n\nCentroderecha\n\n\n18 de febrero de 2026. En productividad y crecimiento, Impulsar agroindustria, turismo, construcción e infraestructura para pagar la deuda social. EFE recoge que Roy Barreras quiere reactivar la producción para financiar la agenda social. Fuente: EFE.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Paloma Susana Valencia Laserna, Sergio Fajardo Valderrama, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nEducación\n\n\nPrimera infancia, colegios, educación superior, calidad y financiación.\n\n\n\n\nCarlos Eduardo Caicedo Omar\n\n\nCentroizquierda\n\n\n31 de marzo de 2026. En educación superior, Transferir una renta pública para pagar por estudiar a jóvenes que desertan o no pueden ingresar al sistema. Carlos Caicedo pone la educación como eje central de su plataforma. Fuente: Noticias Caracol.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de febrero de 2026. En educación superior, Ofrecer un millón de becas, ampliar la jornada escolar y reformar el SENA. El programa de Claudia López usa educación y productividad como motores de desarrollo. Fuente: Claudia López.\n\n\n\n\nLuis Gilberto Murillo Urrutia\n\n\nCentro\n\n\n16 de abril de 2026. En educación superior, Eliminar muros para que la gente tenga oportunidades mediante educación y preparación. Murillo plantea la educación como mecanismo para no desperdiciar talento. Fuente: EL ESPECTADOR.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n8 de marzo de 2026. En educación básica, Permitir que familias de menores ingresos elijan entre colegios públicos o privados mediante bonos escolares. El Tiempo reporta que Valencia propone financiar elección de colegio con recursos públicos. Fuente: EL TIEMPO.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Abelardo Gabriel de la Espriella, Sergio Fajardo Valderrama, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Gustavo Matamoros Camacho.\n\n\n\n\nEmpleo y empresa\n\n\nTrabajo, emprendimiento, formalización, salarios y regulación empresarial.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n8 de marzo de 2026. En emprendimiento y empresa, Modificar la Ley Escalera de la Formalidad y el régimen simple para converger hacia un solo impuesto para mipymes. La propuesta económica de Paloma Valencia pasa por simplificar carga regulatoria. Fuente: EL TIEMPO.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Abelardo Gabriel de la Espriella, Claudia Nayibe López Hernández, Sergio Fajardo Valderrama, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nInstituciones y anticorrupción\n\n\nReforma política, transparencia, contratación, ramas del poder y controles.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n13 de abril de 2026. En anticorrupción y transparencia, Mayor control de la contratación pública, transparencia, participación ciudadana y sanciones más estrictas. La campaña de Cepeda anuncia una Ley Nacional contra la corrupción. Fuente: Pacto Histórico.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En anticorrupción y transparencia, Pasar de un modelo reactivo a uno de anticipación, detección y reacción contra el robo de recursos públicos. La propuesta anticorrupción de Fajardo enfatiza prevención y reacción coordinada. Fuente: Sergio Fajardo.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Claudia Nayibe López Hernández, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nPobreza, desigualdad y protección social\n\n\nTransferencias, hambre, movilidad social, protección y redistribución.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de febrero de 2026. En protección social, Crear mil manzanas del cuidado para liberar tiempo y ampliar acceso de las mujeres a educación y empleo. Claudia López pone el cuidado en el centro de su propuesta social. Fuente: Claudia López.\n\n\n\n\nLuis Gilberto Murillo Urrutia\n\n\nCentro\n\n\n24 de marzo de 2026. En desigualdad y movilidad, Fortalecer tejido social y llevar herramientas de desarrollo a las zonas históricamente relegadas. El País Cali registra que Murillo pone las regiones olvidadas en el centro. Fuente: El País Cali.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Sergio Fajardo Valderrama, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n\nAbelardo Gabriel de la Espriella\n\n\nDerecha\n\n\n26 de marzo de 2026. En paz y conflicto armado, Eliminar la JEP por considerarla costosa e ineficaz. El candidato plantea desmontar la jurisdicción transicional vigente. Fuente: Infobae.\n\n\n26 de marzo de 2026. En defensa y soberanía, Renovar alianza con Estados Unidos e Israel, aumentar pie de fuerza y usar drones, fumigación y bombardeos contra economías ilícitas. La propuesta de seguridad de de la Espriella combina cooperación internacional y fuerza dura. Fuente: Infobae.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n1 de marzo de 2026. En paz y conflicto armado, Profundizar la paz total junto con la justicia social como eje del gobierno 2026-2030. La página oficial de campaña presenta la profundización de la paz total como parte central del programa. Fuente: Pacto Histórico.\n\n\n\n\nLuis Gilberto Murillo Urrutia\n\n\nCentro\n\n\n16 de abril de 2026. En relaciones exteriores, Impulsar puertos y desarrollo del comercio exterior junto con infraestructura estratégica. Murillo vincula infraestructura y comercio exterior como eje económico. Fuente: EL ESPECTADOR.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n14 de abril de 2026. En defensa y soberanía, Aumentar defensa en 20 billones para llegar al 4 % del PIB y sumar 30 mil militares y 30 mil policías. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Fuente: EL PAÍS.\n\n\n\n\nRaúl Santiago Botero Jaramillo\n\n\nCentroderecha\n\n\n27 de febrero de 2026. En defensa y soberanía, Mejorar salarios y respaldo operativo a policías y soldados para actuar con mayor contundencia frente a grupos armados. Botero combina castigo duro con fortalecimiento operativo de la Fuerza Pública. Fuente: Noticias Caracol.\n\n\n\n\nRoy Leonardo Barreras Montealegre\n\n\nCentroderecha\n\n\n18 de febrero de 2026. En paz y conflicto armado, Negociar con método y rigor para que los grupos ilegales solo tengan como salida someterse a la justicia. Roy Barreras ofrece una política de paz menos abierta y más judicializada. Fuente: EFE.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En paz y conflicto armado, Solo hacer diálogos de paz con condiciones claras que desactiven economías ilícitas y reduzcan violencia. Fajardo condiciona los diálogos con grupos armados a resultados concretos. Fuente: Sergio Fajardo.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Claudia Nayibe López Hernández, Clara Eugenia López Obregón, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nSalud\n\n\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\n\n\n\n\nAbelardo Gabriel de la Espriella\n\n\nDerecha\n\n\n26 de marzo de 2026. Implementar un plan de emergencia de 90 días con 10 billones para estabilizar el sistema de salud. La campaña de de la Espriella promete un plan de choque sanitario. Fuente: Infobae.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n4 de marzo de 2026. En aseguramiento y financiación, Mantener un sistema mixto público-privado con auditoría estricta y cero corrupción. Forbes registra que Claudia López defiende un modelo mixto de salud. Fuente: Forbes Colombia.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n14 de abril de 2026. Resolver 10 millones de atenciones represadas y destinar 3 billones inmediatos a compra de medicamentos. El Plan 10 de Valencia plantea un choque inicial sobre la crisis del sistema de salud. Fuente: EL PAÍS.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En aseguramiento y financiación, Poner orden al sistema y garantizar que no se pierda un peso en salud. Fajardo diagnostica caos por incompetencia y opacidad en salud. Fuente: Sergio Fajardo.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n\nAbelardo Gabriel de la Espriella\n\n\nDerecha\n\n\n26 de marzo de 2026. En justicia e instituciones penales, Construir diez megacárceles privadas en zonas apartadas y cambiar el esquema penitenciario. Infobae reporta una expansión carcelaria radical en la propuesta de de la Espriella. Fuente: Infobae.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de febrero de 2026. En seguridad ciudadana, Fortalecer la Fuerza Pública con 40 mil miembros nuevos, modernización y profesionalización. El programa oficial de Claudia López prioriza seguridad y control territorial. Fuente: Claudia López.\n\n\n18 de febrero de 2026. En justicia e instituciones penales, Impulsar una justicia restaurativa con soluciones comunitarias y segundas oportunidades serias. La campaña de Claudia López combina sanción dura con segundas oportunidades. Fuente: Claudia López.\n\n\n\n\nLuis Gilberto Murillo Urrutia\n\n\nCentro\n\n\n16 de abril de 2026. En seguridad ciudadana, Atender los problemas críticos de seguridad por zonas geográficas con apoyo y protección de comunidades. Murillo propone una respuesta territorializada a la seguridad. Fuente: EL ESPECTADOR.\n\n\n\n\nÓscar Mauricio Lizcano Arango\n\n\nCentroderecha\n\n\n27 de febrero de 2026. En seguridad ciudadana, Nombrar un ministro de Defensa activo, crear bloques élite e imponer GPS y cámaras obligatorias en taxis conectadas a la Policía. Noticias Caracol recoge una agenda de seguridad fuertemente tecnificada. Fuente: Noticias Caracol.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n14 de abril de 2026. En justicia e instituciones penales, Crear cárceles agrícolas para que las personas privadas de la libertad trabajen durante su condena. La campaña de Valencia propone una expansión punitiva con componente productivo. Fuente: EL PAÍS.\n\n\n\n\nRaúl Santiago Botero Jaramillo\n\n\nCentroderecha\n\n\n27 de febrero de 2026. En justicia e instituciones penales, Aplicar pena de muerte para corruptos como respuesta a la impunidad. Noticias Caracol registra una propuesta punitiva extrema de Santiago Botero. Fuente: Noticias Caracol.\n\n\n\n\nSergio Fajardo Valderrama\n\n\nCentroderecha\n\n\n18 de abril de 2026. En seguridad ciudadana, Reconstruir una Fuerza Pública sólida y recuperar control territorial en fronteras y ciudades. La página oficial de Sergio Fajardo centra su apertura de campaña en seguridad. Fuente: Sergio Fajardo.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Iván Cepeda Castro, Clara Eugenia López Obregón, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho.\n\n\n\n\nVivienda e infraestructura\n\n\nVivienda, transporte, conectividad y obras públicas.\n\n\n\n\nClaudia Nayibe López Hernández\n\n\nCentroizquierda\n\n\n18 de febrero de 2026. En vivienda, Dar 600 mil subsidios y reactivar Mi Casa Ya con apoyos a mujeres arrendatarias. La propuesta oficial incluye vivienda y construcción como palanca de empleo. Fuente: Claudia López.\n\n\n\n\nIván Cepeda Castro\n\n\nIzquierda\n\n\n15 de abril de 2026. En transporte e infraestructura, Reactivar el tren para dinamizar la economía y el transporte de carga y pasajeros en Boyacá. La campaña en Tunja incluye transporte férreo para Boyacá. Fuente: Pacto Histórico.\n\n\n\n\nPaloma Susana Valencia Laserna\n\n\nDerecha\n\n\n8 de marzo de 2026. En transporte e infraestructura, Ejecutar un Gran Plan Vial Campesino para mejorar 10 mil kilómetros de vías terciarias. La agenda de Paloma Valencia incluye infraestructura rural concreta. Fuente: EL TIEMPO.\n\n\n8 de marzo de 2026. En vivienda, Entregar viviendas iniciales ampliables con subsidios, créditos blandos y autoconstrucción segura. El programa de Valencia incluye vivienda progresiva. Fuente: EL TIEMPO.\n\n\n\n\nSin hallazgos públicos trazables todavía en esta categoría: Abelardo Gabriel de la Espriella, Sergio Fajardo Valderrama, Luis Gilberto Murillo Urrutia, Clara Eugenia López Obregón, Raúl Santiago Botero Jaramillo, Óscar Mauricio Lizcano Arango, Miguel Uribe Londoño, Sondra Macollins Garvin Pinto, Roy Leonardo Barreras Montealegre, Carlos Eduardo Caicedo Omar, Gustavo Matamoros Camacho."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html",
+    "href": "candidatos/sergio-fajardo.html",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#ficha-base",
+    "href": "candidatos/sergio-fajardo.html#ficha-base",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 13\n\n\nVicepresidencia: Edna Cristina del Socorro Bonilla Seba\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 18 de abril de 2026\n\n\n\nCentroderecha\n\nHallazgos: 8\n\n\nFuentes: 4\n\n\nNotas IA: 6"
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#ubicación-ideológica",
+    "href": "candidatos/sergio-fajardo.html#ubicación-ideológica",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroderecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 3 señales programáticas y arrojó un puntaje agregado de 0.20.\n\n\nSe apoya en señales como reconstruir-fuerza-publica (orden y seguridad), protagonismo-mujeres (agenda de genero), dialogos-paz-condicionados (paz condicionada). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#trayectoria-y-contexto-público",
+    "href": "candidatos/sergio-fajardo.html#trayectoria-y-contexto-público",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n18 de abril de 2026. Sostuvo que Colombia necesita debate de frente y preguntó si la invitación también incluye a quienes no representan la polarización Petro-Uribe. Fajardo aprovechó el reto de Cepeda para reiterar que quiere estar en los debates de fondo. Fuente: EL PAÍS.\n\n\n19 de marzo de 2026. Exalcalde de Medellín y exgobernador de Antioquia en su tercera campaña presidencial. RTVC presenta a Sergio Fajardo como referente del centro político. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/sergio-fajardo.html#propuestas-y-posiciones-públicas",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nAmbiente y energía\n\n\nTransición energética, licencias, agua, clima y biodiversidad.\n\n\n\n18 de abril de 2026. En transición energética, Sostiene que el desarrollo energético debe ser sostenible y legal, y que la minería ilegal no puede seguir financiando a las mafias. Fajardo vinculó la agenda energética con sostenibilidad y control criminal. Fuente: EL PAÍS.\n\n\n\n\n\nDerechos, aborto y género\n\n\nAborto, identidad de género, familia, libertades civiles e igualdad.\n\n\n\n18 de abril de 2026. En género y diversidad, Garantizar voz, protección frente a violencias basadas en género y más oportunidades para las mujeres. La página de campaña de Fajardo dedica un eje específico a mujeres. Fuente: Sergio Fajardo.\n\n\n\n\n\nInstituciones y anticorrupción\n\n\nReforma política, transparencia, contratación, ramas del poder y controles.\n\n\n\n18 de abril de 2026. En anticorrupción y transparencia, Pasar de un modelo reactivo a uno de anticipación, detección y reacción contra el robo de recursos públicos. La propuesta anticorrupción de Fajardo enfatiza prevención y reacción coordinada. Fuente: Sergio Fajardo.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n18 de abril de 2026. En paz y conflicto armado, Solo hacer diálogos de paz con condiciones claras que desactiven economías ilícitas y reduzcan violencia. Fajardo condiciona los diálogos con grupos armados a resultados concretos. Fuente: Sergio Fajardo.\n\n\n\n\n\nSalud\n\n\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\n\n\n\n18 de abril de 2026. En aseguramiento y financiación, Poner orden al sistema y garantizar que no se pierda un peso en salud. Fajardo diagnostica caos por incompetencia y opacidad en salud. Fuente: Sergio Fajardo.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n18 de abril de 2026. En seguridad ciudadana, Reconstruir una Fuerza Pública sólida y recuperar control territorial en fronteras y ciudades. La página oficial de Sergio Fajardo centra su apertura de campaña en seguridad. Fuente: Sergio Fajardo."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#análisis-lógico-publicado",
+    "href": "candidatos/sergio-fajardo.html#análisis-lógico-publicado",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para cero-corrupcion no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Sergio Fajardo.\n\n\nVacío de implementación. La propuesta registrada para dialogos-paz-condicionados no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Sergio Fajardo.\n\n\nVacío de implementación. La propuesta registrada para ordenar-sistema-salud no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Sergio Fajardo.\n\n\nVacío de implementación. La propuesta registrada para protagonismo-mujeres no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Sergio Fajardo.\n\n\nVacío de implementación. La propuesta registrada para reconstruir-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Sergio Fajardo.\n\n\nVacío de implementación. La propuesta registrada para desarrollo-energetico-sostenible no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL PAÍS."
+  },
+  {
+    "objectID": "candidatos/sergio-fajardo.html#biblioteca-de-fuentes",
+    "href": "candidatos/sergio-fajardo.html#biblioteca-de-fuentes",
+    "title": "Sergio Fajardo Valderrama",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL PAÍS. El camino a las elecciones presidenciales de Colombia 2026, en vivo. 18 de abril de 2026. Tier: established-media.\n\n\nSergio Fajardo. Cambio Seguro. 18 de abril de 2026. Tier: official.\n\n\nEL PAÍS. Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético. 18 de abril de 2026. Tier: established-media.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html",
+    "href": "candidatos/raul-botero.html",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#ficha-base",
+    "href": "candidatos/raul-botero.html#ficha-base",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 4\n\n\nVicepresidencia: Carlos Fernando Cuevas Romero\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nCentroderecha\n\nHallazgos: 3\n\n\nFuentes: 2\n\n\nNotas IA: 1"
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#ubicación-ideológica",
+    "href": "candidatos/raul-botero.html#ubicación-ideológica",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroderecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 2 señales programáticas y arrojó un puntaje agregado de 1.00.\n\n\nSe apoya en señales como pena-de-muerte (pena de muerte), fortalecer-fuerza-publica (fortalecimiento militar y policial). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#trayectoria-y-contexto-público",
+    "href": "candidatos/raul-botero.html#trayectoria-y-contexto-público",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Fundador de Fin Social y candidato del movimiento Romper el Sistema. RTVC perfila a Santiago Botero como empresario financiero independiente. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/raul-botero.html#propuestas-y-posiciones-públicas",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n27 de febrero de 2026. En defensa y soberanía, Mejorar salarios y respaldo operativo a policías y soldados para actuar con mayor contundencia frente a grupos armados. Botero combina castigo duro con fortalecimiento operativo de la Fuerza Pública. Fuente: Noticias Caracol.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n27 de febrero de 2026. En justicia e instituciones penales, Aplicar pena de muerte para corruptos como respuesta a la impunidad. Noticias Caracol registra una propuesta punitiva extrema de Santiago Botero. Fuente: Noticias Caracol."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#análisis-lógico-publicado",
+    "href": "candidatos/raul-botero.html#análisis-lógico-publicado",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para fortalecer-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Noticias Caracol."
+  },
+  {
+    "objectID": "candidatos/raul-botero.html#biblioteca-de-fuentes",
+    "href": "candidatos/raul-botero.html#biblioteca-de-fuentes",
+    "title": "Raúl Santiago Botero Jaramillo",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nNoticias Caracol. Santiago Botero habla de sus propuestas. 27 de febrero de 2026. Tier: interview."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html",
+    "href": "candidatos/miguel-uribe.html",
+    "title": "Miguel Uribe Londoño",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#ficha-base",
+    "href": "candidatos/miguel-uribe.html#ficha-base",
+    "title": "Miguel Uribe Londoño",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 7\n\n\nVicepresidencia: Luisa Fernanda Villegas Araque\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nEvidencia insuficiente\n\nHallazgos: 1\n\n\nFuentes: 1\n\n\nNotas IA: 0"
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#ubicación-ideológica",
+    "href": "candidatos/miguel-uribe.html#ubicación-ideológica",
+    "title": "Miguel Uribe Londoño",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Evidencia insuficiente. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 0 señales programáticas y arrojó un puntaje agregado de sin cálculo.\n\n\nTodavía no hay suficientes señales programáticas mapeadas para ubicarlo en el espectro. Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#trayectoria-y-contexto-público",
+    "href": "candidatos/miguel-uribe.html#trayectoria-y-contexto-público",
+    "title": "Miguel Uribe Londoño",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Economista, abogado, periodista y docente con ubicación política de centroderecha. RTVC presenta a Miguel Uribe Londoño desde su perfil académico y docente. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/miguel-uribe.html#propuestas-y-posiciones-públicas",
+    "title": "Miguel Uribe Londoño",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\n\n\n\n\nNote\n\n\n\nTodavía no hay propuestas públicas trazables para este candidato."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#análisis-lógico-publicado",
+    "href": "candidatos/miguel-uribe.html#análisis-lógico-publicado",
+    "title": "Miguel Uribe Londoño",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\n\n\n\n\nNote\n\n\n\nAún no hay notas analíticas públicas para esta candidatura."
+  },
+  {
+    "objectID": "candidatos/miguel-uribe.html#biblioteca-de-fuentes",
+    "href": "candidatos/miguel-uribe.html#biblioteca-de-fuentes",
+    "title": "Miguel Uribe Londoño",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html",
+    "href": "candidatos/luis-gilberto-murillo.html",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#ficha-base",
+    "href": "candidatos/luis-gilberto-murillo.html#ficha-base",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 14\n\n\nVicepresidencia: Luz María Zapata Zapata\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 16 de abril de 2026\n\n\n\nCentro\n\nHallazgos: 6\n\n\nFuentes: 3\n\n\nNotas IA: 5"
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#ubicación-ideológica",
+    "href": "candidatos/luis-gilberto-murillo.html#ubicación-ideológica",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centro. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 5 señales programáticas y arrojó un puntaje agregado de -0.13.\n\n\nSe apoya en señales como desarrollo-regiones-olvidadas (correccion territorial), desarrollo-talento (movilidad educativa), seguridad-focalizada (seguridad territorial focalizada). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#trayectoria-y-contexto-público",
+    "href": "candidatos/luis-gilberto-murillo.html#trayectoria-y-contexto-público",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Excanciller, exembajador en Estados Unidos, exministro de Ambiente y exgobernador del Chocó. RTVC resume la trayectoria diplomática y regional de Luis Gilberto Murillo. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/luis-gilberto-murillo.html#propuestas-y-posiciones-públicas",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n16 de abril de 2026. En productividad y crecimiento, Construir desarrollo regional con coordinación entre empresa, Estado y comunidades. Murillo enfatiza la relación empresa-Estado-comunidades para el desarrollo. Fuente: EL ESPECTADOR.\n\n\n\n\n\nEducación\n\n\nPrimera infancia, colegios, educación superior, calidad y financiación.\n\n\n\n16 de abril de 2026. En educación superior, Eliminar muros para que la gente tenga oportunidades mediante educación y preparación. Murillo plantea la educación como mecanismo para no desperdiciar talento. Fuente: EL ESPECTADOR.\n\n\n\n\n\nPobreza, desigualdad y protección social\n\n\nTransferencias, hambre, movilidad social, protección y redistribución.\n\n\n\n24 de marzo de 2026. En desigualdad y movilidad, Fortalecer tejido social y llevar herramientas de desarrollo a las zonas históricamente relegadas. El País Cali registra que Murillo pone las regiones olvidadas en el centro. Fuente: El País Cali.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n16 de abril de 2026. En relaciones exteriores, Impulsar puertos y desarrollo del comercio exterior junto con infraestructura estratégica. Murillo vincula infraestructura y comercio exterior como eje económico. Fuente: EL ESPECTADOR.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n16 de abril de 2026. En seguridad ciudadana, Atender los problemas críticos de seguridad por zonas geográficas con apoyo y protección de comunidades. Murillo propone una respuesta territorializada a la seguridad. Fuente: EL ESPECTADOR."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#análisis-lógico-publicado",
+    "href": "candidatos/luis-gilberto-murillo.html#análisis-lógico-publicado",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para alianza-empresa-estado-comunidades no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL ESPECTADOR.\n\n\nVacío de implementación. La propuesta registrada para desarrollo-talento no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL ESPECTADOR.\n\n\nVacío de implementación. La propuesta registrada para puertos-comercio-exterior no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL ESPECTADOR.\n\n\nVacío de implementación. La propuesta registrada para seguridad-focalizada no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL ESPECTADOR.\n\n\nVacío de implementación. La propuesta registrada para desarrollo-regiones-olvidadas no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: El País Cali."
+  },
+  {
+    "objectID": "candidatos/luis-gilberto-murillo.html#biblioteca-de-fuentes",
+    "href": "candidatos/luis-gilberto-murillo.html#biblioteca-de-fuentes",
+    "title": "Luis Gilberto Murillo Urrutia",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL ESPECTADOR. Luis G. Murillo: Quiero una Colombia que mire al futuro y las oportunidades. 16 de abril de 2026. Tier: interview.\n\n\nEl País Cali. Luis Gilberto Murillo, el candidato chocoano que busca llegar a la Casa de Nariño. 24 de marzo de 2026. Tier: established-media.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/index.html",
+    "href": "candidatos/index.html",
+    "title": "Fichas por candidato",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones.\n  \n\n\n\n\n\n\nCada ficha consolida la trazabilidad básica del candidato, los claims públicos disponibles, las notas analíticas conservadoras y la evidencia fuente.\n\n\n\nWatchlist #1\n\nIván Cepeda Castro\n\n\nVice: Aída Marina Quilcué Vivas\n\n\nTarjetón: 1\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nClara Eugenia López Obregón\n\n\nVice: María Consuelo del Río Mantilla\n\n\nTarjetón: 2\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nWatchlist #4\n\nClaudia Nayibe López Hernández\n\n\nVice: Leonardo Humberto Huerta Gutiérrez\n\n\nTarjetón: 3\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nRaúl Santiago Botero Jaramillo\n\n\nVice: Carlos Fernando Cuevas Romero\n\n\nTarjetón: 4\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nWatchlist #2\n\nAbelardo Gabriel de la Espriella\n\n\nVice: José Manuel Restrepo Abondano\n\n\nTarjetón: 5\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nÓscar Mauricio Lizcano Arango\n\n\nVice: Pedro Luis de la Torre Márquez\n\n\nTarjetón: 6\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nMiguel Uribe Londoño\n\n\nVice: Luisa Fernanda Villegas Araque\n\n\nTarjetón: 7\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nSondra Macollins Garvin Pinto\n\n\nVice: Leonardo Karam Helo\n\n\nTarjetón: 8\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nRoy Leonardo Barreras Montealegre\n\n\nVice: Martha Lucía Zamora Ávila\n\n\nTarjetón: 9\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nCarlos Eduardo Caicedo Omar\n\n\nVice: Nelson Javier Alarcón Suárez\n\n\nTarjetón: 10\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nCobertura secundaria\n\nGustavo Matamoros Camacho\n\n\nVice: Mila María Paz Campaz\n\n\nTarjetón: 11\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nWatchlist #3\n\nPaloma Susana Valencia Laserna\n\n\nVice: Juan Daniel Oviedo Arango\n\n\nTarjetón: 12\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nWatchlist #5\n\nSergio Fajardo Valderrama\n\n\nVice: Edna Cristina del Socorro Bonilla Seba\n\n\nTarjetón: 13\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5\n\n\n\nWatchlist #6\n\nLuis Gilberto Murillo Urrutia\n\n\nVice: Luz María Zapata Zapata\n\n\nTarjetón: 14\n\n\nEspectro analítico: Izquierda\n\n\nClaims públicos: 8\n\n\nNotas IA: 5"
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html",
+    "href": "candidatos/claudia-lopez.html",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#ficha-base",
+    "href": "candidatos/claudia-lopez.html#ficha-base",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 3\n\n\nVicepresidencia: Leonardo Humberto Huerta Gutiérrez\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 18 de abril de 2026\n\n\n\nCentroizquierda\n\nHallazgos: 11\n\n\nFuentes: 4\n\n\nNotas IA: 5"
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#ubicación-ideológica",
+    "href": "candidatos/claudia-lopez.html#ubicación-ideológica",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroizquierda. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 7 señales programáticas y arrojó un puntaje agregado de -0.38.\n\n\nSe apoya en señales como sistema-cuidado (sistema de cuidado), violencias-de-genero (derechos de genero), fuerza-publica (fortalecimiento fuerza publica). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#trayectoria-y-contexto-público",
+    "href": "candidatos/claudia-lopez.html#trayectoria-y-contexto-público",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Exalcaldesa de Bogotá y exsenadora que ganó la Consulta de las Soluciones. RTVC perfila a Claudia López desde su paso por el Senado y la Alcaldía de Bogotá. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/claudia-lopez.html#propuestas-y-posiciones-públicas",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nAmbiente y energía\n\n\nTransición energética, licencias, agua, clima y biodiversidad.\n\n\n\n18 de abril de 2026. En agua y ambiente, Propone incorporar a las comunidades con un mecanismo de construcción de confianza y licenciamiento social para que la minería no quede en manos criminales. En el foro energético, Claudia López defendió formalizar la relación entre minería y comunidades. Fuente: EL PAÍS.\n\n\n18 de febrero de 2026. En agua y ambiente, Llevar agua potable a los territorios y usar regalías para alcantarillado. La campaña de Claudia López trata el agua como derecho y bien común. Fuente: Claudia López.\n\n\n\n\n\nDerechos, aborto y género\n\n\nAborto, identidad de género, familia, libertades civiles e igualdad.\n\n\n\n18 de febrero de 2026. En género y diversidad, Garantizar protección efectiva contra violencias de género y feminicidios. La campaña de Claudia López conecta el sistema de cuidado con protección contra violencias. Fuente: Claudia López.\n\n\n\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n4 de marzo de 2026. En fiscal, Crear una nueva regla fiscal y bajar gradualmente renta empresarial si crecen PIB e inversión. Forbes reporta que Claudia López propone una nueva regla fiscal con reducción tributaria condicionada. Fuente: Forbes Colombia.\n\n\n\n\n\nEducación\n\n\nPrimera infancia, colegios, educación superior, calidad y financiación.\n\n\n\n18 de febrero de 2026. En educación superior, Ofrecer un millón de becas, ampliar la jornada escolar y reformar el SENA. El programa de Claudia López usa educación y productividad como motores de desarrollo. Fuente: Claudia López.\n\n\n\n\n\nPobreza, desigualdad y protección social\n\n\nTransferencias, hambre, movilidad social, protección y redistribución.\n\n\n\n18 de febrero de 2026. En protección social, Crear mil manzanas del cuidado para liberar tiempo y ampliar acceso de las mujeres a educación y empleo. Claudia López pone el cuidado en el centro de su propuesta social. Fuente: Claudia López.\n\n\n\n\n\nSalud\n\n\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\n\n\n\n4 de marzo de 2026. En aseguramiento y financiación, Mantener un sistema mixto público-privado con auditoría estricta y cero corrupción. Forbes registra que Claudia López defiende un modelo mixto de salud. Fuente: Forbes Colombia.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n18 de febrero de 2026. En seguridad ciudadana, Fortalecer la Fuerza Pública con 40 mil miembros nuevos, modernización y profesionalización. El programa oficial de Claudia López prioriza seguridad y control territorial. Fuente: Claudia López.\n\n\n18 de febrero de 2026. En justicia e instituciones penales, Impulsar una justicia restaurativa con soluciones comunitarias y segundas oportunidades serias. La campaña de Claudia López combina sanción dura con segundas oportunidades. Fuente: Claudia López.\n\n\n\n\n\nVivienda e infraestructura\n\n\nVivienda, transporte, conectividad y obras públicas.\n\n\n\n18 de febrero de 2026. En vivienda, Dar 600 mil subsidios y reactivar Mi Casa Ya con apoyos a mujeres arrendatarias. La propuesta oficial incluye vivienda y construcción como palanca de empleo. Fuente: Claudia López."
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#análisis-lógico-publicado",
+    "href": "candidatos/claudia-lopez.html#análisis-lógico-publicado",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para agua-potable no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Claudia López.\n\n\nVacío de implementación. La propuesta registrada para justicia-restaurativa no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Claudia López.\n\n\nVacío de implementación. La propuesta registrada para violencias-de-genero no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Claudia López.\n\n\nVacío de implementación. La propuesta registrada para modelo-mixto-salud no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Forbes Colombia.\n\n\nVacío de implementación. La propuesta registrada para licenciamiento-social-minero no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL PAÍS."
+  },
+  {
+    "objectID": "candidatos/claudia-lopez.html#biblioteca-de-fuentes",
+    "href": "candidatos/claudia-lopez.html#biblioteca-de-fuentes",
+    "title": "Claudia Nayibe López Hernández",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL PAÍS. Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético. 18 de abril de 2026. Tier: established-media.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nForbes Colombia. Continuar lo que funciona y trabajar en seguridad, salud y productividad. 4 de marzo de 2026. Tier: interview.\n\n\nClaudia López. Claudia López presenta su programa de gobierno. 18 de febrero de 2026. Tier: official."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html",
+    "href": "candidatos/carlos-caicedo.html",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#ficha-base",
+    "href": "candidatos/carlos-caicedo.html#ficha-base",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 10\n\n\nVicepresidencia: Nelson Javier Alarcón Suárez\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 31 de marzo de 2026\n\n\n\nCentroizquierda\n\nHallazgos: 2\n\n\nFuentes: 2\n\n\nNotas IA: 0"
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#ubicación-ideológica",
+    "href": "candidatos/carlos-caicedo.html#ubicación-ideológica",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroizquierda. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 1 señales programáticas y arrojó un puntaje agregado de -1.00.\n\n\nSe apoya en señales como pagar-por-estudiar (transferencia educativa). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#trayectoria-y-contexto-público",
+    "href": "candidatos/carlos-caicedo.html#trayectoria-y-contexto-público",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Exgobernador del Magdalena, exalcalde de Santa Marta y exrector universitario. RTVC resalta el arraigo regional de Carlos Caicedo. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/carlos-caicedo.html#propuestas-y-posiciones-públicas",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nEducación\n\n\nPrimera infancia, colegios, educación superior, calidad y financiación.\n\n\n\n31 de marzo de 2026. En educación superior, Transferir una renta pública para pagar por estudiar a jóvenes que desertan o no pueden ingresar al sistema. Carlos Caicedo pone la educación como eje central de su plataforma. Fuente: Noticias Caracol."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#análisis-lógico-publicado",
+    "href": "candidatos/carlos-caicedo.html#análisis-lógico-publicado",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\n\n\n\n\nNote\n\n\n\nAún no hay notas analíticas públicas para esta candidatura."
+  },
+  {
+    "objectID": "candidatos/carlos-caicedo.html#biblioteca-de-fuentes",
+    "href": "candidatos/carlos-caicedo.html#biblioteca-de-fuentes",
+    "title": "Carlos Eduardo Caicedo Omar",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nNoticias Caracol. Carlos Caicedo plantea su propuesta central como candidato. 31 de marzo de 2026. Tier: interview.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html",
+    "href": "candidatos/abelardo-de-la-espriella.html",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#ficha-base",
+    "href": "candidatos/abelardo-de-la-espriella.html#ficha-base",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 5\n\n\nVicepresidencia: José Manuel Restrepo Abondano\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 18 de abril de 2026\n\n\n\nDerecha\n\nHallazgos: 9\n\n\nFuentes: 3\n\n\nNotas IA: 3"
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#ubicación-ideológica",
+    "href": "candidatos/abelardo-de-la-espriella.html#ubicación-ideológica",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Derecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 6 señales programáticas y arrojó un puntaje agregado de 1.00.\n\n\nSe apoya en señales como recorte-del-estado (recorte del Estado), megacarceles (expansion carcelaria), jep (justicia transicional). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#trayectoria-y-contexto-público",
+    "href": "candidatos/abelardo-de-la-espriella.html#trayectoria-y-contexto-público",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n18 de abril de 2026. Dijo estar listo y pidió que los medios organicen cuanto antes el debate. Abelardo de la Espriella aceptó el reto de debate lanzado por Cepeda. Fuente: EL PAÍS.\n\n\n19 de marzo de 2026. Su perfil público está asociado a la defensa de casos judiciales controvertidos como DMG y Alex Saab. RTVC describe a Abelardo de la Espriella como abogado penalista y empresario de alta exposición. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/abelardo-de-la-espriella.html#propuestas-y-posiciones-públicas",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n26 de marzo de 2026. En fiscal, Recortar hasta 40 % del Estado eliminando cargos y contratos que considera sobrantes. Infobae reporta que de la Espriella quiere reducir drásticamente la estructura estatal. Fuente: Infobae.\n\n\n26 de marzo de 2026. En fiscal, Reducir impuestos como el cuatro por mil y los gravámenes a la gasolina. De la Espriella enlaza recorte del Estado con alivios tributarios. Fuente: Infobae.\n\n\n26 de marzo de 2026. En productividad y crecimiento, Impulsar infraestructura, hidrocarburos, minería, energía, turismo, agro e innovación con inversión extranjera. De la Espriella promete reactivar varios sectores como base del crecimiento. Fuente: Infobae.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n26 de marzo de 2026. En paz y conflicto armado, Eliminar la JEP por considerarla costosa e ineficaz. El candidato plantea desmontar la jurisdicción transicional vigente. Fuente: Infobae.\n\n\n26 de marzo de 2026. En defensa y soberanía, Renovar alianza con Estados Unidos e Israel, aumentar pie de fuerza y usar drones, fumigación y bombardeos contra economías ilícitas. La propuesta de seguridad de de la Espriella combina cooperación internacional y fuerza dura. Fuente: Infobae.\n\n\n\n\n\nSalud\n\n\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\n\n\n\n26 de marzo de 2026. Implementar un plan de emergencia de 90 días con 10 billones para estabilizar el sistema de salud. La campaña de de la Espriella promete un plan de choque sanitario. Fuente: Infobae.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n26 de marzo de 2026. En justicia e instituciones penales, Construir diez megacárceles privadas en zonas apartadas y cambiar el esquema penitenciario. Infobae reporta una expansión carcelaria radical en la propuesta de de la Espriella. Fuente: Infobae."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#análisis-lógico-publicado",
+    "href": "candidatos/abelardo-de-la-espriella.html#análisis-lógico-publicado",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para activar-sectores-productivos no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Infobae.\n\n\nVacío de implementación. La propuesta registrada para alianza-seguridad-exterior no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Infobae.\n\n\nVacío de implementación. La propuesta registrada para baja-de-impuestos no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Infobae."
+  },
+  {
+    "objectID": "candidatos/abelardo-de-la-espriella.html#biblioteca-de-fuentes",
+    "href": "candidatos/abelardo-de-la-espriella.html#biblioteca-de-fuentes",
+    "title": "Abelardo Gabriel de la Espriella",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL PAÍS. El camino a las elecciones presidenciales de Colombia 2026, en vivo. 18 de abril de 2026. Tier: established-media.\n\n\nInfobae. Abelardo de la Espriella promete reducir el Estado, eliminar la JEP y construir diez megacárceles. 26 de marzo de 2026. Tier: interview.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html",
+    "href": "candidatos/clara-lopez.html",
+    "title": "Clara Eugenia López Obregón",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#ficha-base",
+    "href": "candidatos/clara-lopez.html#ficha-base",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 2\n\n\nVicepresidencia: María Consuelo del Río Mantilla\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 7 de abril de 2026\n\n\n\nEvidencia insuficiente\n\nHallazgos: 2\n\n\nFuentes: 2\n\n\nNotas IA: 0"
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#ubicación-ideológica",
+    "href": "candidatos/clara-lopez.html#ubicación-ideológica",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Evidencia insuficiente. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 0 señales programáticas y arrojó un puntaje agregado de sin cálculo.\n\n\nTodavía no hay suficientes señales programáticas mapeadas para ubicarlo en el espectro. Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#trayectoria-y-contexto-público",
+    "href": "candidatos/clara-lopez.html#trayectoria-y-contexto-público",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n7 de abril de 2026. Clara López retiró su candidatura y anunció adhesión a la campaña de Iván Cepeda. Infobae reporta la renuncia de Clara López a la contienda presidencial. Fuente: Infobae.\n\n\n19 de marzo de 2026. Exsenadora, exministra de Trabajo y exalcaldesa encargada de Bogotá. RTVC resume la larga trayectoria pública de Clara López. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/clara-lopez.html#propuestas-y-posiciones-públicas",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\n\n\n\n\nNote\n\n\n\nTodavía no hay propuestas públicas trazables para este candidato."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#análisis-lógico-publicado",
+    "href": "candidatos/clara-lopez.html#análisis-lógico-publicado",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\n\n\n\n\nNote\n\n\n\nAún no hay notas analíticas públicas para esta candidatura."
+  },
+  {
+    "objectID": "candidatos/clara-lopez.html#biblioteca-de-fuentes",
+    "href": "candidatos/clara-lopez.html#biblioteca-de-fuentes",
+    "title": "Clara Eugenia López Obregón",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nInfobae. Clara López renuncia a su candidatura presidencial 2026 y anuncia alianza con Iván Cepeda. 7 de abril de 2026. Tier: established-media.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html",
+    "href": "candidatos/gustavo-matamoros.html",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#ficha-base",
+    "href": "candidatos/gustavo-matamoros.html#ficha-base",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 11\n\n\nVicepresidencia: Mila María Paz Campaz\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nEvidencia insuficiente\n\nHallazgos: 1\n\n\nFuentes: 1\n\n\nNotas IA: 0"
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#ubicación-ideológica",
+    "href": "candidatos/gustavo-matamoros.html#ubicación-ideológica",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Evidencia insuficiente. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 0 señales programáticas y arrojó un puntaje agregado de sin cálculo.\n\n\nTodavía no hay suficientes señales programáticas mapeadas para ubicarlo en el espectro. Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#trayectoria-y-contexto-público",
+    "href": "candidatos/gustavo-matamoros.html#trayectoria-y-contexto-público",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. General retirado que centra su campaña en seguridad, desarrollo económico y presencia institucional. RTVC describe a Gustavo Matamoros desde su carrera militar. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/gustavo-matamoros.html#propuestas-y-posiciones-públicas",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\n\n\n\n\nNote\n\n\n\nTodavía no hay propuestas públicas trazables para este candidato."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#análisis-lógico-publicado",
+    "href": "candidatos/gustavo-matamoros.html#análisis-lógico-publicado",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\n\n\n\n\nNote\n\n\n\nAún no hay notas analíticas públicas para esta candidatura."
+  },
+  {
+    "objectID": "candidatos/gustavo-matamoros.html#biblioteca-de-fuentes",
+    "href": "candidatos/gustavo-matamoros.html#biblioteca-de-fuentes",
+    "title": "Gustavo Matamoros Camacho",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html",
+    "href": "candidatos/ivan-cepeda.html",
+    "title": "Iván Cepeda Castro",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#ficha-base",
+    "href": "candidatos/ivan-cepeda.html#ficha-base",
+    "title": "Iván Cepeda Castro",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 1\n\n\nVicepresidencia: Aída Marina Quilcué Vivas\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 18 de abril de 2026\n\n\n\nIzquierda\n\nHallazgos: 8\n\n\nFuentes: 6\n\n\nNotas IA: 5"
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#ubicación-ideológica",
+    "href": "candidatos/ivan-cepeda.html#ubicación-ideológica",
+    "title": "Iván Cepeda Castro",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Izquierda. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 3 señales programáticas y arrojó un puntaje agregado de -1.00.\n\n\nSe apoya en señales como paz-total (paz negociada), acceso-tierra (reforma rural), transicion-energetica (transicion energetica). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#trayectoria-y-contexto-público",
+    "href": "candidatos/ivan-cepeda.html#trayectoria-y-contexto-público",
+    "title": "Iván Cepeda Castro",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n18 de abril de 2026. Dijo que quiere debatir propuestas de fondo, modelos de desarrollo y equidad social con sus dos rivales de derecha. Cepeda giró su estrategia y retó a Paloma Valencia y Abelardo de la Espriella a debatir. Fuente: EL PAÍS.\n\n\n19 de marzo de 2026. Senador del Pacto Histórico y presidente de la Comisión de Paz del Senado. RTVC ubica a Iván Cepeda como senador y defensor de derechos humanos. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/ivan-cepeda.html#propuestas-y-posiciones-públicas",
+    "title": "Iván Cepeda Castro",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nAgro y ruralidad\n\n\nCampo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.\n\n\n\n15 de abril de 2026. En tierras y desarrollo rural, Garantizar que quienes trabajan el campo sean dueños de su territorio. La agenda en Boyacá incluye tierra para los campesinos. Fuente: Pacto Histórico.\n\n\n\n\n\nAmbiente y energía\n\n\nTransición energética, licencias, agua, clima y biodiversidad.\n\n\n\n24 de marzo de 2026. En transición energética, Avanzar en transición energética dialogando con empresarios, trabajadores y comunidades. Cepeda plantea una transición energética concertada con actores productivos y sociales. Fuente: Infobae.\n\n\n\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n24 de marzo de 2026. En fiscal, Mantener los principales lineamientos de la política económica de Petro con responsabilidad fiscal. Infobae reporta que Cepeda promete continuidad macroeconómica frente al gobierno Petro. Fuente: Infobae.\n\n\n\n\n\nInstituciones y anticorrupción\n\n\nReforma política, transparencia, contratación, ramas del poder y controles.\n\n\n\n13 de abril de 2026. En anticorrupción y transparencia, Mayor control de la contratación pública, transparencia, participación ciudadana y sanciones más estrictas. La campaña de Cepeda anuncia una Ley Nacional contra la corrupción. Fuente: Pacto Histórico.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n1 de marzo de 2026. En paz y conflicto armado, Profundizar la paz total junto con la justicia social como eje del gobierno 2026-2030. La página oficial de campaña presenta la profundización de la paz total como parte central del programa. Fuente: Pacto Histórico.\n\n\n\n\n\nVivienda e infraestructura\n\n\nVivienda, transporte, conectividad y obras públicas.\n\n\n\n15 de abril de 2026. En transporte e infraestructura, Reactivar el tren para dinamizar la economía y el transporte de carga y pasajeros en Boyacá. La campaña en Tunja incluye transporte férreo para Boyacá. Fuente: Pacto Histórico."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#análisis-lógico-publicado",
+    "href": "candidatos/ivan-cepeda.html#análisis-lógico-publicado",
+    "title": "Iván Cepeda Castro",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para acceso-tierra no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Pacto Histórico.\n\n\nVacío de implementación. La propuesta registrada para paz-total no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Pacto Histórico.\n\n\nVacío de implementación. La propuesta registrada para transporte-ferreo no incluye suficiente detalle de implementación en la fuente analizada. Confianza alta. Sustento: Pacto Histórico.\n\n\nVacío de implementación. La propuesta registrada para continuidad-macroeconomica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Infobae.\n\n\nVacío de implementación. La propuesta registrada para transicion-energetica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: Infobae."
+  },
+  {
+    "objectID": "candidatos/ivan-cepeda.html#biblioteca-de-fuentes",
+    "href": "candidatos/ivan-cepeda.html#biblioteca-de-fuentes",
+    "title": "Iván Cepeda Castro",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL PAÍS. El camino a las elecciones presidenciales de Colombia 2026, en vivo. 18 de abril de 2026. Tier: established-media.\n\n\nPacto Histórico. Visita de Iván Cepeda a Tunja: Transformación Energética y Ferroviaria para Boyacá. 15 de abril de 2026. Tier: official.\n\n\nPacto Histórico. Iván Cepeda y su propuesta política para transformar Colombia. 13 de abril de 2026. Tier: official.\n\n\nInfobae. Iván Cepeda confirmó que mantendrá la política económica de Gustavo Petro. 24 de marzo de 2026. Tier: interview.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nPacto Histórico. Iván Cepeda: Candidato Presidencial del Pacto Histórico 2026. 1 de marzo de 2026. Tier: official."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html",
+    "href": "candidatos/mauricio-lizcano.html",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#ficha-base",
+    "href": "candidatos/mauricio-lizcano.html#ficha-base",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 6\n\n\nVicepresidencia: Pedro Luis de la Torre Márquez\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nCentroderecha\n\nHallazgos: 3\n\n\nFuentes: 3\n\n\nNotas IA: 1"
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#ubicación-ideológica",
+    "href": "candidatos/mauricio-lizcano.html#ubicación-ideológica",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroderecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 2 señales programáticas y arrojó un puntaje agregado de 1.00.\n\n\nSe apoya en señales como seguridad-tecnologica (seguridad tecnologica), productividad-tecnologica (crecimiento tecnologico). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#trayectoria-y-contexto-público",
+    "href": "candidatos/mauricio-lizcano.html#trayectoria-y-contexto-público",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Exministro TIC e hijo del excongresista Óscar Tulio Lizcano. RTVC ubica a Mauricio Lizcano en una trayectoria de gobierno y origen político familiar. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/mauricio-lizcano.html#propuestas-y-posiciones-públicas",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n15 de enero de 2026. En productividad y crecimiento, Hacer de Colombia un país productor de tecnología y crecer al 6 % para duplicar ingresos. El Espectador reporta que Lizcano quiere duplicar el ingreso per cápita. Fuente: EL ESPECTADOR.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n27 de febrero de 2026. En seguridad ciudadana, Nombrar un ministro de Defensa activo, crear bloques élite e imponer GPS y cámaras obligatorias en taxis conectadas a la Policía. Noticias Caracol recoge una agenda de seguridad fuertemente tecnificada. Fuente: Noticias Caracol."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#análisis-lógico-publicado",
+    "href": "candidatos/mauricio-lizcano.html#análisis-lógico-publicado",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para productividad-tecnologica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL ESPECTADOR."
+  },
+  {
+    "objectID": "candidatos/mauricio-lizcano.html#biblioteca-de-fuentes",
+    "href": "candidatos/mauricio-lizcano.html#biblioteca-de-fuentes",
+    "title": "Óscar Mauricio Lizcano Arango",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nNoticias Caracol. Mauricio Lizcano habla de sus propuestas y por qué no participó en consultas. 27 de febrero de 2026. Tier: interview.\n\n\nEL ESPECTADOR. Mauricio Lizcano: Yo quiero dejar a Colombia duplicando el ingreso de todos. 15 de enero de 2026. Tier: interview."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html",
+    "href": "candidatos/paloma-valencia.html",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#ficha-base",
+    "href": "candidatos/paloma-valencia.html#ficha-base",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 12\n\n\nVicepresidencia: Juan Daniel Oviedo Arango\n\n\nWatchlist activa: Sí\n\n\nÚltimo evento público: 18 de abril de 2026\n\n\n\nDerecha\n\nHallazgos: 11\n\n\nFuentes: 6\n\n\nNotas IA: 2"
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#ubicación-ideológica",
+    "href": "candidatos/paloma-valencia.html#ubicación-ideológica",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Derecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 6 señales programáticas y arrojó un puntaje agregado de 1.00.\n\n\nSe apoya en señales como bonos-escolares (bonos escolares), ampliacion-pie-fuerza (expansion del pie de fuerza), carceles-agricolas (endurecimiento penal). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#trayectoria-y-contexto-público",
+    "href": "candidatos/paloma-valencia.html#trayectoria-y-contexto-público",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n18 de abril de 2026. Pidió un moderador independiente y un canal de alcance nacional para contrastar propuestas. Paloma Valencia aceptó el reto de debate lanzado por Cepeda. Fuente: EL PAÍS.\n\n\n19 de marzo de 2026. Senadora uribista y nieta del expresidente Guillermo León Valencia. RTVC resalta el peso político y familiar de Paloma Valencia. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/paloma-valencia.html#propuestas-y-posiciones-públicas",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nAmbiente y energía\n\n\nTransición energética, licencias, agua, clima y biodiversidad.\n\n\n\n18 de abril de 2026. En transición energética, Pide inversión pública, una solución estructural de largo plazo para la Costa y uso de todos los tipos de energía para evitar un apagón. En el foro de Cartagena, Paloma Valencia insistió en reactivar la oferta energética. Fuente: EL PAÍS.\n\n\n8 de marzo de 2026. En transición energética, Usar energía eólica, solar, hídrica, nuclear y geotérmica como motor de desarrollo y empleo. El Tiempo resume que Paloma Valencia impulsa una revolución energética multisource. Fuente: EL TIEMPO.\n\n\n\n\n\nEducación\n\n\nPrimera infancia, colegios, educación superior, calidad y financiación.\n\n\n\n8 de marzo de 2026. En educación básica, Permitir que familias de menores ingresos elijan entre colegios públicos o privados mediante bonos escolares. El Tiempo reporta que Valencia propone financiar elección de colegio con recursos públicos. Fuente: EL TIEMPO.\n\n\n\n\n\nEmpleo y empresa\n\n\nTrabajo, emprendimiento, formalización, salarios y regulación empresarial.\n\n\n\n8 de marzo de 2026. En emprendimiento y empresa, Modificar la Ley Escalera de la Formalidad y el régimen simple para converger hacia un solo impuesto para mipymes. La propuesta económica de Paloma Valencia pasa por simplificar carga regulatoria. Fuente: EL TIEMPO.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n14 de abril de 2026. En defensa y soberanía, Aumentar defensa en 20 billones para llegar al 4 % del PIB y sumar 30 mil militares y 30 mil policías. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Fuente: EL PAÍS.\n\n\n\n\n\nSalud\n\n\nSistema de salud, aseguramiento, hospitales, prevención y medicamentos.\n\n\n\n14 de abril de 2026. Resolver 10 millones de atenciones represadas y destinar 3 billones inmediatos a compra de medicamentos. El Plan 10 de Valencia plantea un choque inicial sobre la crisis del sistema de salud. Fuente: EL PAÍS.\n\n\n\n\n\nSeguridad y justicia\n\n\nSeguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.\n\n\n\n14 de abril de 2026. En justicia e instituciones penales, Crear cárceles agrícolas para que las personas privadas de la libertad trabajen durante su condena. La campaña de Valencia propone una expansión punitiva con componente productivo. Fuente: EL PAÍS.\n\n\n\n\n\nVivienda e infraestructura\n\n\nVivienda, transporte, conectividad y obras públicas.\n\n\n\n8 de marzo de 2026. En transporte e infraestructura, Ejecutar un Gran Plan Vial Campesino para mejorar 10 mil kilómetros de vías terciarias. La agenda de Paloma Valencia incluye infraestructura rural concreta. Fuente: EL TIEMPO.\n\n\n8 de marzo de 2026. En vivienda, Entregar viviendas iniciales ampliables con subsidios, créditos blandos y autoconstrucción segura. El programa de Valencia incluye vivienda progresiva. Fuente: EL TIEMPO."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#análisis-lógico-publicado",
+    "href": "candidatos/paloma-valencia.html#análisis-lógico-publicado",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL TIEMPO.\n\n\nVacío de implementación. La propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EL PAÍS."
+  },
+  {
+    "objectID": "candidatos/paloma-valencia.html#biblioteca-de-fuentes",
+    "href": "candidatos/paloma-valencia.html#biblioteca-de-fuentes",
+    "title": "Paloma Susana Valencia Laserna",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nEL PAÍS. El camino a las elecciones presidenciales de Colombia 2026, en vivo. 18 de abril de 2026. Tier: established-media.\n\n\nEL PAÍS. Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético. 18 de abril de 2026. Tier: established-media.\n\n\nPaloma Valencia. Programa de Gobierno. 14 de abril de 2026. Tier: official.\n\n\nEL PAÍS. Más fracking, más militares, menos impuestos. 14 de abril de 2026. Tier: established-media.\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nEL TIEMPO. Paloma Valencia gana la Gran Consulta: estas son sus propuestas. 8 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html",
+    "href": "candidatos/roy-barreras.html",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#ficha-base",
+    "href": "candidatos/roy-barreras.html#ficha-base",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 9\n\n\nVicepresidencia: Martha Lucía Zamora Ávila\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nCentroderecha\n\nHallazgos: 3\n\n\nFuentes: 2\n\n\nNotas IA: 2"
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#ubicación-ideológica",
+    "href": "candidatos/roy-barreras.html#ubicación-ideológica",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Centroderecha. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 2 señales programáticas y arrojó un puntaje agregado de 1.00.\n\n\nSe apoya en señales como reactivar-productividad (reactivacion productiva), paz-con-metodo (paz judicializada). Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#trayectoria-y-contexto-público",
+    "href": "candidatos/roy-barreras.html#trayectoria-y-contexto-público",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Exsenador con protagonismo en debates de paz, salud y reformas institucionales. RTVC resume la trayectoria institucional de Roy Barreras. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/roy-barreras.html#propuestas-y-posiciones-públicas",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\nEconomía\n\n\nMarco fiscal, inflación, crecimiento, impuestos y gasto público.\n\n\n\n18 de febrero de 2026. En productividad y crecimiento, Impulsar agroindustria, turismo, construcción e infraestructura para pagar la deuda social. EFE recoge que Roy Barreras quiere reactivar la producción para financiar la agenda social. Fuente: EFE.\n\n\n\n\n\nPolítica internacional y paz\n\n\nRelaciones exteriores, comercio, migración, defensa y paz total.\n\n\n\n18 de febrero de 2026. En paz y conflicto armado, Negociar con método y rigor para que los grupos ilegales solo tengan como salida someterse a la justicia. Roy Barreras ofrece una política de paz menos abierta y más judicializada. Fuente: EFE."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#análisis-lógico-publicado",
+    "href": "candidatos/roy-barreras.html#análisis-lógico-publicado",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\nVacío de implementación. La propuesta registrada para paz-con-metodo no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EFE.\n\n\nVacío de implementación. La propuesta registrada para reactivar-productividad no incluye suficiente detalle de implementación en la fuente analizada. Confianza media-alta. Sustento: EFE."
+  },
+  {
+    "objectID": "candidatos/roy-barreras.html#biblioteca-de-fuentes",
+    "href": "candidatos/roy-barreras.html#biblioteca-de-fuentes",
+    "title": "Roy Leonardo Barreras Montealegre",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media.\n\n\nEFE. Roy Barreras: La inmensa mayoría de los colombianos no quiere un país con extremistas. 18 de febrero de 2026. Tier: interview."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html",
+    "href": "candidatos/sondra-macollins.html",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#ficha-base",
+    "href": "candidatos/sondra-macollins.html#ficha-base",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Ficha base",
+    "text": "Ficha base\n\n\n\nTarjetón 8\n\n\nVicepresidencia: Leonardo Karam Helo\n\n\nWatchlist activa: No\n\n\nÚltimo evento público: 19 de marzo de 2026\n\n\n\nEvidencia insuficiente\n\nHallazgos: 1\n\n\nFuentes: 1\n\n\nNotas IA: 0"
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#ubicación-ideológica",
+    "href": "candidatos/sondra-macollins.html#ubicación-ideológica",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Ubicación ideológica",
+    "text": "Ubicación ideológica\n\n\nUbicación analítica provisional: Evidencia insuficiente. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. Se apoyó en 0 señales programáticas y arrojó un puntaje agregado de sin cálculo.\n\n\nTodavía no hay suficientes señales programáticas mapeadas para ubicarlo en el espectro. Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#trayectoria-y-contexto-público",
+    "href": "candidatos/sondra-macollins.html#trayectoria-y-contexto-público",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Trayectoria y contexto público",
+    "text": "Trayectoria y contexto público\n\n\n19 de marzo de 2026. Abogada conocida por defender a Carlos Lehder y a Martín Sombra. RTVC ubica a Sondra Macollins en el terreno de la abogacía penal de alto perfil. Fuente: RTVC Noticias."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#propuestas-y-posiciones-públicas",
+    "href": "candidatos/sondra-macollins.html#propuestas-y-posiciones-públicas",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Propuestas y posiciones públicas",
+    "text": "Propuestas y posiciones públicas\n\n\n\n\n\n\nNote\n\n\n\nTodavía no hay propuestas públicas trazables para este candidato."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#análisis-lógico-publicado",
+    "href": "candidatos/sondra-macollins.html#análisis-lógico-publicado",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Análisis lógico publicado",
+    "text": "Análisis lógico publicado\n\n\n\n\n\n\nNote\n\n\n\nAún no hay notas analíticas públicas para esta candidatura."
+  },
+  {
+    "objectID": "candidatos/sondra-macollins.html#biblioteca-de-fuentes",
+    "href": "candidatos/sondra-macollins.html#biblioteca-de-fuentes",
+    "title": "Sondra Macollins Garvin Pinto",
+    "section": "Biblioteca de fuentes",
+    "text": "Biblioteca de fuentes\n\n\nRTVC Noticias. Quiénes son los 14 candidatos a la presidencia de Colombia para el periodo 2026-2030. 19 de marzo de 2026. Tier: established-media."
+  },
+  {
+    "objectID": "cronologia.html",
+    "href": "cronologia.html",
+    "title": "Cronología",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones.\nLa cronología muestra cuándo apareció un claim público y qué tipo de nota analítica quedó publicada a partir de ese material."
+  },
+  {
+    "objectID": "cronologia.html#notas-analíticas-publicadas",
+    "href": "cronologia.html#notas-analíticas-publicadas",
+    "title": "Cronología",
+    "section": "Notas analíticas publicadas",
+    "text": "Notas analíticas publicadas\n\n\n\n\n\n\n\n\n\nCandidato\nTipo\nConfianza\nResumen\n\n\n\n\nClaudia Nayibe López Hernández\nvacio_de_implementacion\n0.95\nLa propuesta registrada para agua-potable no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nClaudia Nayibe López Hernández\nvacio_de_implementacion\n0.95\nLa propuesta registrada para justicia-restaurativa no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nClaudia Nayibe López Hernández\nvacio_de_implementacion\n0.95\nLa propuesta registrada para violencias-de-genero no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nIván Cepeda Castro\nvacio_de_implementacion\n0.95\nLa propuesta registrada para acceso-tierra no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nIván Cepeda Castro\nvacio_de_implementacion\n0.95\nLa propuesta registrada para paz-total no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nIván Cepeda Castro\nvacio_de_implementacion\n0.95\nLa propuesta registrada para transporte-ferreo no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.95\nLa propuesta registrada para cero-corrupcion no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.95\nLa propuesta registrada para dialogos-paz-condicionados no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.95\nLa propuesta registrada para ordenar-sistema-salud no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.95\nLa propuesta registrada para protagonismo-mujeres no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.95\nLa propuesta registrada para reconstruir-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nAbelardo Gabriel de la Espriella\nvacio_de_implementacion\n0.85\nLa propuesta registrada para activar-sectores-productivos no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nAbelardo Gabriel de la Espriella\nvacio_de_implementacion\n0.85\nLa propuesta registrada para alianza-seguridad-exterior no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nAbelardo Gabriel de la Espriella\nvacio_de_implementacion\n0.85\nLa propuesta registrada para baja-de-impuestos no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nClaudia Nayibe López Hernández\nvacio_de_implementacion\n0.85\nLa propuesta registrada para modelo-mixto-salud no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nIván Cepeda Castro\nvacio_de_implementacion\n0.85\nLa propuesta registrada para continuidad-macroeconomica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nIván Cepeda Castro\nvacio_de_implementacion\n0.85\nLa propuesta registrada para transicion-energetica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nLuis Gilberto Murillo Urrutia\nvacio_de_implementacion\n0.85\nLa propuesta registrada para alianza-empresa-estado-comunidades no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nLuis Gilberto Murillo Urrutia\nvacio_de_implementacion\n0.85\nLa propuesta registrada para desarrollo-talento no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nLuis Gilberto Murillo Urrutia\nvacio_de_implementacion\n0.85\nLa propuesta registrada para puertos-comercio-exterior no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nLuis Gilberto Murillo Urrutia\nvacio_de_implementacion\n0.85\nLa propuesta registrada para seguridad-focalizada no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nÓscar Mauricio Lizcano Arango\nvacio_de_implementacion\n0.85\nLa propuesta registrada para productividad-tecnologica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nRaúl Santiago Botero Jaramillo\nvacio_de_implementacion\n0.85\nLa propuesta registrada para fortalecer-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nRoy Leonardo Barreras Montealegre\nvacio_de_implementacion\n0.85\nLa propuesta registrada para paz-con-metodo no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nRoy Leonardo Barreras Montealegre\nvacio_de_implementacion\n0.85\nLa propuesta registrada para reactivar-productividad no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nClaudia Nayibe López Hernández\nvacio_de_implementacion\n0.75\nLa propuesta registrada para licenciamiento-social-minero no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nLuis Gilberto Murillo Urrutia\nvacio_de_implementacion\n0.75\nLa propuesta registrada para desarrollo-regiones-olvidadas no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nPaloma Susana Valencia Laserna\nvacio_de_implementacion\n0.75\nLa propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nPaloma Susana Valencia Laserna\nvacio_de_implementacion\n0.75\nLa propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada.\n\n\nSergio Fajardo Valderrama\nvacio_de_implementacion\n0.75\nLa propuesta registrada para desarrollo-energetico-sostenible no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Monitor público de candidatos presidenciales",
+    "section": "",
+    "text": "Aviso metodológico.\n    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.\n    Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones."
+  },
+  {
+    "objectID": "index.html#qué-encontrarás-aquí",
+    "href": "index.html#qué-encontrarás-aquí",
+    "title": "Monitor público de candidatos presidenciales",
+    "section": "Qué encontrarás aquí",
+    "text": "Qué encontrarás aquí\n\nFichas por candidato con trazabilidad a fuentes.\nComparación por categorías y subcategorías de política pública.\nCronología de cambios de postura y hallazgos recientes.\nBiblioteca de fuentes enlazadas para auditoría manual."
+  },
+  {
+    "objectID": "index.html#watchlist-activa",
+    "href": "index.html#watchlist-activa",
+    "title": "Monitor público de candidatos presidenciales",
+    "section": "Watchlist activa",
+    "text": "Watchlist activa\n\n\nWatchlist #1\n\nIván Cepeda Castro\n\n\nVice: Aída Marina Quilcué Vivas\n\n\nPosición en tarjetón: 1\n\n\nEspectro analítico: Izquierda\n\n\n\nWatchlist #2\n\nAbelardo Gabriel de la Espriella\n\n\nVice: José Manuel Restrepo Abondano\n\n\nPosición en tarjetón: 5\n\n\nEspectro analítico: Izquierda\n\n\n\nWatchlist #3\n\nPaloma Susana Valencia Laserna\n\n\nVice: Juan Daniel Oviedo Arango\n\n\nPosición en tarjetón: 12\n\n\nEspectro analítico: Izquierda\n\n\n\nWatchlist #4\n\nClaudia Nayibe López Hernández\n\n\nVice: Leonardo Humberto Huerta Gutiérrez\n\n\nPosición en tarjetón: 3\n\n\nEspectro analítico: Izquierda\n\n\n\nWatchlist #5\n\nSergio Fajardo Valderrama\n\n\nVice: Edna Cristina del Socorro Bonilla Seba\n\n\nPosición en tarjetón: 13\n\n\nEspectro analítico: Izquierda\n\n\n\nWatchlist #6\n\nLuis Gilberto Murillo Urrutia\n\n\nVice: Luz María Zapata Zapata\n\n\nPosición en tarjetón: 14\n\n\nEspectro analítico: Izquierda"
+  },
+  {
+    "objectID": "index.html#estado-del-pipeline",
+    "href": "index.html#estado-del-pipeline",
+    "title": "Monitor público de candidatos presidenciales",
+    "section": "Estado del pipeline",
+    "text": "Estado del pipeline\n\n\n\n\n\n\n\n\n\n\nCandidato\nClaims\nFuentes\nNotas IA\nTemas destacados\n\n\n\n\nIván Cepeda Castro\n8\n6\n5\nAnticorrupción y transparencia, Fiscal, Paz y conflicto armado\n\n\nClara Eugenia López Obregón\n2\n2\n0\nTrayectoria pública, Vida pública y trayectoria\n\n\nClaudia Nayibe López Hernández\n11\n4\n5\nAgua y ambiente, Aseguramiento y financiación, Educación superior\n\n\nRaúl Santiago Botero Jaramillo\n3\n2\n1\nDefensa y soberanía, Justicia e instituciones penales, Trayectoria pública\n\n\nAbelardo Gabriel de la Espriella\n9\n3\n3\nFiscal, Controversias públicas, Defensa y soberanía\n\n\nÓscar Mauricio Lizcano Arango\n3\n3\n1\nProductividad y crecimiento, Redes políticas y familiares, Seguridad ciudadana\n\n\nMiguel Uribe Londoño\n1\n1\n0\nTrayectoria pública\n\n\nSondra Macollins Garvin Pinto\n1\n1\n0\nControversias públicas\n\n\nRoy Leonardo Barreras Montealegre\n3\n2\n2\nPaz y conflicto armado, Productividad y crecimiento, Trayectoria pública\n\n\nCarlos Eduardo Caicedo Omar\n2\n2\n0\nEducación superior, Trayectoria pública\n\n\nGustavo Matamoros Camacho\n1\n1\n0\nTrayectoria pública\n\n\nPaloma Susana Valencia Laserna\n11\n6\n2\nTransición energética, Defensa y soberanía, Educación básica\n\n\nSergio Fajardo Valderrama\n8\n4\n6\nAnticorrupción y transparencia, Aseguramiento y financiación, Género y diversidad\n\n\nLuis Gilberto Murillo Urrutia\n6\n3\n5\nDesigualdad y movilidad, Educación superior, Productividad y crecimiento"
+  }
+]

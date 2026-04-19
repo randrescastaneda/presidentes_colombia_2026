@@ -1,0 +1,84 @@
+generate_candidate_page_template <- function(candidate_row) {
+  paste(
+    "---",
+    paste0('title: "', candidate_row$president_name, '"'),
+    "page-layout: article",
+    "---",
+    "",
+    "```{r}",
+    "project_dir <- normalizePath('..', winslash = '/', mustWork = TRUE)",
+    "source(file.path(project_dir, 'R', 'site_helpers.R'))",
+    paste0("candidate_key <- '", candidate_row$candidate_id, "'"),
+    paste0("candidate_slug <- '", candidate_row$slug, "'"),
+    paste0("candidate_name <- '", candidate_row$president_name, "'"),
+    "candidate_meta <- read_candidate_registry_public(project_dir) |> dplyr::filter(.data$candidate_id == candidate_key)",
+    "taxonomy <- read_taxonomy_public(project_dir)",
+    "dossiers <- read_processed_table('candidate_dossiers.csv', project_dir = project_dir)",
+    "claims <- read_processed_table('claim_records.csv', project_dir = project_dir)",
+    "analysis_notes <- read_processed_table('analysis_notes.csv', project_dir = project_dir)",
+    "sources <- read_processed_table('source_records.csv', project_dir = project_dir)",
+    "candidate_dossier <- dossiers |> dplyr::filter(.data$candidate_id == candidate_key)",
+    "candidate_claims <- claims |> dplyr::filter(.data$candidate_id == candidate_key) |> dplyr::arrange(dplyr::desc(.data$event_date))",
+    "candidate_analysis <- analysis_notes |> dplyr::filter(.data$candidate_id == candidate_key)",
+    "candidate_sources <- sources |> dplyr::filter(.data$candidate_id == candidate_key) |> dplyr::arrange(dplyr::desc(.data$published_at))",
+    "```",
+    "",
+    "## Ficha base",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_header(candidate_meta, candidate_dossier)",
+    "```",
+    "",
+    "## Ubicación ideológica",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_ideology(candidate_dossier)",
+    "```",
+    "",
+    "## Trayectoria y contexto público",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_background(candidate_claims, candidate_sources)",
+    "```",
+    "",
+    "## Propuestas y posiciones públicas",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_policy_sections(candidate_claims, candidate_sources, taxonomy)",
+    "```",
+    "",
+    "## Análisis lógico publicado",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_analysis(candidate_analysis, candidate_sources)",
+    "```",
+    "",
+    "## Biblioteca de fuentes",
+    "",
+    "```{r}",
+    "#| results: asis",
+    "emit_candidate_source_library(candidate_sources)",
+    "```",
+    sep = "\n"
+  )
+}
+
+generate_candidate_pages <- function(project_dir = ".") {
+  candidates <- load_candidate_registry(project_dir)
+  output_dir <- file.path(project_dir, "candidatos")
+  dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
+
+  output_paths <- purrr::map_chr(seq_len(nrow(candidates)), function(index) {
+    candidate_row <- candidates[index, ]
+    path <- file.path(output_dir, paste0(candidate_row$slug[[1]], ".qmd"))
+    writeLines(generate_candidate_page_template(candidate_row), path)
+    path
+  })
+
+  unname(output_paths)
+}
