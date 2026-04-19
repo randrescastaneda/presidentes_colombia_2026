@@ -1,6 +1,0 @@
-tier_id,label_public,default_confidence,publication_rule,description
-official,Oficial,0.95,Una sola fuente oficial puede bastar,"Programas de gobierno, documentos oficiales, cuentas oficiales, ruedas de prensa y discursos publicados por campaña o autoridad."
-interview,Entrevista directa,0.85,Una sola entrevista directa puede bastar si la cita es inequívoca,"Entrevistas donde el candidato habla en primera persona y hay enlace verificable."
-established-media,Prensa reconocida,0.75,Mejor con corroboración adicional si el hallazgo es sensible,"Cobertura de medios establecidos con estándares editoriales y fuente trazable."
-third-party,Fuente de terceros,0.55,No basta sola para análisis crítico sensible,"Resúmenes, comentarios, podcast, video de terceros o cobertura de menor control editorial."
-social,Red social,0.65,Útil como apoyo; si es sensible debe corroborarse,"Publicaciones en redes de la campaña o del candidato; se usa con cautela."
