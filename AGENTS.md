@@ -7,11 +7,12 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 
 ## Qué Leer Primero En Una Nueva Sesión
 
-1. `README.md`
-2. `PROJECT_CONTEXT.md`
-3. `config/taxonomy_v1.csv`
-4. `config/candidate_registry.csv`
-5. `scripts/run_daily_update.R`
+1. Consultar `Family Brain` con `project = presidentes_colombia_2026` para recuperar contexto técnico, editorial y operativo antes de trabajar.
+2. `README.md`
+3. `PROJECT_CONTEXT.md`
+4. `config/taxonomy_v1.csv`
+5. `config/candidate_registry.csv`
+6. `scripts/run_daily_update.R`
 
 ## Modelo Mental Del Repo
 
@@ -49,6 +50,8 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 - Automatización diaria: `colombia-2026-diario`
 
 ## Uso De Family Brain
+
+En una nueva sesión, `Family Brain` no es opcional: debe consultarse antes de asumir que el contexto del repo es suficiente. `AGENTS.md` y `PROJECT_CONTEXT.md` resumen el proyecto, pero no reemplazan la memoria acumulada en `Family Brain`.
 
 Guardar en `Family Brain` bajo `project = presidentes_colombia_2026`:
 

@@ -6,6 +6,10 @@
 
 Proyecto para monitorear candidaturas presidenciales de Colombia 2026 con `Quarto + R`, publicar un sitio estático y ejecutar una investigación diaria automatizada con trazabilidad de fuentes.
 
+## Instrucción Para Nuevas Sesiones
+
+Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project = presidentes_colombia_2026`. Allí están fuentes, análisis, decisiones técnicas, pendientes editoriales y cambios operativos recientes. Este documento resume el estado del proyecto, pero no reemplaza esa memoria acumulada.
+
 ## Snapshot Operativo
 
 - Repo GitHub: `randrescastaneda/presidentes_colombia_2026`
@@ -28,6 +32,7 @@ Commits importantes:
 
 - `06ebc7f` `Inicializa monitor presidencial Colombia 2026`
 - `5da7308` `Corrige workflow de GitHub Pages`
+- `586d03a` `Documenta operación y contexto del repo`
 
 ## Deployment
 
@@ -69,6 +74,11 @@ La automatización diaria fue actualizada para que también guarde en Family Bra
 - cada fuente nueva
 - cada análisis nuevo
 - junto con candidato, fecha, URL o relación con claim
+
+Instrucción operativa persistente:
+
+- en toda nueva sesión, Codex debe empezar consultando `Family Brain`
+- usar estos markdowns como mapa rápido, no como reemplazo del contexto acumulado
 
 ## Pendientes Editoriales
 
