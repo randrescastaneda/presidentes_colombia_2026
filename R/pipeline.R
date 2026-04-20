@@ -97,6 +97,8 @@ run_pipeline <- function(project_dir = ".") {
 
   taxonomy <- load_taxonomy(file.path(project_dir, "config", "taxonomy_v1.csv"))
   ideology_rules <- load_ideology_rules(file.path(project_dir, "config", "ideology_rules.csv"))
+  analysis_axes <- load_analysis_axes(project_dir)
+  analysis_axis_rules <- load_analysis_axis_rules(project_dir)
   candidates <- load_candidate_registry(project_dir)
   sources <- load_inbox_sources(project_dir)
   legacy_claims <- load_inbox_claims(project_dir)
@@ -112,6 +114,24 @@ run_pipeline <- function(project_dir = ".") {
 
   screened <- screen_public_records(claims, sources)
   analysis_notes <- detect_analysis_notes(screened$public_claims, screened$public_sources)
+  latest_event_date <- if (nrow(screened$public_claims) == 0) {
+    as.Date(NA)
+  } else {
+    max(screened$public_claims$event_date, na.rm = TRUE)
+  }
+  report_date <- if (is.na(latest_event_date)) Sys.Date() else latest_event_date
+  candidate_analysis <- build_candidate_analysis_artifacts(
+    candidates = candidates,
+    claims = screened$public_claims,
+    sources = screened$public_sources,
+    analysis_notes = analysis_notes,
+    taxonomy = taxonomy,
+    analysis_axes = analysis_axes,
+    axis_rules = analysis_axis_rules,
+    report_date = report_date
+  )
+  write_candidate_analysis_artifacts(candidate_analysis, project_dir = project_dir, report_date = report_date)
+  candidate_analysis_summary <- candidate_analysis_summary_tibble(candidate_analysis)
   dossiers <- build_candidate_dossiers(
     candidates = candidates,
     claims = screened$public_claims,
@@ -140,17 +160,11 @@ run_pipeline <- function(project_dir = ".") {
     })
   }
 
-  latest_event_date <- if (nrow(screened$public_claims) == 0) {
-    as.Date(NA)
-  } else {
-    max(screened$public_claims$event_date, na.rm = TRUE)
-  }
-
   validation_report <- build_legacy_validation_report(
     claims = screened$public_claims,
     analysis_notes = analysis_notes,
     source_text_files = source_text_files,
-    report_date = if (is.na(latest_event_date)) Sys.Date() else latest_event_date
+    report_date = report_date
   )
 
   validation_status <- tibble::tibble(
@@ -165,6 +179,7 @@ run_pipeline <- function(project_dir = ".") {
     public_claim_count = nrow(screened$public_claims),
     public_source_count = nrow(screened$public_sources),
     public_analysis_note_count = nrow(analysis_notes),
+    candidate_analysis_count = length(candidate_analysis),
     source_text_file_count = nrow(source_text_files),
     source_packet_count = length(source_packets),
     extraction_result_count = length(extraction_results),
@@ -180,6 +195,7 @@ run_pipeline <- function(project_dir = ".") {
   write_output_csv(screened$public_claims, file.path(processed_dir, "claim_records.csv"))
   write_output_csv(screened$rejected_claims, file.path(processed_dir, "rejected_claims.csv"))
   write_output_csv(analysis_notes, file.path(processed_dir, "analysis_notes.csv"))
+  write_output_csv(candidate_analysis_summary, file.path(processed_dir, "candidate_analysis_summary.csv"))
   write_output_csv(dossiers, file.path(processed_dir, "candidate_dossiers.csv"))
   write_output_csv(daily_digest, file.path(processed_dir, "daily_digest.csv"))
   write_output_csv(site_metadata, file.path(processed_dir, "site_metadata.csv"))
@@ -191,6 +207,8 @@ run_pipeline <- function(project_dir = ".") {
   write_output_json(screened$public_sources, file.path(public_dir, "source_records.json"))
   write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
   write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
+  write_output_json(unname(candidate_analysis), file.path(public_dir, "candidate_analysis.json"))
+  write_output_json(candidate_analysis_summary, file.path(public_dir, "candidate_analysis_summary.json"))
   write_output_json(dossiers, file.path(public_dir, "candidate_dossiers.json"))
   write_output_json(daily_digest, file.path(public_dir, "daily_digest.json"))
   write_output_json(site_metadata, file.path(public_dir, "site_metadata.json"))
@@ -207,6 +225,8 @@ run_pipeline <- function(project_dir = ".") {
     claims = screened$public_claims,
     rejected_claims = screened$rejected_claims,
     analysis_notes = analysis_notes,
+    candidate_analysis = candidate_analysis,
+    candidate_analysis_summary = candidate_analysis_summary,
     dossiers = dossiers,
     daily_digest = daily_digest,
     site_metadata = site_metadata,
