@@ -4,7 +4,7 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 
 ## Qué incluye
 
-- `pipeline` en `R` para validar taxonomía, filtrar registros públicos trazables, detectar análisis conservadores y materializar artefactos.
+- `pipeline` en `R` por etapas para ingestión, extracción estructurada, análisis por candidato, comparación transversal, redacción editorial y validación bloqueante.
 - `sitio estático` en `Quarto` para publicar fichas por candidato, comparaciones temáticas, cronología, fuentes y metodología.
 - `plantillas de inbox` para que una automatización diaria o un editor carguen nuevos hallazgos.
 - `capa contractual` en `config/`, `schemas/`, `prompts/`, `examples/` y `data/state/` para evolucionar hacia un sistema agentic y analítico por etapas.
@@ -14,14 +14,15 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
 2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
-3. Mantener `claims.csv` mientras termina la transición al extractor estructurado.
+3. Mantener `claims.csv` solo como fallback mientras la automatización o el extractor estructurado materializan `extraction_result`.
 4. Ejecutar:
 
 ```bash
 Rscript scripts/run_daily_update.R
 ```
 
-5. Revisar `data/processed/`, `data/public/`, `data/staging/`, `data/state/` y `docs/`.
+5. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
+6. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
 
 ## Estructura principal
 
@@ -63,15 +64,15 @@ En resumen:
 
 El repo ya publica un monitor trazable y funcional, pero la dirección vigente es convertirlo en un sistema por etapas:
 
-1. `ingestión`
-2. `extracción estructurada`
-3. `análisis por candidato`
-4. `comparación transversal`
-5. `redacción editorial`
-6. `validación metodológica`
+1. `source_packet`
+2. `extraction_result`
+3. `candidate_analysis`
+4. `comparison_report`
+5. `editorial_package`
+6. `validation_report`
 7. `render y publicación`
 
-La capa nueva de contratos ya está sembrada para hacer esa transición sin reescribir la web actual de `R + Quarto`.
+La transición ya está cableada en el pipeline: `claims.csv` sigue existiendo como compatibilidad, pero la interfaz interna ahora pasa por `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report` y `editorial_package`. La publicación pública queda bloqueada si falla `validation_report`.
 
 ## Contexto Persistente
 

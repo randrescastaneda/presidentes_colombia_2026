@@ -3,8 +3,8 @@
 ## Base actual
 
 - `scripts/run_daily_update.R`: entrypoint diario actual
-- `R/pipeline.R`: batch principal actual
-- `R/core.R`: taxonomía, screening y análisis simple actual
+- `R/pipeline.R`: orquestación de etapas y gate de publicación
+- `R/core.R`: taxonomía, screening y componentes legacy todavía usados por compatibilidad
 - `R/site_helpers.R`: render narrativo actual
 
 ## Capa contractual nueva
@@ -37,8 +37,18 @@
 
 - `data/state/source_registry.csv`
 - `data/state/candidate_state.csv`
+- `data/staging/source_packets/`
 - `data/staging/extraction/`
 - `data/staging/analysis/`
 - `data/staging/comparison/`
 - `data/staging/editorial/`
 - `data/staging/validation/`
+
+## Etapas activas del pipeline
+
+- `R/stage_ingestion.R`: arma `source_packet` desde `sources.csv` y `source_texts/`
+- `R/stage_extraction.R`: materializa `extraction_result` y normaliza claims comparables
+- `R/stage_analysis.R`: construye `candidate_analysis` multidimensional
+- `R/stage_comparison.R`: construye `comparison_report` simétrico
+- `R/stage_editorial.R`: construye `editorial_package`
+- `R/stage_validation.R`: valida y decide si se permite publicación pública

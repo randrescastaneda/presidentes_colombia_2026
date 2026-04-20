@@ -21,8 +21,10 @@ Los componentes no comparten criterio implícito; comparten contratos versionado
 ## Estado actual
 
 - Los contratos y prompts ya existen en el repo.
-- El pipeline público todavía usa `claims.csv` manual.
-- `data/staging/` y `data/state/` ya están preparados para la siguiente iteración.
+- `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report`, `editorial_package` y `validation_report` ya se materializan en `data/staging/`.
+- `data/public/` ya recibe `candidate_analysis.json`, `comparison_report.json` y `editorial_packages.json` cuando la validación no bloquea.
+- `claims.csv` sigue existiendo solo como fallback de transición.
+- `scripts/run_daily_update.R` ya detiene el render si `validation_report.status == "block"`.
 
 ## Restricciones
 
@@ -30,3 +32,4 @@ Los componentes no comparten criterio implícito; comparten contratos versionado
 - No perder trazabilidad.
 - No colapsar todo a izquierda-derecha.
 - No publicar análisis fuertes sin validación final.
+- No publicar artefactos analíticos nuevos a `data/public/` si falla la validación.

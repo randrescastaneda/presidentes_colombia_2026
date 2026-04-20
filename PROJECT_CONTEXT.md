@@ -23,25 +23,24 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 
 El repo ya no debe pensarse solo como `inbox -> claims -> render`.
 
-Desde esta sesión quedó sembrada la base contractual para migrar a una arquitectura por etapas:
+La arquitectura vigente del pipeline ya es:
 
-- `config/claim_type_taxonomy.csv`
-- `config/analysis_axes.csv`
-- `config/validation_rules.yml`
-- `config/editorial_style.md`
-- `config/output_templates.yml`
-- `prompts/`
-- `schemas/`
-- `examples/`
-- `data/staging/`
-- `data/state/`
+1. `source_packet`
+2. `extraction_result`
+3. `candidate_analysis`
+4. `comparison_report`
+5. `editorial_package`
+6. `validation_report`
+7. `data/public` + render web
 
-Estado actual de esa migración:
+Estado actual:
 
-- la capa contractual existe
-- el pipeline público todavía sigue leyendo `claims.csv` manual
+- la capa contractual existe y ya está conectada al pipeline
 - `source_texts/` ya forma parte del scaffold diario
-- la lógica agentic completa todavía no está cableada al pipeline
+- `source_packet` y `extraction_result` ya son la interfaz interna del pipeline
+- `claims.csv` se mantiene solo como fallback de transición
+- `candidate_analysis`, `comparison_report` y `editorial_package` ya se escriben en `data/staging/` y `data/public`
+- `validation_report` ya es un gate real: si da `block`, `scripts/run_daily_update.R` aborta antes del render público
 
 ## Estado Git Consolidado
 
@@ -113,7 +112,7 @@ Instrucción operativa persistente:
 
 ## Pendientes Técnicos Inmediatos
 
-- convertir la extracción estructurada en insumo real del pipeline
-- reemplazar el índice ideológico unidimensional por análisis multidimensional reusable
-- introducir validación metodológica bloqueante antes de `data/public`
-- mover el pipeline desde un batch monolítico hacia etapas explícitas con estado incremental
+- sustituir por completo el fallback manual de `claims.csv` por extracción estructurada automática
+- hacer que la web consuma más directamente `candidate_analysis`, `comparison_report` y `editorial_package`
+- reforzar el estado incremental para reruns parciales por candidato y por fuente
+- seguir ampliando reglas y cobertura del validador metodológico
