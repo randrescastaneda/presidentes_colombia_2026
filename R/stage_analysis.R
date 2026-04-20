@@ -256,8 +256,11 @@ topic_specificity_label <- function(topic_claims) {
 }
 
 topic_instrument_label <- function(topic_claims) {
-  mechanism_count <- sum(!is.na(topic_claims$mechanism_text) & topic_claims$mechanism_text != "")
-  vague_count <- sum(topic_claims$claim_type_id %in% c("promesa_vaga", "slogan"), na.rm = TRUE)
+  mechanism_text <- if ("mechanism_text" %in% names(topic_claims)) topic_claims$mechanism_text else rep(NA_character_, nrow(topic_claims))
+  claim_type_id <- if ("claim_type_id" %in% names(topic_claims)) topic_claims$claim_type_id else rep(NA_character_, nrow(topic_claims))
+
+  mechanism_count <- sum(!is.na(mechanism_text) & mechanism_text != "")
+  vague_count <- sum(claim_type_id %in% c("promesa_vaga", "slogan"), na.rm = TRUE)
 
   if (mechanism_count >= 1) {
     return("instrumentos o mecanismos parcialmente explicitados")
