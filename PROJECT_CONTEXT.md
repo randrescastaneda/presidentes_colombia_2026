@@ -19,6 +19,28 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 - Workflow de publicación: `.github/workflows/publish.yml`
 - Automatización diaria activa: `colombia-2026-diario`
 
+## Estado Arquitectónico
+
+El repo ya no debe pensarse solo como `inbox -> claims -> render`.
+
+La arquitectura vigente del pipeline ya es:
+
+1. `source_packet`
+2. `extraction_result`
+3. `candidate_analysis`
+4. `comparison_report`
+5. `editorial_package`
+6. `validation_report`
+7. `data/public` + render web
+
+Estado actual:
+
+- la capa contractual existe y ya está conectada al pipeline
+- `source_texts/` ya forma parte del scaffold diario
+- `source_packet` y `extraction_result` ya son la interfaz interna del pipeline
+- `candidate_analysis`, `comparison_report` y `editorial_package` ya se escriben en `data/staging/` y `data/public`
+- `validation_report` ya es un gate real: si da `block`, `scripts/run_daily_update.R` aborta antes del render público
+
 ## Estado Git Consolidado
 
 Al cierre de esta sesión:
@@ -86,3 +108,9 @@ Instrucción operativa persistente:
 - mantener especial densidad analítica en la watchlist de 6
 - seguir ampliando temas como política internacional, salud, empleo y derechos
 - registrar también en Family Brain vacíos de investigación y contradicciones potenciales descartadas por evidencia insuficiente
+
+## Pendientes Técnicos Inmediatos
+
+- hacer que la web consuma más directamente `candidate_analysis`, `comparison_report` y `editorial_package`
+- reforzar el estado incremental para reruns parciales por candidato y por fuente
+- seguir ampliando reglas y cobertura del validador metodológico

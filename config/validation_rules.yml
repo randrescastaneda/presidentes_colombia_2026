@@ -1,0 +1,60 @@
+version: 1
+default_behavior:
+  block_on_missing_evidence: true
+  block_on_unlabeled_inference: true
+  warn_on_insufficient_coverage: true
+rules:
+  - id: traceability_required
+    level: block
+    applies_to:
+      - extraction_result
+      - candidate_analysis
+      - comparison_report
+      - editorial_package
+    check: "Every substantive claim, inference, or evaluation must point to one or more source_ids and claim_ids."
+    rationale: "No public analytical output should exist without auditable evidence."
+  - id: description_inference_evaluation_split
+    level: block
+    applies_to:
+      - candidate_analysis
+      - editorial_package
+    check: "Narrative blocks must distinguish descriptive content from inferential and evaluative content."
+    rationale: "Readers must be able to see what is observed versus what is inferred."
+  - id: symmetric_comparison
+    level: block
+    applies_to:
+      - comparison_report
+    check: "All compared candidates must be evaluated against the same axes and headings."
+    rationale: "The system should not privilege one candidate with richer or different criteria."
+  - id: explicit_uncertainty
+    level: warn
+    applies_to:
+      - extraction_result
+      - candidate_analysis
+      - comparison_report
+      - editorial_package
+    check: "Ambiguity, uncertainty, or insufficient evidence must be stated explicitly when present."
+    rationale: "Political analysis should surface uncertainty rather than mask it."
+  - id: no_partisan_language
+    level: block
+    applies_to:
+      - editorial_package
+      - candidate_analysis
+      - comparison_report
+    check: "Loaded, propagandistic, or triumphalist language is disallowed."
+    rationale: "The publication tone must remain analytical and non-partisan."
+  - id: feasibility_required_for_programmatic_analysis
+    level: warn
+    applies_to:
+      - candidate_analysis
+      - comparison_report
+    check: "Programmatic analysis should cover political, fiscal, institutional, and administrative feasibility when evidence allows it."
+    rationale: "Programmatic rigor requires testing proposals against implementation constraints."
+  - id: vague_promises_not_overstated
+    level: warn
+    applies_to:
+      - extraction_result
+      - candidate_analysis
+      - editorial_package
+    check: "Low-specificity promises must not be written as if they were fully designed policy instruments."
+    rationale: "Campaign rhetoric should not be upgraded into false precision."

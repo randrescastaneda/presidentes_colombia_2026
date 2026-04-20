@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/candidate_analysis.schema.json",
+  "title": "Candidate Analysis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "analysis_id",
+    "candidate_id",
+    "source_ids",
+    "claim_ids",
+    "profile_overview",
+    "political_philosophy",
+    "ideology_axes",
+    "thematic_analysis",
+    "internal_coherence",
+    "mainstream_distance",
+    "strengths",
+    "weaknesses",
+    "uncertainties"
+  ],
+  "properties": {
+    "analysis_id": { "type": "string" },
+    "candidate_id": { "type": "string" },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "profile_overview": { "type": "string" },
+    "political_philosophy": { "type": "string" },
+    "ideology_axes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["axis_id", "placement", "confidence", "rationale"],
+        "properties": {
+          "axis_id": { "type": "string" },
+          "placement": { "type": "string" },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "thematic_analysis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "topic_id",
+          "description",
+          "inference",
+          "evaluation",
+          "feasibility",
+          "tradeoffs",
+          "uncertainties"
+        ],
+        "properties": {
+          "topic_id": { "type": "string" },
+          "description": { "type": "string" },
+          "inference": { "type": "string" },
+          "evaluation": { "type": "string" },
+          "feasibility": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "political",
+              "fiscal",
+              "institutional",
+              "administrative"
+            ],
+            "properties": {
+              "political": { "type": "string" },
+              "fiscal": { "type": "string" },
+              "institutional": { "type": "string" },
+              "administrative": { "type": "string" }
+            }
+          },
+          "tradeoffs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "internal_coherence": { "type": "string" },
+    "mainstream_distance": { "type": "string" },
+    "strengths": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "weaknesses": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

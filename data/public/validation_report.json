@@ -1,0 +1,57 @@
+{
+  "report_id": "validation-2026-04-19",
+  "artifact_ids": ["claim_records", "candidate_analysis", "comparison_report", "editorial_packages", "site_metadata"],
+  "status": "pass",
+  "checks": [
+    {
+      "rule_id": "traceability_required",
+      "level": "block",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis|comparison_report|editorial_packages",
+      "message": "Todos los artefactos analíticos conservan source_ids y claim_ids trazables."
+    },
+    {
+      "rule_id": "description_inference_evaluation_split",
+      "level": "block",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis|editorial_packages",
+      "message": "Los artefactos distinguen descripción, inferencia y evaluación."
+    },
+    {
+      "rule_id": "symmetric_comparison",
+      "level": "block",
+      "status": "pass",
+      "artifact_ref": "comparison_report",
+      "message": "La comparación usa la misma estructura para todos los candidatos incluidos."
+    },
+    {
+      "rule_id": "explicit_uncertainty",
+      "level": "warn",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis|comparison_report",
+      "message": "Las incertidumbres relevantes están explicitadas."
+    },
+    {
+      "rule_id": "no_partisan_language",
+      "level": "block",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis|comparison_report|editorial_packages",
+      "message": "No se detectó lenguaje partidista evidente en los artefactos publicables."
+    },
+    {
+      "rule_id": "feasibility_required_for_programmatic_analysis",
+      "level": "warn",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis|comparison_report",
+      "message": "La factibilidad está cubierta en las salidas programáticas."
+    },
+    {
+      "rule_id": "vague_promises_not_overstated",
+      "level": "warn",
+      "status": "pass",
+      "artifact_ref": "candidate_analysis",
+      "message": "Las promesas vagas quedaron marcadas como limitación analítica."
+    }
+  ],
+  "summary": "Validation passed with no blocking issues."
+}

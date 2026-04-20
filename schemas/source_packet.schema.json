@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/source_packet.schema.json",
+  "title": "Source Packet",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "batch_date",
+    "source_name",
+    "source_type",
+    "source_tier",
+    "source_url",
+    "published_at",
+    "title",
+    "text_content"
+  ],
+  "properties": {
+    "source_id": { "type": "string" },
+    "batch_date": { "type": "string", "format": "date" },
+    "source_name": { "type": "string" },
+    "source_type": { "type": "string" },
+    "source_tier": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" },
+    "published_at": { "type": "string", "format": "date-time" },
+    "title": { "type": "string" },
+    "candidate_hints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "capture_method": { "type": "string" },
+    "text_content": { "type": "string" },
+    "captured_excerpt": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "report_id": "validation-2026-04-20-watchlist",
+  "artifact_ids": ["editorial-candidate-sergio-2026-04-20"],
+  "status": "pass_with_warnings",
+  "checks": [
+    {
+      "rule_id": "traceability_required",
+      "level": "block",
+      "status": "pass",
+      "artifact_ref": "editorial-candidate-sergio-2026-04-20",
+      "message": "Every evaluative sentence is linked back to claims and sources."
+    },
+    {
+      "rule_id": "feasibility_required_for_programmatic_analysis",
+      "level": "warn",
+      "status": "warn",
+      "artifact_ref": "editorial-candidate-sergio-2026-04-20",
+      "message": "Fiscal feasibility remains tentative because the source does not provide cost detail."
+    }
+  ],
+  "summary": "Publishable with explicit caveats."
+}

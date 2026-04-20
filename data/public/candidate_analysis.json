@@ -1,0 +1,1269 @@
+[
+  {
+    "analysis_id": "candidate-analysis-ivan-cepeda-2026-04-19",
+    "candidate_id": "ivan-cepeda",
+    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais"],
+    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2"],
+    "profile_overview": "Iván Cepeda Castro cuenta con 8 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Defensa y soberanía, Fiscal. La mezcla observada de afirmaciones es dato_contextual=6, propuesta_concreta=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo; apertura_vs_soberanismo: Soberanismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Institucionalismo",
+        "confidence": 0.81,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Gradualismo",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Soberanismo",
+        "confidence": 0.79,
+        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Seguridad negociada",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "defensa",
+        "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. Senador y filósofo; la defensa de derechos humanos marcó su trayectoria.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      },
+      {
+        "topic_id": "fiscal",
+        "description": "En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Continuidad macroeconómica con responsabilidad fiscal y transición energética.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "justicia",
+        "description": "En Justicia e instituciones penales, la evidencia pública observada se concentra en posturas o prioridades generales. Programa para profundizar justicia social y paz total.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "El análisis requiere cautela: hay alertas registradas sobre vacio_de_implementacion.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El sistema detectó alertas analíticas en este tema: vacio_de_implementacion."]
+      },
+      {
+        "topic_id": "transicion-energetica",
+        "description": "En Transición energética, la evidencia pública observada se concentra en posturas o prioridades generales. Transición energética, tierra para campesinos y tren para Boyacá.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      }
+    ],
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
+    "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, justicia.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-clara-lopez-2026-04-19",
+    "candidate_id": "clara-lopez",
+    "source_ids": ["src-20260418-clara-profile", "src-20260418-clara-renuncia"],
+    "claim_ids": ["src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2"],
+    "profile_overview": "Clara Eugenia López Obregón cuenta con 4 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=3, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: apertura_vs_soberanismo: Apertura. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Apertura",
+        "confidence": 0.9,
+        "rationale": "Predominan señales compatibles con Apertura: privilegia integracion, alianzas o apertura externa"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": [],
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-claudia-lopez-2026-04-19",
+    "candidate_id": "claudia-lopez",
+    "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais"],
+    "claim_ids": ["src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2"],
+    "profile_overview": "Claudia Nayibe López Hernández cuenta con 8 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Salud. La mezcla observada de afirmaciones es dato_contextual=5, propuesta_concreta=3, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Redistribucion",
+        "confidence": 0.84,
+        "rationale": "Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Focalizacion",
+        "confidence": 0.92,
+        "rationale": "Predominan señales compatibles con Focalizacion: formula la politica como respuesta focalizada o selectiva"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Institucionalismo",
+        "confidence": 0.92,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Gradualismo",
+        "confidence": 0.92,
+        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Territorializacion",
+        "confidence": 0.79,
+        "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "fiscal",
+        "description": "En Fiscal, la evidencia pública observada se concentra en posturas o prioridades generales. Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "El análisis requiere cautela: hay alertas registradas sobre vacio_de_implementacion.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El sistema detectó alertas analíticas en este tema: vacio_de_implementacion."]
+      },
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Continuar lo que funciona y trabajar en seguridad, salud y productividad",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      }
+    ],
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
+    "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA, fiscal.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "weaknesses": [],
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-raul-botero-2026-04-19",
+    "candidate_id": "raul-botero",
+    "source_ids": ["src-20260418-raul-profile", "src-20260418-santiago-caracol"],
+    "claim_ids": ["src-20260418-raul-profile-claim-1", "src-20260418-raul-profile-claim-2", "src-20260418-santiago-caracol-claim-1", "src-20260418-santiago-caracol-claim-2"],
+    "profile_overview": "Raúl Santiago Botero Jaramillo cuenta con 4 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=4, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La filosofía política subyacente no puede inferirse con suficiente sustento a partir de la evidencia disponible.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-04-19",
+    "candidate_id": "abelardo-de-la-espriella",
+    "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais"],
+    "claim_ids": ["src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2"],
+    "profile_overview": "Abelardo Gabriel de la Espriella cuenta con 5 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud. La mezcla observada de afirmaciones es dato_contextual=5, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Estado coordinador",
+        "confidence": 0.81,
+        "rationale": "Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Recorte del Estado, megacárceles, choque de seguridad y emergencia en salud.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      }
+    ],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-04-19",
+    "candidate_id": "mauricio-lizcano",
+    "source_ids": ["src-20260418-mauricio-profile", "src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador"],
+    "claim_ids": ["src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2"],
+    "profile_overview": "Óscar Mauricio Lizcano Arango cuenta con 6 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=5, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: tecnocracia_vs_populismo: Populismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Populismo",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Populismo: usa lenguaje antagonico o antiestablishment"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La evidencia sugiere una distancia relativamente alta frente al mainstream, sobre todo por el tono de ruptura o por apelaciones menos institucionales.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-miguel-uribe-2026-04-19",
+    "candidate_id": "miguel-uribe",
+    "source_ids": "src-20260418-miguel-profile",
+    "claim_ids": ["src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2"],
+    "profile_overview": "Miguel Uribe Londoño cuenta con 2 afirmaciones trazables en 1 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La filosofía política subyacente no puede inferirse con suficiente sustento a partir de la evidencia disponible.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": ["El nivel general de especificidad todavía es bajo para una evaluación programática robusta.", "La base de evidencia pública sigue siendo estrecha y eso limita la comparación."],
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-sondra-macollins-2026-04-19",
+    "candidate_id": "sondra-macollins",
+    "source_ids": "src-20260418-sondra-profile",
+    "claim_ids": ["src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2"],
+    "profile_overview": "Sondra Macollins Garvin Pinto cuenta con 2 afirmaciones trazables en 1 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La filosofía política subyacente no puede inferirse con suficiente sustento a partir de la evidencia disponible.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "La base de evidencia pública sigue siendo estrecha y eso limita la comparación.",
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-roy-barreras-2026-04-19",
+    "candidate_id": "roy-barreras",
+    "source_ids": ["src-20260418-roy-profile", "src-20260418-roy-efe"],
+    "claim_ids": ["src-20260418-roy-profile-claim-1", "src-20260418-roy-efe-claim-1"],
+    "profile_overview": "Roy Leonardo Barreras Montealegre cuenta con 2 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en Justicia e instituciones penales, Salud. La mezcla observada de afirmaciones es diagnostico_problema=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: institucionalismo_vs_personalismo: Institucionalismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Institucionalismo",
+        "confidence": 0.94,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Seguridad negociada",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "justicia",
+        "description": "En Justicia e instituciones penales, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Productividad para pagar deuda social y paz con sometimiento a la justicia.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Exsenador con roles clave en paz, salud y reformas institucionales.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      }
+    ],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como justicia, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": [],
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-carlos-caicedo-2026-04-19",
+    "candidate_id": "carlos-caicedo",
+    "source_ids": ["src-20260418-carlos-profile", "src-20260418-caicedo-caracol"],
+    "claim_ids": ["src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2"],
+    "profile_overview": "Carlos Eduardo Caicedo Omar cuenta con 4 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=3, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: centralizacion_vs_territorializacion: Territorializacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Territorializacion",
+        "confidence": 0.75,
+        "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": [],
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo."
+  },
+  {
+    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-04-19",
+    "candidate_id": "gustavo-matamoros",
+    "source_ids": "src-20260418-gustavo-profile",
+    "claim_ids": ["src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2"],
+    "profile_overview": "Gustavo Matamoros Camacho cuenta con 2 afirmaciones trazables en 1 fuentes públicas. La evidencia disponible se concentra sobre todo en NA. La mezcla observada de afirmaciones es dato_contextual=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Institucionalismo",
+        "confidence": 0.77,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": ["El nivel general de especificidad todavía es bajo para una evaluación programática robusta.", "La base de evidencia pública sigue siendo estrecha y eso limita la comparación."],
+    "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
+  },
+  {
+    "analysis_id": "candidate-analysis-paloma-valencia-2026-04-19",
+    "candidate_id": "paloma-valencia",
+    "source_ids": ["src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais"],
+    "claim_ids": ["src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2"],
+    "profile_overview": "Paloma Susana Valencia Laserna cuenta con 10 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud, Vivienda. La mezcla observada de afirmaciones es dato_contextual=7, propuesta_concreta=3, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; apertura_vs_soberanismo: Soberanismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Estado coordinador",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Soberanismo",
+        "confidence": 0.75,
+        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plan 10 con seguridad, salud, energía y justicia rápida.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "vivienda",
+        "description": "En Vivienda, la evidencia pública observada se concentra en posturas o prioridades generales. Energía, vías terciarias, educación, vivienda progresiva y formalización.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      }
+    ],
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": [],
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-sergio-fajardo-2026-04-19",
+    "candidate_id": "sergio-fajardo",
+    "source_ids": ["src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais"],
+    "claim_ids": ["src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2"],
+    "profile_overview": "Sergio Fajardo Valderrama cuenta con 6 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Salud. La mezcla observada de afirmaciones es dato_contextual=5, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La filosofía política subyacente no puede inferirse con suficiente sustento a partir de la evidencia disponible.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta concentra la respuesta en el nivel nacional o en escalas territoriales?"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "educacion",
+        "description": "En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
+        "evaluation": "El análisis requiere cautela: hay alertas registradas sobre vacio_de_implementacion.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El sistema detectó alertas analíticas en este tema: vacio_de_implementacion."]
+      },
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Seguridad, cero corrupción, salud, mujeres y cultura en la página oficial.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      }
+    ],
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como educacion, NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  },
+  {
+    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-04-19",
+    "candidate_id": "luis-gilberto-murillo",
+    "source_ids": ["src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais"],
+    "claim_ids": ["src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1"],
+    "profile_overview": "Luis Gilberto Murillo Urrutia cuenta con 4 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en Educación, NA. La mezcla observada de afirmaciones es dato_contextual=4, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: universalismo_vs_focalizacion: Focalizacion; centralizacion_vs_territorializacion: Territorializacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "ideology_axes": [
+      {
+        "axis_id": "estado_vs_mercado",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado?"
+      },
+      {
+        "axis_id": "redistribucion_vs_libertad_economica",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+      },
+      {
+        "axis_id": "universalismo_vs_focalizacion",
+        "placement": "Focalizacion",
+        "confidence": 0.79,
+        "rationale": "Predominan señales compatibles con Focalizacion: formula la politica como respuesta focalizada o selectiva"
+      },
+      {
+        "axis_id": "institucionalismo_vs_personalismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+      },
+      {
+        "axis_id": "gradualismo_vs_disrupcion",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta promete continuidad ajustada o ruptura acelerada?"
+      },
+      {
+        "axis_id": "tecnocracia_vs_populismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+      },
+      {
+        "axis_id": "apertura_vs_soberanismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+      },
+      {
+        "axis_id": "conservadurismo_vs_progresismo_cultural",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+      },
+      {
+        "axis_id": "seguridad_negociacion_vs_punitivismo",
+        "placement": "Evidencia insuficiente",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+      },
+      {
+        "axis_id": "centralizacion_vs_territorializacion",
+        "placement": "Territorializacion",
+        "confidence": 0.92,
+        "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
+      }
+    ],
+    "thematic_analysis": [
+      {
+        "topic_id": "educacion",
+        "description": "En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Educación, oportunidades, seguridad focalizada y desarrollo regional. La educación y las regiones olvidadas están en el centro de su apuesta.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+      }
+    ],
+    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "analysis_id": "analysis-sergio-fajardo-2026-04-20",
+  "candidate_id": "sergio-fajardo",
+  "source_ids": ["src-20260420-sergio-salud-radio"],
+  "claim_ids": ["claim-20260420-sergio-salud-radio"],
+  "profile_overview": "Candidato de centro con enfasis en gestion, seguridad y educacion.",
+  "political_philosophy": "Proyecta una lectura de Estado ordenador con foco en gestion y gradualismo.",
+  "ideology_axes": [
+    {
+      "axis_id": "estado_vs_mercado",
+      "placement": "centro con sesgo a Estado coordinador",
+      "confidence": 0.55,
+      "rationale": "Habla de reorganizacion institucional sin romper el modelo mixto."
+    }
+  ],
+  "thematic_analysis": [
+    {
+      "topic_id": "salud",
+      "description": "Propone reorganizar el sistema de salud con transparencia y auditoria.",
+      "inference": "Sugiere un enfoque de correccion institucional antes que una refundacion total del sistema.",
+      "evaluation": "La propuesta gana orden conceptual, pero sigue siendo poco especifica en instrumentos y secuencia de implementacion.",
+      "feasibility": {
+        "political": "media",
+        "fiscal": "media",
+        "institutional": "media",
+        "administrative": "media-baja"
+      },
+      "tradeoffs": [
+        "Mayor control puede aumentar friccion burocratica si no se aclara el arreglo operativo."
+      ],
+      "uncertainties": [
+        "No precisa arquitectura institucional ni calendario."
+      ]
+    }
+  ],
+  "internal_coherence": "No hay suficiente evidencia todavia para una evaluacion integral de coherencia programatica.",
+  "mainstream_distance": "Se mantiene relativamente cerca del mainstream tecnocratico de centro.",
+  "strengths": ["Lenguaje de gestion y orden institucional."],
+  "weaknesses": ["Baja especificidad de implementacion."],
+  "uncertainties": ["Insuficiente evidencia para juzgar el programa completo."]
+}

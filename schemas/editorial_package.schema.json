@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/editorial_package.schema.json",
+  "title": "Editorial Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "artifact_type",
+    "title",
+    "candidate_ids",
+    "sections"
+  ],
+  "properties": {
+    "artifact_id": { "type": "string" },
+    "artifact_type": {
+      "type": "string",
+      "enum": [
+        "candidate_profile",
+        "comparison_report",
+        "daily_update",
+        "homepage_brief"
+      ]
+    },
+    "title": { "type": "string" },
+    "dek": { "type": "string" },
+    "candidate_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["section_id", "heading", "content_type", "body"],
+        "properties": {
+          "section_id": { "type": "string" },
+          "heading": { "type": "string" },
+          "content_type": {
+            "type": "string",
+            "enum": ["description", "inference", "evaluation", "mixed"]
+          },
+          "body": { "type": "string" }
+        }
+      }
+    }
+  }
+}

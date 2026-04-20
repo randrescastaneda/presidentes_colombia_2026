@@ -4,27 +4,33 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 
 ## Qué incluye
 
-- `pipeline` en `R` para validar taxonomía, filtrar registros públicos trazables, detectar análisis conservadores y materializar artefactos.
+- `pipeline` en `R` por etapas para ingestión, extracción estructurada, análisis por candidato, comparación transversal, redacción editorial y validación bloqueante.
 - `sitio estático` en `Quarto` para publicar fichas por candidato, comparaciones temáticas, cronología, fuentes y metodología.
 - `plantillas de inbox` para que una automatización diaria o un editor carguen nuevos hallazgos.
+- `capa contractual` en `config/`, `schemas/`, `prompts/`, `examples/` y `data/state/` para evolucionar hacia un sistema agentic y analítico por etapas.
 - `workflow` de publicación para `GitHub Pages`.
 
 ## Flujo diario esperado
 
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
-2. Llenar `sources.csv` y `claims.csv` con hallazgos de las últimas 24 horas.
+2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
 3. Ejecutar:
 
 ```bash
 Rscript scripts/run_daily_update.R
 ```
 
-4. Revisar `data/processed/`, `data/public/` y `docs/`.
+4. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
+5. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
 
 ## Estructura principal
 
 - `config/`: taxonomía, registro oficial de candidaturas y reglas editoriales.
+- `prompts/`: instrucciones versionadas para extractor, analista, comparador, writer, validator y orquestador.
+- `schemas/`: contratos JSON para artefactos estructurados intermedios.
 - `data/inbox/`: insumos diarios de investigación.
+- `data/staging/`: artefactos intermedios por etapa analítica.
+- `data/state/`: estado incremental para fuentes y candidatos.
 - `data/processed/`: tablas consolidadas listas para auditoría.
 - `data/public/`: JSON usados por el sitio público.
 - `R/`: funciones del pipeline y helpers del sitio.
@@ -52,6 +58,20 @@ En resumen:
 - revisa el render en `docs/`
 - deja que Actions publique a `origin/gh-pages`
 - evita trabajar manualmente en `gh-pages`
+
+## Dirección arquitectónica actual
+
+El repo ya publica un monitor trazable y funcional, pero la dirección vigente es convertirlo en un sistema por etapas:
+
+1. `source_packet`
+2. `extraction_result`
+3. `candidate_analysis`
+4. `comparison_report`
+5. `editorial_package`
+6. `validation_report`
+7. `render y publicación`
+
+La extracción estructurada ya es el insumo operativo del pipeline. La interfaz interna pasa por `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report` y `editorial_package`. La publicación pública queda bloqueada si falla `validation_report`.
 
 ## Contexto Persistente
 

@@ -1,0 +1,50 @@
+{
+  "report_id": "comparison-watchlist-2026-04-20",
+  "scope_label": "watchlist diaria",
+  "candidate_ids": ["sergio-fajardo", "claudia-lopez"],
+  "axes_comparison": [
+    {
+      "axis_id": "estado_vs_mercado",
+      "candidate_positions": [
+        {
+          "candidate_id": "sergio-fajardo",
+          "placement": "centro con sesgo a Estado coordinador",
+          "confidence": 0.55
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "placement": "centroizquierda con uso fuerte de coordinacion estatal",
+          "confidence": 0.7
+        }
+      ],
+      "summary": "Ambos usan Estado coordinador, pero Claudia Lopez lo hace con expansion social mas explicita."
+    }
+  ],
+  "topic_comparison": [
+    {
+      "topic_id": "salud",
+      "candidate_rows": [
+        {
+          "candidate_id": "sergio-fajardo",
+          "priority": "alta",
+          "instrument": "reorganizacion institucional",
+          "specificity": "baja",
+          "coherence": "todavia indeterminada",
+          "feasibility": "media"
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "priority": "alta",
+          "instrument": "modelo mixto con auditoria",
+          "specificity": "media",
+          "coherence": "media",
+          "feasibility": "media"
+        }
+      ],
+      "summary": "Comparten defensa de arreglos mixtos, pero difieren en densidad programatica."
+    }
+  ],
+  "convergences": ["Ambos evitan una ruptura total inmediata del sistema de salud."],
+  "divergences": ["Claudia Lopez tiene formulacion mas cerrada y Fajardo mantiene mayor vaguedad."],
+  "uncertainties": ["Falta evidencia para comparar costos fiscales de forma seria."]
+}

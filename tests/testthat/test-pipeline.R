@@ -3,6 +3,7 @@ test_that("run_pipeline materializes processed and public artifacts from inbox f
   dir.create(project_dir)
   dir.create(file.path(project_dir, "config"), recursive = TRUE)
   dir.create(file.path(project_dir, "data", "inbox", "2026-04-18"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "inbox", "2026-04-18", "source_texts"), recursive = TRUE)
   dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
   dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
 
@@ -30,12 +31,31 @@ test_that("run_pipeline materializes processed and public artifacts from inbox f
     file.path(project_dir, "data", "inbox", "2026-04-18", "sources.csv")
   )
 
-  readr::write_csv(
-    tibble::tribble(
-      ~claim_id, ~candidate_id, ~event_date, ~source_id, ~claim_type, ~policy_key, ~topic_id, ~summary_text, ~position_text, ~position_key, ~stance_value, ~implementation_detail,
-      "claim-1", "ivan-cepeda", "2026-04-18", "src-1", "policy_proposal", "salud-preventiva", "salud", "Fortalecer atención primaria", "Fortalecer atención primaria", "a_favor", 1, TRUE
+  writeLines(
+    c(
+      "- source_id: src-1",
+      "- candidate_hint: ivan-cepeda",
+      "",
+      "## Structured claims",
+      "",
+      "### Claim 1",
+      "- claim_type: propuesta_concreta",
+      "- topic_id: salud",
+      "- policy_key: salud-preventiva",
+      "- summary_text: Fortalecer atención primaria.",
+      "- position_text: Fortalecer atención primaria.",
+      "- stance_value: 1",
+      "- specificity_score: 2",
+      "- ambiguity_flag: false",
+      "- insufficient_evidence_flag: false",
+      "- possible_contradiction_flag: false",
+      "- evidence_excerpt: Fortalecer atención primaria.",
+      "",
+      "## Source text or cleaned transcript",
+      "",
+      "Fortalecer atención primaria."
     ),
-    file.path(project_dir, "data", "inbox", "2026-04-18", "claims.csv")
+    file.path(project_dir, "data", "inbox", "2026-04-18", "source_texts", "src-1.md")
   )
 
   outputs <- run_pipeline(project_dir)
@@ -44,7 +64,8 @@ test_that("run_pipeline materializes processed and public artifacts from inbox f
   expect_true(file.exists(file.path(project_dir, "data", "processed", "candidate_dossiers.csv")))
   expect_true(file.exists(file.path(project_dir, "data", "public", "daily_digest.json")))
   expect_true(file.exists(file.path(project_dir, "data", "public", "site_metadata.json")))
-  expect_equal(outputs$claims$claim_id, "claim-1")
+  expect_equal(outputs$claims$claim_type_id[[1]], "propuesta_concreta")
   expect_equal(outputs$dossiers$total_claims, 1)
   expect_true(all(c("updated_at", "latest_event_date", "public_claim_count") %in% names(outputs$site_metadata)))
+  expect_equal(outputs$site_metadata$pipeline_mode[[1]], "structured_extraction_auto")
 })

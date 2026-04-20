@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/comparison_report.schema.json",
+  "title": "Comparison Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "scope_label",
+    "candidate_ids",
+    "source_ids",
+    "claim_ids",
+    "axes_comparison",
+    "topic_comparison",
+    "convergences",
+    "divergences",
+    "uncertainties"
+  ],
+  "properties": {
+    "report_id": { "type": "string" },
+    "scope_label": { "type": "string" },
+    "candidate_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claim_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "axes_comparison": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["axis_id", "candidate_positions", "summary"],
+        "properties": {
+          "axis_id": { "type": "string" },
+          "candidate_positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["candidate_id", "placement", "confidence"],
+              "properties": {
+                "candidate_id": { "type": "string" },
+                "placement": { "type": "string" },
+                "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+              }
+            }
+          },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "topic_comparison": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["topic_id", "candidate_rows", "summary"],
+        "properties": {
+          "topic_id": { "type": "string" },
+          "candidate_rows": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "candidate_id",
+                "priority",
+                "instrument",
+                "specificity",
+                "coherence",
+                "feasibility"
+              ],
+              "properties": {
+                "candidate_id": { "type": "string" },
+                "priority": { "type": "string" },
+                "instrument": { "type": "string" },
+                "specificity": { "type": "string" },
+                "coherence": { "type": "string" },
+                "feasibility": { "type": "string" }
+              }
+            }
+          },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "convergences": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "divergences": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

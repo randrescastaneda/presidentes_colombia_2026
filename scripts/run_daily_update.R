@@ -7,7 +7,15 @@ on.exit(setwd(old_wd), add = TRUE)
 r_files <- list.files("R", pattern = "[.][Rr]$", full.names = TRUE)
 purrr::walk(r_files, ~ source(.x, local = FALSE))
 
-invisible(run_pipeline(project_dir = "."))
+pipeline_outputs <- run_pipeline(project_dir = ".")
+if (identical(pipeline_outputs$validation_report$status %||% "block", "block")) {
+  stop(
+    "Validation blocked publication. Review ",
+    file.path("data", "public", "validation_report.json"),
+    " before rendering the public site."
+  )
+}
+
 invisible(generate_candidate_pages(project_dir = "."))
 
 quarto_home <- file.path(tempdir(), "quarto-home")
