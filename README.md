@@ -14,15 +14,14 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
 2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
-3. Mantener `claims.csv` solo como fallback mientras la automatización o el extractor estructurado materializan `extraction_result`.
-4. Ejecutar:
+3. Ejecutar:
 
 ```bash
 Rscript scripts/run_daily_update.R
 ```
 
-5. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
-6. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
+4. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
+5. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
 
 ## Estructura principal
 
@@ -72,7 +71,7 @@ El repo ya publica un monitor trazable y funcional, pero la dirección vigente e
 6. `validation_report`
 7. `render y publicación`
 
-La transición ya está cableada en el pipeline: `claims.csv` sigue existiendo como compatibilidad, pero la interfaz interna ahora pasa por `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report` y `editorial_package`. La publicación pública queda bloqueada si falla `validation_report`.
+La extracción estructurada ya es el insumo operativo del pipeline. La interfaz interna pasa por `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report` y `editorial_package`. La publicación pública queda bloqueada si falla `validation_report`.
 
 ## Contexto Persistente
 

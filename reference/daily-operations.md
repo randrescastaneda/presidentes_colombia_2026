@@ -12,7 +12,6 @@ Rscript scripts/create_daily_batch.R
 
 - `data/inbox/YYYY-MM-DD/sources.csv`
 - `data/inbox/YYYY-MM-DD/source_texts/`
-- `data/inbox/YYYY-MM-DD/claims.csv` solo mientras dure el fallback legacy
 
 3. Ejecutar:
 

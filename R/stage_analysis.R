@@ -636,7 +636,7 @@ compose_weaknesses <- function(candidate_claims, candidate_notes) {
     weaknesses <- c(weaknesses, "Hay señales de tensión interna o cambios de postura que debilitan la coherencia del programa.")
   }
 
-  if (n_distinct(candidate_claims$source_id) <= 1) {
+  if (dplyr::n_distinct(candidate_claims$source_id) <= 1) {
     weaknesses <- c(weaknesses, "La base de evidencia pública sigue siendo estrecha y eso limita la comparación.")
   }
 

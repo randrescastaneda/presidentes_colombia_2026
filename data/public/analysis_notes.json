@@ -1,272 +1,65 @@
 [
   {
-    "analysis_id": "vacio-claim-20260418-abelardo-economia",
-    "candidate_id": "abelardo-de-la-espriella",
+    "analysis_id": "vacio-src-20260418-caicedo-caracol-claim-2",
+    "candidate_id": "carlos-caicedo",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-abelardo-economia",
-    "source_ids": "src-20260418-abelardo-infobae",
+    "claim_ids": "src-20260418-caicedo-caracol-claim-2",
+    "source_ids": "src-20260418-caicedo-caracol",
     "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para activar-sectores-productivos no incluye suficiente detalle de implementación en la fuente analizada."
+    "public_reasoning_summary": "La propuesta registrada para general-carlos-caicedo-plantea no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
-    "analysis_id": "vacio-claim-20260418-abelardo-seguridad",
-    "candidate_id": "abelardo-de-la-espriella",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-abelardo-seguridad",
-    "source_ids": "src-20260418-abelardo-infobae",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para alianza-seguridad-exterior no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-abelardo-impuestos",
-    "candidate_id": "abelardo-de-la-espriella",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-abelardo-impuestos",
-    "source_ids": "src-20260418-abelardo-infobae",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para baja-de-impuestos no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-claudia-agua",
+    "analysis_id": "vacio-src-20260418-claudia-program-claim-2",
     "candidate_id": "claudia-lopez",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-claudia-agua",
+    "claim_ids": "src-20260418-claudia-program-claim-2",
     "source_ids": "src-20260418-claudia-program",
     "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para agua-potable no incluye suficiente detalle de implementación en la fuente analizada."
+    "public_reasoning_summary": "La propuesta registrada para general-claudia-l-opez no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
-    "analysis_id": "vacio-claim-20260418-claudia-justicia",
+    "analysis_id": "vacio-src-20260418-claudia-forbes-claim-1",
     "candidate_id": "claudia-lopez",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-claudia-justicia",
-    "source_ids": "src-20260418-claudia-program",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para justicia-restaurativa no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-claudia-genero",
-    "candidate_id": "claudia-lopez",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-claudia-genero",
-    "source_ids": "src-20260418-claudia-program",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para violencias-de-genero no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-claudia-salud",
-    "candidate_id": "claudia-lopez",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-claudia-salud",
+    "claim_ids": "src-20260418-claudia-forbes-claim-1",
     "source_ids": "src-20260418-claudia-forbes",
     "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para modelo-mixto-salud no incluye suficiente detalle de implementación en la fuente analizada."
+    "public_reasoning_summary": "La propuesta registrada para fiscal-continuidad-selectiva-de no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
-    "analysis_id": "vacio-claim-20260419-claudia-mineria-social",
-    "candidate_id": "claudia-lopez",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260419-claudia-mineria-social",
-    "source_ids": "src-20260419-claudia-energia-elpais",
-    "confidence": 0.75,
-    "public_reasoning_summary": "La propuesta registrada para licenciamiento-social-minero no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-ivan-tierras",
+    "analysis_id": "vacio-src-20260418-ivan-program-home-claim-1",
     "candidate_id": "ivan-cepeda",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-ivan-tierras",
-    "source_ids": "src-20260418-ivan-tunja",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para acceso-tierra no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-ivan-paz-total",
-    "candidate_id": "ivan-cepeda",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-ivan-paz-total",
+    "claim_ids": "src-20260418-ivan-program-home-claim-1",
     "source_ids": "src-20260418-ivan-program-home",
     "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para paz-total no incluye suficiente detalle de implementación en la fuente analizada."
+    "public_reasoning_summary": "La propuesta registrada para justicia-programa-profundizar-justicia no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
-    "analysis_id": "vacio-claim-20260418-ivan-tren",
-    "candidate_id": "ivan-cepeda",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-ivan-tren",
-    "source_ids": "src-20260418-ivan-tunja",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para transporte-ferreo no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-ivan-economia",
-    "candidate_id": "ivan-cepeda",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-ivan-economia",
-    "source_ids": "src-20260418-ivan-economia",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para continuidad-macroeconomica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-ivan-transicion",
-    "candidate_id": "ivan-cepeda",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-ivan-transicion",
-    "source_ids": "src-20260418-ivan-economia",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para transicion-energetica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-murillo-alianza",
-    "candidate_id": "luis-gilberto-murillo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-murillo-alianza",
-    "source_ids": "src-20260418-murillo-espectador",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para alianza-empresa-estado-comunidades no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-murillo-educacion",
-    "candidate_id": "luis-gilberto-murillo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-murillo-educacion",
-    "source_ids": "src-20260418-murillo-espectador",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para desarrollo-talento no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-murillo-puertos",
-    "candidate_id": "luis-gilberto-murillo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-murillo-puertos",
-    "source_ids": "src-20260418-murillo-espectador",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para puertos-comercio-exterior no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-murillo-seguridad",
-    "candidate_id": "luis-gilberto-murillo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-murillo-seguridad",
-    "source_ids": "src-20260418-murillo-espectador",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para seguridad-focalizada no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-murillo-regiones",
-    "candidate_id": "luis-gilberto-murillo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-murillo-regiones",
-    "source_ids": "src-20260418-murillo-elpais",
-    "confidence": 0.75,
-    "public_reasoning_summary": "La propuesta registrada para desarrollo-regiones-olvidadas no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-mauricio-ingresos",
-    "candidate_id": "mauricio-lizcano",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-mauricio-ingresos",
-    "source_ids": "src-20260418-mauricio-espectador",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para productividad-tecnologica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-paloma-energia",
+    "analysis_id": "vacio-src-20260418-paloma-official-claim-2",
     "candidate_id": "paloma-valencia",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-paloma-energia",
-    "source_ids": "src-20260418-paloma-eltiempo",
-    "confidence": 0.75,
-    "public_reasoning_summary": "La propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada."
+    "claim_ids": "src-20260418-paloma-official-claim-2",
+    "source_ids": "src-20260418-paloma-official",
+    "confidence": 0.95,
+    "public_reasoning_summary": "La propuesta registrada para general-programa-de-gobierno no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
-    "analysis_id": "vacio-claim-20260419-paloma-energia-foro",
+    "analysis_id": "vacio-src-20260418-paloma-official-claim-1",
     "candidate_id": "paloma-valencia",
     "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260419-paloma-energia-foro",
-    "source_ids": "src-20260419-paloma-energia-elpais",
+    "claim_ids": "src-20260418-paloma-official-claim-1",
+    "source_ids": "src-20260418-paloma-official",
+    "confidence": 0.95,
+    "public_reasoning_summary": "La propuesta registrada para general-programa-integrado-de no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
+    "analysis_id": "vacio-src-20260418-sergio-profile-claim-1",
+    "candidate_id": "sergio-fajardo",
+    "analysis_type": "vacio_de_implementacion",
+    "claim_ids": "src-20260418-sergio-profile-claim-1",
+    "source_ids": "src-20260418-sergio-profile",
     "confidence": 0.75,
-    "public_reasoning_summary": "La propuesta registrada para revolucion-energetica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-santiago-fuerza-publica",
-    "candidate_id": "raul-botero",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-santiago-fuerza-publica",
-    "source_ids": "src-20260418-santiago-caracol",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para fortalecer-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-roy-paz",
-    "candidate_id": "roy-barreras",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-roy-paz",
-    "source_ids": "src-20260418-roy-efe",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para paz-con-metodo no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-roy-productividad",
-    "candidate_id": "roy-barreras",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-roy-productividad",
-    "source_ids": "src-20260418-roy-efe",
-    "confidence": 0.85,
-    "public_reasoning_summary": "La propuesta registrada para reactivar-productividad no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-fajardo-anticorrupcion",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-fajardo-anticorrupcion",
-    "source_ids": "src-20260418-fajardo-official",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para cero-corrupcion no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-fajardo-paz",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-fajardo-paz",
-    "source_ids": "src-20260418-fajardo-official",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para dialogos-paz-condicionados no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-fajardo-salud",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-fajardo-salud",
-    "source_ids": "src-20260418-fajardo-official",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para ordenar-sistema-salud no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-fajardo-mujeres",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-fajardo-mujeres",
-    "source_ids": "src-20260418-fajardo-official",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para protagonismo-mujeres no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260418-fajardo-seguridad",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260418-fajardo-seguridad",
-    "source_ids": "src-20260418-fajardo-official",
-    "confidence": 0.95,
-    "public_reasoning_summary": "La propuesta registrada para reconstruir-fuerza-publica no incluye suficiente detalle de implementación en la fuente analizada."
-  },
-  {
-    "analysis_id": "vacio-claim-20260419-sergio-energia-legalidad",
-    "candidate_id": "sergio-fajardo",
-    "analysis_type": "vacio_de_implementacion",
-    "claim_ids": "claim-20260419-sergio-energia-legalidad",
-    "source_ids": "src-20260419-sergio-energia-elpais",
-    "confidence": 0.75,
-    "public_reasoning_summary": "La propuesta registrada para desarrollo-energetico-sostenible no incluye suficiente detalle de implementación en la fuente analizada."
+    "public_reasoning_summary": "La propuesta registrada para educacion-exalcalde-de-medell no incluye suficiente detalle de implementación en la fuente analizada."
   }
 ]

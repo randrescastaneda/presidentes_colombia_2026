@@ -23,7 +23,7 @@ Los componentes no comparten criterio implícito; comparten contratos versionado
 - Los contratos y prompts ya existen en el repo.
 - `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report`, `editorial_package` y `validation_report` ya se materializan en `data/staging/`.
 - `data/public/` ya recibe `candidate_analysis.json`, `comparison_report.json` y `editorial_packages.json` cuando la validación no bloquea.
-- `claims.csv` sigue existiendo solo como fallback de transición.
+- `source_texts/` y `sources.csv` alimentan la extracción automática; el scaffold diario ya no depende de `claims.csv`.
 - `scripts/run_daily_update.R` ya detiene el render si `validation_report.status == "block"`.
 
 ## Restricciones

@@ -38,7 +38,6 @@ Estado actual:
 - la capa contractual existe y ya está conectada al pipeline
 - `source_texts/` ya forma parte del scaffold diario
 - `source_packet` y `extraction_result` ya son la interfaz interna del pipeline
-- `claims.csv` se mantiene solo como fallback de transición
 - `candidate_analysis`, `comparison_report` y `editorial_package` ya se escriben en `data/staging/` y `data/public`
 - `validation_report` ya es un gate real: si da `block`, `scripts/run_daily_update.R` aborta antes del render público
 
@@ -112,7 +111,6 @@ Instrucción operativa persistente:
 
 ## Pendientes Técnicos Inmediatos
 
-- sustituir por completo el fallback manual de `claims.csv` por extracción estructurada automática
 - hacer que la web consuma más directamente `candidate_analysis`, `comparison_report` y `editorial_package`
 - reforzar el estado incremental para reruns parciales por candidato y por fuente
 - seguir ampliando reglas y cobertura del validador metodológico

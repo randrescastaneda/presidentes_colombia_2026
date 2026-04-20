@@ -336,9 +336,9 @@ build_legacy_validation_report <- function(claims, analysis_notes, source_text_f
       status = "warn",
       artifact_ref = "pipeline_mode",
       message = if (nrow(source_text_files) > 0) {
-        "Source texts are present, but the public pipeline still depends on manual claims.csv during this transition."
+        "Source texts are present; this legacy helper should no longer be used as the main validation gate."
       } else {
-        "The contract layer exists, but structured extraction is not yet wired into the public pipeline."
+        "The contract layer exists, but this legacy helper predates the current validation gate."
       }
     )
   )

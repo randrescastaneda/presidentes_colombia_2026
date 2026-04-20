@@ -50,6 +50,40 @@ read_source_text_content <- function(path) {
   paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 }
 
+parse_source_note_metadata <- function(text) {
+  if (is.na(text) || identical(text, "")) {
+    return(list())
+  }
+
+  lines <- strsplit(text, "\n", fixed = TRUE)[[1]]
+  metadata_lines <- lines[grepl("^\\s*-\\s+[A-Za-z0-9_]+\\s*:", lines)]
+
+  if (length(metadata_lines) == 0) {
+    return(list())
+  }
+
+  pairs <- regmatches(
+    metadata_lines,
+    regexec("^\\s*-\\s+([A-Za-z0-9_]+)\\s*:\\s*(.*)$", metadata_lines, perl = TRUE)
+  )
+
+  values <- purrr::map(pairs, function(match) {
+    if (length(match) < 3) {
+      return(NULL)
+    }
+
+    key <- trimws(match[[2]])
+    value <- trimws(match[[3]])
+    if (identical(value, "")) {
+      value <- NA_character_
+    }
+    stats::setNames(list(value), key)
+  })
+
+  purrr::compact(values) |>
+    purrr::flatten()
+}
+
 build_source_packets <- function(sources, source_text_files = tibble::tibble()) {
   if (nrow(sources) == 0) {
     return(list())
@@ -71,6 +105,13 @@ build_source_packets <- function(sources, source_text_files = tibble::tibble()) 
 
   packets <- purrr::pmap(enriched_sources, function(...) {
     row <- tibble::as_tibble(list(...))
+    raw_text <- if (!is.na(row$text_path[[1]] %||% NA_character_)) read_source_text_content(row$text_path[[1]]) else row$quote_text[[1]] %||% ""
+    note_metadata <- parse_source_note_metadata(raw_text)
+    hinted_candidates <- unique(stats::na.omit(c(
+      row$candidate_id[[1]],
+      note_metadata$candidate_hint %||% NA_character_
+    )))
+
     list(
       source_id = row$source_id[[1]],
       batch_date = row$inbox_batch[[1]] %||% as.character(row$batch_date[[1]] %||% Sys.Date()),
@@ -80,11 +121,11 @@ build_source_packets <- function(sources, source_text_files = tibble::tibble()) 
       source_url = row$url[[1]],
       published_at = format(as.POSIXct(row$published_at[[1]], tz = "UTC"), "%Y-%m-%dT%H:%M:%SZ"),
       title = row$title[[1]] %||% "Sin título visible",
-      candidate_hints = unique(stats::na.omit(c(row$candidate_id[[1]]))),
-      capture_method = if (!is.na(row$text_path[[1]] %||% NA_character_)) "source_text_file" else "quote_only",
-      text_content = if (!is.na(row$text_path[[1]] %||% NA_character_)) read_source_text_content(row$text_path[[1]]) else row$quote_text[[1]] %||% "",
+      candidate_hints = hinted_candidates,
+      capture_method = note_metadata$capture_method %||% if (!is.na(row$text_path[[1]] %||% NA_character_)) "source_text_file" else "quote_only",
+      text_content = raw_text,
       captured_excerpt = row$quote_text[[1]] %||% "",
-      notes = NA_character_
+      notes = note_metadata$notes %||% NA_character_
     )
   })
 
@@ -106,4 +147,14 @@ write_source_packets <- function(source_packets, project_dir = ".") {
   })
 
   unname(paths)
+}
+
+load_source_packets <- function(project_dir = ".") {
+  packet_dir <- file.path(project_dir, "data", "staging", "source_packets")
+  if (!dir.exists(packet_dir)) {
+    return(list())
+  }
+
+  files <- list.files(packet_dir, pattern = "[.]json$", recursive = TRUE, full.names = TRUE)
+  stats::setNames(lapply(files, read_contract_json), basename(files))
 }

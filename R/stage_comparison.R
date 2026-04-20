@@ -48,7 +48,11 @@ candidate_axis_lookup <- function(artifact) {
 find_thematic_row <- function(artifact, topic_id) {
   themes <- normalize_nested_objects(artifact$thematic_analysis)
   matches <- purrr::keep(themes, \(theme) identical(theme$topic_id %||% NA_character_, topic_id))
-  matches[[1]] %||% NULL
+  if (length(matches) == 0) {
+    return(NULL)
+  }
+
+  matches[[1]]
 }
 
 topic_priority_label <- function(topic_claims) {

@@ -50,37 +50,6 @@ load_inbox_sources <- function(project_dir) {
     dplyr::distinct(source_id, .keep_all = TRUE)
 }
 
-load_inbox_claims <- function(project_dir) {
-  claim_files <- list_inbox_files(project_dir, "claims.csv")
-
-  if (length(claim_files) == 0) {
-    return(tibble::tibble(
-      claim_id = character(),
-      candidate_id = character(),
-      event_date = as.Date(character()),
-      source_id = character(),
-      claim_type = character(),
-      policy_key = character(),
-      topic_id = character(),
-      summary_text = character(),
-      position_text = character(),
-      position_key = character(),
-      stance_value = numeric(),
-      implementation_detail = logical(),
-      inbox_batch = character()
-    ))
-  }
-
-  purrr::map_dfr(claim_files, \(path) {
-    readr::read_csv(path, show_col_types = FALSE) |>
-      dplyr::mutate(
-        event_date = as.Date(event_date),
-        inbox_batch = basename(dirname(path))
-      )
-  }) |>
-    dplyr::distinct(claim_id, .keep_all = TRUE)
-}
-
 write_output_csv <- function(data, path) {
   dir.create(dirname(path), recursive = TRUE, showWarnings = FALSE)
   readr::write_csv(data, path)
@@ -101,15 +70,10 @@ run_pipeline <- function(project_dir = ".") {
   analysis_axis_rules <- load_analysis_axis_rules(project_dir)
   candidates <- load_candidate_registry(project_dir)
   sources <- load_inbox_sources(project_dir)
-  legacy_claims <- load_inbox_claims(project_dir)
   source_text_files <- list_source_text_files(project_dir)
   source_packets <- build_source_packets(sources, source_text_files)
   write_source_packets(source_packets, project_dir)
-  extraction_results <- materialize_extraction_results(
-    project_dir = project_dir,
-    claims = legacy_claims,
-    sources = sources
-  )
+  extraction_results <- materialize_extraction_results(project_dir = project_dir, source_packets = source_packets)
   claims <- flatten_extraction_claims(extraction_results)
 
   screened <- screen_public_records(claims, sources)
@@ -205,7 +169,7 @@ run_pipeline <- function(project_dir = ".") {
     source_text_file_count = nrow(source_text_files),
     source_packet_count = length(source_packets),
     extraction_result_count = length(extraction_results),
-    pipeline_mode = if (nrow(legacy_claims) > 0) "structured_extraction_with_legacy_fallback" else "structured_extraction_only",
+    pipeline_mode = "structured_extraction_auto",
     validation_status = validation_report$status
   )
 

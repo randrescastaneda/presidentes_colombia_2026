@@ -7,18 +7,17 @@ dir.create(target_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(file.path(target_dir, "source_texts"), recursive = TRUE, showWarnings = FALSE)
 
 source_template <- file.path(project_dir, "data", "inbox", "template_sources.csv")
-claim_template <- file.path(project_dir, "data", "inbox", "template_claims.csv")
+source_note_template <- file.path(project_dir, "data", "inbox", "template_source_note.md")
 
 if (!file.exists(source_template)) {
   stop("Missing source template at ", source_template)
 }
 
-if (!file.exists(claim_template)) {
-  stop("Missing claim template at ", claim_template)
+if (!file.exists(source_note_template)) {
+  stop("Missing source note template at ", source_note_template)
 }
 
 source_target <- file.path(target_dir, "sources.csv")
-claim_target <- file.path(target_dir, "claims.csv")
 
 if (!file.exists(source_target)) {
   copied <- file.copy(source_template, source_target)
@@ -27,11 +26,4 @@ if (!file.exists(source_target)) {
   }
 }
 
-if (!file.exists(claim_target)) {
-  copied <- file.copy(claim_template, claim_target)
-  if (!isTRUE(copied)) {
-    stop("Could not copy claim template into ", claim_target)
-  }
-}
-
-message("Lote listo en ", target_dir, " con source_texts/ para captura por fuente.")
+message("Lote listo en ", target_dir, " con source_texts/ para captura por fuente y extracción estructurada.")

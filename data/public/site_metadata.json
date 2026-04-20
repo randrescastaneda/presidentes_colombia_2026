@@ -1,9 +1,17 @@
 [
   {
-    "updated_at": "2026-04-19 12:36:52 UTC",
-    "latest_event_date": "2026-04-18",
-    "public_claim_count": 69,
+    "updated_at": "2026-04-20 10:22:06 UTC",
+    "latest_event_date": "2026-04-19",
+    "public_claim_count": 67,
     "public_source_count": 40,
-    "public_analysis_note_count": 30
+    "public_analysis_note_count": 7,
+    "candidate_analysis_count": 14,
+    "comparison_report_count": 1,
+    "editorial_package_count": 17,
+    "source_text_file_count": 0,
+    "source_packet_count": 40,
+    "extraction_result_count": 40,
+    "pipeline_mode": "structured_extraction_auto",
+    "validation_status": "pass"
   }
 ]
