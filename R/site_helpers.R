@@ -1,3 +1,21 @@
+site_helper_env <- environment()
+
+if (!exists("build_homepage_view_model", envir = site_helper_env, inherits = TRUE)) {
+  current_project_dir <- get0("project_dir", envir = site_helper_env, inherits = TRUE, ifnotfound = NULL)
+  candidate_paths <- unique(stats::na.omit(c(
+    if (!is.null(current_project_dir)) file.path(current_project_dir, "R", "site_public_view_models.R") else NA_character_,
+    "R/site_public_view_models.R",
+    "site_public_view_models.R"
+  )))
+
+  existing_path <- candidate_paths[file.exists(candidate_paths)][1]
+  if (length(existing_path) == 1 && !is.na(existing_path)) {
+    source(existing_path, local = site_helper_env)
+  }
+}
+
+rm(site_helper_env)
+
 read_processed_table <- function(filename, project_dir = ".") {
   path <- file.path(project_dir, "data", "processed", filename)
 

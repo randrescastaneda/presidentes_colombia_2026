@@ -13,6 +13,7 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 4. `config/taxonomy_v1.csv`
 5. `config/candidate_registry.csv`
 6. `scripts/run_daily_update.R`
+7. `docs/solutions/` cuando exista trabajo previo en el área; contiene soluciones documentadas por categoría con frontmatter buscable (`module`, `tags`, `problem_type`)
 
 ## Modelo Mental Del Repo
 

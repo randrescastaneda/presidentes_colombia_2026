@@ -1,95 +1,185 @@
 ---
 title: "Monitor público de candidatos presidenciales"
+toc: false
 ---
 
 ```{r}
 #| results: asis
 source("R/site_helpers.R")
 
-candidates <- read_candidate_registry_public()
-claims <- read_processed_table("claim_records.csv")
-sources <- read_processed_table("source_records.csv")
-analysis_notes <- read_processed_table("analysis_notes.csv")
-dossiers <- read_processed_table("candidate_dossiers.csv")
-daily_digest <- read_processed_table("daily_digest.csv")
+homepage <- build_homepage_view_model()
+taxonomy <- read_taxonomy_public()
 site_metadata <- read_processed_table("site_metadata.csv")
 
-watchlist_total <- sum(candidates$watchlist_active, na.rm = TRUE)
-latest_digest_date <- if (nrow(daily_digest) == 0) "Sin corridas todavía" else as.character(max(daily_digest$digest_date, na.rm = TRUE))
-last_updated_text <- if (nrow(site_metadata) == 0) "Sin corridas todavía" else site_metadata$updated_at[[1]]
+topic_lookup <- if (nrow(taxonomy) == 0) {
+  character()
+} else {
+  stats::setNames(taxonomy$label_public, taxonomy$topic_id)
+}
+
+last_updated_text <- if (nrow(site_metadata) == 0) {
+  "Sin corridas todavía"
+} else {
+  site_metadata$updated_at[[1]]
+}
+
+methodology_badge <- homepage$methodology_badge
+comparison_blocks <- homepage$comparison_blocks
+roster <- homepage$roster
+
+methodology_badge_html <- paste0(
+  '<div class="methodology-badge methodology-badge--', escape_html(methodology_badge$tone %||% "neutral"), '">',
+  '<span class="methodology-badge__label">', escape_html(methodology_badge$label %||% "Sin validación pública"), '</span>',
+  '<p>', escape_html(methodology_badge$summary %||% "Sin resumen metodológico publicado."), '</p>',
+  '<a href="metodologia.html">Ver metodología</a>',
+  '</div>'
+)
+
+comparison_cards_html <- if (length(comparison_blocks) == 0) {
+  paste0(
+    '<div class="comparison-empty">',
+    '<p class="section-intro">', escape_html(homepage$empty_state %||% "Todavía no hay suficiente material comparativo para destacar."), '</p>',
+    '<a class="card-link" href="comparador.html">Ir al comparador completo</a>',
+    '</div>'
+  )
+} else {
+  paste(
+    vapply(comparison_blocks, function(block) {
+      topic_label <- topic_lookup[[block$topic_id]] %||% stringr::str_to_title(gsub("-", " ", block$topic_id))
+      candidate_links <- if (length(block$candidate_ids) == 0) {
+        '<span class="comparison-highlight__meta">La comparación todavía no permite destacar candidaturas concretas.</span>'
+      } else {
+        paste(
+          vapply(block$handoff$candidate_destinations, function(destination) {
+            roster_row <- purrr::keep(roster, \(entry) identical(entry$candidate_id, destination$candidate_id))
+            if (length(roster_row) == 0 || is.null(destination$href) || identical(destination$href, "")) {
+              return("")
+            }
+
+            paste0(
+              '<a class="inline-link" href="', escape_html(destination$href), '">',
+              escape_html(roster_row[[1]]$president_name),
+              '</a>'
+            )
+          }, character(1)),
+          collapse = " · "
+        )
+      }
+
+      paste0(
+        '<article class="comparison-highlight">',
+        '<div class="comparison-highlight__header">',
+        '<p class="eyebrow">Comparación rápida</p>',
+        '<span class="evidence-chip evidence-chip--', escape_html(block$evidence_state), '">', escape_html(block$public_label), '</span>',
+        '</div>',
+        '<h3>', escape_html(topic_label), '</h3>',
+        '<p>', escape_html(block$summary), '</p>',
+        '<p class="comparison-highlight__meta">',
+        if (length(block$candidate_names) > 0) {
+          paste0('Candidaturas más visibles aquí: ', escape_html(paste(block$candidate_names, collapse = ", ")), '.')
+        } else {
+          'La evidencia disponible sigue siendo insuficiente para priorizar nombres concretos.'
+        },
+        '</p>',
+        '<div class="comparison-highlight__actions">',
+        '<a class="card-link" href="comparador.html">Abrir comparador</a>',
+        '<div class="comparison-highlight__candidates">', candidate_links, '</div>',
+        '</div>',
+        '<p class="comparison-highlight__meta">Las fichas abren la sección de propuestas del candidato y conservan el tema de origen en la URL para no perder el contexto comparativo.</p>',
+        '</article>'
+      )
+    }, character(1)),
+    collapse = ""
+  )
+}
+
+roster_cards_html <- if (length(roster) == 0) {
+  '<p class="section-intro">Todavía no hay candidaturas públicas cargadas.</p>'
+} else {
+  paste(
+    vapply(roster, function(entry) {
+      badge_html <- if (isTRUE(entry$watchlist_active)) {
+        paste0('<span class="candidate-badge">Watchlist #', entry$watchlist_priority %||% "?", '</span>')
+      } else {
+        '<span class="candidate-badge candidate-badge--muted">Cobertura general</span>'
+      }
+
+      paste0(
+        '<div class="candidate-card">',
+        badge_html,
+        '<h3><a href="', escape_html(entry$href), '">', escape_html(entry$president_name), '</a></h3>',
+        '<div class="candidate-card__meta">Cobertura completa por candidatura, con trazabilidad a fuentes y salida comparativa.</div>',
+        '<a class="card-link" href="', escape_html(entry$href), '">Abrir ficha</a>',
+        '</div>'
+      )
+    }, character(1)),
+    collapse = ""
+  )
+}
 
 cat(
   paste0(
-    '<div class="hero-shell">',
+    '<section class="hero-shell hero-shell--homepage">',
+    '<div class="hero-shell__grid">',
+    '<div class="hero-shell__main">',
     '<p class="eyebrow">Colombia 2026</p>',
-    '<h1>Seguimiento trazable, comparativo y crítico de las campañas presidenciales</h1>',
-    '<p class="section-intro">El proyecto prioriza evidencia verificable, una taxonomía pública entendible y análisis conservadores de consistencia lógica. No produce puntajes ni rankings globales.</p>',
-    '<p class="candidate-card__meta"><strong>Última actualización de la aplicación:</strong> ', last_updated_text, '</p>',
-    '</div>'
+    '<h1>Qué diferencias visibles hay hoy entre las candidaturas presidenciales</h1>',
+    '<p class="section-intro">La portada prioriza contraste útil entre campañas, sin forzar simetrías cuando la evidencia es desigual. Aquí se distingue entre señal comparativa, trazabilidad y estado metodológico.</p>',
+    '<div class="hero-shell__story">',
+    '<p><strong>Cambios principales.</strong> ', escape_html(homepage$top_changes), '</p>',
+    '<p><strong>Lectura comparativa.</strong> ', escape_html(homepage$key_comparison_note), '</p>',
+    '</div>',
+    '<p class="hero-shell__updated"><strong>Última actualización:</strong> ', escape_html(last_updated_text), '</p>',
+    '</div>',
+    '<aside class="hero-shell__aside">',
+    methodology_badge_html,
+    '<div class="hero-shell__note">',
+    '<h3>Promesa editorial</h3>',
+    '<p>', escape_html(homepage$caveats), '</p>',
+    '</div>',
+    '</aside>',
+    '</div>',
+    '</section>'
   )
 )
+```
 
+## Comparaciones destacadas
+
+```{r}
+#| results: asis
+cat(paste0('<div class="comparison-highlight-grid">', comparison_cards_html, '</div>'))
+```
+
+## Cómo leer esta portada
+
+```{r}
+#| results: asis
 cat(
   paste0(
-    '<div class="metric-grid">',
-    '<div class="metric-card"><div class="metric-card__label">Fórmulas inscritas</div><div class="metric-card__value">', nrow(candidates), '</div></div>',
-    '<div class="metric-card"><div class="metric-card__label">Watchlist activa</div><div class="metric-card__value">', watchlist_total, '</div></div>',
-    '<div class="metric-card"><div class="metric-card__label">Claims públicos</div><div class="metric-card__value">', nrow(claims), '</div></div>',
-    '<div class="metric-card"><div class="metric-card__label">Fuentes públicas</div><div class="metric-card__value">', nrow(sources), '</div></div>',
-    '<div class="metric-card"><div class="metric-card__label">Notas analíticas IA</div><div class="metric-card__value">', nrow(analysis_notes), '</div></div>',
-    '<div class="metric-card"><div class="metric-card__label">Último digest</div><div class="metric-card__value" style="font-size:1.1rem;">', latest_digest_date, '</div></div>',
+    '<div class="reading-grid">',
+    '<div class="prose-card">',
+    '<h3>Fuerza comparativa</h3>',
+    '<p class="narrative-paragraph">`Diferencia visible` significa que la evidencia ya permite contrastar candidaturas sin caveat dominante. `Lectura parcial` indica que hay contraste útil, pero todavía desigual. `Evidencia insuficiente` declara que no sería honesto simular una comparación fuerte.</p>',
+    '</div>',
+    '<div class="prose-card">',
+    '<h3>Estado metodológico</h3>',
+    '<p class="narrative-paragraph">El badge metodológico no reemplaza la lectura comparativa. Solo resume si la validación pública salió limpia, con advertencias o bloqueada.</p>',
+    '<p class="comparison-card__meta">', escape_html(methodology_badge$summary %||% "Sin resumen metodológico."), '</p>',
+    '</div>',
     '</div>'
   )
 )
 ```
 
-## Qué encontrarás aquí
-
-- Fichas por candidato con trazabilidad a fuentes.
-- Comparación por categorías y subcategorías de política pública.
-- Cronología de cambios de postura y hallazgos recientes.
-- Biblioteca de fuentes enlazadas para auditoría manual.
-
-## Watchlist activa
+## Cobertura completa
 
 ```{r}
 #| results: asis
-watchlist <- candidates |>
-  dplyr::filter(.data$watchlist_active) |>
-  dplyr::arrange(.data$watchlist_priority)
-
-if (nrow(watchlist) == 0) {
-  emit_callout("La watchlist todavía no se ha configurado.", "warning")
-} else {
-  cards <- purrr::pmap_chr(watchlist, function(candidate_id, slug, president_name, vicepresident_name, ballot_position, watchlist_active, watchlist_priority, ...) {
-    dossier <- dossiers |> dplyr::filter(.data$candidate_id == candidate_id)
-    ideology_label <- if (nrow(dossier) == 0) "Evidencia insuficiente" else dossier$ideology_label[[1]]
-    paste0(
-      '<div class="candidate-card">',
-      '<span class="candidate-badge">Watchlist #', watchlist_priority, '</span>',
-      '<h3><a href="candidatos/', slug, '.html">', president_name, '</a></h3>',
-      '<div class="candidate-card__meta">Vice: ', vicepresident_name, '</div>',
-      '<div class="candidate-card__meta">Posición en tarjetón: ', ballot_position, '</div>',
-      '<div class="candidate-card__meta"><strong>Espectro analítico:</strong> ', ideology_label, '</div>',
-      '</div>'
-    )
-  })
-
-  cat(paste0('<div class="candidate-grid">', paste(cards, collapse = ""), '</div>'))
-}
-```
-
-## Estado del pipeline
-
-```{r}
-#| results: asis
-if (nrow(claims) == 0) {
-  emit_callout("Todavía no hay claims públicos cargados. La estructura del sitio y del pipeline ya está lista para recibir investigación diaria.", "note")
-} else {
-  safe_kable(
-    dossiers |>
-      dplyr::select(.data$president_name, .data$total_claims, .data$total_sources, .data$total_analysis_notes, .data$top_topics),
-    col.names = c("Candidato", "Claims", "Fuentes", "Notas IA", "Temas destacados")
+cat(
+  paste0(
+    '<p class="section-intro">La portada prioriza la watchlist activa, pero el monitor mantiene cobertura abierta del roster completo. Desde aquí puedes abrir fichas individuales o ir al comparador general.</p>',
+    '<div class="candidate-grid">', roster_cards_html, '</div>'
   )
-}
+)
 ```

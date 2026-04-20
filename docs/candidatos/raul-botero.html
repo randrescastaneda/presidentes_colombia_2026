@@ -137,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ficha-base" id="toc-ficha-base" class="nav-link active" data-scroll-target="#ficha-base">Ficha base</a></li>
   <li><a href="#ubicación-ideológica" id="toc-ubicación-ideológica" class="nav-link" data-scroll-target="#ubicación-ideológica">Ubicación ideológica</a></li>
   <li><a href="#trayectoria-y-contexto-público" id="toc-trayectoria-y-contexto-público" class="nav-link" data-scroll-target="#trayectoria-y-contexto-público">Trayectoria y contexto público</a></li>
-  <li><a href="#propuestas-y-posiciones-públicas" id="toc-propuestas-y-posiciones-públicas" class="nav-link" data-scroll-target="#propuestas-y-posiciones-públicas">Propuestas y posiciones públicas</a></li>
+  <li><a href="#propuestas-y-posiciones-publicas" id="toc-propuestas-y-posiciones-publicas" class="nav-link" data-scroll-target="#propuestas-y-posiciones-publicas">Propuestas y posiciones públicas</a></li>
   <li><a href="#análisis-lógico-publicado" id="toc-análisis-lógico-publicado" class="nav-link" data-scroll-target="#análisis-lógico-publicado">Análisis lógico publicado</a></li>
   <li><a href="#biblioteca-de-fuentes" id="toc-biblioteca-de-fuentes" class="nav-link" data-scroll-target="#biblioteca-de-fuentes">Biblioteca de fuentes</a></li>
   </ul>
@@ -148,7 +148,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="page-disclaimer">
   <div class="page-disclaimer__inner">
     <strong>Aviso metodológico.</strong>
-    Este sitio publica síntesis y análisis generados por inteligencia artificial. Puede contener errores, omisiones o interpretaciones discutibles.
+    Este sitio distingue entre hecho trazable, síntesis editorial y análisis generado por inteligencia artificial.
+    Puede contener errores u omisiones, y declara explícitamente cuando la evidencia es parcial o insuficiente.
     Úselo como puerta de entrada y revise siempre las fuentes originales enlazadas antes de extraer conclusiones.
   </div>
 </div>
@@ -231,8 +232,29 @@ Todavía no hay suficientes señales programáticas mapeadas para ubicarlo en el
 </p>
 </div>
 </section>
-<section id="propuestas-y-posiciones-públicas" class="level2">
-<h2 class="anchored" data-anchor-id="propuestas-y-posiciones-públicas">Propuestas y posiciones públicas</h2>
+<section id="propuestas-y-posiciones-publicas" class="level2">
+<h2 class="anchored" data-anchor-id="propuestas-y-posiciones-publicas">Propuestas y posiciones públicas</h2>
+<div id="homepage-comparison-context" class="prose-card" hidden="">
+<p class="candidate-card__meta">
+<strong>Contexto de comparación:</strong> Llegaste aquí desde la portada comparativa por el tema <span id="homepage-comparison-topic"></span>. Esta sección reúne las propuestas públicas relacionadas con ese eje.
+</p>
+<p class="candidate-card__meta">
+<a class="card-link" href="../comparador.html">Volver al comparador general</a>
+</p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var params = new URLSearchParams(window.location.search);
+  var topic = params.get('topic');
+  var from = params.get('from');
+  if (from !== 'homepage' || !topic) return;
+  var note = document.getElementById('homepage-comparison-context');
+  var label = document.getElementById('homepage-comparison-topic');
+  if (!note || !label) return;
+  label.textContent = topic.replace(/[-_]+/g, ' ');
+  note.hidden = false;
+});
+</script>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

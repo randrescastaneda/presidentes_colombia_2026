@@ -42,7 +42,25 @@ emit_candidate_ideology(candidate_dossier)
 emit_candidate_background(candidate_claims, candidate_sources)
 ```
 
-## Propuestas y posiciones públicas
+## Propuestas y posiciones públicas {#propuestas-y-posiciones-publicas}
+
+<div id="homepage-comparison-context" class="prose-card" hidden>
+<p class="candidate-card__meta"><strong>Contexto de comparación:</strong> Llegaste aquí desde la portada comparativa por el tema <span id="homepage-comparison-topic"></span>. Esta sección reúne las propuestas públicas relacionadas con ese eje.</p>
+<p class="candidate-card__meta"><a class="card-link" href="../comparador.html">Volver al comparador general</a></p>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var params = new URLSearchParams(window.location.search);
+  var topic = params.get('topic');
+  var from = params.get('from');
+  if (from !== 'homepage' || !topic) return;
+  var note = document.getElementById('homepage-comparison-context');
+  var label = document.getElementById('homepage-comparison-topic');
+  if (!note || !label) return;
+  label.textContent = topic.replace(/[-_]+/g, ' ');
+  note.hidden = false;
+});
+</script>
 
 ```{r}
 #| results: asis

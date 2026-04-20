@@ -1,0 +1,255 @@
+test_that("build_homepage_view_model normalizes homepage artifacts and evidence states", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1,
+      "b", "candidato-b", "Candidato B", "Vice B", 2, TRUE, 2,
+      "c", "candidato-c", "Candidato C", "Vice C", 3, FALSE, NA
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  jsonlite::write_json(
+    list(
+      a = list(
+        artifact_id = "candidate-profile-a",
+        artifact_type = "candidate_profile",
+        title = "Perfil A",
+        candidate_ids = "a",
+        source_ids = list("src-1"),
+        claim_ids = list("claim-1"),
+        sections = list()
+      ),
+      `17` = list(
+        artifact_id = "homepage-brief-2026-04-20",
+        artifact_type = "homepage_brief",
+        title = "Resumen ejecutivo",
+        dek = "Resumen de prueba",
+        candidate_ids = c("a", "b"),
+        source_ids = c("src-1", "src-2"),
+        claim_ids = c("claim-1", "claim-2"),
+        sections = list(
+          list(section_id = "top_changes", body = "Se procesaron cambios nuevos."),
+          list(section_id = "key_comparison_note", body = "estado_vs_mercado: a=Estado coordinador; b=Evidencia insuficiente"),
+          list(section_id = "caveats", body = "La evidencia sigue siendo parcial.")
+        )
+      ),
+      `16` = list(
+        artifact_id = "daily-update-2026-04-20",
+        artifact_type = "daily_update",
+        title = "Actualización diaria",
+        candidate_ids = c("a", "b"),
+        source_ids = c("src-1", "src-2"),
+        claim_ids = c("claim-1", "claim-2"),
+        sections = list(
+          list(section_id = "what_changed", body = "Cambios del día."),
+          list(section_id = "open_questions", body = "Persisten preguntas abiertas.")
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "editorial_packages.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = c("a", "b"),
+      topic_comparison = list(
+        list(
+          topic_id = "salud",
+          candidate_rows = list(
+            list(candidate_id = "a", priority = "alta", instrument = "mecanismo claro", specificity = "alta", coherence = "alta", feasibility = "parcialmente evaluable"),
+            list(candidate_id = "b", priority = "sin evidencia suficiente", instrument = "sin evidencia suficiente", specificity = "sin evidencia suficiente", coherence = "sin evidencia suficiente", feasibility = "sin base suficiente")
+          ),
+          summary = "destacan candidata-a con mayor prioridad relativa."
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "validation-2026-04-20",
+      status = "pass_with_warnings",
+      summary = "Validation passed with warnings."
+    ),
+    file.path(project_dir, "data", "public", "validation_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  readr::write_csv(
+    tibble::tibble(
+      report_id = "validation-2026-04-20",
+      status = "pass_with_warnings",
+      summary = "Validation passed with warnings."
+    ),
+    file.path(project_dir, "data", "processed", "validation_status.csv")
+  )
+
+  model <- build_homepage_view_model(project_dir = project_dir)
+
+  expect_equal(model$title, "Resumen ejecutivo")
+  expect_equal(model$top_changes, "Se procesaron cambios nuevos.")
+  expect_match(model$key_comparison_note, "La comparación más útil hoy aparece en Salud")
+  expect_no_match(model$key_comparison_note, "estado_vs_mercado|candidate_id|topic_id")
+  expect_equal(model$methodology_badge$status, "pass_with_warnings")
+  expect_equal(model$methodology_badge$label, "Metodología con advertencias")
+  expect_length(model$comparison_blocks, 1)
+  expect_equal(model$comparison_blocks[[1]]$evidence_state, "partial")
+  expect_equal(model$comparison_blocks[[1]]$public_label, "lectura parcial")
+  expect_match(model$comparison_blocks[[1]]$summary, "Candidata A")
+  expect_no_match(model$comparison_blocks[[1]]$summary, "candidata-a|candidate_id|topic_id")
+  expect_equal(model$comparison_blocks[[1]]$handoff$topic_or_axis, "salud")
+  expect_equal(model$comparison_blocks[[1]]$handoff$section_anchor, "topic-salud")
+  expect_equal(model$comparison_blocks[[1]]$handoff$fallback_destination, "comparador.html")
+  expect_equal(model$comparison_blocks[[1]]$handoff$candidate_destinations[[1]]$href, "candidatos/candidata-a.html?from=homepage&topic=salud#propuestas-y-posiciones-publicas")
+  expect_true(any(vapply(model$roster, \(entry) identical(entry$candidate_id, "c"), logical(1))))
+  expect_false("c" %in% model$comparison_blocks[[1]]$candidate_ids)
+})
+
+test_that("build_homepage_view_model degrades safely when homepage brief or comparison report is missing", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  jsonlite::write_json(
+    list(
+      `16` = list(
+        artifact_id = "daily-update-2026-04-20",
+        artifact_type = "daily_update",
+        title = "Actualización diaria",
+        candidate_ids = "a",
+        source_ids = "src-1",
+        claim_ids = "claim-1",
+        sections = list(
+          list(section_id = "what_changed", body = "Cambios del día."),
+          list(section_id = "open_questions", body = "Persisten preguntas abiertas.")
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "editorial_packages.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "validation-2026-04-20",
+      status = "pass",
+      summary = "Validation passed with no blocking issues."
+    ),
+    file.path(project_dir, "data", "public", "validation_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_homepage_view_model(project_dir = project_dir)
+
+  expect_equal(model$title, "Resumen ejecutivo")
+  expect_equal(model$top_changes, "Cambios del día.")
+  expect_equal(model$key_comparison_note, "Persisten preguntas abiertas.")
+  expect_equal(model$methodology_badge$label, "Metodología verificada")
+  expect_length(model$comparison_blocks, 0)
+  expect_match(model$empty_state, "Todavía no hay suficientes diferencias comparables")
+})
+
+test_that("build_homepage_view_model tolerates missing processed validation status and unknown candidate ids", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  jsonlite::write_json(
+    list(
+      `17` = list(
+        artifact_id = "homepage-brief-2026-04-20",
+        artifact_type = "homepage_brief",
+        title = "Resumen ejecutivo",
+        sections = list(
+          list(section_id = "top_changes", body = "Cambios nuevos."),
+          list(section_id = "key_comparison_note", body = "estado_vs_mercado: a=Estado coordinador; b=Evidencia insuficiente")
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "editorial_packages.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = c("a", "missing-candidate"),
+      topic_comparison = list(
+        list(
+          topic_id = "salud-publica",
+          candidate_rows = list(
+            list(candidate_id = "a", priority = "alta", specificity = "alta", feasibility = "parcialmente evaluable"),
+            list(candidate_id = "missing-candidate", priority = "alta", specificity = "alta", feasibility = "parcialmente evaluable")
+          ),
+          summary = "destacan missing-candidate y candidata-a con mayor prioridad relativa."
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "validation-2026-04-20",
+      status = "pass",
+      summary = "Validation passed with no blocking issues."
+    ),
+    file.path(project_dir, "data", "public", "validation_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  expect_no_error(model <- build_homepage_view_model(project_dir = project_dir))
+  expect_equal(model$methodology_badge$label, "Metodología verificada")
+  expect_equal(model$comparison_blocks[[1]]$candidate_ids, "a")
+  expect_length(model$comparison_blocks[[1]]$handoff$candidate_destinations, 1)
+  expect_equal(model$comparison_blocks[[1]]$handoff$candidate_destinations[[1]]$candidate_id, "a")
+  expect_no_match(model$comparison_blocks[[1]]$summary, "missing-candidate")
+})

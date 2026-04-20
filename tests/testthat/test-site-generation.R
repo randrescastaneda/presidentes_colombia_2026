@@ -39,10 +39,30 @@ test_that("site helpers can read candidate registry without hidden pipeline depe
   expect_no_error(isolated_env$read_candidate_registry_public(project_dir))
 })
 
+test_that("site helpers expose homepage view models when sourced in isolation", {
+  isolated_env <- new.env(parent = baseenv())
+  isolated_env$project_dir <- project_root
+  sys.source(file.path(project_root, "R", "site_helpers.R"), envir = isolated_env)
+
+  expect_true(exists("build_homepage_view_model", envir = isolated_env, inherits = FALSE))
+})
+
 test_that("index page marks HTML-emitting chunks as asis", {
   index_lines <- readLines(file.path(project_root, "index.qmd"), warn = FALSE)
 
-  expect_gte(sum(index_lines == "#| results: asis"), 3)
+  expect_equal(sum(index_lines == "#| results: asis"), 4)
+})
+
+test_that("index page is driven by homepage view models instead of raw legacy tables", {
+  index_lines <- readLines(file.path(project_root, "index.qmd"), warn = FALSE)
+  index_text <- paste(index_lines, collapse = "\n")
+
+  expect_match(index_text, "build_homepage_view_model\\(")
+  expect_no_match(index_text, "read_processed_table\\(\"claim_records.csv\"\\)")
+  expect_no_match(index_text, "read_processed_table\\(\"analysis_notes.csv\"\\)")
+  expect_match(index_text, "## Comparaciones destacadas")
+  expect_match(index_text, "## Cómo leer esta portada")
+  expect_match(index_text, "## Cobertura completa")
 })
 
 test_that("generated candidate pages mark output chunks as asis", {
@@ -76,6 +96,10 @@ test_that("generated candidate pages favor narrative sections over tables", {
 
   expect_match(template, "## Ubicación ideológica")
   expect_match(template, "## Propuestas y posiciones públicas")
+  expect_match(template, "homepage-comparison-context")
+  expect_match(template, "URLSearchParams")
+  expect_match(template, "from !== 'homepage'")
+  expect_match(template, "topic.replace")
   expect_no_match(template, "safe_kable")
 })
 
