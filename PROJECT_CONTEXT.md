@@ -19,6 +19,30 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 - Workflow de publicación: `.github/workflows/publish.yml`
 - Automatización diaria activa: `colombia-2026-diario`
 
+## Estado Arquitectónico
+
+El repo ya no debe pensarse solo como `inbox -> claims -> render`.
+
+Desde esta sesión quedó sembrada la base contractual para migrar a una arquitectura por etapas:
+
+- `config/claim_type_taxonomy.csv`
+- `config/analysis_axes.csv`
+- `config/validation_rules.yml`
+- `config/editorial_style.md`
+- `config/output_templates.yml`
+- `prompts/`
+- `schemas/`
+- `examples/`
+- `data/staging/`
+- `data/state/`
+
+Estado actual de esa migración:
+
+- la capa contractual existe
+- el pipeline público todavía sigue leyendo `claims.csv` manual
+- `source_texts/` ya forma parte del scaffold diario
+- la lógica agentic completa todavía no está cableada al pipeline
+
 ## Estado Git Consolidado
 
 Al cierre de esta sesión:
@@ -86,3 +110,10 @@ Instrucción operativa persistente:
 - mantener especial densidad analítica en la watchlist de 6
 - seguir ampliando temas como política internacional, salud, empleo y derechos
 - registrar también en Family Brain vacíos de investigación y contradicciones potenciales descartadas por evidencia insuficiente
+
+## Pendientes Técnicos Inmediatos
+
+- convertir la extracción estructurada en insumo real del pipeline
+- reemplazar el índice ideológico unidimensional por análisis multidimensional reusable
+- introducir validación metodológica bloqueante antes de `data/public`
+- mover el pipeline desde un batch monolítico hacia etapas explícitas con estado incremental

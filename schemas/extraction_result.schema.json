@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/extraction_result.schema.json",
+  "title": "Extraction Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_id",
+    "batch_date",
+    "candidates_detected",
+    "claims"
+  ],
+  "properties": {
+    "source_id": { "type": "string" },
+    "batch_date": { "type": "string", "format": "date" },
+    "candidates_detected": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "candidate_id",
+          "claim_type",
+          "summary_text",
+          "position_text",
+          "topic_id",
+          "specificity_score",
+          "ambiguity_flag",
+          "evidence_excerpt"
+        ],
+        "properties": {
+          "claim_id": { "type": "string" },
+          "candidate_id": { "type": "string" },
+          "claim_type": { "type": "string" },
+          "summary_text": { "type": "string" },
+          "position_text": { "type": "string" },
+          "topic_id": { "type": "string" },
+          "subtopic_id": { "type": ["string", "null"] },
+          "policy_key": { "type": ["string", "null"] },
+          "mechanism_text": { "type": ["string", "null"] },
+          "target_population": { "type": ["string", "null"] },
+          "problem_diagnosed": { "type": ["string", "null"] },
+          "stance_value": { "type": ["number", "null"] },
+          "specificity_score": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3
+          },
+          "ambiguity_flag": { "type": "boolean" },
+          "insufficient_evidence_flag": { "type": "boolean" },
+          "possible_contradiction_flag": { "type": "boolean" },
+          "evidence_excerpt": { "type": "string" }
+        }
+      }
+    }
+  }
+}

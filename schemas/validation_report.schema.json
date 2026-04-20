@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://randrescastaneda.github.io/presidentes_colombia_2026/schemas/validation_report.schema.json",
+  "title": "Validation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "report_id",
+    "artifact_ids",
+    "status",
+    "checks",
+    "summary"
+  ],
+  "properties": {
+    "report_id": { "type": "string" },
+    "artifact_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pass", "pass_with_warnings", "block"]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["rule_id", "level", "status", "message"],
+        "properties": {
+          "rule_id": { "type": "string" },
+          "level": { "type": "string", "enum": ["block", "warn", "info"] },
+          "status": { "type": "string", "enum": ["pass", "warn", "fail"] },
+          "artifact_ref": { "type": "string" },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "summary": { "type": "string" }
+  }
+}

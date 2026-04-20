@@ -1,0 +1,15 @@
+{
+  "source_id": "src-20260420-sergio-salud-radio",
+  "batch_date": "2026-04-20",
+  "source_name": "Blu Radio",
+  "source_type": "interview",
+  "source_tier": "interview",
+  "source_url": "https://example.com/sergio-salud",
+  "published_at": "2026-04-20T11:30:00Z",
+  "title": "Sergio Fajardo expone su idea para reorganizar la salud",
+  "candidate_hints": ["sergio-fajardo"],
+  "capture_method": "manual_transcript",
+  "text_content": "Fajardo dijo que quiere reorganizar el sistema de salud con transparencia y auditoria fuerte.",
+  "captured_excerpt": "reorganizar el sistema de salud con transparencia y auditoria fuerte",
+  "notes": "Fuente util para extraction v1."
+}

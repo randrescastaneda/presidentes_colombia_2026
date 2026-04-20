@@ -1,0 +1,23 @@
+{
+  "artifact_id": "editorial-candidate-sergio-2026-04-20",
+  "artifact_type": "candidate_profile",
+  "title": "Sergio Fajardo: perfil politico-programatico",
+  "dek": "Gestion, seguridad y gradualismo con varios puntos todavia abiertos en detalle de implementacion.",
+  "candidate_ids": ["sergio-fajardo"],
+  "source_ids": ["src-20260420-sergio-salud-radio"],
+  "claim_ids": ["claim-20260420-sergio-salud-radio"],
+  "sections": [
+    {
+      "section_id": "profile_overview",
+      "heading": "Perfil general",
+      "content_type": "description",
+      "body": "La evidencia reciente muestra un lenguaje de orden institucional y prioridad por seguridad y gestion."
+    },
+    {
+      "section_id": "health_evaluation",
+      "heading": "Salud",
+      "content_type": "evaluation",
+      "body": "La propuesta de reorganizacion gana claridad de orientacion, pero sigue siendo baja en especificidad operativa."
+    }
+  ]
+}

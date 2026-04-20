@@ -1,0 +1,26 @@
+{
+  "source_id": "src-20260420-sergio-salud-radio",
+  "batch_date": "2026-04-20",
+  "candidates_detected": ["sergio-fajardo"],
+  "claims": [
+    {
+      "claim_id": "claim-20260420-sergio-salud-radio",
+      "candidate_id": "sergio-fajardo",
+      "claim_type": "postura_general",
+      "summary_text": "Presenta la reorganizacion del sistema de salud como prioridad programatica.",
+      "position_text": "Reorganizar el sistema de salud con transparencia y auditoria fuerte.",
+      "topic_id": "salud",
+      "subtopic_id": "aseguramiento-salud",
+      "policy_key": "ordenar-sistema-salud",
+      "mechanism_text": "Auditoria y reorganizacion institucional.",
+      "target_population": null,
+      "problem_diagnosed": "Desorden y opacidad del sistema.",
+      "stance_value": 1,
+      "specificity_score": 1,
+      "ambiguity_flag": false,
+      "insufficient_evidence_flag": false,
+      "possible_contradiction_flag": false,
+      "evidence_excerpt": "reorganizar el sistema de salud con transparencia y auditoria fuerte"
+    }
+  ]
+}

@@ -7,24 +7,30 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 - `pipeline` en `R` para validar taxonomía, filtrar registros públicos trazables, detectar análisis conservadores y materializar artefactos.
 - `sitio estático` en `Quarto` para publicar fichas por candidato, comparaciones temáticas, cronología, fuentes y metodología.
 - `plantillas de inbox` para que una automatización diaria o un editor carguen nuevos hallazgos.
+- `capa contractual` en `config/`, `schemas/`, `prompts/`, `examples/` y `data/state/` para evolucionar hacia un sistema agentic y analítico por etapas.
 - `workflow` de publicación para `GitHub Pages`.
 
 ## Flujo diario esperado
 
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
-2. Llenar `sources.csv` y `claims.csv` con hallazgos de las últimas 24 horas.
-3. Ejecutar:
+2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
+3. Mantener `claims.csv` mientras termina la transición al extractor estructurado.
+4. Ejecutar:
 
 ```bash
 Rscript scripts/run_daily_update.R
 ```
 
-4. Revisar `data/processed/`, `data/public/` y `docs/`.
+5. Revisar `data/processed/`, `data/public/`, `data/staging/`, `data/state/` y `docs/`.
 
 ## Estructura principal
 
 - `config/`: taxonomía, registro oficial de candidaturas y reglas editoriales.
+- `prompts/`: instrucciones versionadas para extractor, analista, comparador, writer, validator y orquestador.
+- `schemas/`: contratos JSON para artefactos estructurados intermedios.
 - `data/inbox/`: insumos diarios de investigación.
+- `data/staging/`: artefactos intermedios por etapa analítica.
+- `data/state/`: estado incremental para fuentes y candidatos.
 - `data/processed/`: tablas consolidadas listas para auditoría.
 - `data/public/`: JSON usados por el sitio público.
 - `R/`: funciones del pipeline y helpers del sitio.
@@ -52,6 +58,20 @@ En resumen:
 - revisa el render en `docs/`
 - deja que Actions publique a `origin/gh-pages`
 - evita trabajar manualmente en `gh-pages`
+
+## Dirección arquitectónica actual
+
+El repo ya publica un monitor trazable y funcional, pero la dirección vigente es convertirlo en un sistema por etapas:
+
+1. `ingestión`
+2. `extracción estructurada`
+3. `análisis por candidato`
+4. `comparación transversal`
+5. `redacción editorial`
+6. `validación metodológica`
+7. `render y publicación`
+
+La capa nueva de contratos ya está sembrada para hacer esa transición sin reescribir la web actual de `R + Quarto`.
 
 ## Contexto Persistente
 

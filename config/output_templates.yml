@@ -1,0 +1,37 @@
+version: 1
+artifacts:
+  candidate_profile:
+    title_pattern: "{candidate_name}: perfil politico-programatico"
+    required_sections:
+      - profile_overview
+      - political_philosophy
+      - thematic_proposals
+      - internal_coherence
+      - multidimensional_ideology
+      - mainstream_distance
+      - strengths
+      - weaknesses_and_uncertainties
+  comparison_report:
+    title_pattern: "Comparativa transversal: {scope_label}"
+    required_sections:
+      - scope_note
+      - priorities_comparison
+      - instruments_comparison
+      - specificity_comparison
+      - feasibility_comparison
+      - ideology_axes_comparison
+      - convergences_and_divergences
+      - unresolved_uncertainties
+  daily_update:
+    title_pattern: "Actualizacion diaria: {batch_date}"
+    required_sections:
+      - what_changed
+      - new_proposals
+      - notable_reframing
+      - open_questions
+  homepage_brief:
+    title_pattern: "Resumen ejecutivo"
+    required_sections:
+      - top_changes
+      - key_comparison_note
+      - caveats
