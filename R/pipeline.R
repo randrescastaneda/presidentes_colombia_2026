@@ -92,11 +92,15 @@ write_output_json <- function(data, path) {
 }
 
 run_pipeline <- function(project_dir = ".") {
+  ensure_contract_layout(project_dir)
+  ensure_state_tables(project_dir)
+
   taxonomy <- load_taxonomy(file.path(project_dir, "config", "taxonomy_v1.csv"))
   ideology_rules <- load_ideology_rules(file.path(project_dir, "config", "ideology_rules.csv"))
   candidates <- load_candidate_registry(project_dir)
   sources <- load_inbox_sources(project_dir)
   claims <- load_inbox_claims(project_dir)
+  source_text_files <- list_source_text_files(project_dir)
 
   screened <- screen_public_records(claims, sources)
   analysis_notes <- detect_analysis_notes(screened$public_claims, screened$public_sources)
@@ -134,16 +138,33 @@ run_pipeline <- function(project_dir = ".") {
     max(screened$public_claims$event_date, na.rm = TRUE)
   }
 
+  validation_report <- build_legacy_validation_report(
+    claims = screened$public_claims,
+    analysis_notes = analysis_notes,
+    source_text_files = source_text_files,
+    report_date = if (is.na(latest_event_date)) Sys.Date() else latest_event_date
+  )
+
+  validation_status <- tibble::tibble(
+    report_id = validation_report$report_id,
+    status = validation_report$status,
+    summary = validation_report$summary
+  )
+
   site_metadata <- tibble::tibble(
     updated_at = format(Sys.time(), tz = "UTC", usetz = TRUE),
     latest_event_date = as.character(latest_event_date),
     public_claim_count = nrow(screened$public_claims),
     public_source_count = nrow(screened$public_sources),
-    public_analysis_note_count = nrow(analysis_notes)
+    public_analysis_note_count = nrow(analysis_notes),
+    source_text_file_count = nrow(source_text_files),
+    pipeline_mode = "legacy_with_contract_layer",
+    validation_status = validation_report$status
   )
 
   processed_dir <- file.path(project_dir, "data", "processed")
   public_dir <- file.path(project_dir, "data", "public")
+  validation_dir <- file.path(project_dir, "data", "staging", "validation")
 
   write_output_csv(screened$public_sources, file.path(processed_dir, "source_records.csv"))
   write_output_csv(screened$public_claims, file.path(processed_dir, "claim_records.csv"))
@@ -152,6 +173,7 @@ run_pipeline <- function(project_dir = ".") {
   write_output_csv(dossiers, file.path(processed_dir, "candidate_dossiers.csv"))
   write_output_csv(daily_digest, file.path(processed_dir, "daily_digest.csv"))
   write_output_csv(site_metadata, file.path(processed_dir, "site_metadata.csv"))
+  write_output_csv(validation_status, file.path(processed_dir, "validation_status.csv"))
   write_output_csv(ideology_rules, file.path(processed_dir, "ideology_rules.csv"))
 
   write_output_json(candidates, file.path(public_dir, "candidate_registry.json"))
@@ -162,6 +184,9 @@ run_pipeline <- function(project_dir = ".") {
   write_output_json(dossiers, file.path(public_dir, "candidate_dossiers.json"))
   write_output_json(daily_digest, file.path(public_dir, "daily_digest.json"))
   write_output_json(site_metadata, file.path(public_dir, "site_metadata.json"))
+  write_output_json(validation_status, file.path(public_dir, "validation_status.json"))
+  write_contract_json(validation_report, file.path(validation_dir, paste0(validation_report$report_id, ".json")))
+  write_output_json(validation_report, file.path(public_dir, "validation_report.json"))
   write_output_json(ideology_rules, file.path(public_dir, "ideology_rules.json"))
 
   list(
@@ -174,6 +199,8 @@ run_pipeline <- function(project_dir = ".") {
     analysis_notes = analysis_notes,
     dossiers = dossiers,
     daily_digest = daily_digest,
-    site_metadata = site_metadata
+    site_metadata = site_metadata,
+    validation_report = validation_report,
+    validation_status = validation_status
   )
 }
