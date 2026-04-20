@@ -109,6 +109,8 @@ test_that("build_editorial_packages creates reusable publication artifacts", {
   comparison_report <- list(
     report_id = "comparison-watchlist-2026-04-20",
     candidate_ids = c("a", "b"),
+    source_ids = c("src-1", "src-2"),
+    claim_ids = c("claim-1", "claim-2"),
     axes_comparison = list(
       list(
         axis_id = "estado_vs_mercado",

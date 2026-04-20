@@ -79,5 +79,65 @@ test_that("run_pipeline materializes validation artifacts", {
   expect_true(file.exists(file.path(project_dir, "data", "public", "validation_status.json")))
   expect_true(file.exists(file.path(project_dir, "data", "public", "validation_report.json")))
   expect_true(file.exists(file.path(project_dir, "data", "staging", "validation", "validation-2026-04-20.json")))
-  expect_equal(outputs$validation_status$status[[1]], "pass_with_warnings")
+  expect_equal(outputs$validation_status$status[[1]], "pass")
+})
+
+test_that("build_validation_report blocks missing traceability in analytical artifacts", {
+  claims <- tibble::tribble(
+    ~claim_id, ~candidate_id, ~claim_type_id,
+    "claim-1", "ivan-cepeda", "propuesta_concreta"
+  )
+
+  candidate_analysis <- list(
+    list(
+      candidate_id = "ivan-cepeda",
+      source_ids = character(),
+      claim_ids = "claim-1",
+      ideology_axes = list(),
+      thematic_analysis = list(),
+      uncertainties = "Evidencia insuficiente."
+    )
+  )
+
+  comparison_report <- list(
+    report_id = "comparison-watchlist-2026-04-20",
+    candidate_ids = c("ivan-cepeda"),
+    source_ids = character(),
+    claim_ids = "claim-1",
+    axes_comparison = list(
+      list(axis_id = "estado_vs_mercado", candidate_positions = list(list(candidate_id = "ivan-cepeda", placement = "Evidencia insuficiente", confidence = 0.1)), summary = "Sin evidencia.")
+    ),
+    topic_comparison = list(),
+    convergences = character(),
+    divergences = character(),
+    uncertainties = "Sin evidencia suficiente."
+  )
+
+  editorial_packages <- list(
+    list(
+      artifact_id = "candidate-profile-ivan",
+      artifact_type = "candidate_profile",
+      title = "Perfil",
+      candidate_ids = c("ivan-cepeda"),
+      source_ids = "src-1",
+      claim_ids = character(),
+      sections = list(
+        list(section_id = "profile_overview", heading = "Perfil", content_type = "description", body = "Texto"),
+        list(section_id = "political_philosophy", heading = "Filosofía", content_type = "inference", body = "Texto"),
+        list(section_id = "internal_coherence", heading = "Coherencia", content_type = "evaluation", body = "Texto")
+      )
+    )
+  )
+
+  report <- build_validation_report(
+    claims = claims,
+    candidate_analysis = candidate_analysis,
+    comparison_report = comparison_report,
+    editorial_packages = editorial_packages,
+    report_date = as.Date("2026-04-20"),
+    project_dir = "."
+  )
+
+  expect_equal(report$status, "block")
+  expect_true(any(vapply(report$checks, \(check) identical(check$rule_id, "traceability_required") && identical(check$status, "fail"), logical(1))))
 })

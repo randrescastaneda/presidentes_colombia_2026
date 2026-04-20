@@ -178,11 +178,13 @@ run_pipeline <- function(project_dir = ".") {
     })
   }
 
-  validation_report <- build_legacy_validation_report(
+  validation_report <- build_validation_report(
     claims = screened$public_claims,
-    analysis_notes = analysis_notes,
-    source_text_files = source_text_files,
-    report_date = report_date
+    candidate_analysis = candidate_analysis,
+    comparison_report = comparison_report,
+    editorial_packages = editorial_packages,
+    report_date = report_date,
+    project_dir = project_dir
   )
 
   validation_status <- tibble::tibble(
@@ -207,6 +209,8 @@ run_pipeline <- function(project_dir = ".") {
     validation_status = validation_report$status
   )
 
+  publish_allowed <- public_publish_allowed(validation_report)
+
   processed_dir <- file.path(project_dir, "data", "processed")
   public_dir <- file.path(project_dir, "data", "public")
   validation_dir <- file.path(project_dir, "data", "staging", "validation")
@@ -224,23 +228,25 @@ run_pipeline <- function(project_dir = ".") {
   write_output_csv(validation_status, file.path(processed_dir, "validation_status.csv"))
   write_output_csv(ideology_rules, file.path(processed_dir, "ideology_rules.csv"))
 
+  write_contract_json(validation_report, file.path(validation_dir, paste0(validation_report$report_id, ".json")))
   write_output_json(candidates, file.path(public_dir, "candidate_registry.json"))
   write_output_json(taxonomy, file.path(public_dir, "taxonomy_v1.json"))
-  write_output_json(screened$public_sources, file.path(public_dir, "source_records.json"))
-  write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
-  write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
-  write_output_json(unname(candidate_analysis), file.path(public_dir, "candidate_analysis.json"))
-  write_output_json(candidate_analysis_summary, file.path(public_dir, "candidate_analysis_summary.json"))
-  write_output_json(comparison_report, file.path(public_dir, "comparison_report.json"))
-  write_output_json(dossiers, file.path(public_dir, "candidate_dossiers.json"))
-  write_output_json(daily_digest, file.path(public_dir, "daily_digest.json"))
-  write_output_json(editorial_packages, file.path(public_dir, "editorial_packages.json"))
-  write_output_json(editorial_package_index, file.path(public_dir, "editorial_package_index.json"))
-  write_output_json(site_metadata, file.path(public_dir, "site_metadata.json"))
+  if (publish_allowed) {
+    write_output_json(screened$public_sources, file.path(public_dir, "source_records.json"))
+    write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
+    write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
+    write_output_json(unname(candidate_analysis), file.path(public_dir, "candidate_analysis.json"))
+    write_output_json(candidate_analysis_summary, file.path(public_dir, "candidate_analysis_summary.json"))
+    write_output_json(comparison_report, file.path(public_dir, "comparison_report.json"))
+    write_output_json(dossiers, file.path(public_dir, "candidate_dossiers.json"))
+    write_output_json(daily_digest, file.path(public_dir, "daily_digest.json"))
+    write_output_json(editorial_packages, file.path(public_dir, "editorial_packages.json"))
+    write_output_json(editorial_package_index, file.path(public_dir, "editorial_package_index.json"))
+    write_output_json(site_metadata, file.path(public_dir, "site_metadata.json"))
+    write_output_json(ideology_rules, file.path(public_dir, "ideology_rules.json"))
+  }
   write_output_json(validation_status, file.path(public_dir, "validation_status.json"))
-  write_contract_json(validation_report, file.path(validation_dir, paste0(validation_report$report_id, ".json")))
   write_output_json(validation_report, file.path(public_dir, "validation_report.json"))
-  write_output_json(ideology_rules, file.path(public_dir, "ideology_rules.json"))
 
   list(
     taxonomy = taxonomy,
@@ -260,6 +266,7 @@ run_pipeline <- function(project_dir = ".") {
     daily_digest = daily_digest,
     site_metadata = site_metadata,
     validation_report = validation_report,
-    validation_status = validation_status
+    validation_status = validation_status,
+    publish_allowed = publish_allowed
   )
 }

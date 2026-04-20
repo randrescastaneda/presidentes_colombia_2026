@@ -64,8 +64,8 @@ build_comparison_editorial_package <- function(comparison_report, candidates, re
     title = paste0("Comparativa transversal: ", paste(candidate_names, collapse = ", ")),
     dek = "Comparación simétrica de prioridades, instrumentos, especificidad, factibilidad y ejes ideológicos.",
     candidate_ids = comparison_report$candidate_ids,
-    source_ids = character(),
-    claim_ids = character(),
+    source_ids = comparison_report$source_ids %||% character(),
+    claim_ids = comparison_report$claim_ids %||% character(),
     sections = list(
       build_editorial_section("scope_note", "Alcance", "description", "La comparación usa la misma estructura y los mismos ejes para todos los candidatos incluidos en la watchlist activa."),
       build_editorial_section("priorities_comparison", "Prioridades temáticas", "description", paste(purrr::map_chr(comparison_report$topic_comparison, "summary"), collapse = " ")),

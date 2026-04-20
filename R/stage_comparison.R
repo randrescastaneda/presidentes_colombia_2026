@@ -262,11 +262,15 @@ build_comparison_report <- function(candidate_analysis, candidates, claims, anal
   filtered_analysis <- candidate_analysis[candidate_ids]
   axes_comparison <- build_axes_comparison(filtered_analysis, candidate_ids, analysis_axes)
   topic_comparison <- build_topic_comparison(filtered_analysis, candidate_ids, claims)
+  source_ids <- unique(unlist(purrr::map(filtered_analysis, \(artifact) artifact$source_ids %||% character())))
+  claim_ids <- unique(unlist(purrr::map(filtered_analysis, \(artifact) artifact$claim_ids %||% character())))
 
   list(
     report_id = paste0("comparison-watchlist-", as.character(report_date)),
     scope_label = "watchlist_activa",
     candidate_ids = candidate_ids,
+    source_ids = source_ids,
+    claim_ids = claim_ids,
     axes_comparison = axes_comparison,
     topic_comparison = topic_comparison,
     convergences = build_comparison_convergences(axes_comparison, topic_comparison),
