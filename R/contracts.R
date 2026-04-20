@@ -30,6 +30,7 @@ contract_directories <- function(project_dir = ".") {
     file.path(project_dir, "prompts"),
     file.path(project_dir, "schemas"),
     file.path(project_dir, "examples"),
+    file.path(project_dir, "data", "staging", "source_packets"),
     file.path(project_dir, "data", "staging", "extraction"),
     file.path(project_dir, "data", "staging", "analysis"),
     file.path(project_dir, "data", "staging", "comparison"),

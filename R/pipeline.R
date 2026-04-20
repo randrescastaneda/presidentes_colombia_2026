@@ -99,8 +99,16 @@ run_pipeline <- function(project_dir = ".") {
   ideology_rules <- load_ideology_rules(file.path(project_dir, "config", "ideology_rules.csv"))
   candidates <- load_candidate_registry(project_dir)
   sources <- load_inbox_sources(project_dir)
-  claims <- load_inbox_claims(project_dir)
+  legacy_claims <- load_inbox_claims(project_dir)
   source_text_files <- list_source_text_files(project_dir)
+  source_packets <- build_source_packets(sources, source_text_files)
+  write_source_packets(source_packets, project_dir)
+  extraction_results <- materialize_extraction_results(
+    project_dir = project_dir,
+    claims = legacy_claims,
+    sources = sources
+  )
+  claims <- flatten_extraction_claims(extraction_results)
 
   screened <- screen_public_records(claims, sources)
   analysis_notes <- detect_analysis_notes(screened$public_claims, screened$public_sources)
@@ -158,7 +166,9 @@ run_pipeline <- function(project_dir = ".") {
     public_source_count = nrow(screened$public_sources),
     public_analysis_note_count = nrow(analysis_notes),
     source_text_file_count = nrow(source_text_files),
-    pipeline_mode = "legacy_with_contract_layer",
+    source_packet_count = length(source_packets),
+    extraction_result_count = length(extraction_results),
+    pipeline_mode = if (nrow(legacy_claims) > 0) "structured_extraction_with_legacy_fallback" else "structured_extraction_only",
     validation_status = validation_report$status
   )
 

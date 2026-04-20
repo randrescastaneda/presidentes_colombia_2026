@@ -41,3 +41,69 @@ list_source_text_files <- function(project_dir = ".", batch_date = NULL) {
     )
   })
 }
+
+read_source_text_content <- function(path) {
+  if (!file.exists(path)) {
+    return(NA_character_)
+  }
+
+  paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+}
+
+build_source_packets <- function(sources, source_text_files = tibble::tibble()) {
+  if (nrow(sources) == 0) {
+    return(list())
+  }
+
+  source_text_lookup <- if (nrow(source_text_files) == 0) {
+    tibble::tibble(source_id = character(), text_path = character(), batch_date = as.Date(character()))
+  } else {
+    source_text_files |>
+      dplyr::transmute(
+        source_id = .data$source_id,
+        text_path = .data$path,
+        batch_date = .data$batch_date
+      )
+  }
+
+  enriched_sources <- sources |>
+    dplyr::left_join(source_text_lookup, by = "source_id")
+
+  packets <- purrr::pmap(enriched_sources, function(...) {
+    row <- tibble::as_tibble(list(...))
+    list(
+      source_id = row$source_id[[1]],
+      batch_date = row$inbox_batch[[1]] %||% as.character(row$batch_date[[1]] %||% Sys.Date()),
+      source_name = row$source_name[[1]],
+      source_type = row$source_type[[1]],
+      source_tier = row$source_tier[[1]],
+      source_url = row$url[[1]],
+      published_at = format(as.POSIXct(row$published_at[[1]], tz = "UTC"), "%Y-%m-%dT%H:%M:%SZ"),
+      title = row$title[[1]] %||% "Sin título visible",
+      candidate_hints = unique(stats::na.omit(c(row$candidate_id[[1]]))),
+      capture_method = if (!is.na(row$text_path[[1]] %||% NA_character_)) "source_text_file" else "quote_only",
+      text_content = if (!is.na(row$text_path[[1]] %||% NA_character_)) read_source_text_content(row$text_path[[1]]) else row$quote_text[[1]] %||% "",
+      captured_excerpt = row$quote_text[[1]] %||% "",
+      notes = NA_character_
+    )
+  })
+
+  stats::setNames(packets, vapply(packets, `[[`, character(1), "source_id"))
+}
+
+write_source_packets <- function(source_packets, project_dir = ".") {
+  if (length(source_packets) == 0) {
+    return(character())
+  }
+
+  output_dir <- file.path(project_dir, "data", "staging", "source_packets")
+
+  paths <- purrr::imap_chr(source_packets, function(packet, source_id) {
+    batch_date <- packet$batch_date %||% "undated"
+    path <- file.path(output_dir, batch_date, paste0(source_id, ".json"))
+    write_contract_json(packet, path)
+    path
+  })
+
+  unname(paths)
+}
