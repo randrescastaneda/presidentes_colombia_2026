@@ -286,6 +286,59 @@ h1, h2, h3, h4, .navbar-brand {
   margin-top: 1rem;
 }
 
+.program-document-grid,
+.comparison-matrix-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1rem;
+}
+
+.program-document-card,
+.comparison-matrix-card {
+  background: rgba(255, 250, 242, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.program-document-card__header,
+.program-document-card__actions,
+.comparison-matrix-card__links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.comparison-matrix-card__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.comparison-matrix-card__stats div {
+  background: rgba(23, 50, 77, 0.04);
+  border-radius: 16px;
+  padding: 0.7rem 0.8rem;
+}
+
+.comparison-matrix-card__stats dt {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.comparison-matrix-card__stats dd {
+  margin: 0.25rem 0 0;
+  color: var(--ink);
+}
+
 .comparison-highlight-grid,
 .reading-grid {
   display: grid;
@@ -385,5 +438,9 @@ h1, h2, h3, h4, .navbar-brand {
     border-top: 1px solid var(--line);
     padding-left: 0;
     padding-top: 1rem;
+  }
+
+  .comparison-matrix-card__stats {
+    grid-template-columns: 1fr;
   }
 }
