@@ -1,7 +1,7 @@
 {
   "report_id": "validation-2026-04-20",
   "artifact_ids": ["claim_records", "candidate_analysis", "comparison_report", "editorial_packages", "site_metadata"],
-  "status": "pass_with_warnings",
+  "status": "pass",
   "checks": [
     {
       "rule_id": "primary_program_documents_registered",
@@ -20,9 +20,9 @@
     {
       "rule_id": "primary_program_documents_quality",
       "level": "warn",
-      "status": "warn",
+      "status": "pass",
       "artifact_ref": "program_documents",
-      "message": "Al menos un documento oficial primario requiere revisión por conversión parcial o contenido demasiado fragmentario."
+      "message": "Los documentos oficiales primarios disponibles no muestran señales obvias de conversión deficiente."
     },
     {
       "rule_id": "traceability_required",
@@ -74,5 +74,5 @@
       "message": "Las promesas vagas quedaron marcadas como limitación analítica."
     }
   ],
-  "summary": "Validation passed with warnings: publication is possible, but analytical caveats remain visible."
+  "summary": "Validation passed with no blocking issues."
 }
