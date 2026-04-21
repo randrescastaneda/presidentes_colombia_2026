@@ -39,4 +39,6 @@ if (!identical(status, 0L)) {
   stop("Quarto render failed with exit status ", status)
 }
 
+publish_program_document_files(project_dir = ".", program_documents = pipeline_outputs$program_documents)
+
 message("Pipeline y sitio renderizados correctamente.")

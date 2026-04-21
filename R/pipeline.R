@@ -69,8 +69,17 @@ run_pipeline <- function(project_dir = ".") {
   analysis_axes <- load_analysis_axes(project_dir)
   analysis_axis_rules <- load_analysis_axis_rules(project_dir)
   candidates <- load_candidate_registry(project_dir)
-  sources <- load_inbox_sources(project_dir)
-  source_text_files <- list_source_text_files(project_dir)
+  program_documents <- load_program_documents(project_dir)
+  sources <- dplyr::bind_rows(
+    load_inbox_sources(project_dir),
+    build_program_document_sources(program_documents)
+  ) |>
+    dplyr::distinct(.data$source_id, .keep_all = TRUE)
+  source_text_files <- dplyr::bind_rows(
+    list_source_text_files(project_dir),
+    list_program_document_text_files(project_dir, program_documents)
+  ) |>
+    dplyr::distinct(.data$source_id, .keep_all = TRUE)
   source_packets <- build_source_packets(sources, source_text_files)
   write_source_packets(source_packets, project_dir)
   extraction_results <- materialize_extraction_results(project_dir = project_dir, source_packets = source_packets)
@@ -147,6 +156,8 @@ run_pipeline <- function(project_dir = ".") {
     candidate_analysis = candidate_analysis,
     comparison_report = comparison_report,
     editorial_packages = editorial_packages,
+    program_documents = program_documents,
+    candidates = candidates,
     report_date = report_date,
     project_dir = project_dir
   )
@@ -167,6 +178,8 @@ run_pipeline <- function(project_dir = ".") {
     comparison_report_count = if (is.null(comparison_report)) 0 else 1,
     editorial_package_count = length(editorial_packages),
     source_text_file_count = nrow(source_text_files),
+    program_document_count = nrow(program_documents),
+    primary_program_document_count = sum(program_documents$is_primary %in% TRUE, na.rm = TRUE),
     source_packet_count = length(source_packets),
     extraction_result_count = length(extraction_results),
     pipeline_mode = "structured_extraction_auto",
@@ -178,8 +191,15 @@ run_pipeline <- function(project_dir = ".") {
   processed_dir <- file.path(project_dir, "data", "processed")
   public_dir <- file.path(project_dir, "data", "public")
   validation_dir <- file.path(project_dir, "data", "staging", "validation")
+  program_documents_public <- build_program_documents_public(
+    program_documents = program_documents,
+    public_sources = screened$public_sources,
+    candidate_analysis = candidate_analysis,
+    comparison_report = comparison_report
+  )
 
   write_output_csv(screened$public_sources, file.path(processed_dir, "source_records.csv"))
+  write_output_csv(program_documents_public, file.path(processed_dir, "program_documents.csv"))
   write_output_csv(screened$public_claims, file.path(processed_dir, "claim_records.csv"))
   write_output_csv(screened$rejected_claims, file.path(processed_dir, "rejected_claims.csv"))
   write_output_csv(analysis_notes, file.path(processed_dir, "analysis_notes.csv"))
@@ -197,6 +217,7 @@ run_pipeline <- function(project_dir = ".") {
   write_output_json(taxonomy, file.path(public_dir, "taxonomy_v1.json"))
   if (publish_allowed) {
     write_output_json(screened$public_sources, file.path(public_dir, "source_records.json"))
+    write_output_json(program_documents_public, file.path(public_dir, "program_documents.json"))
     write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
     write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
     write_output_json(unname(candidate_analysis), file.path(public_dir, "candidate_analysis.json"))
@@ -217,6 +238,7 @@ run_pipeline <- function(project_dir = ".") {
     ideology_rules = ideology_rules,
     candidates = candidates,
     sources = screened$public_sources,
+    program_documents = program_documents_public,
     claims = screened$public_claims,
     rejected_claims = screened$rejected_claims,
     analysis_notes = analysis_notes,

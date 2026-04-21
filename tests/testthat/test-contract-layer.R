@@ -5,6 +5,7 @@ test_that("contract layout can be created without touching the public pipeline",
   paths <- ensure_contract_layout(project_dir)
 
   expect_true(all(dir.exists(paths)))
+  expect_true(file.exists(file.path(project_dir, "data", "program_documents", "program_documents.csv")))
 })
 
 test_that("state tables are created with expected headers", {

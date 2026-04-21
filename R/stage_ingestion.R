@@ -105,6 +105,19 @@ build_source_packets <- function(sources, source_text_files = tibble::tibble()) 
 
   packets <- purrr::pmap(enriched_sources, function(...) {
     row <- tibble::as_tibble(list(...))
+    row_value <- function(name, default = NA_character_) {
+      if (!name %in% names(row)) {
+        return(default)
+      }
+
+      value <- row[[name]][[1]]
+      if (length(value) == 0 || all(is.na(value))) {
+        return(default)
+      }
+
+      value
+    }
+
     raw_text <- if (!is.na(row$text_path[[1]] %||% NA_character_)) read_source_text_content(row$text_path[[1]]) else row$quote_text[[1]] %||% ""
     note_metadata <- parse_source_note_metadata(raw_text)
     hinted_candidates <- unique(stats::na.omit(c(
@@ -121,6 +134,16 @@ build_source_packets <- function(sources, source_text_files = tibble::tibble()) 
       source_url = row$url[[1]],
       published_at = format(as.POSIXct(row$published_at[[1]], tz = "UTC"), "%Y-%m-%dT%H:%M:%SZ"),
       title = row$title[[1]] %||% "Sin título visible",
+      document_id = row_value("document_id"),
+      document_role = row_value("document_role"),
+      is_primary_document = as.logical(row_value("is_primary", FALSE)),
+      official_page_url = row_value("official_page_url"),
+      download_url = row_value("download_url"),
+      discovery_method = row_value("discovery_method"),
+      download_status = row_value("download_status"),
+      conversion_status = row_value("conversion_status"),
+      pdf_path = row_value("pdf_path"),
+      markdown_path = row_value("markdown_path"),
       candidate_hints = hinted_candidates,
       capture_method = note_metadata$capture_method %||% if (!is.na(row$text_path[[1]] %||% NA_character_)) "source_text_file" else "quote_only",
       text_content = raw_text,

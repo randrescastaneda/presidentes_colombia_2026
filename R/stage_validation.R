@@ -145,6 +145,10 @@ has_feasibility_coverage <- function(candidate_analysis, comparison_report) {
 }
 
 vague_promises_are_flagged <- function(claims, candidate_analysis) {
+  if (!all(c("claim_type_id", "candidate_id") %in% names(claims))) {
+    return(TRUE)
+  }
+
   vague_candidates <- claims |>
     dplyr::filter(claim_type_id %in% c("promesa_vaga", "slogan")) |>
     dplyr::distinct(candidate_id) |>
@@ -175,6 +179,75 @@ build_validation_check <- function(rule_id, level, status, artifact_ref, message
   )
 }
 
+program_document_watchlist_rows <- function(program_documents, candidates) {
+  watchlist_ids <- candidates |>
+    dplyr::filter(.data$watchlist_active %in% TRUE) |>
+    dplyr::pull(.data$candidate_id)
+
+  program_documents |>
+    dplyr::filter(.data$candidate_id %in% watchlist_ids)
+}
+
+primary_program_documents_complete <- function(program_documents, candidates) {
+  if (!program_documents_initialized(program_documents)) {
+    return(TRUE)
+  }
+
+  watchlist_ids <- candidates |>
+    dplyr::filter(.data$watchlist_active %in% TRUE) |>
+    dplyr::pull(.data$candidate_id)
+
+  primary_ids <- program_documents |>
+    dplyr::filter(.data$is_primary %in% TRUE) |>
+    dplyr::pull(.data$candidate_id) |>
+    unique()
+
+  length(setdiff(watchlist_ids, primary_ids)) == 0
+}
+
+primary_program_documents_have_markdown <- function(program_documents, candidates, project_dir = ".") {
+  if (!program_documents_initialized(program_documents)) {
+    return(TRUE)
+  }
+
+  primary_rows <- program_document_watchlist_rows(program_documents, candidates) |>
+    dplyr::filter(.data$is_primary %in% TRUE)
+
+  if (nrow(primary_rows) == 0) {
+    return(FALSE)
+  }
+
+  all(vapply(seq_len(nrow(primary_rows)), function(index) {
+    markdown_path <- resolve_program_document_path(project_dir, primary_rows$markdown_path[[index]])
+    !is.na(markdown_path) && file.exists(markdown_path)
+  }, logical(1)))
+}
+
+primary_program_documents_need_review <- function(program_documents, candidates, project_dir = ".") {
+  if (!program_documents_initialized(program_documents)) {
+    return(FALSE)
+  }
+
+  primary_rows <- program_document_watchlist_rows(program_documents, candidates) |>
+    dplyr::filter(.data$is_primary %in% TRUE)
+
+  if (nrow(primary_rows) == 0) {
+    return(FALSE)
+  }
+
+  any(vapply(seq_len(nrow(primary_rows)), function(index) {
+    markdown_path <- resolve_program_document_path(project_dir, primary_rows$markdown_path[[index]])
+    conversion_status <- tolower(primary_rows$conversion_status[[index]] %||% "")
+    if (is.na(markdown_path) || !file.exists(markdown_path)) {
+      return(FALSE)
+    }
+
+    text <- read_source_text_content(markdown_path)
+    nchar(text %||% "", type = "chars") < 800 ||
+      conversion_status %in% c("partial", "incomplete", "needs_review", "warn")
+  }, logical(1)))
+}
+
 validation_status_from_checks <- function(checks) {
   has_block_fail <- any(vapply(checks, \(check) check$level == "block" && check$status == "fail", logical(1)))
   has_warning <- any(vapply(checks, \(check) check$status == "warn", logical(1)))
@@ -193,6 +266,8 @@ build_validation_report <- function(
   candidate_analysis,
   comparison_report,
   editorial_packages,
+  program_documents = empty_program_documents_tibble(),
+  candidates = tibble::tibble(candidate_id = character(), watchlist_active = logical()),
   report_date = Sys.Date(),
   project_dir = "."
 ) {
@@ -203,6 +278,45 @@ build_validation_report <- function(
   editorial_traceable <- purrr::every(editorial_packages, \(artifact) artifact_has_traceability(artifact$source_ids, artifact$claim_ids))
 
   checks <- list(
+    build_validation_check(
+      "primary_program_documents_registered",
+      "block",
+      if (primary_program_documents_complete(program_documents, candidates)) "pass" else "fail",
+      "program_documents",
+      if (!program_documents_initialized(program_documents)) {
+        "El corpus oficial de programas todavía no está inicializado; la validación documental estricta aún no corre."
+      } else if (primary_program_documents_complete(program_documents, candidates)) {
+        "Cada candidatura activa de la watchlist ya tiene un documento oficial primario registrado."
+      } else {
+        "Faltan documentos oficiales primarios para al menos una candidatura activa de la watchlist."
+      }
+    ),
+    build_validation_check(
+      "primary_program_documents_markdown_ready",
+      "block",
+      if (primary_program_documents_have_markdown(program_documents, candidates, project_dir = project_dir)) "pass" else "fail",
+      "program_documents",
+      if (!program_documents_initialized(program_documents)) {
+        "Aún no hay corpus oficial de programas registrado para exigir Markdown persistido."
+      } else if (primary_program_documents_have_markdown(program_documents, candidates, project_dir = project_dir)) {
+        "Los documentos oficiales primarios de la watchlist tienen Markdown disponible para análisis."
+      } else {
+        "Hay documentos oficiales primarios sin Markdown persistido o sin archivo legible para análisis."
+      }
+    ),
+    build_validation_check(
+      "primary_program_documents_quality",
+      "warn",
+      if (primary_program_documents_need_review(program_documents, candidates, project_dir = project_dir)) "warn" else "pass",
+      "program_documents",
+      if (!program_documents_initialized(program_documents)) {
+        "No hay corpus oficial inicializado; no aplica revisión de calidad documental."
+      } else if (primary_program_documents_need_review(program_documents, candidates, project_dir = project_dir)) {
+        "Al menos un documento oficial primario requiere revisión por conversión parcial o contenido demasiado fragmentario."
+      } else {
+        "Los documentos oficiales primarios disponibles no muestran señales obvias de conversión deficiente."
+      }
+    ),
     build_validation_check(
       "traceability_required",
       "block",

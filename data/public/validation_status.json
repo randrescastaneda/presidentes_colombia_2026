@@ -1,7 +1,7 @@
 [
   {
-    "report_id": "validation-2026-04-19",
-    "status": "pass",
-    "summary": "Validation passed with no blocking issues."
+    "report_id": "validation-2026-04-20",
+    "status": "pass_with_warnings",
+    "summary": "Validation passed with warnings: publication is possible, but analytical caveats remain visible."
   }
 ]

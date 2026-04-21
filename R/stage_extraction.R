@@ -12,6 +12,7 @@ empty_flattened_claims_tibble <- function() {
   tibble::tibble(
     claim_id = character(),
     candidate_id = character(),
+    document_id = character(),
     event_date = as.Date(character()),
     source_id = character(),
     claim_type = character(),
@@ -529,6 +530,7 @@ build_extraction_result_from_source_packet <- function(packet, project_dir = "."
 
   list(
     source_id = packet$source_id,
+    document_id = packet$document_id %||% NA_character_,
     batch_date = packet$batch_date %||% as.character(Sys.Date()),
     candidates_detected = unique(stats::na.omit(c(
       packet$candidate_hints %||% character(),
@@ -609,6 +611,7 @@ flatten_extraction_claims <- function(extraction_results) {
     claims |>
       dplyr::mutate(
         source_id = result$source_id %||% tools::file_path_sans_ext(name),
+        document_id = result$document_id %||% NA_character_,
         event_date = as.Date(result$batch_date %||% NA_character_),
         claim_type_id = .data$claim_type,
         claim_type = contract_claim_type_to_legacy(.data$claim_type),

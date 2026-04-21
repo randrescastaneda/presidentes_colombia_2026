@@ -1,17 +1,17 @@
 {
-  "report_id": "comparison-watchlist-2026-04-19",
+  "report_id": "comparison-watchlist-2026-04-20",
   "scope_label": "watchlist_activa",
   "candidate_ids": ["ivan-cepeda", "abelardo-de-la-espriella", "paloma-valencia", "claudia-lopez", "sergio-fajardo", "luis-gilberto-murillo"],
-  "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais"],
-  "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1"],
+  "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260420-ivan-program-pdf", "src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260420-abelardo-program-pdf", "src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260420-paloma-program-pdf", "src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260420-claudia-program-pdf", "src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260420-fajardo-program-pdf", "src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais", "src-20260420-murillo-program-home"],
+  "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260420-ivan-program-pdf-claim-1", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260420-fajardo-program-pdf-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1", "src-20260420-murillo-program-home-claim-1"],
   "axes_comparison": [
     {
       "axis_id": "estado_vs_mercado",
       "candidate_positions": [
         {
           "candidate_id": "ivan-cepeda",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -25,29 +25,29 @@
         },
         {
           "candidate_id": "claudia-lopez",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Estado coordinador",
+          "confidence": 0.95
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Estado coordinador."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Mixto o tensionado vs. Estado coordinador."
     },
     {
       "axis_id": "redistribucion_vs_libertad_economica",
       "candidate_positions": [
         {
           "candidate_id": "ivan-cepeda",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Redistribucion",
+          "confidence": 0.95
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -62,12 +62,12 @@
         {
           "candidate_id": "claudia-lopez",
           "placement": "Redistribucion",
-          "confidence": 0.84
+          "confidence": 0.68
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
@@ -75,7 +75,7 @@
           "confidence": 0
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Redistribucion."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Redistribucion vs. Mixto o tensionado."
     },
     {
       "axis_id": "universalismo_vs_focalizacion",
@@ -98,20 +98,20 @@
         {
           "candidate_id": "claudia-lopez",
           "placement": "Focalizacion",
-          "confidence": 0.92
+          "confidence": 0.71
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
-          "placement": "Focalizacion",
-          "confidence": 0.79
+          "placement": "Universalismo",
+          "confidence": 0.71
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Focalizacion."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Focalizacion vs. Mixto o tensionado vs. Universalismo."
     },
     {
       "axis_id": "institucionalismo_vs_personalismo",
@@ -119,7 +119,7 @@
         {
           "candidate_id": "ivan-cepeda",
           "placement": "Institucionalismo",
-          "confidence": 0.81
+          "confidence": 0.68
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -134,12 +134,12 @@
         {
           "candidate_id": "claudia-lopez",
           "placement": "Institucionalismo",
-          "confidence": 0.92
+          "confidence": 0.71
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
@@ -147,7 +147,7 @@
           "confidence": 0
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Institucionalismo."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Institucionalismo vs. Mixto o tensionado."
     },
     {
       "axis_id": "gradualismo_vs_disrupcion",
@@ -170,135 +170,27 @@
         {
           "candidate_id": "claudia-lopez",
           "placement": "Gradualismo",
-          "confidence": 0.92
+          "confidence": 0.95
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Gradualismo",
+          "confidence": 0.95
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Gradualismo."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Gradualismo vs. Mixto o tensionado."
     },
     {
       "axis_id": "tecnocracia_vs_populismo",
       "candidate_positions": [
         {
           "candidate_id": "ivan-cepeda",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "abelardo-de-la-espriella",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "paloma-valencia",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "claudia-lopez",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "luis-gilberto-murillo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        }
-      ],
-      "summary": "La comparación todavía no tiene evidencia suficiente para diferenciar a los candidatos en este eje."
-    },
-    {
-      "axis_id": "apertura_vs_soberanismo",
-      "candidate_positions": [
-        {
-          "candidate_id": "ivan-cepeda",
-          "placement": "Soberanismo",
-          "confidence": 0.79
-        },
-        {
-          "candidate_id": "abelardo-de-la-espriella",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "paloma-valencia",
-          "placement": "Soberanismo",
-          "confidence": 0.75
-        },
-        {
-          "candidate_id": "claudia-lopez",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "luis-gilberto-murillo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        }
-      ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Soberanismo."
-    },
-    {
-      "axis_id": "conservadurismo_vs_progresismo_cultural",
-      "candidate_positions": [
-        {
-          "candidate_id": "ivan-cepeda",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "abelardo-de-la-espriella",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "paloma-valencia",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "claudia-lopez",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        },
-        {
-          "candidate_id": "luis-gilberto-murillo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
-        }
-      ],
-      "summary": "La comparación todavía no tiene evidencia suficiente para diferenciar a los candidatos en este eje."
-    },
-    {
-      "axis_id": "seguridad_negociacion_vs_punitivismo",
-      "candidate_positions": [
-        {
-          "candidate_id": "ivan-cepeda",
-          "placement": "Seguridad negociada",
+          "placement": "Populismo",
           "confidence": 0.95
         },
         {
@@ -313,13 +205,13 @@
         },
         {
           "candidate_id": "claudia-lopez",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
@@ -327,15 +219,123 @@
           "confidence": 0
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Seguridad negociada."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Populismo vs. Mixto o tensionado."
+    },
+    {
+      "axis_id": "apertura_vs_soberanismo",
+      "candidate_positions": [
+        {
+          "candidate_id": "ivan-cepeda",
+          "placement": "Soberanismo",
+          "confidence": 0.68
+        },
+        {
+          "candidate_id": "abelardo-de-la-espriella",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        },
+        {
+          "candidate_id": "paloma-valencia",
+          "placement": "Soberanismo",
+          "confidence": 0.75
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
+        },
+        {
+          "candidate_id": "sergio-fajardo",
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
+        },
+        {
+          "candidate_id": "luis-gilberto-murillo",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        }
+      ],
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Soberanismo vs. Mixto o tensionado."
+    },
+    {
+      "axis_id": "conservadurismo_vs_progresismo_cultural",
+      "candidate_positions": [
+        {
+          "candidate_id": "ivan-cepeda",
+          "placement": "Progresismo cultural",
+          "confidence": 0.92
+        },
+        {
+          "candidate_id": "abelardo-de-la-espriella",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        },
+        {
+          "candidate_id": "paloma-valencia",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "placement": "Progresismo cultural",
+          "confidence": 0.92
+        },
+        {
+          "candidate_id": "sergio-fajardo",
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
+        },
+        {
+          "candidate_id": "luis-gilberto-murillo",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        }
+      ],
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Progresismo cultural vs. Mixto o tensionado."
+    },
+    {
+      "axis_id": "seguridad_negociacion_vs_punitivismo",
+      "candidate_positions": [
+        {
+          "candidate_id": "ivan-cepeda",
+          "placement": "Seguridad negociada",
+          "confidence": 0.73
+        },
+        {
+          "candidate_id": "abelardo-de-la-espriella",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        },
+        {
+          "candidate_id": "paloma-valencia",
+          "placement": "Evidencia insuficiente",
+          "confidence": 0
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
+        },
+        {
+          "candidate_id": "sergio-fajardo",
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
+        },
+        {
+          "candidate_id": "luis-gilberto-murillo",
+          "placement": "Seguridad negociada",
+          "confidence": 0.95
+        }
+      ],
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Seguridad negociada vs. Mixto o tensionado."
     },
     {
       "axis_id": "centralizacion_vs_territorializacion",
       "candidate_positions": [
         {
           "candidate_id": "ivan-cepeda",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Territorializacion",
+          "confidence": 0.92
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -350,12 +350,12 @@
         {
           "candidate_id": "claudia-lopez",
           "placement": "Territorializacion",
-          "confidence": 0.79
+          "confidence": 0.68
         },
         {
           "candidate_id": "sergio-fajardo",
-          "placement": "Evidencia insuficiente",
-          "confidence": 0
+          "placement": "Mixto o tensionado",
+          "confidence": 0.6
         },
         {
           "candidate_id": "luis-gilberto-murillo",
@@ -363,7 +363,7 @@
           "confidence": 0.92
         }
       ],
-      "summary": "La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Territorializacion."
+      "summary": "La comparación muestra diferencias sustantivas en este eje: Territorializacion vs. Mixto o tensionado."
     }
   ],
   "topic_comparison": [
@@ -520,14 +520,14 @@
         },
         {
           "candidate_id": "luis-gilberto-murillo",
-          "priority": "sin evidencia suficiente",
-          "instrument": "sin evidencia suficiente",
-          "specificity": "sin evidencia suficiente",
-          "coherence": "sin evidencia suficiente",
-          "feasibility": "sin base suficiente"
+          "priority": "alta",
+          "instrument": "instrumentos o mecanismos parcialmente explicitados",
+          "specificity": "alta",
+          "coherence": "con tensiones visibles",
+          "feasibility": "parcialmente evaluable"
         }
       ],
-      "summary": "El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa."
+      "summary": "El tema permite comparación útil porque destacan paloma-valencia, luis-gilberto-murillo con mayor prioridad relativa."
     },
     {
       "topic_id": "justicia",
@@ -667,18 +667,18 @@
         {
           "candidate_id": "claudia-lopez",
           "priority": "alta",
-          "instrument": "posturas o prioridades generales",
+          "instrument": "instrumentos o mecanismos parcialmente explicitados",
           "specificity": "alta",
           "coherence": "con tensiones visibles",
-          "feasibility": "relativamente evaluable"
+          "feasibility": "parcialmente evaluable"
         },
         {
           "candidate_id": "sergio-fajardo",
-          "priority": "sin evidencia suficiente",
-          "instrument": "sin evidencia suficiente",
-          "specificity": "sin evidencia suficiente",
-          "coherence": "sin evidencia suficiente",
-          "feasibility": "sin base suficiente"
+          "priority": "alta",
+          "instrument": "instrumentos o mecanismos parcialmente explicitados",
+          "specificity": "alta",
+          "coherence": "con tensiones visibles",
+          "feasibility": "parcialmente evaluable"
         },
         {
           "candidate_id": "luis-gilberto-murillo",
@@ -689,7 +689,7 @@
           "feasibility": "sin base suficiente"
         }
       ],
-      "summary": "El tema permite comparación útil porque destacan ivan-cepeda, claudia-lopez con mayor prioridad relativa."
+      "summary": "El tema permite comparación útil porque destacan ivan-cepeda, claudia-lopez, sergio-fajardo con mayor prioridad relativa."
     },
     {
       "topic_id": "vivienda",
@@ -747,6 +747,6 @@
     }
   ],
   "convergences": [],
-  "divergences": ["Diferencia temática en educacion: El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa.", "Diferencia temática en salud: El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa."],
-  "uncertainties": ["ivan-cepeda: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "abelardo-de-la-espriella: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "paloma-valencia: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "claudia-lopez: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "sergio-fajardo: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "luis-gilberto-murillo: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Persisten vacíos de evidencia en el eje estado_vs_mercado.", "Persisten vacíos de evidencia en el eje redistribucion_vs_libertad_economica.", "Persisten vacíos de evidencia en el eje universalismo_vs_focalizacion.", "Persisten vacíos de evidencia en el eje institucionalismo_vs_personalismo.", "Persisten vacíos de evidencia en el eje gradualismo_vs_disrupcion.", "Persisten vacíos de evidencia en el eje tecnocracia_vs_populismo.", "Persisten vacíos de evidencia en el eje apertura_vs_soberanismo.", "Persisten vacíos de evidencia en el eje conservadurismo_vs_progresismo_cultural.", "Persisten vacíos de evidencia en el eje seguridad_negociacion_vs_punitivismo.", "Persisten vacíos de evidencia en el eje centralizacion_vs_territorializacion.", "No todos los candidatos tienen evidencia suficiente en el tema defensa.", "No todos los candidatos tienen evidencia suficiente en el tema educacion.", "No todos los candidatos tienen evidencia suficiente en el tema salud.", "No todos los candidatos tienen evidencia suficiente en el tema justicia.", "No todos los candidatos tienen evidencia suficiente en el tema transicion-energetica.", "No todos los candidatos tienen evidencia suficiente en el tema fiscal.", "No todos los candidatos tienen evidencia suficiente en el tema vivienda."]
+  "divergences": ["Diferencia en estado_vs_mercado: La comparación muestra diferencias sustantivas en este eje: Mixto o tensionado vs. Estado coordinador.", "Diferencia en redistribucion_vs_libertad_economica: La comparación muestra diferencias sustantivas en este eje: Redistribucion vs. Mixto o tensionado.", "Diferencia en universalismo_vs_focalizacion: La comparación muestra diferencias sustantivas en este eje: Focalizacion vs. Mixto o tensionado vs. Universalismo.", "Diferencia en institucionalismo_vs_personalismo: La comparación muestra diferencias sustantivas en este eje: Institucionalismo vs. Mixto o tensionado.", "Diferencia en gradualismo_vs_disrupcion: La comparación muestra diferencias sustantivas en este eje: Gradualismo vs. Mixto o tensionado.", "Diferencia en tecnocracia_vs_populismo: La comparación muestra diferencias sustantivas en este eje: Populismo vs. Mixto o tensionado.", "Diferencia en apertura_vs_soberanismo: La comparación muestra diferencias sustantivas en este eje: Soberanismo vs. Mixto o tensionado.", "Diferencia en conservadurismo_vs_progresismo_cultural: La comparación muestra diferencias sustantivas en este eje: Progresismo cultural vs. Mixto o tensionado.", "Diferencia en seguridad_negociacion_vs_punitivismo: La comparación muestra diferencias sustantivas en este eje: Seguridad negociada vs. Mixto o tensionado.", "Diferencia en centralizacion_vs_territorializacion: La comparación muestra diferencias sustantivas en este eje: Territorializacion vs. Mixto o tensionado.", "Diferencia temática en educacion: El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa.", "Diferencia temática en salud: El tema permite comparación útil porque destacan paloma-valencia, luis-gilberto-murillo con mayor prioridad relativa."],
+  "uncertainties": ["ivan-cepeda: Siguen con evidencia insuficiente varios ejes: universalismo_vs_focalizacion.", "abelardo-de-la-espriella: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "paloma-valencia: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "claudia-lopez: Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación.", "sergio-fajardo: Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación.", "luis-gilberto-murillo: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural.", "Persisten vacíos de evidencia en el eje redistribucion_vs_libertad_economica.", "Persisten vacíos de evidencia en el eje universalismo_vs_focalizacion.", "Persisten vacíos de evidencia en el eje institucionalismo_vs_personalismo.", "Persisten vacíos de evidencia en el eje gradualismo_vs_disrupcion.", "Persisten vacíos de evidencia en el eje tecnocracia_vs_populismo.", "Persisten vacíos de evidencia en el eje apertura_vs_soberanismo.", "Persisten vacíos de evidencia en el eje conservadurismo_vs_progresismo_cultural.", "Persisten vacíos de evidencia en el eje seguridad_negociacion_vs_punitivismo.", "Persisten vacíos de evidencia en el eje centralizacion_vs_territorializacion.", "No todos los candidatos tienen evidencia suficiente en el tema defensa.", "No todos los candidatos tienen evidencia suficiente en el tema educacion.", "No todos los candidatos tienen evidencia suficiente en el tema salud.", "No todos los candidatos tienen evidencia suficiente en el tema justicia.", "No todos los candidatos tienen evidencia suficiente en el tema transicion-energetica.", "No todos los candidatos tienen evidencia suficiente en el tema fiscal.", "No todos los candidatos tienen evidencia suficiente en el tema vivienda."]
 }

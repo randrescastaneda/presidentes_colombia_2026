@@ -15,10 +15,12 @@ dossiers <- read_processed_table('candidate_dossiers.csv', project_dir = project
 claims <- read_processed_table('claim_records.csv', project_dir = project_dir)
 analysis_notes <- read_processed_table('analysis_notes.csv', project_dir = project_dir)
 sources <- read_processed_table('source_records.csv', project_dir = project_dir)
+program_documents <- read_processed_table('program_documents.csv', project_dir = project_dir)
 candidate_dossier <- dossiers |> dplyr::filter(.data$candidate_id == candidate_key)
 candidate_claims <- claims |> dplyr::filter(.data$candidate_id == candidate_key) |> dplyr::arrange(dplyr::desc(.data$event_date))
 candidate_analysis <- analysis_notes |> dplyr::filter(.data$candidate_id == candidate_key)
 candidate_sources <- sources |> dplyr::filter(.data$candidate_id == candidate_key) |> dplyr::arrange(dplyr::desc(.data$published_at))
+candidate_program_documents <- program_documents |> dplyr::filter(.data$candidate_id == candidate_key) |> dplyr::arrange(dplyr::desc(.data$is_primary), dplyr::desc(.data$published_at))
 ```
 
 ## Ficha base
@@ -72,6 +74,13 @@ emit_candidate_policy_sections(candidate_claims, candidate_sources, taxonomy)
 ```{r}
 #| results: asis
 emit_candidate_analysis(candidate_analysis, candidate_sources)
+```
+
+## Programa oficial
+
+```{r}
+#| results: asis
+emit_candidate_program_documents(candidate_program_documents)
 ```
 
 ## Biblioteca de fuentes

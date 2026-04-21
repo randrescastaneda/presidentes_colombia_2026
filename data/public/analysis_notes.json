@@ -36,6 +36,15 @@
     "public_reasoning_summary": "La propuesta registrada para justicia-programa-profundizar-justicia no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
+    "analysis_id": "vacio-src-20260420-paloma-program-pdf-claim-3",
+    "candidate_id": "paloma-valencia",
+    "analysis_type": "vacio_de_implementacion",
+    "claim_ids": "src-20260420-paloma-program-pdf-claim-3",
+    "source_ids": "src-20260420-paloma-program-pdf",
+    "confidence": 0.95,
+    "public_reasoning_summary": "La propuesta registrada para general-plan-integrado-de no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
     "analysis_id": "vacio-src-20260418-paloma-official-claim-2",
     "candidate_id": "paloma-valencia",
     "analysis_type": "vacio_de_implementacion",

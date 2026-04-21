@@ -1,30 +1,30 @@
 {
   "ivan-cepeda": {
-    "artifact_id": "candidate-profile-ivan-cepeda-2026-04-19",
+    "artifact_id": "candidate-profile-ivan-cepeda-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Iván Cepeda Castro: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Iván Cepeda Castro.",
     "candidate_ids": "ivan-cepeda",
-    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais"],
-    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2"],
+    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260420-ivan-program-pdf"],
+    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260420-ivan-program-pdf-claim-1"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Iván Cepeda Castro cuenta con 8 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Defensa y soberanía, Fiscal. La mezcla observada de afirmaciones es dato_contextual=6, propuesta_concreta=2, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Iván Cepeda Castro cuenta con 9 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Defensa y soberanía. La mezcla observada de afirmaciones es dato_contextual=6, propuesta_concreta=2, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
         "heading": "Filosofía política",
         "content_type": "inference",
-        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo; apertura_vs_soberanismo: Soberanismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
+        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
       },
       {
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "defensa: En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. Senador y filósofo; la defensa de derechos humanos marcó su trayectoria. fiscal: En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Continuidad macroeconómica con responsabilidad fiscal y transición energética. justicia: En Justicia e instituciones penales, la evidencia pública observada se concentra en posturas o prioridades generales. Programa para profundizar justicia social y paz total."
+        "body": "fiscal: En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Continuidad macroeconómica con responsabilidad fiscal y transición energética. EL CAMBIO Sí SE SIENTE, Y SE DEFIENDE VOTANDO Vota 31 de mayo 2 Ni un paso atrás 5 cosas en común entre Iván Cepeda y Aida Quilqué 5 Ambos participaron del Acuerdo de Paz con la... defensa: En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. Senador y filósofo; la defensa de derechos humanos marcó su trayectoria. justicia: En Justicia e instituciones penales, la evidencia pública observada se concentra en posturas o prioridades generales. Programa para profundizar justicia social y paz total."
       },
       {
         "section_id": "internal_coherence",
@@ -36,13 +36,13 @@
         "section_id": "multidimensional_ideology",
         "heading": "Ubicación ideológica multidimensional",
         "content_type": "inference",
-        "body": "tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado? tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica? tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+        "body": "tema: La evidencia relevante apunta en ambos sentidos; conviven señales hacia Estado coordinador y Mercado coordinador. Señales observadas: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia tema: Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
       },
       {
         "section_id": "mainstream_distance",
         "heading": "Distancia frente al mainstream",
         "content_type": "evaluation",
-        "body": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional."
+        "body": "La evidencia sugiere una distancia relativamente alta frente al mainstream, sobre todo por el tono de ruptura o por apelaciones menos institucionales."
       },
       {
         "section_id": "strengths",
@@ -54,12 +54,12 @@
         "section_id": "weaknesses_and_uncertainties",
         "heading": "Debilidades e incertidumbres",
         "content_type": "evaluation",
-        "body": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta. Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
+        "body": "Siguen con evidencia insuficiente varios ejes: universalismo_vs_focalizacion. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
       }
     ]
   },
   "clara-lopez": {
-    "artifact_id": "candidate-profile-clara-lopez-2026-04-19",
+    "artifact_id": "candidate-profile-clara-lopez-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Clara Eugenia López Obregón: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Clara Eugenia López Obregón.",
@@ -118,31 +118,31 @@
     ]
   },
   "claudia-lopez": {
-    "artifact_id": "candidate-profile-claudia-lopez-2026-04-19",
+    "artifact_id": "candidate-profile-claudia-lopez-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Claudia Nayibe López Hernández: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Claudia Nayibe López Hernández.",
     "candidate_ids": "claudia-lopez",
-    "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais"],
-    "claim_ids": ["src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2"],
+    "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260420-claudia-program-pdf"],
+    "claim_ids": ["src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260420-claudia-program-pdf-claim-1"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Claudia Nayibe López Hernández cuenta con 8 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Salud. La mezcla observada de afirmaciones es dato_contextual=5, propuesta_concreta=3, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Claudia Nayibe López Hernández cuenta con 9 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Salud. La mezcla observada de afirmaciones es dato_contextual=5, propuesta_concreta=3, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
         "heading": "Filosofía política",
         "content_type": "inference",
-        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
+        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
       },
       {
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "fiscal: En Fiscal, la evidencia pública observada se concentra en posturas o prioridades generales. Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud. salud: En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Continuar lo que funciona y trabajar en seguridad, salud y productividad"
+        "body": "fiscal: En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. 1 2 3 4 5 ¿QUIÉNES SOMOS? Las mayorías de Colombia no son ‘de izquierda’, ‘de derecha’ o ‘de centro’. Esa es una falsa divi- sión. Las mayorías somos gente buena, honra- da y tr... Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud. salud: En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Continuar lo que funciona y trabajar en seguridad, salud y productividad"
       },
       {
         "section_id": "internal_coherence",
@@ -154,7 +154,7 @@
         "section_id": "multidimensional_ideology",
         "heading": "Ubicación ideológica multidimensional",
         "content_type": "inference",
-        "body": "tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado? tema: Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social tema: Predominan señales compatibles con Focalizacion: formula la politica como respuesta focalizada o selectiva"
+        "body": "tema: La evidencia relevante apunta en ambos sentidos; conviven señales hacia Estado coordinador y Mercado coordinador. Señales observadas: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia tema: Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social; acentua libertad economica o alivio regulatorio tema: Predominan señales compatibles con Focalizacion: formula la politica como cobertura amplia o derecho general; formula la politica como respuesta focalizada o selectiva"
       },
       {
         "section_id": "mainstream_distance",
@@ -172,12 +172,12 @@
         "section_id": "weaknesses_and_uncertainties",
         "heading": "Debilidades e incertidumbres",
         "content_type": "evaluation",
-        "body": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
+        "body": "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
       }
     ]
   },
   "raul-botero": {
-    "artifact_id": "candidate-profile-raul-botero-2026-04-19",
+    "artifact_id": "candidate-profile-raul-botero-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Raúl Santiago Botero Jaramillo: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Raúl Santiago Botero Jaramillo.",
@@ -236,19 +236,19 @@
     ]
   },
   "abelardo-de-la-espriella": {
-    "artifact_id": "candidate-profile-abelardo-de-la-espriella-2026-04-19",
+    "artifact_id": "candidate-profile-abelardo-de-la-espriella-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Abelardo Gabriel de la Espriella: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Abelardo Gabriel de la Espriella.",
     "candidate_ids": "abelardo-de-la-espriella",
-    "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais"],
-    "claim_ids": ["src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2"],
+    "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260420-abelardo-program-pdf"],
+    "claim_ids": ["src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Abelardo Gabriel de la Espriella cuenta con 5 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud. La mezcla observada de afirmaciones es dato_contextual=5, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Abelardo Gabriel de la Espriella cuenta con 8 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud. La mezcla observada de afirmaciones es dato_contextual=7, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
@@ -295,7 +295,7 @@
     ]
   },
   "mauricio-lizcano": {
-    "artifact_id": "candidate-profile-mauricio-lizcano-2026-04-19",
+    "artifact_id": "candidate-profile-mauricio-lizcano-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Óscar Mauricio Lizcano Arango: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Óscar Mauricio Lizcano Arango.",
@@ -354,7 +354,7 @@
     ]
   },
   "miguel-uribe": {
-    "artifact_id": "candidate-profile-miguel-uribe-2026-04-19",
+    "artifact_id": "candidate-profile-miguel-uribe-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Miguel Uribe Londoño: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Miguel Uribe Londoño.",
@@ -413,7 +413,7 @@
     ]
   },
   "sondra-macollins": {
-    "artifact_id": "candidate-profile-sondra-macollins-2026-04-19",
+    "artifact_id": "candidate-profile-sondra-macollins-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Sondra Macollins Garvin Pinto: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Sondra Macollins Garvin Pinto.",
@@ -472,7 +472,7 @@
     ]
   },
   "roy-barreras": {
-    "artifact_id": "candidate-profile-roy-barreras-2026-04-19",
+    "artifact_id": "candidate-profile-roy-barreras-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Roy Leonardo Barreras Montealegre: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Roy Leonardo Barreras Montealegre.",
@@ -531,7 +531,7 @@
     ]
   },
   "carlos-caicedo": {
-    "artifact_id": "candidate-profile-carlos-caicedo-2026-04-19",
+    "artifact_id": "candidate-profile-carlos-caicedo-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Carlos Eduardo Caicedo Omar: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Carlos Eduardo Caicedo Omar.",
@@ -590,7 +590,7 @@
     ]
   },
   "gustavo-matamoros": {
-    "artifact_id": "candidate-profile-gustavo-matamoros-2026-04-19",
+    "artifact_id": "candidate-profile-gustavo-matamoros-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Gustavo Matamoros Camacho: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Gustavo Matamoros Camacho.",
@@ -649,19 +649,19 @@
     ]
   },
   "paloma-valencia": {
-    "artifact_id": "candidate-profile-paloma-valencia-2026-04-19",
+    "artifact_id": "candidate-profile-paloma-valencia-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Paloma Susana Valencia Laserna: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Paloma Susana Valencia Laserna.",
     "candidate_ids": "paloma-valencia",
-    "source_ids": ["src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais"],
-    "claim_ids": ["src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2"],
+    "source_ids": ["src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260420-paloma-program-pdf"],
+    "claim_ids": ["src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Paloma Susana Valencia Laserna cuenta con 10 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud, Vivienda. La mezcla observada de afirmaciones es dato_contextual=7, propuesta_concreta=3, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Paloma Susana Valencia Laserna cuenta con 13 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud, Vivienda. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=5, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
@@ -708,31 +708,31 @@
     ]
   },
   "sergio-fajardo": {
-    "artifact_id": "candidate-profile-sergio-fajardo-2026-04-19",
+    "artifact_id": "candidate-profile-sergio-fajardo-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Sergio Fajardo Valderrama: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Sergio Fajardo Valderrama.",
     "candidate_ids": "sergio-fajardo",
-    "source_ids": ["src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais"],
-    "claim_ids": ["src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2"],
+    "source_ids": ["src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260420-fajardo-program-pdf"],
+    "claim_ids": ["src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260420-fajardo-program-pdf-claim-1"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Sergio Fajardo Valderrama cuenta con 6 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Salud. La mezcla observada de afirmaciones es dato_contextual=5, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Sergio Fajardo Valderrama cuenta con 7 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Fiscal. La mezcla observada de afirmaciones es dato_contextual=5, critica_adversario=1, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
         "heading": "Filosofía política",
         "content_type": "inference",
-        "body": "La filosofía política subyacente no puede inferirse con suficiente sustento a partir de la evidencia disponible."
+        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Mixto o tensionado; universalismo_vs_focalizacion: Mixto o tensionado. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
       },
       {
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "educacion: En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia. salud: En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Seguridad, cero corrupción, salud, mujeres y cultura en la página oficial."
+        "body": "educacion: En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia. fiscal: En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. TABLA DE CONTENIDO INTRODUCCIÓN. ................................................................................................................................................... salud: En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Seguridad, cero corrupción, salud, mujeres y cultura en la página oficial."
       },
       {
         "section_id": "internal_coherence",
@@ -744,7 +744,7 @@
         "section_id": "multidimensional_ideology",
         "heading": "Ubicación ideológica multidimensional",
         "content_type": "inference",
-        "body": "tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado? tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica? tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La politica propuesta busca cobertura amplia o focalizacion selectiva?"
+        "body": "tema: La evidencia relevante apunta en ambos sentidos; conviven señales hacia Estado coordinador y Mercado coordinador. Señales observadas: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia tema: La evidencia relevante apunta en ambos sentidos; conviven señales hacia Redistribucion y Libertad economica. Señales observadas: acentua correccion distributiva o proteccion social; acentua libertad economica o alivio regulatorio tema: La evidencia relevante apunta en ambos sentidos; conviven señales hacia Universalismo y Focalizacion. Señales observadas: formula la politica como cobertura amplia o derecho general; formula la politica como respuesta focalizada o selectiva"
       },
       {
         "section_id": "mainstream_distance",
@@ -756,42 +756,42 @@
         "section_id": "strengths",
         "heading": "Fortalezas programáticas",
         "content_type": "evaluation",
-        "body": "Hay mayor desarrollo relativo en temas como educacion, NA. No se observan contradicciones internas fuertes en la evidencia disponible."
+        "body": "Hay mayor desarrollo relativo en temas como educacion, fiscal. No se observan contradicciones internas fuertes en la evidencia disponible. La orientación programática ya muestra cierta consistencia en varios ejes analíticos."
       },
       {
         "section_id": "weaknesses_and_uncertainties",
         "heading": "Debilidades e incertidumbres",
         "content_type": "evaluation",
-        "body": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta. Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
+        "body": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
       }
     ]
   },
   "luis-gilberto-murillo": {
-    "artifact_id": "candidate-profile-luis-gilberto-murillo-2026-04-19",
+    "artifact_id": "candidate-profile-luis-gilberto-murillo-2026-04-20",
     "artifact_type": "candidate_profile",
     "title": "Luis Gilberto Murillo Urrutia: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Luis Gilberto Murillo Urrutia.",
     "candidate_ids": "luis-gilberto-murillo",
-    "source_ids": ["src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais"],
-    "claim_ids": ["src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1"],
+    "source_ids": ["src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais", "src-20260420-murillo-program-home"],
+    "claim_ids": ["src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1", "src-20260420-murillo-program-home-claim-1"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Luis Gilberto Murillo Urrutia cuenta con 4 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en Educación, NA. La mezcla observada de afirmaciones es dato_contextual=4, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Luis Gilberto Murillo Urrutia cuenta con 5 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Educación, NA, Salud. La mezcla observada de afirmaciones es dato_contextual=4, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
         "heading": "Filosofía política",
         "content_type": "inference",
-        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: universalismo_vs_focalizacion: Focalizacion; centralizacion_vs_territorializacion: Territorializacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
+        "body": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; universalismo_vs_focalizacion: Universalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato."
       },
       {
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "educacion: En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Educación, oportunidades, seguridad focalizada y desarrollo regional. La educación y las regiones olvidadas están en el centro de su apuesta."
+        "body": "educacion: En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Educación, oportunidades, seguridad focalizada y desarrollo regional. La educación y las regiones olvidadas están en el centro de su apuesta. salud: En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. # Luis Gilberto Murillo - Captura parcial del sitio oficial Fuente oficial: <https://murillosoy.com/> Estado de acceso al momento de la captura: - El dominio oficial aparece ind..."
       },
       {
         "section_id": "internal_coherence",
@@ -803,7 +803,7 @@
         "section_id": "multidimensional_ideology",
         "heading": "Ubicación ideológica multidimensional",
         "content_type": "inference",
-        "body": "tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta desplaza la solucion hacia intervencion estatal o hacia coordinacion de mercado? tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica? tema: Predominan señales compatibles con Focalizacion: formula la politica como respuesta focalizada o selectiva"
+        "body": "tema: Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica tema: No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica? tema: Predominan señales compatibles con Universalismo: formula la politica como cobertura amplia o derecho general; formula la politica como respuesta focalizada o selectiva"
       },
       {
         "section_id": "mainstream_distance",
@@ -815,24 +815,24 @@
         "section_id": "strengths",
         "heading": "Fortalezas programáticas",
         "content_type": "evaluation",
-        "body": "Hay mayor desarrollo relativo en temas como NA. No se observan contradicciones internas fuertes en la evidencia disponible."
+        "body": "Hay mayor desarrollo relativo en temas como salud, NA. No se observan contradicciones internas fuertes en la evidencia disponible. La orientación programática ya muestra cierta consistencia en varios ejes analíticos."
       },
       {
         "section_id": "weaknesses_and_uncertainties",
         "heading": "Debilidades e incertidumbres",
         "content_type": "evaluation",
-        "body": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta. Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
+        "body": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta. Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural. Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
       }
     ]
   },
   "15": {
-    "artifact_id": "comparison-report-2026-04-19",
+    "artifact_id": "comparison-report-2026-04-20",
     "artifact_type": "comparison_report",
     "title": "Comparativa transversal: Iván Cepeda Castro, Claudia Nayibe López Hernández, Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Sergio Fajardo Valderrama, Luis Gilberto Murillo Urrutia",
     "dek": "Comparación simétrica de prioridades, instrumentos, especificidad, factibilidad y ejes ideológicos.",
     "candidate_ids": ["ivan-cepeda", "abelardo-de-la-espriella", "paloma-valencia", "claudia-lopez", "sergio-fajardo", "luis-gilberto-murillo"],
-    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais"],
-    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1"],
+    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260420-ivan-program-pdf", "src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260420-abelardo-program-pdf", "src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260420-paloma-program-pdf", "src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260420-claudia-program-pdf", "src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260420-fajardo-program-pdf", "src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais", "src-20260420-murillo-program-home"],
+    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260420-ivan-program-pdf-claim-1", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260420-fajardo-program-pdf-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1", "src-20260420-murillo-program-home-claim-1"],
     "sections": [
       {
         "section_id": "scope_note",
@@ -844,66 +844,66 @@
         "section_id": "priorities_comparison",
         "heading": "Prioridades temáticas",
         "content_type": "description",
-        "body": "Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema. El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa. El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa. El tema permite comparación útil porque destacan ivan-cepeda con mayor prioridad relativa. Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema. El tema permite comparación útil porque destacan ivan-cepeda, claudia-lopez con mayor prioridad relativa. Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema."
+        "body": "Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema. El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa. El tema permite comparación útil porque destacan paloma-valencia, luis-gilberto-murillo con mayor prioridad relativa. El tema permite comparación útil porque destacan ivan-cepeda con mayor prioridad relativa. Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema. El tema permite comparación útil porque destacan ivan-cepeda, claudia-lopez, sergio-fajardo con mayor prioridad relativa. Ningún candidato comparado tiene todavía suficiente desarrollo público para priorizar con claridad este tema."
       },
       {
         "section_id": "instruments_comparison",
         "heading": "Instrumentos de política",
         "content_type": "inference",
-        "body": "defensa: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente educacion: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=posturas o prioridades generales; luis-gilberto-murillo=posturas o prioridades generales salud: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=posturas o prioridades generales; paloma-valencia=instrumentos o mecanismos parcialmente explicitados; claudia-lopez=posturas o prioridades generales; sergio-fajardo=posturas o prioridades generales; luis-gilberto-murillo=sin evidencia suficiente justicia: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente transicion-energetica: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente fiscal: ivan-cepeda=instrumentos o mecanismos parcialmente explicitados; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=posturas o prioridades generales; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente vivienda: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=posturas o prioridades generales; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente"
+        "body": "defensa: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente educacion: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=posturas o prioridades generales; luis-gilberto-murillo=posturas o prioridades generales salud: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=posturas o prioridades generales; paloma-valencia=instrumentos o mecanismos parcialmente explicitados; claudia-lopez=posturas o prioridades generales; sergio-fajardo=posturas o prioridades generales; luis-gilberto-murillo=instrumentos o mecanismos parcialmente explicitados justicia: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente transicion-energetica: ivan-cepeda=posturas o prioridades generales; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente fiscal: ivan-cepeda=instrumentos o mecanismos parcialmente explicitados; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=instrumentos o mecanismos parcialmente explicitados; sergio-fajardo=instrumentos o mecanismos parcialmente explicitados; luis-gilberto-murillo=sin evidencia suficiente vivienda: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=posturas o prioridades generales; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente"
       },
       {
         "section_id": "specificity_comparison",
         "heading": "Grado de especificidad",
         "content_type": "evaluation",
-        "body": "defensa: ivan-cepeda=baja; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente educacion: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=media; luis-gilberto-murillo=baja salud: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=baja; paloma-valencia=alta; claudia-lopez=baja; sergio-fajardo=baja; luis-gilberto-murillo=sin evidencia suficiente justicia: ivan-cepeda=alta; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente transicion-energetica: ivan-cepeda=baja; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente fiscal: ivan-cepeda=alta; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=alta; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente vivienda: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=baja; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente"
+        "body": "defensa: ivan-cepeda=baja; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente educacion: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=media; luis-gilberto-murillo=baja salud: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=baja; paloma-valencia=alta; claudia-lopez=baja; sergio-fajardo=baja; luis-gilberto-murillo=alta justicia: ivan-cepeda=alta; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente transicion-energetica: ivan-cepeda=baja; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente fiscal: ivan-cepeda=alta; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=sin evidencia suficiente; claudia-lopez=alta; sergio-fajardo=alta; luis-gilberto-murillo=sin evidencia suficiente vivienda: ivan-cepeda=sin evidencia suficiente; abelardo-de-la-espriella=sin evidencia suficiente; paloma-valencia=baja; claudia-lopez=sin evidencia suficiente; sergio-fajardo=sin evidencia suficiente; luis-gilberto-murillo=sin evidencia suficiente"
       },
       {
         "section_id": "feasibility_comparison",
         "heading": "Factibilidad",
         "content_type": "evaluation",
-        "body": "defensa: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente educacion: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=incierta; luis-gilberto-murillo=incierta salud: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=incierta; paloma-valencia=parcialmente evaluable; claudia-lopez=incierta; sergio-fajardo=incierta; luis-gilberto-murillo=sin base suficiente justicia: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente transicion-energetica: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente fiscal: ivan-cepeda=parcialmente evaluable; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=relativamente evaluable; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente vivienda: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=incierta; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente"
+        "body": "defensa: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente educacion: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=incierta; luis-gilberto-murillo=incierta salud: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=incierta; paloma-valencia=parcialmente evaluable; claudia-lopez=incierta; sergio-fajardo=incierta; luis-gilberto-murillo=parcialmente evaluable justicia: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente transicion-energetica: ivan-cepeda=incierta; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente fiscal: ivan-cepeda=parcialmente evaluable; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=sin base suficiente; claudia-lopez=parcialmente evaluable; sergio-fajardo=parcialmente evaluable; luis-gilberto-murillo=sin base suficiente vivienda: ivan-cepeda=sin base suficiente; abelardo-de-la-espriella=sin base suficiente; paloma-valencia=incierta; claudia-lopez=sin base suficiente; sergio-fajardo=sin base suficiente; luis-gilberto-murillo=sin base suficiente"
       },
       {
         "section_id": "ideology_axes_comparison",
         "heading": "Ejes ideológicos",
         "content_type": "inference",
-        "body": "estado_vs_mercado: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Estado coordinador; paloma-valencia=Estado coordinador; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente redistribucion_vs_libertad_economica: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Redistribucion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente universalismo_vs_focalizacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Focalizacion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Focalizacion institucionalismo_vs_personalismo: ivan-cepeda=Institucionalismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Institucionalismo; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente gradualismo_vs_disrupcion: ivan-cepeda=Gradualismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Gradualismo; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente tecnocracia_vs_populismo: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente apertura_vs_soberanismo: ivan-cepeda=Soberanismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Soberanismo; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente conservadurismo_vs_progresismo_cultural: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente seguridad_negociacion_vs_punitivismo: ivan-cepeda=Seguridad negociada; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente centralizacion_vs_territorializacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Territorializacion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Territorializacion"
+        "body": "estado_vs_mercado: ivan-cepeda=Mixto o tensionado; abelardo-de-la-espriella=Estado coordinador; paloma-valencia=Estado coordinador; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Estado coordinador redistribucion_vs_libertad_economica: ivan-cepeda=Redistribucion; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Redistribucion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente universalismo_vs_focalizacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Focalizacion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Universalismo institucionalismo_vs_personalismo: ivan-cepeda=Institucionalismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Institucionalismo; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente gradualismo_vs_disrupcion: ivan-cepeda=Gradualismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Gradualismo; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Gradualismo tecnocracia_vs_populismo: ivan-cepeda=Populismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente apertura_vs_soberanismo: ivan-cepeda=Soberanismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Soberanismo; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente conservadurismo_vs_progresismo_cultural: ivan-cepeda=Progresismo cultural; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Progresismo cultural; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente seguridad_negociacion_vs_punitivismo: ivan-cepeda=Seguridad negociada; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Seguridad negociada centralizacion_vs_territorializacion: ivan-cepeda=Territorializacion; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Territorializacion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Territorializacion"
       },
       {
         "section_id": "convergences_and_divergences",
         "heading": "Convergencias y divergencias",
         "content_type": "evaluation",
-        "body": "Diferencia temática en educacion: El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa. Diferencia temática en salud: El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa."
+        "body": "Diferencia en estado_vs_mercado: La comparación muestra diferencias sustantivas en este eje: Mixto o tensionado vs. Estado coordinador. Diferencia en redistribucion_vs_libertad_economica: La comparación muestra diferencias sustantivas en este eje: Redistribucion vs. Mixto o tensionado. Diferencia en universalismo_vs_focalizacion: La comparación muestra diferencias sustantivas en este eje: Focalizacion vs. Mixto o tensionado vs. Universalismo. Diferencia en institucionalismo_vs_personalismo: La comparación muestra diferencias sustantivas en este eje: Institucionalismo vs. Mixto o tensionado. Diferencia en gradualismo_vs_disrupcion: La comparación muestra diferencias sustantivas en este eje: Gradualismo vs. Mixto o tensionado. Diferencia en tecnocracia_vs_populismo: La comparación muestra diferencias sustantivas en este eje: Populismo vs. Mixto o tensionado. Diferencia en apertura_vs_soberanismo: La comparación muestra diferencias sustantivas en este eje: Soberanismo vs. Mixto o tensionado. Diferencia en conservadurismo_vs_progresismo_cultural: La comparación muestra diferencias sustantivas en este eje: Progresismo cultural vs. Mixto o tensionado. Diferencia en seguridad_negociacion_vs_punitivismo: La comparación muestra diferencias sustantivas en este eje: Seguridad negociada vs. Mixto o tensionado. Diferencia en centralizacion_vs_territorializacion: La comparación muestra diferencias sustantivas en este eje: Territorializacion vs. Mixto o tensionado. Diferencia temática en educacion: El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa. Diferencia temática en salud: El tema permite comparación útil porque destacan paloma-valencia, luis-gilberto-murillo con mayor prioridad relativa."
       },
       {
         "section_id": "unresolved_uncertainties",
         "heading": "Incertidumbres abiertas",
         "content_type": "evaluation",
-        "body": "ivan-cepeda: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion. abelardo-de-la-espriella: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. paloma-valencia: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. claudia-lopez: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo. sergio-fajardo: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. luis-gilberto-murillo: Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo. Persisten vacíos de evidencia en el eje estado_vs_mercado. Persisten vacíos de evidencia en el eje redistribucion_vs_libertad_economica. Persisten vacíos de evidencia en el eje universalismo_vs_focalizacion. Persisten vacíos de evidencia en el eje institucionalismo_vs_personalismo. Persisten vacíos de evidencia en el eje gradualismo_vs_disrupcion. Persisten vacíos de evidencia en el eje tecnocracia_vs_populismo. Persisten vacíos de evidencia en el eje apertura_vs_soberanismo. Persisten vacíos de evidencia en el eje conservadurismo_vs_progresismo_cultural. Persisten vacíos de evidencia en el eje seguridad_negociacion_vs_punitivismo. Persisten vacíos de evidencia en el eje centralizacion_vs_territorializacion. No todos los candidatos tienen evidencia suficiente en el tema defensa. No todos los candidatos tienen evidencia suficiente en el tema educacion. No todos los candidatos tienen evidencia suficiente en el tema salud. No todos los candidatos tienen evidencia suficiente en el tema justicia. No todos los candidatos tienen evidencia suficiente en el tema transicion-energetica. No todos los candidatos tienen evidencia suficiente en el tema fiscal. No todos los candidatos tienen evidencia suficiente en el tema vivienda."
+        "body": "ivan-cepeda: Siguen con evidencia insuficiente varios ejes: universalismo_vs_focalizacion. abelardo-de-la-espriella: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. paloma-valencia: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion. claudia-lopez: Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación. sergio-fajardo: Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación. luis-gilberto-murillo: Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural. Persisten vacíos de evidencia en el eje redistribucion_vs_libertad_economica. Persisten vacíos de evidencia en el eje universalismo_vs_focalizacion. Persisten vacíos de evidencia en el eje institucionalismo_vs_personalismo. Persisten vacíos de evidencia en el eje gradualismo_vs_disrupcion. Persisten vacíos de evidencia en el eje tecnocracia_vs_populismo. Persisten vacíos de evidencia en el eje apertura_vs_soberanismo. Persisten vacíos de evidencia en el eje conservadurismo_vs_progresismo_cultural. Persisten vacíos de evidencia en el eje seguridad_negociacion_vs_punitivismo. Persisten vacíos de evidencia en el eje centralizacion_vs_territorializacion. No todos los candidatos tienen evidencia suficiente en el tema defensa. No todos los candidatos tienen evidencia suficiente en el tema educacion. No todos los candidatos tienen evidencia suficiente en el tema salud. No todos los candidatos tienen evidencia suficiente en el tema justicia. No todos los candidatos tienen evidencia suficiente en el tema transicion-energetica. No todos los candidatos tienen evidencia suficiente en el tema fiscal. No todos los candidatos tienen evidencia suficiente en el tema vivienda."
       }
     ]
   },
   "16": {
-    "artifact_id": "daily-update-2026-04-19",
+    "artifact_id": "daily-update-2026-04-20",
     "artifact_type": "daily_update",
-    "title": "Actualizacion diaria: 2026-04-19",
+    "title": "Actualizacion diaria: 2026-04-20",
     "dek": "Resumen breve de cambios, nuevas propuestas y preguntas abiertas del día.",
-    "candidate_ids": ["claudia-lopez", "paloma-valencia", "sergio-fajardo", "ivan-cepeda", "abelardo-de-la-espriella"],
-    "source_ids": ["src-20260419-claudia-energia-elpais", "src-20260419-paloma-energia-elpais", "src-20260419-sergio-energia-elpais", "src-20260419-ivan-debate-elpais", "src-20260419-paloma-debate-elpais", "src-20260419-abelardo-debate-elpais", "src-20260419-sergio-debate-elpais"],
-    "claim_ids": ["src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2"],
+    "candidate_ids": "luis-gilberto-murillo",
+    "source_ids": "src-20260420-murillo-program-home",
+    "claim_ids": "src-20260420-murillo-program-home-claim-1",
     "sections": [
       {
         "section_id": "what_changed",
         "heading": "Qué cambió",
         "content_type": "description",
-        "body": "Se procesaron 14 afirmaciones nuevas o actualizadas."
+        "body": "Se procesaron 1 afirmaciones nuevas o actualizadas."
       },
       {
         "section_id": "new_proposals",
         "heading": "Nuevas propuestas",
         "content_type": "description",
-        "body": "Los mayores movimientos del día se concentraron en Paloma Susana Valencia Laserna, Sergio Fajardo Valderrama, Abelardo Gabriel de la Espriella."
+        "body": "Los mayores movimientos del día se concentraron en Luis Gilberto Murillo Urrutia."
       },
       {
         "section_id": "notable_reframing",
@@ -920,25 +920,25 @@
     ]
   },
   "17": {
-    "artifact_id": "homepage-brief-2026-04-19",
+    "artifact_id": "homepage-brief-2026-04-20",
     "artifact_type": "homepage_brief",
     "title": "Resumen ejecutivo",
     "dek": "Resumen breve para portada con los cambios más relevantes del seguimiento diario.",
-    "candidate_ids": ["claudia-lopez", "paloma-valencia", "sergio-fajardo", "ivan-cepeda", "abelardo-de-la-espriella", "luis-gilberto-murillo"],
-    "source_ids": ["src-20260419-claudia-energia-elpais", "src-20260419-paloma-energia-elpais", "src-20260419-sergio-energia-elpais", "src-20260419-ivan-debate-elpais", "src-20260419-paloma-debate-elpais", "src-20260419-abelardo-debate-elpais", "src-20260419-sergio-debate-elpais"],
-    "claim_ids": ["src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2"],
+    "candidate_ids": ["luis-gilberto-murillo", "ivan-cepeda", "abelardo-de-la-espriella", "paloma-valencia", "claudia-lopez", "sergio-fajardo"],
+    "source_ids": "src-20260420-murillo-program-home",
+    "claim_ids": "src-20260420-murillo-program-home-claim-1",
     "sections": [
       {
         "section_id": "top_changes",
         "heading": "Cambios principales",
         "content_type": "description",
-        "body": "Se procesaron 14 afirmaciones nuevas o actualizadas."
+        "body": "Se procesaron 1 afirmaciones nuevas o actualizadas."
       },
       {
         "section_id": "key_comparison_note",
         "heading": "Clave comparativa",
         "content_type": "inference",
-        "body": "estado_vs_mercado: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Estado coordinador; paloma-valencia=Estado coordinador; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente redistribucion_vs_libertad_economica: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Redistribucion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente universalismo_vs_focalizacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Focalizacion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Focalizacion institucionalismo_vs_personalismo: ivan-cepeda=Institucionalismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Institucionalismo; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente gradualismo_vs_disrupcion: ivan-cepeda=Gradualismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Gradualismo; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente tecnocracia_vs_populismo: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente apertura_vs_soberanismo: ivan-cepeda=Soberanismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Soberanismo; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente conservadurismo_vs_progresismo_cultural: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente seguridad_negociacion_vs_punitivismo: ivan-cepeda=Seguridad negociada; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Evidencia insuficiente; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Evidencia insuficiente centralizacion_vs_territorializacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Territorializacion; sergio-fajardo=Evidencia insuficiente; luis-gilberto-murillo=Territorializacion"
+        "body": "estado_vs_mercado: ivan-cepeda=Mixto o tensionado; abelardo-de-la-espriella=Estado coordinador; paloma-valencia=Estado coordinador; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Estado coordinador redistribucion_vs_libertad_economica: ivan-cepeda=Redistribucion; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Redistribucion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente universalismo_vs_focalizacion: ivan-cepeda=Evidencia insuficiente; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Focalizacion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Universalismo institucionalismo_vs_personalismo: ivan-cepeda=Institucionalismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Institucionalismo; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente gradualismo_vs_disrupcion: ivan-cepeda=Gradualismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Gradualismo; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Gradualismo tecnocracia_vs_populismo: ivan-cepeda=Populismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente apertura_vs_soberanismo: ivan-cepeda=Soberanismo; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Soberanismo; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente conservadurismo_vs_progresismo_cultural: ivan-cepeda=Progresismo cultural; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Progresismo cultural; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Evidencia insuficiente seguridad_negociacion_vs_punitivismo: ivan-cepeda=Seguridad negociada; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Mixto o tensionado; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Seguridad negociada centralizacion_vs_territorializacion: ivan-cepeda=Territorializacion; abelardo-de-la-espriella=Evidencia insuficiente; paloma-valencia=Evidencia insuficiente; claudia-lopez=Territorializacion; sergio-fajardo=Mixto o tensionado; luis-gilberto-murillo=Territorializacion"
       },
       {
         "section_id": "caveats",
