@@ -1,62 +1,179 @@
-# Luis Gilberto Murillo - Captura parcial del sitio oficial
+[Saltar al contenido](#content)
 
-Fuente oficial: <https://murillosoy.com/>
+🇨🇴 Apoya el cambio que Colombia necesita — **Apoya a Murillo presidente**
+[Conoce más](https://murilloporcolombia.com/luis-gilberto-murillo-quien-es/)
 
-Estado de acceso al momento de la captura:
+[![](https://murilloporcolombia.com/wp-content/uploads/2025/11/murillo-presidente.png)](/)
 
-- El dominio oficial aparece indexado por buscadores como sitio de campana.
-- La apertura directa del sitio desde las herramientas de descarga del pipeline devuelve acceso restringido o error de resolucion.
-- Este archivo conserva unicamente el contenido programatico visible en la captura publica indexada del sitio oficial. No reemplaza un PDF o una version completa del programa.
+* [INICIO](/)
+* [¿QUIÉN ES MURILLO?](https://murilloporcolombia.com/luis-gilberto-murillo-quien-es/)
+* [QUIERO SER VOLUNTARIO](/voluntarios/)
+* [RECURSOS](/publicidad-por-murrillo/)
+* [BLOG](https://murilloporcolombia.com/blog/)
 
-## Mensaje central visible
+* [INICIO](/)
+* [¿QUIÉN ES MURILLO?](https://murilloporcolombia.com/luis-gilberto-murillo-quien-es/)
+* [QUIERO SER VOLUNTARIO](/voluntarios/)
+* [RECURSOS](/publicidad-por-murrillo/)
+* [BLOG](https://murilloporcolombia.com/blog/)
 
-"No es una nueva Colombia para unos pocos. Es una nueva Colombia para todos, empezando por los siempre olvidados."
+¿QUÉ ESPERAS PARA SER PARTE DE ESTE
+ MURICOMBO?
 
-## Ejes programaticos visibles en la captura publica del sitio oficial
+[QUIERO SER PARTE](https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=573332502107&text=Hola%20Equipo%20MuriCombo%20%F0%9F%AB%B0%20quiero%20ser%20parte%20de%20este%20gran%20movimiento%2C%20%C2%BFc%C3%B3mo%20puedo%20ayudar%20en%20digital%20o%20en%20firmas%3F)
+
+![](data:image/svg+xml;base64...)
+
+## SOY LUIS GILBERTO MURILLO Y QUIERO SER TU PRESIDENTE
+
+Colombiano con más de tres décadas dedicadas al servicio público y al trabajo por un país más justo y sostenible. Su experiencia abarca el medio ambiente, el clima, la biodiversidad, la inclusión social y el desarrollo territorial. Es Ingeniero de Minas con estudios en Moscú, y ha complementado su formación en economía y liderazgo en universidades como Maryland y Harvard. Ha sido gobernador, ministro, embajador y consultor internacional, siempre con un sello claro: impulsar la equidad en las regiones, el respeto y la sostenibilidad ambiental, y la paz en los territorios. Su liderazgo ha sido ampliamente reconocido por su capacidad de construir consensos y lograr transformaciones con impacto real en las comunidades.
+
+[MÁS SOBRE MÍ](https://murilloporcolombia.com/luis-gilberto-murillo-quien-es/)
+
+![](data:image/svg+xml;base64...)
+
+[QUIERO APORTAR](https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=573332502107&text=Hola%20Equipo%20MuriCombo%20%F0%9F%AB%B0%20quiero%20ser%20parte%20de%20este%20gran%20movimiento%2C%20%C2%BFc%C3%B3mo%20puedo%20ayudar%20en%20digital%20o%20en%20firmas%3F)
+
+##### QUIERO APOYAR EN DIGITAL
+
+![](data:image/svg+xml;base64...)
+
+[QUIERO APORTAR](https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=573332502107&text=Hola%20Equipo%20MuriCombo%20%F0%9F%AB%B0%20quiero%20ser%20parte%20de%20este%20gran%20movimiento%2C%20%C2%BFc%C3%B3mo%20puedo%20ayudar%20en%20digital%20o%20en%20firmas%3F)
+
+##### ME APUNTO A LAS FIRMAS
+
+![](data:image/svg+xml;base64...)
+
+[QUIERO APORTAR](https://api.whatsapp.com/send?phone=api.whatsapp.com/send?phone=573332502107&text=Hola%20Equipo%20MuriCombo%20%F0%9F%AB%B0%20quiero%20ser%20parte%20de%20este%20gran%20movimiento%2C%20%C2%BFc%C3%B3mo%20puedo%20ayudar%20en%20digital%20o%20en%20firmas%3F)
+
+##### QUIERO APORTAR MI IDEA
+
+## ¿PORQUE SER VOLUNTARIO?
+
+La historia de nuestro país está a punto de dar un giro.
+
+Súmate como voluntario y ayúdanos a construir una Colombia con oportunidades
+para todos.
+
+![](data:image/svg+xml;base64...)
+
+![](data:image/svg+xml;base64...)
+
+## Blogs y noticias
 
 ### Estado
 
-**Reformar sin destruir**
+![](data:image/svg+xml;base64...)
 
-Fortalecer la democracia sin dividirnos: modernizar el Estado, abrir participacion, pactar acuerdos amplios y reformar para devolver confianza en la politica, sin Constituyente.
+Fortalecer la democracia sin dividirnos: modernizar el Estado, abrir participación, pactar acuerdos amplios y reformar para devolver confianza en la política, sin Constituyente.
 
-### Educacion
+[Más información](/category/estado/)
 
-**Educacion para el desarrollo**
+### **Educación**
 
-La educacion sera el corazon de este gobierno: quien cuida a sus ninos y apuesta por sus maestros, construye su futuro. Esa Colombia la haremos juntos.
+![](data:image/svg+xml;base64...)
+
+La educación será el corazón de este gobierno: quien cuida a sus niños y apuesta por sus maestros, construye su futuro. Esa Colombia la haremos juntos.
+
+[Más información](/category/educacion/)
 
 ### Seguridad
 
-**Dialogar para desarmar el crimen, no para premiarlo**
+![](data:image/svg+xml;base64...)
 
-La Ley de Sometimiento a la Justicia desmantela estructuras criminales sin impunidad, mediante justicia efectiva, tecnologia avanzada y cooperacion con paises vecinos.
+La Ley de Sometimiento a la Justicia desmantela estructuras criminales sin impunidad, mediante justicia efectiva, tecnología avanzada y cooperación con países vecinos.
+
+[Más información](/category/seguridad/)
 
 ### Ambiente
 
-**Medio ambiente y cuidado de la vida**
+![](data:image/svg+xml;base64...)
 
-Colombia protegera la naturaleza creando empleo: transicion energetica justa, impuestos verdes, reforestacion y desarrollo sostenible para que cuidar el ambiente sea prosperar.
+Colombia protegerá la naturaleza creando empleo: transición energética justa, impuestos verdes, reforestación y desarrollo sostenible para que cuidar el ambiente sea prosperar.
+
+[Más información](/category/ambiente/)
 
 ### Desarrollo
 
-**Sustitucion y desarrollo**
+![](data:image/svg+xml;base64...)
 
-Venceremos cultivos ilicitos con inversion: el plan Murillo trae proyectos, creditos blandos y vias. Paz real con inteligencia, prevencion y oportunidades junto a las comunidades.
+Venceremos cultivos ilícitos con inversión: El plan Murillo trae proyectos, créditos blandos y vías. Paz real con inteligencia, prevención y oportunidades junto a las comunidades.
 
-### Economia
+[Más información](/category/desarrollo/)
 
-**Finanazas sanas, pais justo**
+### Economía
 
-Impuestos verdes, lucha contra la evasion y austeridad en el gasto publico. Cada peso ira a donde mas se necesita: educacion, salud, agua y oportunidades para la Colombia olvidada.
+![](data:image/svg+xml;base64...)
 
-## Otros elementos visibles
+Impuestos verdes, lucha contra la evasión y austeridad en el gasto público. Cada peso irá a donde más se necesita: educación, salud, agua, y oportunidades para la Colombia olvidada.
 
-- Llamado a voluntariado y recoleccion de firmas.
-- Contacto visible: `voluntarios@lacolombiaquemerecemos.co`
-- WhatsApp visible: `333 250 2107`
-- Seccion "Mis propuestas" mencionada en la portada.
+[Más información](/category/economia/)
 
-## Nota metodologica
+## El MuriCombo en tiktok
 
-Este documento debe tratarse como **captura oficial parcial**. Hace falta reemplazarlo por una descarga completa del sitio oficial o por un PDF oficial si la campana publica una version accesible posteriormente.
+> [Ver video en TikTok](https://www.tiktok.com/%40luisgilbertomurillo/video/7566344781287197972)
+
+> [Ver video en TikTok](https://www.tiktok.com/%40luisgilbertomurillo/video/7442949930987081016)
+
+> [Ver video en TikTok](https://www.tiktok.com/%40luisgilbertomurillo/video/7437290359018802487)
+
+> [Ver video en TikTok](https://www.tiktok.com/%40luisgilbertomurillo/video/7434339529819000120)
+
+REGISTRATE EN
+NUESTRO MURICOMBO
+
+Nombre y Apellido
+
+Ciudad o municipio
+
+Número de contacto
+
+Correo
+
+ENVIAR
+
+## Imprime en tu territorio
+
+[DESCARGAR MATERIAL](https://drive.google.com/drive/folders/10h4xkwkJDZuwcxvDUO_Ar97pOBLuUsRI)
+
+![](data:image/svg+xml;base64...)
+
+![](data:image/svg+xml;base64...)
+
+![](data:image/svg+xml;base64...)
+
+![](data:image/svg+xml;base64...)
+
+![](data:image/svg+xml;base64...)
+
+Si tienes alguna inquietud, sugerencia o idea para el Murillo, escríbenos mediante el siguiente formulario y estaremos en comunicación.
+
+* Correo electrónico:
+* luisg.murillou@gmail.com
+
+SÍGUENOS EN:
+
+[Facebook](https://web.facebook.com/LuisGilbertoMurilloUrrutia/?_rdc=1&_rdr)
+
+[Twitter](https://x.com/LuisGMurillo)
+
+[Instagram](https://www.instagram.com/accounts/login/?next=%2Fluisgmurillou%2F&source=omni_redirect)
+
+[Twitch](https://www.tiktok.com/%40luisgilbertomurillo)
+
+[Youtube](https://www.youtube.com/%40LuisGilbertoMurilloOficial)
+
+[Whatsapp](https://api.whatsapp.com/send?phone=573332502107&text=Hola%20Equipo%20MuriCombo%20%F0%9F%AB%B0%20quiero%20ser%20parte%20de%20este%20gran%20movimiento%2C%20%C2%BFc%C3%B3mo%20puedo%20ayudar%20en%20digital%20o%20en%20firmas%3F)
+
+[INICIO](/)
+
+[MAPA DEL SITIO](https://murilloporcolombia.com/mapa-web-html/)
+
+[CONTACTO](#forms-template)
+
+Reservados a Murillo presidente Prohibida su reproducción total o parcial, así como su traducción a cualquier idioma
+sin la autorización escrita de su titular. Reproduction in whole or in part is prohibited. All rights reserved copyright ©2026.
+
+Todos los derechos reservados. | [Sitemap](https://murilloporcolombia.com/sitemap_index.xml)
+
+ [Agencia SEO Bogotá](https://www.margetcseobogota.com/)
