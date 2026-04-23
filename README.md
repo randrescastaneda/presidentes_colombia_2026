@@ -14,6 +14,7 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
 2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
+   Si no hubo hallazgos publicables, registrar el resultado en `batch_status.json` en vez de dejar el lote vacío en `pending`.
 3. Ejecutar:
 
 ```bash

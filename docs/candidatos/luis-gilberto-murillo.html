@@ -188,19 +188,19 @@ Tarjetón 14
 <strong>Watchlist activa:</strong> Sí
 </p>
 <p class="profile-hero__meta">
-<strong>Último evento público:</strong> 20 de abril de 2026
+<strong>Último evento público:</strong> 21 de abril de 2026
 </p>
 </div>
 <div class="profile-hero__aside">
 <span class="spectrum-chip spectrum-chip--unknown">Evidencia insuficiente</span>
 <p class="profile-hero__meta">
-<strong>Hallazgos:</strong> 5
+<strong>Hallazgos:</strong> 7
 </p>
 <p class="profile-hero__meta">
-<strong>Fuentes:</strong> 4
+<strong>Fuentes:</strong> 5
 </p>
 <p class="profile-hero__meta">
-<strong>Notas IA:</strong> 0
+<strong>Notas IA:</strong> 1
 </p>
 </div>
 </div>
@@ -219,6 +219,9 @@ Todavía no hay suficientes señales programáticas mapeadas para ubicarlo en el
 <section id="trayectoria-y-contexto-público" class="level2">
 <h2 class="anchored" data-anchor-id="trayectoria-y-contexto-público">Trayectoria y contexto público</h2>
 <div class="prose-card">
+<p class="narrative-paragraph">
+<span class="narrative-date">21 de abril de 2026.</span> ‘No soy un canciller en la sombra; trato de contribuir como ciudadano en relaciones clave como EE.UU y Venezuela’: Luis Gilberto Murillo. <span class="narrative-source">Fuente: <a href="https://www.eltiempo.com/politica/elecciones-colombia-2026/no-soy-un-canciller-en-la-sombra-trato-de-contribuir-como-ciudadano-en-relaciones-clave-como-ee-uu-y-venezuela-luis-gilberto-murillo-3549757">EL TIEMPO</a>.</span>
+</p>
 <p class="narrative-paragraph">
 <span class="narrative-date">20 de abril de 2026.</span> # Luis Gilberto Murillo - Captura parcial del sitio oficial Fuente oficial: &lt;https://murillosoy.com/&gt; Estado de acceso al momento de la captura: - El dominio oficial aparece indexado por buscadores como sitio de campana. - La apertura directa del sitio desde las herramientas de descarga del pipeline devuelve acceso restringido o error de resolucion. - Este archivo conserva unicamente el contenido programatico visible en la captura publica indexada del sitio oficial. No reemplaza un PDF o una version completa del programa. ## Mensaje central visible "No es una nueva Colombia para unos pocos. Es una nueva Colombia para todos, empezando por los siempre olvidados." ## Ejes programaticos visibles en la captura publica del sitio oficial <strong>Reformar sin destruir</strong> Fortalecer la democracia sin dividirnos: modernizar el Estado, abrir participacion, pactar acuerdos amplios y reformar para devolver confianza en la politica, sin Constituyente. <strong>Educacion para el desarrollo</strong> La educacion sera el corazon de este gobierno: quien cuida a sus ninos y apuesta por sus maestros, construye su futuro. Esa Colombia la haremos juntos. <strong>Dialogar para desarmar el crimen, no para premiarlo</strong> La Ley de Sometimiento a la Justicia desmantela estructuras criminales sin impunidad, mediante justicia efectiva, tecnologia avanzada y cooperacion con paises vecinos. <strong>Medio ambiente y cuidado de la vida</strong> Colombia protegera la naturaleza creando empleo: transicion energetica justa, impuestos verdes, reforestacion y desarrollo sostenible para que cuidar el ambiente sea prosperar. <strong>Sustitucion y desarrollo</strong> Venceremos cultivos ilicitos con inversion: el plan Murillo trae proyectos, creditos blandos y vias. Paz real con inteligencia, prevencion y oportunidades junto a las comunidades. <strong>Finanazas sanas, pais justo</strong> Impuestos verdes, lucha contra la evasion y austeridad en el gasto publico. Cada peso ira a donde mas se necesita: educacion, salud, agua y oportunidades para la Colombia olvidada. ## Otros elementos visibles - Llamado a voluntariado y recoleccion de firmas. - Contacto visible: <code>voluntarios@lacolombiaquemerecemos.co</code> - WhatsApp visible: <code>333 250 2107</code> - Seccion "Mis propuestas" mencionada en la portada. ## Nota metodologica Este documento debe tratarse como <strong>captura oficial parcial</strong>. Hace falta reemplazarlo por una descarga completa del sitio oficial o por un PDF oficial si la campana publica una version accesible posteriormente. # Luis Gilberto Murillo - Captura parcial del sitio oficial Fuente oficial: &lt;https://murillosoy.com/&gt; Estado de acceso al momento de la captura: - El dominio oficial aparece ind. <span class="narrative-source">Fuente: <a href="https://murilloporcolombia.com/">Murillo presidente</a>.</span>
 </p>
@@ -240,7 +243,9 @@ Todavía no hay suficientes señales programáticas mapeadas para ubicarlo en el
 <h2 class="anchored" data-anchor-id="propuestas-y-posiciones-publicas">Propuestas y posiciones públicas</h2>
 <div id="homepage-comparison-context" class="prose-card" hidden="">
 <p class="candidate-card__meta">
-<strong>Contexto de comparación:</strong> Llegaste aquí desde la portada comparativa por el tema <span id="homepage-comparison-topic"></span>. Esta sección reúne las propuestas públicas relacionadas con ese eje.
+<strong>Contexto de comparación:</strong> Llegaste aquí desde <span id="homepage-comparison-origin"></span> por el tema <span id="homepage-comparison-topic"></span>. Esta sección mantiene la ficha completa, pero resalta el estado público de ese eje.
+</p>
+<p id="homepage-comparison-state" class="candidate-card__meta">
 </p>
 <p class="candidate-card__meta">
 <a class="card-link" href="../comparador.html">Volver al comparador general</a>
@@ -251,42 +256,128 @@ document.addEventListener('DOMContentLoaded', function () {
   var params = new URLSearchParams(window.location.search);
   var topic = params.get('topic');
   var from = params.get('from');
-  if (from !== 'homepage' || !topic) return;
+  if (!topic || (from !== 'homepage' && from !== 'comparador')) return;
   var note = document.getElementById('homepage-comparison-context');
   var label = document.getElementById('homepage-comparison-topic');
-  if (!note || !label) return;
+  var origin = document.getElementById('homepage-comparison-origin');
+  var state = document.getElementById('homepage-comparison-state');
+  if (!note || !label || !origin || !state) return;
+  var normalizedTopic = topic.replace(/[-_]+/g, ' ');
   label.textContent = topic.replace(/[-_]+/g, ' ');
+  origin.textContent = from === 'homepage' ? 'la portada comparativa' : 'el comparador temático';
+  var topicSection = document.querySelector('[data-topic-id="' + topic + '"]');
+  var topicState = topicSection ? topicSection.getAttribute('data-topic-state') : null;
+  if (topicSection) {
+    topicSection.classList.add('topic-section--focused');
+    topicSection.style.scrollMarginTop = '2rem';
+  }
+  if (topicState === 'comparable') {
+    state.textContent = 'Estado del tema: ya comparable en esta ficha.';
+  } else if (topicState === 'documented_only') {
+    state.textContent = 'Estado del tema: documentado, aún no comparable.';
+  } else {
+    state.textContent = 'Estado del tema: sin evidencia pública suficiente para resaltarlo de forma específica; se muestra la sección completa.';
+  }
   note.hidden = false;
 });
 </script>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div class="policy-topic-bucket" data-policy-bucket="comparable">
+<div class="prose-card">
+<h3 class="anchored">
+Propuestas comparables
+</h3>
+<p class="narrative-paragraph">
+Estas propuestas ya sostienen una comparación pública útil con otras candidaturas.
+</p>
 </div>
-<div class="callout-title-container flex-fill">
-Note
+<section class="topic-section" data-topic-id="educacion" data-topic-state="comparable">
+<div class="comparison-highlight__header">
+<h3 class="anchored">
+Educación
+</h3>
+<span class="evidence-chip evidence-chip--solid">comparable</span>
 </div>
+<p class="topic-section__intro">
+Primera infancia, colegios, educación superior, calidad y financiación.
+</p>
+<div class="prose-card">
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia. <span class="narrative-source">Fuente: <a href="https://www.rtvcnoticias.com/nacion/quienes-son-los-14-candidatos-la-presidencia-de-colombia-para-el-periodo-2026-2030">RTVC Noticias</a>.</span>
+</p>
 </div>
-<div class="callout-body-container callout-body">
-<p>Todavía no hay propuestas públicas trazables para este candidato.</p>
+</section>
+<section class="topic-section" data-topic-id="salud" data-topic-state="comparable">
+<div class="comparison-highlight__header">
+<h3 class="anchored">
+Salud
+</h3>
+<span class="evidence-chip evidence-chip--solid">comparable</span>
 </div>
+<p class="topic-section__intro">
+Sistema de salud, aseguramiento, hospitales, prevención y medicamentos.
+</p>
+<div class="prose-card">
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> Exsenador con roles clave en paz, salud y reformas institucionales. <span class="narrative-source">Fuente: <a href="https://www.rtvcnoticias.com/nacion/quienes-son-los-14-candidatos-la-presidencia-de-colombia-para-el-periodo-2026-2030">RTVC Noticias</a>.</span>
+</p>
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> Plan 10 con seguridad, salud, energía y justicia rápida. <span class="narrative-source">Fuente: <a href="https://elpais.com/america-colombia/elecciones-presidenciales/2026-04-14/mas-fracking-mas-militares-menos-impuestos-el-programa-de-paloma-valencia-refleja-las-formulas-clasicas-de-la-derecha.html">EL PAÍS</a>.</span>
+</p>
+</div>
+</section>
+</div>
+<div class="policy-topic-bucket" data-policy-bucket="documented-only">
+<div class="prose-card">
+<h3 class="anchored">
+Propuestas documentadas aún no comparables
+</h3>
+<p class="narrative-paragraph">
+Estas propuestas ya son publicables y trazables, pero todavía no tienen base suficiente para una comparación transversal firme.
+</p>
+</div>
+<section class="topic-section" data-topic-id="economia" data-topic-state="documented_only">
+<div class="comparison-highlight__header">
+<h3 class="anchored">
+Economía
+</h3>
+<span class="evidence-chip evidence-chip--partial">documentado, aún no comparable</span>
+</div>
+<p class="topic-section__intro">
+Marco fiscal, inflación, crecimiento, impuestos y gasto público.
+</p>
+<div class="prose-card">
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> En fiscal, Continuidad macroeconómica con responsabilidad fiscal y transición energética. <span class="narrative-source">Fuente: <a href="https://www.infobae.com/colombia/2026/03/24/ivan-cepeda-confirmo-que-mantendra-la-politica-economica-de-gustavo-petro-no-se-produjo-el-desplome/">Infobae</a>.</span>
+</p>
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> En fiscal, Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud. <span class="narrative-source">Fuente: <a href="https://forbes.co/2026/03/04/politica/elecciones-2026/continuar-lo-que-funciona-y-trabajar-en-seguridad-salud-y-productividad-la-meta-de-claudia-lopez">Forbes Colombia</a>.</span>
+</p>
+</div>
+</section>
+<section class="topic-section" data-topic-id="seguridad-justicia" data-topic-state="documented_only">
+<div class="comparison-highlight__header">
+<h3 class="anchored">
+Seguridad y justicia
+</h3>
+<span class="evidence-chip evidence-chip--partial">documentado, aún no comparable</span>
+</div>
+<p class="topic-section__intro">
+Seguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.
+</p>
+<div class="prose-card">
+<p class="narrative-paragraph">
+<span class="narrative-date">18 de abril de 2026.</span> En justicia e instituciones penales, Programa para profundizar justicia social y paz total. <span class="narrative-source">Fuente: <a href="https://pactohistorico.co/">Pacto Histórico</a>.</span>
+</p>
+</div>
+</section>
 </div>
 </section>
 <section id="análisis-lógico-publicado" class="level2">
 <h2 class="anchored" data-anchor-id="análisis-lógico-publicado">Análisis lógico publicado</h2>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Aún no hay notas analíticas públicas para esta candidatura.</p>
-</div>
+<div class="prose-card">
+<p class="narrative-paragraph">
+<strong>Vacío de implementación.</strong> La propuesta registrada para general-defendio-su-gestion no incluye suficiente detalle de implementación en la fuente analizada. <span class="narrative-meta">Confianza media-alta.</span> <span class="narrative-source">Sustento: <a href="https://www.eltiempo.com/politica/elecciones-colombia-2026/no-soy-un-canciller-en-la-sombra-trato-de-contribuir-como-ciudadano-en-relaciones-clave-como-ee-uu-y-venezuela-luis-gilberto-murillo-3549757">EL TIEMPO</a>.</span>
+</p>
 </div>
 </section>
 <section id="programa-oficial" class="level2">
@@ -329,6 +420,9 @@ Sitio oficial accesible en HTML; se convirtió con MarkItDown desde la portada q
 <section id="biblioteca-de-fuentes" class="level2">
 <h2 class="anchored" data-anchor-id="biblioteca-de-fuentes">Biblioteca de fuentes</h2>
 <ol class="source-list">
+<li id="source-src-20260421-murillo-tiempo">
+<strong><a href="https://www.eltiempo.com/politica/elecciones-colombia-2026/no-soy-un-canciller-en-la-sombra-trato-de-contribuir-como-ciudadano-en-relaciones-clave-como-ee-uu-y-venezuela-luis-gilberto-murillo-3549757">EL TIEMPO</a></strong>. ‘No soy un canciller en la sombra; trato de contribuir como ciudadano en relaciones clave como EE.UU y Venezuela’: Luis Gilberto Murillo. 21 de abril de 2026. <span class="narrative-meta">Tier: established-media.</span>
+</li>
 <li id="source-src-20260420-murillo-program-home">
 <strong><a href="https://murilloporcolombia.com/">Murillo presidente</a></strong>. Sitio oficial y ejes programáticos de Luis Gilberto Murillo. 21 de abril de 2026. <span class="narrative-meta">Tier: official.</span>
 </li>

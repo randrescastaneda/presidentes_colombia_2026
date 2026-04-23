@@ -27,6 +27,15 @@
     "public_reasoning_summary": "La propuesta registrada para fiscal-continuidad-selectiva-de no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
+    "analysis_id": "vacio-src-20260422-claudia-infobae-claim-1",
+    "candidate_id": "claudia-lopez",
+    "analysis_type": "vacio_de_implementacion",
+    "claim_ids": "src-20260422-claudia-infobae-claim-1",
+    "source_ids": "src-20260422-claudia-infobae",
+    "confidence": 0.8,
+    "public_reasoning_summary": "La propuesta registrada para general-rechazo-replicar-el no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
     "analysis_id": "vacio-src-20260418-ivan-program-home-claim-1",
     "candidate_id": "ivan-cepeda",
     "analysis_type": "vacio_de_implementacion",
@@ -34,6 +43,15 @@
     "source_ids": "src-20260418-ivan-program-home",
     "confidence": 0.95,
     "public_reasoning_summary": "La propuesta registrada para justicia-programa-profundizar-justicia no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
+    "analysis_id": "vacio-src-20260421-murillo-tiempo-claim-1",
+    "candidate_id": "luis-gilberto-murillo",
+    "analysis_type": "vacio_de_implementacion",
+    "claim_ids": "src-20260421-murillo-tiempo-claim-1",
+    "source_ids": "src-20260421-murillo-tiempo",
+    "confidence": 0.8,
+    "public_reasoning_summary": "La propuesta registrada para general-defendio-su-gestion no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
     "analysis_id": "vacio-src-20260420-paloma-program-pdf-claim-3",
@@ -61,6 +79,15 @@
     "source_ids": "src-20260418-paloma-official",
     "confidence": 0.95,
     "public_reasoning_summary": "La propuesta registrada para general-programa-integrado-de no incluye suficiente detalle de implementación en la fuente analizada."
+  },
+  {
+    "analysis_id": "vacio-src-20260423-fajardo-espectador-claim-1",
+    "candidate_id": "sergio-fajardo",
+    "analysis_type": "vacio_de_implementacion",
+    "claim_ids": "src-20260423-fajardo-espectador-claim-1",
+    "source_ids": "src-20260423-fajardo-espectador",
+    "confidence": 0.85,
+    "public_reasoning_summary": "La propuesta registrada para general-planteo-la-criminalidad no incluye suficiente detalle de implementación en la fuente analizada."
   },
   {
     "analysis_id": "vacio-src-20260418-sergio-profile-claim-1",

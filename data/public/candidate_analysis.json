@@ -1,10 +1,10 @@
 [
   {
-    "analysis_id": "candidate-analysis-ivan-cepeda-2026-04-20",
+    "analysis_id": "candidate-analysis-ivan-cepeda-2026-04-23",
     "candidate_id": "ivan-cepeda",
-    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260420-ivan-program-pdf"],
-    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260420-ivan-program-pdf-claim-1"],
-    "profile_overview": "Iván Cepeda Castro cuenta con 9 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Defensa y soberanía. La mezcla observada de afirmaciones es dato_contextual=6, propuesta_concreta=2, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-ivan-anticorrup", "src-20260418-ivan-tunja", "src-20260418-ivan-economia", "src-20260419-ivan-debate-elpais", "src-20260421-ivan-vanguardia", "src-20260420-ivan-program-pdf"],
+    "claim_ids": ["src-20260418-ivan-profile-claim-1", "src-20260418-ivan-program-home-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260420-ivan-program-pdf-claim-1"],
+    "profile_overview": "Iván Cepeda Castro cuenta con 11 afirmaciones trazables en 8 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Defensa y soberanía. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=2, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -129,11 +129,11 @@
     "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
     "mainstream_distance": "La evidencia sugiere una distancia relativamente alta frente al mainstream, sobre todo por el tono de ruptura o por apelaciones menos institucionales.",
     "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, justicia.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": [],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
     "uncertainties": ["Siguen con evidencia insuficiente varios ejes: universalismo_vs_focalizacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-clara-lopez-2026-04-20",
+    "analysis_id": "candidate-analysis-clara-lopez-2026-04-23",
     "candidate_id": "clara-lopez",
     "source_ids": ["src-20260418-clara-profile", "src-20260418-clara-renuncia"],
     "claim_ids": ["src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2"],
@@ -209,11 +209,11 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-claudia-lopez-2026-04-20",
+    "analysis_id": "candidate-analysis-claudia-lopez-2026-04-23",
     "candidate_id": "claudia-lopez",
-    "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260420-claudia-program-pdf"],
-    "claim_ids": ["src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260420-claudia-program-pdf-claim-1"],
-    "profile_overview": "Claudia Nayibe López Hernández cuenta con 9 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Salud. La mezcla observada de afirmaciones es dato_contextual=5, propuesta_concreta=3, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260419-claudia-energia-elpais", "src-20260422-claudia-infobae", "src-20260420-claudia-program-pdf"],
+    "claim_ids": ["src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260422-claudia-infobae-claim-1", "src-20260422-claudia-infobae-claim-2", "src-20260420-claudia-program-pdf-claim-1"],
+    "profile_overview": "Claudia Nayibe López Hernández cuenta con 11 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Fiscal, Salud. La mezcla observada de afirmaciones es dato_contextual=6, propuesta_concreta=4, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -314,7 +314,7 @@
     "uncertainties": "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
   },
   {
-    "analysis_id": "candidate-analysis-raul-botero-2026-04-20",
+    "analysis_id": "candidate-analysis-raul-botero-2026-04-23",
     "candidate_id": "raul-botero",
     "source_ids": ["src-20260418-raul-profile", "src-20260418-santiago-caracol"],
     "claim_ids": ["src-20260418-raul-profile-claim-1", "src-20260418-raul-profile-claim-2", "src-20260418-santiago-caracol-claim-1", "src-20260418-santiago-caracol-claim-2"],
@@ -390,11 +390,11 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-04-20",
+    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-04-23",
     "candidate_id": "abelardo-de-la-espriella",
-    "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260420-abelardo-program-pdf"],
-    "claim_ids": ["src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3"],
-    "profile_overview": "Abelardo Gabriel de la Espriella cuenta con 8 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud. La mezcla observada de afirmaciones es dato_contextual=7, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260422-abelardo-infobae", "src-20260420-abelardo-program-pdf"],
+    "claim_ids": ["src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-20260418-abelardo-infobae-claim-1", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260422-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-2", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3"],
+    "profile_overview": "Abelardo Gabriel de la Espriella cuenta con 10 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -481,7 +481,7 @@
     "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-04-20",
+    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-04-23",
     "candidate_id": "mauricio-lizcano",
     "source_ids": ["src-20260418-mauricio-profile", "src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador"],
     "claim_ids": ["src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2"],
@@ -557,7 +557,7 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-miguel-uribe-2026-04-20",
+    "analysis_id": "candidate-analysis-miguel-uribe-2026-04-23",
     "candidate_id": "miguel-uribe",
     "source_ids": "src-20260418-miguel-profile",
     "claim_ids": ["src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2"],
@@ -633,7 +633,7 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-sondra-macollins-2026-04-20",
+    "analysis_id": "candidate-analysis-sondra-macollins-2026-04-23",
     "candidate_id": "sondra-macollins",
     "source_ids": "src-20260418-sondra-profile",
     "claim_ids": ["src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2"],
@@ -709,7 +709,7 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-roy-barreras-2026-04-20",
+    "analysis_id": "candidate-analysis-roy-barreras-2026-04-23",
     "candidate_id": "roy-barreras",
     "source_ids": ["src-20260418-roy-profile", "src-20260418-roy-efe"],
     "claim_ids": ["src-20260418-roy-profile-claim-1", "src-20260418-roy-efe-claim-1"],
@@ -814,7 +814,7 @@
     "uncertainties": ["Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-carlos-caicedo-2026-04-20",
+    "analysis_id": "candidate-analysis-carlos-caicedo-2026-04-23",
     "candidate_id": "carlos-caicedo",
     "source_ids": ["src-20260418-carlos-profile", "src-20260418-caicedo-caracol"],
     "claim_ids": ["src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2"],
@@ -890,7 +890,7 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo."
   },
   {
-    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-04-20",
+    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-04-23",
     "candidate_id": "gustavo-matamoros",
     "source_ids": "src-20260418-gustavo-profile",
     "claim_ids": ["src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2"],
@@ -966,12 +966,12 @@
     "uncertainties": "Siguen con evidencia insuficiente varios ejes: estado_vs_mercado, redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion."
   },
   {
-    "analysis_id": "candidate-analysis-paloma-valencia-2026-04-20",
+    "analysis_id": "candidate-analysis-paloma-valencia-2026-04-23",
     "candidate_id": "paloma-valencia",
-    "source_ids": ["src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260420-paloma-program-pdf"],
-    "claim_ids": ["src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3"],
-    "profile_overview": "Paloma Susana Valencia Laserna cuenta con 13 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Salud, Vivienda. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=5, lo que permite una lectura programática todavía provisional pero ya comparable.",
-    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; apertura_vs_soberanismo: Soberanismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "source_ids": ["src-20260418-paloma-profile", "src-20260418-paloma-official", "src-20260418-paloma-elpais", "src-20260418-paloma-eltiempo", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260423-paloma-elpais", "src-20260420-paloma-program-pdf"],
+    "claim_ids": ["src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-eltiempo-claim-1", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260423-paloma-elpais-claim-1", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3"],
+    "profile_overview": "Paloma Susana Valencia Laserna cuenta con 14 afirmaciones trazables en 8 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Paz y conflicto armado, Salud. La mezcla observada de afirmaciones es dato_contextual=9, propuesta_concreta=5, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; apertura_vs_soberanismo: Soberanismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
         "axis_id": "estado_vs_mercado",
@@ -1023,9 +1023,9 @@
       },
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
-        "placement": "Evidencia insuficiente",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+        "placement": "Seguridad negociada",
+        "confidence": 0.81,
+        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
@@ -1035,6 +1035,20 @@
       }
     ],
     "thematic_analysis": [
+      {
+        "topic_id": "paz",
+        "description": "En Paz y conflicto armado, la evidencia pública observada se concentra en posturas o prioridades generales. Presento su propuesta de seguridad total y prometio reactivar las ordenes de captura contra gestores de paz senalados de seguir delinquiendo.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      },
       {
         "topic_id": "salud",
         "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plan 10 con seguridad, salud, energía y justicia rápida.",
@@ -1066,16 +1080,16 @@
     ],
     "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como NA, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": [],
-    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-sergio-fajardo-2026-04-20",
+    "analysis_id": "candidate-analysis-sergio-fajardo-2026-04-23",
     "candidate_id": "sergio-fajardo",
-    "source_ids": ["src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260420-fajardo-program-pdf"],
-    "claim_ids": ["src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260420-fajardo-program-pdf-claim-1"],
-    "profile_overview": "Sergio Fajardo Valderrama cuenta con 7 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Fiscal. La mezcla observada de afirmaciones es dato_contextual=5, critica_adversario=1, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-sergio-profile", "src-20260418-fajardo-official", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais", "src-20260423-fajardo-espectador", "src-20260420-fajardo-program-pdf"],
+    "claim_ids": ["src-20260418-sergio-profile-claim-1", "src-20260418-fajardo-official-claim-1", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260423-fajardo-espectador-claim-1", "src-20260423-fajardo-espectador-claim-2", "src-20260420-fajardo-program-pdf-claim-1"],
+    "profile_overview": "Sergio Fajardo Valderrama cuenta con 9 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Fiscal. La mezcla observada de afirmaciones es dato_contextual=6, critica_adversario=1, postura_general=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Mixto o tensionado; redistribucion_vs_libertad_economica: Mixto o tensionado; universalismo_vs_focalizacion: Mixto o tensionado. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1185,16 +1199,16 @@
     ],
     "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como educacion, fiscal.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA, educacion.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
     "uncertainties": "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."
   },
   {
-    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-04-20",
+    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-04-23",
     "candidate_id": "luis-gilberto-murillo",
-    "source_ids": ["src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais", "src-20260420-murillo-program-home"],
-    "claim_ids": ["src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1", "src-20260420-murillo-program-home-claim-1"],
-    "profile_overview": "Luis Gilberto Murillo Urrutia cuenta con 5 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Educación, NA, Salud. La mezcla observada de afirmaciones es dato_contextual=4, critica_adversario=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-murillo-profile", "src-20260418-murillo-espectador", "src-20260418-murillo-elpais", "src-20260421-murillo-tiempo", "src-20260420-murillo-program-home"],
+    "claim_ids": ["src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-20260418-murillo-espectador-claim-1", "src-20260418-murillo-elpais-claim-1", "src-20260421-murillo-tiempo-claim-1", "src-20260421-murillo-tiempo-claim-2", "src-20260420-murillo-program-home-claim-1"],
+    "profile_overview": "Luis Gilberto Murillo Urrutia cuenta con 7 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en NA, Educación, Salud. La mezcla observada de afirmaciones es dato_contextual=5, critica_adversario=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; universalismo_vs_focalizacion: Universalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1229,9 +1243,9 @@
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
-        "placement": "Evidencia insuficiente",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+        "placement": "Tecnocracia",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Tecnocracia: usa lenguaje de capacidad tecnica o gestion"
       },
       {
         "axis_id": "apertura_vs_soberanismo",
@@ -1288,10 +1302,10 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
-    "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
+    "internal_coherence": "No aparecen contradicciones directas relevantes, pero la coherencia sustantiva sigue limitada por vacíos de implementación.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como salud, NA.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como NA, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
-    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
+    "uncertainties": ["Siguen con evidencia insuficiente varios ejes: redistribucion_vs_libertad_economica, institucionalismo_vs_personalismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural.", "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación."]
   }
 ]

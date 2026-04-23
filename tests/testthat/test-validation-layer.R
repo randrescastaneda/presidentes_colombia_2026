@@ -141,3 +141,71 @@ test_that("build_validation_report blocks missing traceability in analytical art
   expect_equal(report$status, "block")
   expect_true(any(vapply(report$checks, \(check) identical(check$rule_id, "traceability_required") && identical(check$status, "fail"), logical(1))))
 })
+
+test_that("build_validation_report blocks scaffold-only inbox batches without explicit no_findings status", {
+  project_dir <- tempfile()
+  dir.create(file.path(project_dir, "data", "inbox", "2026-04-21", "source_texts"), recursive = TRUE)
+  readr::write_csv(
+    tibble::tibble(
+      source_id = character(),
+      candidate_id = character(),
+      published_at = character(),
+      source_tier = character(),
+      source_type = character(),
+      source_name = character(),
+      url = character(),
+      title = character(),
+      quote_text = character(),
+      confidence = numeric()
+    ),
+    file.path(project_dir, "data", "inbox", "2026-04-21", "sources.csv")
+  )
+
+  report <- build_validation_report(
+    claims = tibble::tibble(),
+    candidate_analysis = list(),
+    comparison_report = NULL,
+    editorial_packages = list(),
+    report_date = as.Date("2026-04-21"),
+    project_dir = project_dir
+  )
+
+  expect_equal(report$status, "block")
+  expect_true(any(vapply(report$checks, \(check) identical(check$rule_id, "empty_inbox_batches_require_resolution") && identical(check$status, "fail"), logical(1))))
+})
+
+test_that("build_validation_report allows empty inbox batches with explicit no_findings status", {
+  project_dir <- tempfile()
+  dir.create(file.path(project_dir, "data", "inbox", "2026-04-21", "source_texts"), recursive = TRUE)
+  readr::write_csv(
+    tibble::tibble(
+      source_id = character(),
+      candidate_id = character(),
+      published_at = character(),
+      source_tier = character(),
+      source_type = character(),
+      source_name = character(),
+      url = character(),
+      title = character(),
+      quote_text = character(),
+      confidence = numeric()
+    ),
+    file.path(project_dir, "data", "inbox", "2026-04-21", "sources.csv")
+  )
+  writeLines(
+    '{"status":"no_findings","updated_at":"2026-04-21T10:30:00Z","summary":"No hubo hallazgos publicables en la ventana revisada.","notes":"Revisadas fuentes de las ultimas 24 horas.","checked_window_start":"2026-04-20T10:30:00Z","checked_window_end":"2026-04-21T10:30:00Z"}',
+    file.path(project_dir, "data", "inbox", "2026-04-21", "batch_status.json")
+  )
+
+  report <- build_validation_report(
+    claims = tibble::tibble(),
+    candidate_analysis = list(),
+    comparison_report = NULL,
+    editorial_packages = list(),
+    report_date = as.Date("2026-04-21"),
+    project_dir = project_dir
+  )
+
+  expect_equal(report$status, "pass")
+  expect_true(any(vapply(report$checks, \(check) identical(check$rule_id, "empty_inbox_batches_require_resolution") && identical(check$status, "pass"), logical(1))))
+})

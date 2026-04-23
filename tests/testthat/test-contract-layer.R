@@ -37,6 +37,7 @@ test_that("create_daily_batch scaffolds sources and source_texts without claims.
   dir.create(file.path(project_dir, "data", "inbox"), recursive = TRUE)
   writeLines("source_id,candidate_id,published_at,source_tier,source_type,source_name,url,title,quote_text,confidence", file.path(project_dir, "data", "inbox", "template_sources.csv"))
   writeLines("- source_id:\n\n## Source text or cleaned transcript", file.path(project_dir, "data", "inbox", "template_source_note.md"))
+  writeLines('{"status":"pending","updated_at":null,"summary":"","notes":"","checked_window_start":null,"checked_window_end":null}', file.path(project_dir, "data", "inbox", "template_batch_status.json"))
 
   script_path <- file.path(project_root, "scripts", "create_daily_batch.R")
   status <- system2("Rscript", c(shQuote(script_path), shQuote(project_dir), "2026-04-21"))
@@ -44,5 +45,6 @@ test_that("create_daily_batch scaffolds sources and source_texts without claims.
   expect_equal(status, 0)
   expect_true(file.exists(file.path(project_dir, "data", "inbox", "2026-04-21", "sources.csv")))
   expect_true(dir.exists(file.path(project_dir, "data", "inbox", "2026-04-21", "source_texts")))
+  expect_true(file.exists(file.path(project_dir, "data", "inbox", "2026-04-21", "batch_status.json")))
   expect_false(file.exists(file.path(project_dir, "data", "inbox", "2026-04-21", "claims.csv")))
 })

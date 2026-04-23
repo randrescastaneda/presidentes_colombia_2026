@@ -12,6 +12,7 @@ Rscript scripts/create_daily_batch.R
 
 - `data/inbox/YYYY-MM-DD/sources.csv`
 - `data/inbox/YYYY-MM-DD/source_texts/`
+- `data/inbox/YYYY-MM-DD/batch_status.json`
 
 3. Ejecutar:
 
@@ -46,3 +47,9 @@ Rscript scripts/run_daily_update.R
 5. Se construye `comparison_report` para la watchlist activa.
 6. Se generan `editorial_package` para perfiles, comparativa, update diario y resumen breve.
 7. `validation_report` decide si la publicación sigue o se bloquea.
+
+## Regla operativa nueva
+
+- No dejar lotes scaffold-only en estado implícito.
+- Si no hubo hallazgos publicables, registrar `status = "no_findings"` en `batch_status.json` con una nota breve de la revisión.
+- Si el lote sigue en `pending` y además `sources.csv` y `source_texts/` están vacíos, la validación debe bloquear la publicación.

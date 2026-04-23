@@ -261,6 +261,84 @@ validation_status_from_checks <- function(checks) {
   "pass"
 }
 
+read_inbox_batch_status <- function(batch_dir) {
+  status_path <- file.path(batch_dir, "batch_status.json")
+
+  if (!file.exists(status_path)) {
+    return(list(
+      exists = FALSE,
+      path = status_path,
+      status = NA_character_,
+      summary = NA_character_,
+      updated_at = NA_character_
+    ))
+  }
+
+  payload <- read_contract_json(status_path) %||% list()
+
+  list(
+    exists = TRUE,
+    path = status_path,
+    status = as.character(payload$status %||% NA_character_),
+    summary = as.character(payload$summary %||% NA_character_),
+    updated_at = as.character(payload$updated_at %||% NA_character_)
+  )
+}
+
+inspect_inbox_batches <- function(project_dir = ".") {
+  batch_dirs <- list_inbox_batches_v2(project_dir)
+
+  if (length(batch_dirs) == 0) {
+    return(tibble::tibble(
+      batch_date = as.Date(character()),
+      batch_dir = character(),
+      source_count = integer(),
+      source_text_count = integer(),
+      status_exists = logical(),
+      status = character(),
+      status_path = character(),
+      requires_resolution = logical(),
+      resolution_note = character()
+    ))
+  }
+
+  purrr::map_dfr(batch_dirs, function(batch_dir) {
+    sources_path <- file.path(batch_dir, "sources.csv")
+    source_count <- if (file.exists(sources_path)) {
+      nrow(readr::read_csv(sources_path, show_col_types = FALSE))
+    } else {
+      0L
+    }
+
+    source_text_count <- nrow(list_source_text_files(project_dir, batch_date = basename(batch_dir)))
+    batch_status <- read_inbox_batch_status(batch_dir)
+    normalized_status <- tolower(trimws(batch_status$status %||% ""))
+    is_empty_batch <- identical(source_count, 0L) && identical(source_text_count, 0L)
+
+    requires_resolution <- is_empty_batch && normalized_status != "no_findings"
+    resolution_note <- dplyr::case_when(
+      !is_empty_batch ~ "batch_has_content",
+      !batch_status$exists ~ "missing_batch_status",
+      identical(normalized_status, "no_findings") ~ "explicit_no_findings",
+      identical(normalized_status, "pending") ~ "still_pending",
+      identical(normalized_status, "completed") ~ "empty_but_marked_completed",
+      TRUE ~ paste0("empty_with_status_", normalized_status)
+    )
+
+    tibble::tibble(
+      batch_date = as.Date(basename(batch_dir)),
+      batch_dir = batch_dir,
+      source_count = as.integer(source_count),
+      source_text_count = as.integer(source_text_count),
+      status_exists = isTRUE(batch_status$exists),
+      status = batch_status$status %||% NA_character_,
+      status_path = batch_status$path,
+      requires_resolution = requires_resolution,
+      resolution_note = resolution_note
+    )
+  })
+}
+
 build_validation_report <- function(
   claims,
   candidate_analysis,
@@ -272,12 +350,30 @@ build_validation_report <- function(
   project_dir = "."
 ) {
   rules <- load_validation_rules(project_dir)
+  inbox_batches <- inspect_inbox_batches(project_dir)
+  unresolved_empty_batches <- inbox_batches |>
+    dplyr::filter(.data$requires_resolution %in% TRUE)
 
   candidate_traceable <- purrr::every(candidate_analysis, \(artifact) artifact_has_traceability(artifact$source_ids, artifact$claim_ids))
   comparison_traceable <- is.null(comparison_report) || artifact_has_traceability(comparison_report$source_ids, comparison_report$claim_ids)
   editorial_traceable <- purrr::every(editorial_packages, \(artifact) artifact_has_traceability(artifact$source_ids, artifact$claim_ids))
 
   checks <- list(
+    build_validation_check(
+      "empty_inbox_batches_require_resolution",
+      "block",
+      if (nrow(unresolved_empty_batches) == 0) "pass" else "fail",
+      "data/inbox/*/batch_status.json",
+      if (nrow(unresolved_empty_batches) == 0) {
+        "Los lotes vacios del inbox tienen una resolucion explicita o ya contienen fuentes capturadas."
+      } else {
+        paste0(
+          "Los lotes ",
+          paste(as.character(unresolved_empty_batches$batch_date), collapse = ", "),
+          " quedaron vacios sin `batch_status.json` con `status = \"no_findings\"`; eso indica una ingesta incompleta o no auditada."
+        )
+      }
+    ),
     build_validation_check(
       "primary_program_documents_registered",
       "block",
