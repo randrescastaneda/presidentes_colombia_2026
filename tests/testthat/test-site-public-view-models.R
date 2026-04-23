@@ -253,3 +253,310 @@ test_that("build_homepage_view_model tolerates missing processed validation stat
   expect_equal(model$comparison_blocks[[1]]$handoff$candidate_destinations[[1]]$candidate_id, "a")
   expect_no_match(model$comparison_blocks[[1]]$summary, "missing-candidate")
 })
+
+test_that("build_homepage_view_model normalizes homepage handoffs to root topic ids", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1,
+      "salud-publica", "salud", "Salud pública", "salud-publica", "Subtema de salud", TRUE, 2
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = "a",
+      topic_comparison = list(
+        list(
+          topic_id = "salud-publica",
+          candidate_rows = list(
+            list(candidate_id = "a", priority = "alta", instrument = "ley", specificity = "alta", coherence = "alta", feasibility = "parcialmente evaluable")
+          ),
+          summary = "Tema útil para comparar."
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "validation-2026-04-20",
+      status = "pass",
+      summary = "Validation passed with no blocking issues."
+    ),
+    file.path(project_dir, "data", "public", "validation_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_homepage_view_model(project_dir = project_dir)
+
+  expect_equal(model$comparison_blocks[[1]]$topic_id, "salud-publica")
+  expect_equal(model$comparison_blocks[[1]]$handoff$topic_or_axis, "salud")
+  expect_equal(model$comparison_blocks[[1]]$handoff$section_anchor, "topic-salud")
+  expect_equal(model$comparison_blocks[[1]]$handoff$candidate_destinations[[1]]$href, "candidatos/candidata-a.html?from=homepage&topic=salud#propuestas-y-posiciones-publicas")
+})
+
+test_that("build_comparison_view_model derives comparison destinations from public JSON only", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1,
+      "b", "candidato-b", "Candidato B", "Vice B", 2, TRUE, 2
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~claim_id, ~candidate_id, ~topic_id, ~claim_type, ~event_date, ~source_id, ~position_text, ~summary_text,
+      "claim-1", "a", "salud", "policy_proposal", "2026-04-20", "src-1", "Fortalecer la red pública.", "Plantea fortalecer la red pública.",
+      "claim-2", "b", "salud", "policy_proposal", "2026-04-20", "src-2", "Revisar incentivos de aseguramiento.", "Plantea una revisión gradual."
+    ),
+    file.path(project_dir, "data", "public", "claim_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~source_id, ~candidate_id, ~published_at, ~source_name, ~url,
+      "src-1", "a", "2026-04-20T10:00:00Z", "Fuente A", "https://example.com/a",
+      "src-2", "b", "2026-04-20T10:00:00Z", "Fuente B", "https://example.com/b"
+    ),
+    file.path(project_dir, "data", "public", "source_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~document_id, ~candidate_id, ~title, ~is_primary, ~published_at, ~download_url,
+      "doc-a", "a", "Programa A", TRUE, "2026-04-20", "https://example.com/doc-a"
+    ),
+    file.path(project_dir, "data", "public", "program_documents.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = c("a", "b"),
+      topic_comparison = list(
+        list(
+          topic_id = "salud",
+          candidate_rows = list(
+            list(candidate_id = "a", priority = "alta", instrument = "ley", specificity = "alta", coherence = "alta", feasibility = "parcialmente evaluable"),
+            list(candidate_id = "b", priority = "sin evidencia suficiente", instrument = "sin evidencia suficiente", specificity = "sin evidencia suficiente", coherence = "sin evidencia suficiente", feasibility = "sin base suficiente")
+          ),
+          summary = "Tema útil para comparar a la candidata A."
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_comparison_view_model(project_dir = project_dir)
+
+  expect_length(model$topics, 1)
+  expect_equal(model$topics[[1]]$topic_label, "Salud")
+  expect_equal(model$topics[[1]]$candidate_cards[[1]]$destination_state, "comparable")
+  expect_equal(model$topics[[1]]$candidate_cards[[1]]$href, "candidatos/candidata-a.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
+  expect_equal(model$topics[[1]]$candidate_cards[[2]]$destination_state, "documented_only")
+  expect_equal(model$topics[[1]]$candidate_cards[[2]]$href, "candidatos/candidato-b.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
+  expect_equal(model$topics[[1]]$candidate_cards[[1]]$primary_document$title, "Programa A")
+})
+
+test_that("build_candidate_policy_view_model separates comparable and documented-only topics", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1,
+      "empleo", NA_character_, "Empleo", "empleo", "Trabajo e ingresos", TRUE, 2
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~claim_id, ~candidate_id, ~topic_id, ~claim_type, ~event_date, ~source_id, ~position_text, ~summary_text,
+      "claim-1", "a", "salud", "policy_proposal", "2026-04-20", "src-1", "Fortalecer la red pública.", "Plantea fortalecer la red pública.",
+      "claim-2", "a", "empleo", "policy_proposal", "2026-04-21", "src-2", "Impulsar formación dual.", "Describe una propuesta laboral."
+    ),
+    file.path(project_dir, "data", "public", "claim_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~source_id, ~candidate_id, ~published_at, ~source_name, ~url,
+      "src-1", "a", "2026-04-20T10:00:00Z", "Fuente A", "https://example.com/a",
+      "src-2", "a", "2026-04-21T10:00:00Z", "Fuente B", "https://example.com/b"
+    ),
+    file.path(project_dir, "data", "public", "source_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = "a",
+      topic_comparison = list(
+        list(
+          topic_id = "salud",
+          candidate_rows = list(
+            list(candidate_id = "a", priority = "alta", instrument = "ley", specificity = "alta", coherence = "alta", feasibility = "parcialmente evaluable")
+          ),
+          summary = "Salud ya es comparable."
+        )
+      )
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_candidate_policy_view_model(
+    candidate_id = "a",
+    topic_id = "empleo",
+    from = "comparador",
+    project_dir = project_dir
+  )
+
+  expect_equal(model$candidate_name, "Candidata A")
+  expect_length(model$comparable_sections, 1)
+  expect_equal(model$comparable_sections[[1]]$topic_id, "salud")
+  expect_length(model$documented_sections, 1)
+  expect_equal(model$documented_sections[[1]]$topic_id, "empleo")
+  expect_equal(model$topic_focus$root_topic_id, "empleo")
+  expect_equal(model$topic_focus$state, "documented_only")
+  expect_equal(model$topic_focus$state_label, "documentado, aún no comparable")
+  expect_false(model$empty_state)
+})
+
+test_that("build_candidate_policy_view_model preserves documented-only state for topics missing in taxonomy", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "a", "candidata-a", "Candidata A", "Vice A", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~claim_id, ~candidate_id, ~topic_id, ~claim_type, ~event_date, ~source_id, ~position_text, ~summary_text,
+      "claim-1", "a", "seguridad-rural", "policy_proposal", "2026-04-21", "src-1", "Fortalecer presencia territorial.", "Describe una propuesta sin taxonomía aún."
+    ),
+    file.path(project_dir, "data", "public", "claim_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    tibble::tribble(
+      ~source_id, ~candidate_id, ~published_at, ~source_name, ~url,
+      "src-1", "a", "2026-04-21T10:00:00Z", "Fuente A", "https://example.com/a"
+    ),
+    file.path(project_dir, "data", "public", "source_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      report_id = "comparison-watchlist-2026-04-20",
+      candidate_ids = "a",
+      topic_comparison = list()
+    ),
+    file.path(project_dir, "data", "public", "comparison_report.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_candidate_policy_view_model(
+    candidate_id = "a",
+    topic_id = "seguridad-rural",
+    from = "comparador",
+    project_dir = project_dir
+  )
+
+  expect_length(model$documented_sections, 1)
+  expect_equal(model$documented_sections[[1]]$topic_id, "seguridad-rural")
+  expect_equal(model$topic_focus$root_topic_id, "seguridad-rural")
+  expect_equal(model$topic_focus$state, "documented_only")
+})

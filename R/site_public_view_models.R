@@ -273,7 +273,7 @@ build_public_comparison_summary <- function(topic_id, candidate_names, evidence_
   )
 }
 
-build_homepage_comparison_blocks <- function(comparison_report, candidates, limit = 3) {
+build_homepage_comparison_blocks <- function(comparison_report, candidates, taxonomy_lookup = tibble::tibble(), limit = 3) {
   if (is.null(comparison_report)) {
     return(list())
   }
@@ -286,6 +286,11 @@ build_homepage_comparison_blocks <- function(comparison_report, candidates, limi
   candidate_lookup <- candidate_lookup_public(candidates)
 
   blocks <- lapply(topic_rows, function(topic_row) {
+    topic_request <- normalize_topic_request(
+      normalize_public_scalar(topic_row$topic_id, default = "sin-tema"),
+      taxonomy_lookup = taxonomy_lookup
+    )
+    handoff_topic_id <- topic_request$root_topic_id %||% normalize_public_scalar(topic_row$topic_id, default = "sin-tema")
     supported_rows <- topic_row_supported_candidates(topic_row)
     supported_ids <- purrr::map_chr(supported_rows, \(row) normalize_public_scalar(row$candidate_id, default = NA_character_))
     supported_ids <- stats::na.omit(supported_ids)
@@ -308,8 +313,8 @@ build_homepage_comparison_blocks <- function(comparison_report, candidates, limi
       public_label = public_evidence_label(evidence_state),
       supported_candidate_count = length(known_supported_ids),
       handoff = list(
-        topic_or_axis = normalize_public_scalar(topic_row$topic_id, default = "sin-tema"),
-        section_anchor = paste0("topic-", normalize_public_scalar(topic_row$topic_id, default = "sin-tema")),
+        topic_or_axis = handoff_topic_id,
+        section_anchor = paste0("topic-", handoff_topic_id),
         candidate_ids = known_supported_ids,
         candidate_destinations = unname(lapply(known_supported_ids, function(candidate_id) {
           candidate_meta <- candidate_lookup[[candidate_id]]
@@ -319,7 +324,7 @@ build_homepage_comparison_blocks <- function(comparison_report, candidates, limi
               "candidatos/",
               candidate_meta$slug %||% candidate_id,
               ".html?from=homepage&topic=",
-              utils::URLencode(normalize_public_scalar(topic_row$topic_id, default = "sin-tema"), reserved = TRUE),
+              utils::URLencode(handoff_topic_id, reserved = TRUE),
               "#propuestas-y-posiciones-publicas"
             ),
             fallback_destination = paste0("candidatos/", candidate_meta$slug %||% candidate_id, ".html")
@@ -411,6 +416,13 @@ build_homepage_roster <- function(candidates) {
 
 build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
   candidates <- read_candidate_registry_public(project_dir = project_dir)
+  taxonomy_path <- file.path(project_dir, "config", "taxonomy_v1.csv")
+  taxonomy <- if (file.exists(taxonomy_path)) {
+    read_taxonomy_public(project_dir = project_dir)
+  } else {
+    tibble::tibble()
+  }
+  taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
   editorial_packages <- read_editorial_packages_public(project_dir = project_dir)
   homepage_brief <- find_public_artifact(editorial_packages, "homepage_brief")
   daily_update <- find_public_artifact(editorial_packages, "daily_update")
@@ -432,6 +444,7 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
   comparison_blocks <- build_homepage_comparison_blocks(
     comparison_report = comparison_report,
     candidates = candidates,
+    taxonomy_lookup = taxonomy_lookup,
     limit = comparison_limit
   )
 
@@ -457,5 +470,337 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
     } else {
       NULL
     }
+  )
+}
+
+taxonomy_root_lookup_public <- function(taxonomy) {
+  if (!is.data.frame(taxonomy) || nrow(taxonomy) == 0) {
+    return(tibble::tibble())
+  }
+
+  parent_lookup <- stats::setNames(taxonomy$parent_topic_id, taxonomy$topic_id)
+  label_lookup <- stats::setNames(taxonomy$label_public, taxonomy$topic_id)
+  description_lookup <- stats::setNames(taxonomy$description, taxonomy$topic_id)
+  sort_lookup <- stats::setNames(taxonomy$sort_order, taxonomy$topic_id)
+
+  find_root <- function(topic_id) {
+    parent_id <- parent_lookup[[topic_id]]
+    if (is.null(parent_id) || is.na(parent_id) || identical(parent_id, "")) {
+      return(topic_id)
+    }
+
+    Recall(parent_id)
+  }
+
+  roots <- vapply(taxonomy$topic_id, find_root, character(1))
+
+  tibble::tibble(
+    topic_id = taxonomy$topic_id,
+    topic_label = taxonomy$label_public,
+    root_topic_id = roots,
+    root_label = unname(label_lookup[roots]),
+    root_description = unname(description_lookup[roots]),
+    root_sort_order = unname(sort_lookup[roots])
+  ) |>
+    dplyr::mutate(
+      root_label = dplyr::coalesce(.data$root_label, .data$topic_label, .data$root_topic_id),
+      root_description = dplyr::coalesce(.data$root_description, ""),
+      root_sort_order = dplyr::coalesce(as.integer(.data$root_sort_order), 999L)
+    )
+}
+
+normalize_public_table <- function(x) {
+  if (is.null(x) || length(x) == 0) {
+    return(tibble::tibble())
+  }
+
+  if (is.data.frame(x)) {
+    return(tibble::as_tibble(x))
+  }
+
+  tibble::as_tibble(x)
+}
+
+read_public_table <- function(filename, project_dir = ".") {
+  normalize_public_table(read_public_json(filename, project_dir = project_dir))
+}
+
+normalize_topic_request <- function(topic_id, taxonomy_lookup = tibble::tibble()) {
+  if (is.null(topic_id) || length(topic_id) == 0 || is.na(topic_id) || identical(topic_id, "")) {
+    return(NULL)
+  }
+
+  normalized <- as.character(topic_id[[1]])
+  if (!is.data.frame(taxonomy_lookup) || nrow(taxonomy_lookup) == 0 || !all(c("topic_id", "root_topic_id", "root_label") %in% names(taxonomy_lookup))) {
+    return(list(
+      requested_topic_id = normalized,
+      root_topic_id = normalized,
+      label = public_topic_label(normalized)
+    ))
+  }
+
+  matches <- taxonomy_lookup |>
+    dplyr::filter(.data$topic_id == normalized | .data$root_topic_id == normalized) |>
+    dplyr::slice_head(n = 1)
+
+  if (nrow(matches) == 0) {
+    return(list(
+      requested_topic_id = normalized,
+      root_topic_id = normalized,
+      label = public_topic_label(normalized)
+    ))
+  }
+
+  list(
+    requested_topic_id = normalized,
+    root_topic_id = matches$root_topic_id[[1]],
+    label = matches$root_label[[1]]
+  )
+}
+
+comparison_topic_ids_by_candidate <- function(comparison_report, taxonomy_lookup = tibble::tibble()) {
+  topic_rows <- normalize_public_collection(comparison_report$topic_comparison)
+  if (length(topic_rows) == 0) {
+    return(list())
+  }
+
+  mapping <- list()
+  for (topic_row in topic_rows) {
+    topic_request <- normalize_topic_request(
+      normalize_public_scalar(topic_row$topic_id, default = NA_character_),
+      taxonomy_lookup = taxonomy_lookup
+    )
+    root_topic_id <- topic_request$root_topic_id %||% normalize_public_scalar(topic_row$topic_id, default = NA_character_)
+    supported_rows <- topic_row_supported_candidates(topic_row)
+    for (row in supported_rows) {
+      candidate_id <- normalize_public_scalar(row$candidate_id, default = NA_character_)
+      if (is.na(candidate_id)) {
+        next
+      }
+
+      mapping[[candidate_id]] <- unique(c(mapping[[candidate_id]], root_topic_id))
+    }
+  }
+
+  mapping
+}
+
+candidate_topic_state_public <- function(candidate_id, root_topic_id, comparable_topic_ids, documented_topic_ids) {
+  if (!is.na(root_topic_id) && root_topic_id %in% (comparable_topic_ids[[candidate_id]] %||% character())) {
+    return("comparable")
+  }
+
+  if (!is.na(root_topic_id) && root_topic_id %in% (documented_topic_ids[[candidate_id]] %||% character())) {
+    return("documented_only")
+  }
+
+  "empty"
+}
+
+candidate_topic_state_label <- function(state) {
+  dplyr::case_when(
+    identical(state, "comparable") ~ "comparable",
+    identical(state, "documented_only") ~ "documentado, aún no comparable",
+    TRUE ~ "sin evidencia pública suficiente"
+  )
+}
+
+build_candidate_policy_topic_sections <- function(candidate_claims, taxonomy_lookup, comparable_topic_ids) {
+  if (!is.data.frame(candidate_claims) || nrow(candidate_claims) == 0) {
+    return(list(comparable = list(), documented_only = list()))
+  }
+
+  enriched_claims <- candidate_claims |>
+    dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
+    dplyr::mutate(
+      root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id),
+      root_label = dplyr::coalesce(.data$root_label, .data$topic_id),
+      root_description = dplyr::coalesce(.data$root_description, ""),
+      root_sort_order = dplyr::coalesce(as.integer(.data$root_sort_order), 999L),
+      topic_label = dplyr::coalesce(.data$topic_label, .data$topic_id)
+    ) |>
+    dplyr::arrange(.data$root_sort_order, dplyr::desc(.data$event_date))
+
+  sections <- lapply(split(enriched_claims, enriched_claims$root_topic_id), function(section_claims) {
+    root_topic_id <- section_claims$root_topic_id[[1]]
+    state <- if (root_topic_id %in% comparable_topic_ids) "comparable" else "documented_only"
+
+    list(
+      topic_id = root_topic_id,
+      topic_label = section_claims$root_label[[1]],
+      topic_description = section_claims$root_description[[1]] %||% "",
+      state = state,
+      state_label = candidate_topic_state_label(state),
+      claim_rows = section_claims
+    )
+  })
+
+  ordered_sections <- sections[order(
+    vapply(sections, \(section) if (identical(section$state, "comparable")) 1L else 2L, integer(1)),
+    vapply(sections, \(section) normalize_public_scalar(section$topic_label, default = ""), character(1))
+  )]
+
+  list(
+    comparable = unname(Filter(\(section) identical(section$state, "comparable"), ordered_sections)),
+    documented_only = unname(Filter(\(section) identical(section$state, "documented_only"), ordered_sections))
+  )
+}
+
+build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, from = NULL, project_dir = ".") {
+  candidates <- read_candidate_registry_public(project_dir = project_dir)
+  claims <- read_public_table("claim_records.json", project_dir = project_dir)
+  sources <- read_public_table("source_records.json", project_dir = project_dir)
+  taxonomy <- read_taxonomy_public(project_dir = project_dir)
+  comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
+
+  taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
+  candidate_row <- candidates |>
+    dplyr::filter(.data$candidate_id == candidate_id) |>
+    dplyr::slice_head(n = 1)
+  candidate_name <- candidate_row$president_name[[1]] %||% candidate_id
+  candidate_slug <- candidate_row$slug[[1]] %||% candidate_id
+
+  policy_claims <- claims |>
+    dplyr::filter(.data$candidate_id == candidate_id, .data$claim_type == "policy_proposal")
+
+  raw_documented_topic_ids <- unique(policy_claims$topic_id[!is.na(policy_claims$topic_id)])
+  documented_topic_ids <- split(
+    raw_documented_topic_ids,
+    rep(candidate_id, length(raw_documented_topic_ids))
+  )
+  if (length(documented_topic_ids) == 0) {
+    documented_topic_ids <- list()
+  }
+  if (length(documented_topic_ids[[candidate_id]]) > 0) {
+    mapped_root_ids <- taxonomy_lookup$root_topic_id[match(documented_topic_ids[[candidate_id]], taxonomy_lookup$topic_id)]
+    documented_topic_ids[[candidate_id]] <- unique(dplyr::coalesce(mapped_root_ids, documented_topic_ids[[candidate_id]]))
+  }
+
+  comparable_topic_ids <- comparison_topic_ids_by_candidate(comparison_report, taxonomy_lookup = taxonomy_lookup)
+  sections <- build_candidate_policy_topic_sections(
+    candidate_claims = policy_claims,
+    taxonomy_lookup = taxonomy_lookup,
+    comparable_topic_ids = comparable_topic_ids[[candidate_id]] %||% character()
+  )
+
+  topic_focus <- normalize_topic_request(topic_id, taxonomy_lookup = taxonomy_lookup)
+  focus_state <- if (is.null(topic_focus)) {
+    NULL
+  } else {
+    candidate_topic_state_public(
+      candidate_id = candidate_id,
+      root_topic_id = topic_focus$root_topic_id,
+      comparable_topic_ids = comparable_topic_ids,
+      documented_topic_ids = documented_topic_ids
+    )
+  }
+
+  list(
+    candidate_id = candidate_id,
+    candidate_slug = candidate_slug,
+    candidate_name = candidate_name,
+    from = from %||% "",
+    topic_focus = if (is.null(topic_focus)) NULL else c(topic_focus, list(state = focus_state, state_label = candidate_topic_state_label(focus_state))),
+    comparable_sections = sections$comparable,
+    documented_sections = sections$documented_only,
+    source_library = sources |>
+      dplyr::filter(.data$candidate_id == candidate_id) |>
+      dplyr::arrange(dplyr::desc(.data$published_at)),
+    empty_state = nrow(policy_claims) == 0
+  )
+}
+
+build_comparison_view_model <- function(project_dir = ".") {
+  comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
+  candidates <- read_candidate_registry_public(project_dir = project_dir)
+  taxonomy <- read_taxonomy_public(project_dir = project_dir)
+  program_documents <- read_public_table("program_documents.json", project_dir = project_dir)
+  claims <- read_public_table("claim_records.json", project_dir = project_dir)
+
+  if (is.null(comparison_report) || length(comparison_report) == 0) {
+    return(list(topics = list(), empty_state = "Todavía no hay material público suficiente para comparar programas entre candidatos."))
+  }
+
+  taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
+  candidate_lookup <- candidate_lookup_public(candidates)
+  documents_by_candidate <- split(program_documents, program_documents$candidate_id)
+  documented_topic_lookup <- claims |>
+    dplyr::filter(.data$claim_type == "policy_proposal", !is.na(.data$topic_id)) |>
+    dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
+    dplyr::mutate(root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id)) |>
+    dplyr::distinct(.data$candidate_id, .data$root_topic_id)
+  documented_topic_ids <- split(documented_topic_lookup$root_topic_id, documented_topic_lookup$candidate_id)
+  comparable_topic_ids <- comparison_topic_ids_by_candidate(comparison_report, taxonomy_lookup = taxonomy_lookup)
+
+  topic_rows <- normalize_public_collection(comparison_report$topic_comparison)
+  topics <- lapply(topic_rows, function(topic_row) {
+    topic_request <- normalize_topic_request(normalize_public_scalar(topic_row$topic_id, default = "tema"), taxonomy_lookup = taxonomy_lookup)
+    root_topic_id <- topic_request$root_topic_id %||% normalize_public_scalar(topic_row$topic_id, default = "tema")
+    label <- topic_request$label %||% public_topic_label(root_topic_id)
+    topic_meta <- taxonomy_lookup |>
+      dplyr::filter(.data$root_topic_id == root_topic_id) |>
+      dplyr::slice_head(n = 1)
+    topic_description <- topic_meta$root_description[[1]] %||% ""
+    evidence_state <- comparison_topic_evidence_state(topic_row)
+    candidate_rows <- normalize_public_collection(topic_row$candidate_rows)
+
+    cards <- lapply(candidate_rows, function(row) {
+      candidate_id <- normalize_public_scalar(row$candidate_id, default = NA_character_)
+      candidate_meta <- candidate_lookup[[candidate_id]]
+      primary_doc <- documents_by_candidate[[candidate_id]]
+      if (!is.null(primary_doc) && nrow(primary_doc) > 0) {
+        primary_doc <- primary_doc |>
+          dplyr::arrange(dplyr::desc(.data$is_primary), dplyr::desc(.data$published_at)) |>
+          dplyr::slice_head(n = 1)
+      } else {
+        primary_doc <- tibble::tibble()
+      }
+
+      destination_state <- candidate_topic_state_public(
+        candidate_id = candidate_id,
+        root_topic_id = root_topic_id,
+        comparable_topic_ids = comparable_topic_ids,
+        documented_topic_ids = documented_topic_ids
+      )
+
+      list(
+        candidate_id = candidate_id,
+        candidate_name = candidate_meta$president_name %||% candidate_id,
+        href = if (identical(destination_state, "empty")) {
+          ""
+        } else {
+          paste0(
+            "candidatos/",
+            candidate_meta$slug %||% candidate_id,
+            ".html?from=comparador&topic=",
+            utils::URLencode(root_topic_id, reserved = TRUE),
+            "#propuestas-y-posiciones-publicas"
+          )
+        },
+        destination_state = destination_state,
+        destination_state_label = candidate_topic_state_label(destination_state),
+        priority = normalize_public_scalar(row$priority, default = "Sin evidencia suficiente"),
+        instrument = normalize_public_scalar(row$instrument, default = "Sin evidencia suficiente"),
+        specificity = normalize_public_scalar(row$specificity, default = "Sin evidencia suficiente"),
+        coherence = normalize_public_scalar(row$coherence, default = "Sin evidencia suficiente"),
+        feasibility = normalize_public_scalar(row$feasibility, default = "Sin evidencia suficiente"),
+        primary_document = if (nrow(primary_doc) == 0) NULL else as.list(primary_doc[1, , drop = FALSE])
+      )
+    })
+
+    list(
+      topic_id = root_topic_id,
+      topic_label = label,
+      topic_description = topic_description,
+      summary = normalize_public_scalar(topic_row$summary, default = "Sin resumen comparativo publicado."),
+      evidence_state = evidence_state,
+      public_label = public_evidence_label(evidence_state),
+      candidate_cards = cards
+    )
+  })
+
+  list(
+    topics = topics,
+    empty_state = if (length(topics) == 0) "Todavía no hay filas comparativas públicas para el comparador programático." else NULL
   )
 }

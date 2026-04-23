@@ -433,53 +433,132 @@ emit_candidate_background <- function(candidate_claims, candidate_sources) {
   cat(paste0('<div class="prose-card">', paste(paragraphs, collapse = ""), "</div>"))
 }
 
-emit_candidate_policy_sections <- function(candidate_claims, candidate_sources, taxonomy) {
-  policy_claims <- candidate_claims |>
-    dplyr::filter(.data$claim_type == "policy_proposal")
+emit_candidate_policy_sections <- function(candidate_policy, candidate_sources = NULL, taxonomy = NULL) {
+  if (is.data.frame(candidate_policy)) {
+    policy_claims <- candidate_policy |>
+      dplyr::filter(.data$claim_type == "policy_proposal")
 
-  if (nrow(policy_claims) == 0) {
+    if (nrow(policy_claims) == 0) {
+      emit_callout("Todavía no hay propuestas públicas trazables para este candidato.", "note")
+      return(invisible(NULL))
+    }
+
+    taxonomy_lookup <- taxonomy_root_lookup(taxonomy)
+    enriched_claims <- policy_claims |>
+      dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
+      dplyr::mutate(
+        root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id),
+        root_label = dplyr::coalesce(.data$root_label, .data$topic_id),
+        root_description = dplyr::coalesce(.data$root_description, ""),
+        root_sort_order = dplyr::coalesce(.data$root_sort_order, 999L),
+        topic_label = dplyr::coalesce(.data$topic_label, .data$topic_id)
+      ) |>
+      dplyr::arrange(.data$root_sort_order, dplyr::desc(.data$event_date))
+
+    sections <- enriched_claims |>
+      dplyr::group_split(.data$root_topic_id)
+
+    rendered_sections <- vapply(sections, function(section_claims) {
+      root_label <- section_claims$root_label[[1]]
+      root_description <- section_claims$root_description[[1]]
+      paragraphs <- vapply(seq_len(nrow(section_claims)), function(index) {
+        claim_paragraph_html(section_claims[index, , drop = FALSE], candidate_sources)
+      }, character(1))
+
+      paste0(
+        '<section class="topic-section">',
+        "<h3>", escape_html(root_label), "</h3>",
+        if (!is.na(root_description) && root_description != "") {
+          paste0('<p class="topic-section__intro">', escape_html(root_description), "</p>")
+        } else {
+          ""
+        },
+        '<div class="prose-card">',
+        paste(paragraphs, collapse = ""),
+        "</div>",
+        "</section>"
+      )
+    }, character(1))
+
+    cat(paste(rendered_sections, collapse = "\n"))
+    return(invisible(NULL))
+  }
+
+  if (is.null(candidate_policy) || isTRUE(candidate_policy$empty_state)) {
     emit_callout("Todavía no hay propuestas públicas trazables para este candidato.", "note")
     return(invisible(NULL))
   }
 
-  taxonomy_lookup <- taxonomy_root_lookup(taxonomy)
-  enriched_claims <- policy_claims |>
-    dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
-    dplyr::mutate(
-      root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id),
-      root_label = dplyr::coalesce(.data$root_label, .data$topic_id),
-      root_description = dplyr::coalesce(.data$root_description, ""),
-      root_sort_order = dplyr::coalesce(.data$root_sort_order, 999L),
-      topic_label = dplyr::coalesce(.data$topic_label, .data$topic_id)
-    ) |>
-    dplyr::arrange(.data$root_sort_order, dplyr::desc(.data$event_date))
+  render_topic_sections <- function(sections, bucket_id, heading, intro, sources) {
+    if (length(sections) == 0) {
+      return(
+        paste0(
+          '<div class="prose-card" data-policy-bucket="', bucket_id, '">',
+          '<h3>', escape_html(heading), '</h3>',
+          '<p class="narrative-paragraph">', escape_html(intro), "</p>",
+          "</div>"
+        )
+      )
+    }
 
-  sections <- enriched_claims |>
-    dplyr::group_split(.data$root_topic_id)
+    rendered_sections <- vapply(sections, function(section) {
+      claim_rows <- section$claim_rows
+      paragraphs <- vapply(seq_len(nrow(claim_rows)), function(index) {
+        claim_paragraph_html(claim_rows[index, , drop = FALSE], sources)
+      }, character(1))
 
-  rendered_sections <- vapply(sections, function(section_claims) {
-    root_label <- section_claims$root_label[[1]]
-    root_description <- section_claims$root_description[[1]]
-    paragraphs <- vapply(seq_len(nrow(section_claims)), function(index) {
-      claim_paragraph_html(section_claims[index, , drop = FALSE], candidate_sources)
+      paste0(
+        '<section class="topic-section" data-topic-id="', escape_html(section$topic_id), '" data-topic-state="', escape_html(section$state), '">',
+        '<div class="comparison-highlight__header">',
+        '<h3>', escape_html(section$topic_label), '</h3>',
+        '<span class="evidence-chip evidence-chip--', if (identical(section$state, "comparable")) "solid" else "partial", '">',
+        escape_html(section$state_label),
+        '</span>',
+        '</div>',
+        if (!is.na(section$topic_description) && section$topic_description != "") {
+          paste0('<p class="topic-section__intro">', escape_html(section$topic_description), "</p>")
+        } else {
+          ""
+        },
+        '<div class="prose-card">',
+        paste(paragraphs, collapse = ""),
+        "</div>",
+        "</section>"
+      )
     }, character(1))
 
     paste0(
-      '<section class="topic-section">',
-      "<h3>", escape_html(root_label), "</h3>",
-      if (!is.na(root_description) && root_description != "") {
-        paste0('<p class="topic-section__intro">', escape_html(root_description), "</p>")
-      } else {
-        ""
-      },
+      '<div class="policy-topic-bucket" data-policy-bucket="', bucket_id, '">',
       '<div class="prose-card">',
-      paste(paragraphs, collapse = ""),
-      "</div>",
-      "</section>"
+      '<h3>', escape_html(heading), '</h3>',
+      '<p class="narrative-paragraph">', escape_html(intro), "</p>",
+      '</div>',
+      paste(rendered_sections, collapse = "\n"),
+      "</div>"
     )
-  }, character(1))
+  }
 
-  cat(paste(rendered_sections, collapse = "\n"))
+  cat(
+    paste(
+      c(
+        render_topic_sections(
+          candidate_policy$comparable_sections %||% list(),
+          bucket_id = "comparable",
+          heading = "Propuestas comparables",
+          intro = "Estas propuestas ya sostienen una comparación pública útil con otras candidaturas.",
+          sources = candidate_policy$source_library %||% tibble::tibble()
+        ),
+        render_topic_sections(
+          candidate_policy$documented_sections %||% list(),
+          bucket_id = "documented-only",
+          heading = "Propuestas documentadas aún no comparables",
+          intro = "Estas propuestas ya son publicables y trazables, pero todavía no tienen base suficiente para una comparación transversal firme.",
+          sources = candidate_policy$source_library %||% tibble::tibble()
+        )
+      ),
+      collapse = "\n"
+    )
+  )
 }
 
 emit_candidate_analysis <- function(candidate_analysis, candidate_sources) {
@@ -623,13 +702,81 @@ emit_candidate_source_library <- function(candidate_sources) {
   cat(paste0('<ol class="source-list">', paste(items, collapse = ""), "</ol>"))
 }
 
-emit_comparison_sections <- function(comparison_report, candidates, taxonomy, program_documents) {
-  if (is.null(comparison_report) || length(comparison_report) == 0) {
+emit_comparison_sections <- function(comparison_model, candidates = NULL, taxonomy = NULL, program_documents = NULL) {
+  if (!is.null(comparison_model$topics)) {
+    if (length(comparison_model$topics) == 0) {
+      emit_callout(comparison_model$empty_state %||% "Todavía no hay material público suficiente para comparar programas entre candidatos.", "note")
+      return(invisible(NULL))
+    }
+
+    rendered_topics <- vapply(comparison_model$topics, function(topic) {
+      cards <- vapply(topic$candidate_cards, function(card) {
+        primary_doc <- card$primary_document
+        links <- c(
+          if (!is.null(primary_doc$pdf_path %||% NULL) && (primary_doc$pdf_path %||% "") != "") program_document_link_html(primary_doc$pdf_path, "PDF", project_dir = ".") else "",
+          if (!is.null(primary_doc$markdown_path %||% NULL) && (primary_doc$markdown_path %||% "") != "") program_document_link_html(primary_doc$markdown_path, "Markdown", project_dir = ".") else "",
+          if (!is.null(primary_doc$download_url %||% NULL) && (primary_doc$download_url %||% "") != "") program_document_link_html(primary_doc$download_url, "Fuente", project_dir = ".") else ""
+        )
+        links <- links[links != ""]
+
+        paste0(
+          '<article class="comparison-matrix-card">',
+          "<h3>", escape_html(card$candidate_name), "</h3>",
+          '<p class="comparison-card__meta"><strong>Destino en ficha:</strong> ',
+          if ((card$href %||% "") != "") {
+            paste0('<a class="card-link" href="', escape_html(card$href), '">', escape_html(card$destination_state_label), "</a>")
+          } else {
+            escape_html(card$destination_state_label)
+          },
+          "</p>",
+          '<dl class="comparison-matrix-card__stats">',
+          '<div><dt>Prioridad</dt><dd>', escape_html(card$priority), "</dd></div>",
+          '<div><dt>Instrumento</dt><dd>', escape_html(card$instrument), "</dd></div>",
+          '<div><dt>Especificidad</dt><dd>', escape_html(card$specificity), "</dd></div>",
+          '<div><dt>Coherencia</dt><dd>', escape_html(card$coherence), "</dd></div>",
+          '<div><dt>Factibilidad</dt><dd>', escape_html(card$feasibility), "</dd></div>",
+          "</dl>",
+          if (!is.null(primary_doc)) {
+            paste0('<p class="comparison-card__meta"><strong>Documento base:</strong> ', escape_html(primary_doc$title %||% primary_doc$document_id %||% "sin documento oficial cargado"), "</p>")
+          } else {
+            '<p class="comparison-card__meta"><strong>Documento base:</strong> sin documento oficial cargado.</p>'
+          },
+          if (length(links) > 0) {
+            paste0('<div class="comparison-matrix-card__links">', paste(links, collapse = " · "), "</div>")
+          } else {
+            ""
+          },
+          "</article>"
+        )
+      }, character(1))
+
+      paste0(
+        '<section class="topic-section" data-topic-id="', escape_html(topic$topic_id), '">',
+        '<div class="comparison-highlight__header">',
+        "<h2>", escape_html(topic$topic_label), "</h2>",
+        '<span class="evidence-chip evidence-chip--', escape_html(topic$evidence_state), '">', escape_html(topic$public_label), '</span>',
+        '</div>',
+        if (!is.na(topic$topic_description) && topic$topic_description != "") {
+          paste0('<p class="topic-section__intro">', escape_html(topic$topic_description), "</p>")
+        } else {
+          ""
+        },
+        '<p class="narrative-paragraph">', escape_html(topic$summary), "</p>",
+        '<div class="comparison-matrix-grid">', paste(cards, collapse = ""), "</div>",
+        "</section>"
+      )
+    }, character(1))
+
+    cat(paste(rendered_topics, collapse = "\n"))
+    return(invisible(NULL))
+  }
+
+  if (is.null(comparison_model) || length(comparison_model) == 0) {
     emit_callout("Todavía no hay material público suficiente para comparar programas entre candidatos.", "note")
     return(invisible(NULL))
   }
 
-  topic_rows <- normalize_public_collection(comparison_report$topic_comparison)
+  topic_rows <- normalize_public_collection(comparison_model$topic_comparison)
   if (length(topic_rows) == 0) {
     emit_callout("Todavía no hay filas comparativas públicas para el comparador programático.", "note")
     return(invisible(NULL))

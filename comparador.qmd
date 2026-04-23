@@ -6,12 +6,9 @@ title: "Comparador temático"
 #| results: asis
 source("R/site_helpers.R")
 
-candidates <- read_candidate_registry_public()
-taxonomy <- read_taxonomy_public()
-program_documents <- read_processed_table("program_documents.csv")
-comparison_report <- read_public_json("comparison_report.json")
+comparison <- build_comparison_view_model()
 
 cat('<p class="section-intro">La comparación se organiza por ámbitos de política pública y usa una misma matriz para cada candidatura: prioridad, instrumento, especificidad, coherencia y factibilidad. Cada tarjeta conserva enlaces directos al documento oficial base cuando ya está cargado en el corpus.</p>')
 
-emit_comparison_sections(comparison_report, candidates, taxonomy, program_documents)
+emit_comparison_sections(comparison)
 ```

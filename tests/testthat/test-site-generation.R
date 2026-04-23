@@ -97,9 +97,11 @@ test_that("generated candidate pages favor narrative sections over tables", {
   expect_match(template, "## Ubicación ideológica")
   expect_match(template, "## Propuestas y posiciones públicas")
   expect_match(template, "## Programa oficial")
+  expect_match(template, "build_candidate_policy_view_model")
   expect_match(template, "homepage-comparison-context")
   expect_match(template, "URLSearchParams")
-  expect_match(template, "from !== 'homepage'")
+  expect_match(template, "from !== 'homepage' && from !== 'comparador'")
+  expect_match(template, "documentado, aún no comparable")
   expect_match(template, "topic.replace")
   expect_no_match(template, "safe_kable")
 })
@@ -109,8 +111,8 @@ test_that("comparison page is no longer driven by a single output table", {
   comparison_text <- paste(comparison_lines, collapse = "\n")
 
   expect_no_match(comparison_text, "safe_kable")
-  expect_match(comparison_text, "comparison_report")
-  expect_match(comparison_text, "program_documents")
+  expect_match(comparison_text, "build_comparison_view_model")
+  expect_no_match(comparison_text, "read_processed_table\\(\"program_documents.csv\"\\)")
 })
 
 test_that("quarto freeze is disabled for daily data-driven rendering", {
