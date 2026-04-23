@@ -6,23 +6,40 @@ title: "Biblioteca de fuentes"
 #| results: asis
 source("R/site_helpers.R")
 
-sources <- read_processed_table("source_records.csv")
-candidates <- read_candidate_registry_public() |> dplyr::select(.data$candidate_id, .data$president_name)
+source_library <- build_source_library_view_model()
 
 cat('<p class="section-intro">Toda afirmación pública debe rastrearse hasta aquí. Esta tabla es la capa mínima de auditabilidad del proyecto.</p>')
 
-if (nrow(sources) == 0) {
-  emit_callout("Todavía no hay fuentes públicas cargadas.", "note")
+if (!is.null(source_library$empty_state)) {
+  emit_callout(source_library$empty_state, "note")
 } else {
-  source_library <- sources |>
-    dplyr::left_join(candidates, by = "candidate_id") |>
+  cat("## Fuentes integradas al sistema\n")
+
+  promoted_sources <- source_library$promoted_sources |>
     dplyr::mutate(url = paste0("[enlace](", .data$url, ")")) |>
     dplyr::arrange(dplyr::desc(.data$published_at))
 
   safe_kable(
-    source_library |>
+    promoted_sources |>
       dplyr::select(.data$published_at, .data$president_name, .data$source_name, .data$source_tier, .data$title, .data$url),
     col.names = c("Fecha", "Candidato", "Fuente", "Tier", "Título", "URL")
   )
+
+  if (nrow(source_library$pending_sources) > 0) {
+    cat("\n## Fuentes por clasificar\n")
+    cat('<p class="section-intro">Estos enlaces fueron validados como insumo útil, pero todavía no cumplen la metadata mínima para entrar al corpus público trazable por candidato.</p>')
+
+    pending_sources <- source_library$pending_sources |>
+      dplyr::mutate(
+        published_at = ifelse(is.na(.data$published_at), "sin fecha confirmada", as.character(.data$published_at)),
+        url = paste0("[enlace](", .data$url, ")")
+      )
+
+    safe_kable(
+      pending_sources |>
+        dplyr::select(.data$published_at, .data$president_name, .data$source_name, .data$title, .data$url),
+      col.names = c("Fecha", "Asignación", "Fuente", "Título", "URL")
+    )
+  }
 }
 ```

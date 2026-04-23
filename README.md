@@ -15,14 +15,16 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 1. Crear o actualizar una carpeta en `data/inbox/YYYY-MM-DD/`.
 2. Llenar `sources.csv` y, cuando aplique, `source_texts/` con texto capturado o limpiado por fuente.
    Si no hubo hallazgos publicables, registrar el resultado en `batch_status.json` en vez de dejar el lote vacío en `pending`.
-3. Ejecutar:
+3. Cuando existan listas curadas de URLs aún no estructuradas, agregarlas a `data/added_manually/`.
+   El pipeline las convierte en un ledger auditable, promueve automáticamente las que pasan validación mínima y deja el resto como `fuentes por clasificar`.
+4. Ejecutar:
 
 ```bash
 Rscript scripts/run_daily_update.R
 ```
 
-4. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
-5. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
+5. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
+6. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
 
 ## Estructura principal
 
@@ -30,6 +32,7 @@ Rscript scripts/run_daily_update.R
 - `prompts/`: instrucciones versionadas para extractor, analista, comparador, writer, validator y orquestador.
 - `schemas/`: contratos JSON para artefactos estructurados intermedios.
 - `data/inbox/`: insumos diarios de investigación.
+- `data/added_manually/`: listas curadas manualmente de URLs para descubrimiento y promoción semiautomática.
 - `data/staging/`: artefactos intermedios por etapa analítica.
 - `data/state/`: estado incremental para fuentes y candidatos.
 - `data/processed/`: tablas consolidadas listas para auditoría.
@@ -73,6 +76,17 @@ El repo ya publica un monitor trazable y funcional, pero la dirección vigente e
 7. `render y publicación`
 
 La extracción estructurada ya es el insumo operativo del pipeline. La interfaz interna pasa por `source_packet`, `extraction_result`, `candidate_analysis`, `comparison_report` y `editorial_package`. La publicación pública queda bloqueada si falla `validation_report`.
+
+## Ingesta Manual De Fuentes
+
+El repo ahora tiene una capa adicional de descubrimiento en `data/added_manually/`:
+
+- sirve para capturar listas heterogéneas de URLs sin exigir `sources.csv` desde el primer momento
+- genera un ledger auditable en `data/state/manual_source_registry.csv`
+- promueve automáticamente solo las URLs válidas con metadata mínima
+- deja visibles las URLs válidas pero todavía ambiguas en la biblioteca pública de fuentes como `Fuentes por clasificar`
+
+Esto permite ampliar cobertura sin relajar la regla editorial principal: no convertir enlaces débiles o rotos en evidencia pública trazable.
 
 ## Contexto Persistente
 

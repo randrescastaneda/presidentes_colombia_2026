@@ -560,3 +560,89 @@ test_that("build_candidate_policy_view_model preserves documented-only state for
   expect_equal(model$topic_focus$root_topic_id, "seguridad-rural")
   expect_equal(model$topic_focus$state, "documented_only")
 })
+
+test_that("build_source_library_view_model separates promoted and pending manual sources", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "paloma-valencia", "paloma-valencia", "Paloma Valencia", "Juan Daniel Oviedo", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  jsonlite::write_json(
+    list(
+      list(
+        source_id = "src-manual-1",
+        candidate_id = "paloma-valencia",
+        published_at = "2026-04-20T00:00:00Z",
+        source_tier = "official",
+        source_type = "article",
+        source_name = "Paloma Valencia",
+        url = "https://palomavalencia.com/2026/04/20/propuestas.html",
+        title = "Propuestas",
+        confidence = 0.95
+      )
+    ),
+    file.path(project_dir, "data", "public", "source_records.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  jsonlite::write_json(
+    list(
+      list(
+        entry_id = "manual-2",
+        candidate_id = NULL,
+        source_name = "Fuente General",
+        source_tier = "reference",
+        source_type = "webpage",
+        url = "https://example.com/general",
+        title = "General",
+        published_at = NULL,
+        status = "pending_classification",
+        status_reason = "validated_by_http",
+        candidate_confidence = 0.2,
+        source_files = "data/added_manually/manual.md"
+      )
+    ),
+    file.path(project_dir, "data", "public", "manual_source_library.json"),
+    auto_unbox = TRUE,
+    pretty = TRUE,
+    null = "null"
+  )
+
+  model <- build_source_library_view_model(project_dir = project_dir)
+
+  expect_equal(nrow(model$promoted_sources), 1)
+  expect_equal(model$promoted_sources$library_status_label[[1]], "Integrada al sistema")
+  expect_equal(nrow(model$pending_sources), 1)
+  expect_equal(model$pending_sources$president_name[[1]], "Por clasificar")
+  expect_equal(model$pending_sources$library_status_label[[1]], "Pendiente de clasificar")
+})
+
+test_that("build_source_library_view_model returns an empty state when public source files are absent", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "paloma-valencia", "paloma-valencia", "Paloma Valencia", "Juan Daniel Oviedo", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  model <- build_source_library_view_model(project_dir = project_dir)
+
+  expect_equal(nrow(model$promoted_sources), 0)
+  expect_equal(nrow(model$pending_sources), 0)
+  expect_match(model$empty_state, "Todavía no hay fuentes públicas")
+})

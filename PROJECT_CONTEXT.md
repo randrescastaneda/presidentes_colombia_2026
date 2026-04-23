@@ -1,6 +1,6 @@
 # Project Context
 
-Última actualización: 2026-04-20
+Última actualización: 2026-04-23
 
 ## Resumen
 
@@ -42,6 +42,7 @@ Estado actual:
 - `validation_report` ya es un gate real: si da `block`, `scripts/run_daily_update.R` aborta antes del render público
 - la homepage pública ya consume un view-model derivado desde `homepage_brief`, `comparison_report` y `validation_report`, en vez de depender solo de tablas procesadas legacy
 - el contrato público de homepage ahora incluye handoff contextual hacia fichas: links con `?from=homepage&topic=...#propuestas-y-posiciones-publicas`, síntesis pública de comparaciones y degradación segura cuando faltan candidatos o metadata auxiliar
+- `data/added_manually/` ahora funciona como canal de descubrimiento curado: produce `data/state/manual_source_registry.csv`, promueve automáticamente URLs válidas con metadata mínima y publica una capa de `fuentes por clasificar` para enlaces útiles aún no integrados al corpus candidato-trazable
 
 ## Estado Git Consolidado
 
@@ -110,9 +111,11 @@ Instrucción operativa persistente:
 - mantener especial densidad analítica en la watchlist de 6
 - seguir ampliando temas como política internacional, salud, empleo y derechos
 - registrar también en Family Brain vacíos de investigación y contradicciones potenciales descartadas por evidencia insuficiente
+- seguir curando `fuentes por clasificar` para convertirlas en fuentes trazables cuando aparezca metadata suficiente
 
 ## Pendientes Técnicos Inmediatos
 
 - extender el adapter público compartido para que comparador y fichas consuman más directamente `candidate_analysis`, `comparison_report` y `editorial_package`
 - reforzar el estado incremental para reruns parciales por candidato y por fuente
 - seguir ampliando reglas y cobertura del validador metodológico
+- decidir si la promoción automática desde `data/added_manually/` necesita fetch de metadata más profundo para aumentar la tasa de fuentes promovidas

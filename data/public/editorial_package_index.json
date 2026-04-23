@@ -108,14 +108,14 @@
     "artifact_id": "daily-update-2026-04-23",
     "artifact_type": "daily_update",
     "title": "Actualizacion diaria: 2026-04-23",
-    "candidate_count": 2,
+    "candidate_count": 13,
     "section_count": 4
   },
   {
     "artifact_id": "homepage-brief-2026-04-23",
     "artifact_type": "homepage_brief",
     "title": "Resumen ejecutivo",
-    "candidate_count": 6,
+    "candidate_count": 13,
     "section_count": 3
   }
 ]

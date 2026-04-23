@@ -21,6 +21,7 @@ empty_candidate_state <- function() {
 ensure_state_tables <- function(project_dir = ".") {
   source_registry_path <- file.path(project_dir, "data", "state", "source_registry.csv")
   candidate_state_path <- file.path(project_dir, "data", "state", "candidate_state.csv")
+  manual_source_registry_path <- file.path(project_dir, "data", "state", "manual_source_registry.csv")
 
   dir.create(dirname(source_registry_path), recursive = TRUE, showWarnings = FALSE)
 
@@ -32,7 +33,11 @@ ensure_state_tables <- function(project_dir = ".") {
     readr::write_csv(empty_candidate_state(), candidate_state_path)
   }
 
-  invisible(c(source_registry_path, candidate_state_path))
+  if (!file.exists(manual_source_registry_path)) {
+    readr::write_csv(empty_manual_source_registry(), manual_source_registry_path)
+  }
+
+  invisible(c(source_registry_path, candidate_state_path, manual_source_registry_path))
 }
 
 load_source_registry <- function(project_dir = ".") {

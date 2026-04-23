@@ -115,6 +115,16 @@ test_that("comparison page is no longer driven by a single output table", {
   expect_no_match(comparison_text, "read_processed_table\\(\"program_documents.csv\"\\)")
 })
 
+test_that("source library page is driven by a dedicated view model", {
+  source_lines <- readLines(file.path(project_root, "fuentes.qmd"), warn = FALSE)
+  source_text <- paste(source_lines, collapse = "\n")
+
+  expect_match(source_text, "build_source_library_view_model\\(")
+  expect_match(source_text, "## Fuentes integradas al sistema")
+  expect_match(source_text, "## Fuentes por clasificar")
+  expect_no_match(source_text, "read_processed_table\\(\"source_records.csv\"\\)")
+})
+
 test_that("quarto freeze is disabled for daily data-driven rendering", {
   quarto_config <- readLines(file.path(project_root, "_quarto.yml"), warn = FALSE)
   quarto_text <- paste(quarto_config, collapse = "\n")
