@@ -21,6 +21,12 @@ La automatización o el editor deben copiar las plantillas base y llenarlas con 
 - Los archivos en `source_texts/` pueden mezclar texto libre con bloques `Structured claims` cuando la curaduría ya haya avanzado.
 - Cada archivo en `source_texts/` debería corresponder a un `source_id` y puede partir de `template_source_note.md`.
 
+## Manual operativo completo
+
+Si necesitas una explicación de extremo a extremo sobre cómo funciona el proyecto y qué pasos te toca ejecutar como operador/editor, usa:
+
+- [docs/manual-operativo.md](/Volumes/FRC%20SSD%20990PRO/projects/Research-topics/presidentes_colombia_2026/docs/manual-operativo.md)
+
 ## Reglas mínimas
 
 - Cada `source` público debe tener `url`, `published_at` y `confidence`.

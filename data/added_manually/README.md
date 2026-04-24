@@ -29,3 +29,9 @@ En cada corrida:
 - Un enlace por línea funciona bien.
 - También se admiten listas Markdown con encabezados o notas breves.
 - No hace falta estructurar metadatos manualmente para entrar al ledger básico.
+
+## Manual operativo completo
+
+Si quieres ver el flujo completo del proyecto, incluyendo qué hacer después de agregar un archivo aquí, consulta:
+
+- [docs/manual-operativo.md](/Volumes/FRC%20SSD%20990PRO/projects/Research-topics/presidentes_colombia_2026/docs/manual-operativo.md)

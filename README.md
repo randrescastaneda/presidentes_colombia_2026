@@ -94,6 +94,7 @@ Para futuras sesiones, el contexto operativo del proyecto quedó documentado en:
 
 - [AGENTS.md](/Volumes/FRC%20SSD%20990PRO/projects/Research-topics/presidentes_colombia_2026/AGENTS.md)
 - [PROJECT_CONTEXT.md](/Volumes/FRC%20SSD%20990PRO/projects/Research-topics/presidentes_colombia_2026/PROJECT_CONTEXT.md)
+- [docs/manual-operativo.md](/Volumes/FRC%20SSD%20990PRO/projects/Research-topics/presidentes_colombia_2026/docs/manual-operativo.md)
 
 ## Fuente oficial base
 

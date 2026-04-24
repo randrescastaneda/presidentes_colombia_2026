@@ -55,8 +55,14 @@
   },
   {
     "digest_date": "2026-04-23",
-    "total_claims": 74,
-    "total_candidates": 13,
-    "total_analysis_notes": 8
+    "total_claims": 2,
+    "total_candidates": 1,
+    "total_analysis_notes": 1
+  },
+  {
+    "digest_date": "2026-04-24",
+    "total_claims": 8,
+    "total_candidates": 3,
+    "total_analysis_notes": 0
   }
 ]
