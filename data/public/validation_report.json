@@ -1,5 +1,5 @@
 {
-  "report_id": "validation-2026-04-23",
+  "report_id": "validation-2026-04-24",
   "artifact_ids": ["claim_records", "candidate_analysis", "comparison_report", "editorial_packages", "site_metadata"],
   "status": "pass",
   "checks": [

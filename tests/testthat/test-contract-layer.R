@@ -16,9 +16,11 @@ test_that("state tables are created with expected headers", {
 
   source_registry <- readr::read_csv(file.path(project_dir, "data", "state", "source_registry.csv"), show_col_types = FALSE)
   candidate_state <- readr::read_csv(file.path(project_dir, "data", "state", "candidate_state.csv"), show_col_types = FALSE)
+  manual_source_registry <- readr::read_csv(file.path(project_dir, "data", "state", "manual_source_registry.csv"), show_col_types = FALSE)
 
   expect_true(all(c("source_id", "source_url", "content_hash", "batch_date", "processed_at") %in% names(source_registry)))
   expect_true(all(c("candidate_id", "last_evidence_hash", "last_analysis_at", "last_batch_date", "dirty") %in% names(candidate_state)))
+  expect_true(all(c("entry_id", "normalized_url", "validation_status", "public_status", "source_files") %in% names(manual_source_registry)))
 })
 
 test_that("list_source_text_files finds captured source text files by batch", {

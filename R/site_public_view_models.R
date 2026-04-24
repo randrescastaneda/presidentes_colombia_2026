@@ -525,6 +525,21 @@ read_public_table <- function(filename, project_dir = ".") {
   normalize_public_table(read_public_json(filename, project_dir = project_dir))
 }
 
+ensure_public_table_columns <- function(data, defaults = list()) {
+  data <- tibble::as_tibble(data)
+  row_count <- nrow(data)
+
+  for (column in names(defaults)) {
+    if (column %in% names(data)) {
+      next
+    }
+
+    data[[column]] <- rep(defaults[[column]], row_count)
+  }
+
+  data
+}
+
 normalize_topic_request <- function(topic_id, taxonomy_lookup = tibble::tibble()) {
   if (is.null(topic_id) || length(topic_id) == 0 || is.na(topic_id) || identical(topic_id, "")) {
     return(NULL)
@@ -802,5 +817,59 @@ build_comparison_view_model <- function(project_dir = ".") {
   list(
     topics = topics,
     empty_state = if (length(topics) == 0) "Todavía no hay filas comparativas públicas para el comparador programático." else NULL
+  )
+}
+
+build_source_library_view_model <- function(project_dir = ".") {
+  candidates <- read_candidate_registry_public(project_dir = project_dir) |>
+    dplyr::select("candidate_id", "president_name")
+  promoted_sources <- read_public_table("source_records.json", project_dir = project_dir) |>
+    ensure_public_table_columns(list(
+      source_id = NA_character_,
+      candidate_id = NA_character_,
+      published_at = NA_character_,
+      source_tier = NA_character_,
+      source_type = NA_character_,
+      source_name = NA_character_,
+      url = NA_character_,
+      title = NA_character_,
+      confidence = NA_real_
+    )) |>
+    dplyr::left_join(candidates, by = "candidate_id") |>
+    dplyr::mutate(
+      library_status = "promoted",
+      library_status_label = "Integrada al sistema"
+    ) |>
+    dplyr::arrange(dplyr::desc(.data$published_at), .data$title)
+  pending_sources <- read_public_table("manual_source_library.json", project_dir = project_dir) |>
+    ensure_public_table_columns(list(
+      entry_id = NA_character_,
+      candidate_id = NA_character_,
+      source_name = NA_character_,
+      source_tier = NA_character_,
+      source_type = NA_character_,
+      url = NA_character_,
+      title = NA_character_,
+      published_at = NA_character_,
+      status = NA_character_,
+      status_reason = NA_character_,
+      candidate_confidence = NA_real_,
+      source_files = NA_character_
+    )) |>
+    dplyr::left_join(candidates, by = "candidate_id") |>
+    dplyr::mutate(
+      president_name = dplyr::coalesce(.data$president_name, "Por clasificar"),
+      library_status_label = "Pendiente de clasificar"
+    ) |>
+    dplyr::arrange(dplyr::desc(.data$candidate_confidence), dplyr::desc(.data$published_at), .data$title)
+
+  list(
+    promoted_sources = promoted_sources,
+    pending_sources = pending_sources,
+    empty_state = if (nrow(promoted_sources) == 0 && nrow(pending_sources) == 0) {
+      "Todavía no hay fuentes públicas ni hallazgos manuales válidos cargados."
+    } else {
+      NULL
+    }
   )
 }

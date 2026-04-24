@@ -60,6 +60,38 @@ write_output_json <- function(data, path) {
   jsonlite::write_json(data, path, auto_unbox = TRUE, pretty = TRUE, na = "null")
 }
 
+deduplicate_sources <- function(sources) {
+  if (!is.data.frame(sources) || nrow(sources) == 0) {
+    return(sources)
+  }
+
+  sources |>
+    dplyr::mutate(
+      normalized_url = vapply(.data$url, function(url) {
+        normalized <- normalize_manual_source_url(url)
+        if (is.na(normalized) || !nzchar(normalized)) {
+          return(url %||% "")
+        }
+
+        normalized
+      }, character(1)),
+      candidate_key = dplyr::coalesce(.data$candidate_id, paste0("__missing_candidate__", .data$source_id)),
+      url_key = dplyr::if_else(
+        is.na(.data$normalized_url) | !nzchar(.data$normalized_url),
+        paste0("__missing_url__", .data$source_id),
+        .data$normalized_url
+      ),
+      source_priority = dplyr::case_when(
+        startsWith(.data$source_id %||% "", "src-manual-") ~ 2L,
+        TRUE ~ 1L
+      )
+    ) |>
+    dplyr::arrange(.data$source_priority, dplyr::desc(.data$confidence), dplyr::desc(.data$published_at), .data$source_id) |>
+    dplyr::distinct(.data$candidate_key, .data$url_key, .keep_all = TRUE) |>
+    dplyr::distinct(.data$source_id, .keep_all = TRUE) |>
+    dplyr::select(-"normalized_url", -"candidate_key", -"url_key", -"source_priority")
+}
+
 run_pipeline <- function(project_dir = ".") {
   ensure_contract_layout(project_dir)
   ensure_state_tables(project_dir)
@@ -69,12 +101,18 @@ run_pipeline <- function(project_dir = ".") {
   analysis_axes <- load_analysis_axes(project_dir)
   analysis_axis_rules <- load_analysis_axis_rules(project_dir)
   candidates <- load_candidate_registry(project_dir)
+  manual_source_registry <- build_manual_source_registry(project_dir = project_dir, candidates = candidates)
+  write_manual_source_registry(manual_source_registry, project_dir = project_dir)
+  promoted_manual_sources <- build_promoted_manual_sources(manual_source_registry)
+  pending_manual_sources <- build_pending_manual_source_library(manual_source_registry)
   program_documents <- load_program_documents(project_dir)
   sources <- dplyr::bind_rows(
     load_inbox_sources(project_dir),
+    promoted_manual_sources,
     build_program_document_sources(program_documents)
   ) |>
-    dplyr::distinct(.data$source_id, .keep_all = TRUE)
+    dplyr::distinct(.data$source_id, .keep_all = TRUE) |>
+    deduplicate_sources()
   source_text_files <- dplyr::bind_rows(
     list_source_text_files(project_dir),
     list_program_document_text_files(project_dir, program_documents)
@@ -178,6 +216,9 @@ run_pipeline <- function(project_dir = ".") {
     comparison_report_count = if (is.null(comparison_report)) 0 else 1,
     editorial_package_count = length(editorial_packages),
     source_text_file_count = nrow(source_text_files),
+    manual_source_registry_count = nrow(manual_source_registry),
+    promoted_manual_source_count = nrow(promoted_manual_sources),
+    pending_manual_source_count = nrow(pending_manual_sources),
     program_document_count = nrow(program_documents),
     primary_program_document_count = sum(program_documents$is_primary %in% TRUE, na.rm = TRUE),
     source_packet_count = length(source_packets),
@@ -199,6 +240,8 @@ run_pipeline <- function(project_dir = ".") {
   )
 
   write_output_csv(screened$public_sources, file.path(processed_dir, "source_records.csv"))
+  write_output_csv(manual_source_registry, file.path(processed_dir, "manual_source_registry.csv"))
+  write_output_csv(pending_manual_sources, file.path(processed_dir, "manual_source_library.csv"))
   write_output_csv(program_documents_public, file.path(processed_dir, "program_documents.csv"))
   write_output_csv(screened$public_claims, file.path(processed_dir, "claim_records.csv"))
   write_output_csv(screened$rejected_claims, file.path(processed_dir, "rejected_claims.csv"))
@@ -217,6 +260,7 @@ run_pipeline <- function(project_dir = ".") {
   write_output_json(taxonomy, file.path(public_dir, "taxonomy_v1.json"))
   if (publish_allowed) {
     write_output_json(screened$public_sources, file.path(public_dir, "source_records.json"))
+    write_output_json(pending_manual_sources, file.path(public_dir, "manual_source_library.json"))
     write_output_json(program_documents_public, file.path(public_dir, "program_documents.json"))
     write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
     write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
@@ -232,12 +276,15 @@ run_pipeline <- function(project_dir = ".") {
   }
   write_output_json(validation_status, file.path(public_dir, "validation_status.json"))
   write_output_json(validation_report, file.path(public_dir, "validation_report.json"))
+  write_output_json(pending_manual_sources, file.path(public_dir, "manual_source_library.json"))
 
   list(
     taxonomy = taxonomy,
     ideology_rules = ideology_rules,
     candidates = candidates,
     sources = screened$public_sources,
+    manual_source_registry = manual_source_registry,
+    pending_manual_sources = pending_manual_sources,
     program_documents = program_documents_public,
     claims = screened$public_claims,
     rejected_claims = screened$rejected_claims,
