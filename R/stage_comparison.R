@@ -35,7 +35,7 @@ default_axis_position <- function(axis_id, candidate_id) {
   list(
     axis_id = axis_id,
     candidate_id = candidate_id,
-    placement = "Evidencia insuficiente",
+    placement = "Señales programáticas pendientes",
     confidence = 0.1
   )
 }
@@ -57,7 +57,7 @@ find_thematic_row <- function(artifact, topic_id) {
 
 topic_priority_label <- function(topic_claims) {
   if (nrow(topic_claims) == 0) {
-    return("sin evidencia suficiente")
+    return("sin posición trazable")
   }
 
   if (nrow(topic_claims) >= 2 || mean(topic_claims$specificity_score %||% 0, na.rm = TRUE) >= 1.5) {
@@ -94,7 +94,7 @@ topic_feasibility_summary <- function(theme_row) {
 
 topic_coherence_summary <- function(theme_row, artifact) {
   if (is.null(theme_row)) {
-    return("sin evidencia suficiente")
+    return("sin posición trazable")
   }
 
   evaluation_text <- normalize_analysis_text(theme_row$evaluation %||% "")
@@ -123,16 +123,16 @@ build_axes_comparison <- function(candidate_analysis, candidate_ids, analysis_ax
 
       list(
         candidate_id = candidate_id,
-        placement = axis_row$placement %||% "Evidencia insuficiente",
+        placement = axis_row$placement %||% "Señales programáticas pendientes",
         confidence = axis_row$confidence %||% 0.1
       )
     })
 
-    non_empty_positions <- purrr::keep(candidate_positions, \(row) row$placement != "Evidencia insuficiente")
+    non_empty_positions <- purrr::keep(candidate_positions, \(row) row$placement != "Señales programáticas pendientes")
     unique_placements <- unique(purrr::map_chr(non_empty_positions, "placement"))
 
     summary <- if (length(unique_placements) == 0) {
-      "La comparación todavía no tiene evidencia suficiente para diferenciar a los candidatos en este eje."
+      "La comparación todavía no tiene señales programáticas comparables para diferenciar a los candidatos en este eje."
     } else if (length(unique_placements) == 1) {
       paste0("La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: ", unique_placements[[1]], ".")
     } else {
@@ -172,9 +172,9 @@ build_topic_comparison <- function(candidate_analysis, candidate_ids, claims, ta
       list(
         candidate_id = candidate_id,
         priority = topic_priority_label(topic_claims),
-        instrument = if (nrow(topic_claims) == 0) "sin evidencia suficiente" else topic_instrument_label(topic_claims),
-        specificity = if (nrow(topic_claims) == 0) "sin evidencia suficiente" else topic_specificity_label(topic_claims),
-        coherence = if (is.null(artifact)) "sin evidencia suficiente" else topic_coherence_summary(theme_row, artifact),
+        instrument = if (nrow(topic_claims) == 0) "sin posición trazable" else topic_instrument_label(topic_claims),
+        specificity = if (nrow(topic_claims) == 0) "sin posición trazable" else topic_specificity_label(topic_claims),
+        coherence = if (is.null(artifact)) "sin posición trazable" else topic_coherence_summary(theme_row, artifact),
         feasibility = topic_feasibility_summary(theme_row)
       )
     })
@@ -201,12 +201,12 @@ build_topic_comparison <- function(candidate_analysis, candidate_ids, claims, ta
 build_comparison_convergences <- function(axes_comparison, topic_comparison) {
   axis_convergences <- purrr::keep(axes_comparison, function(axis_row) {
     placements <- unique(purrr::map_chr(axis_row$candidate_positions, "placement"))
-    length(placements) == 1 && placements[[1]] != "Evidencia insuficiente"
+    length(placements) == 1 && placements[[1]] != "Señales programáticas pendientes"
   })
 
   topic_convergences <- purrr::keep(topic_comparison, function(topic_row) {
     priorities <- unique(purrr::map_chr(topic_row$candidate_rows, "priority"))
-    length(priorities) == 1 && priorities[[1]] != "sin evidencia suficiente"
+    length(priorities) == 1 && priorities[[1]] != "sin posición trazable"
   })
 
   c(
@@ -218,12 +218,12 @@ build_comparison_convergences <- function(axes_comparison, topic_comparison) {
 build_comparison_divergences <- function(axes_comparison, topic_comparison) {
   axis_divergences <- purrr::keep(axes_comparison, function(axis_row) {
     placements <- unique(purrr::map_chr(axis_row$candidate_positions, "placement"))
-    length(setdiff(placements, "Evidencia insuficiente")) >= 2
+    length(setdiff(placements, "Señales programáticas pendientes")) >= 2
   })
 
   topic_divergences <- purrr::keep(topic_comparison, function(topic_row) {
     priorities <- unique(purrr::map_chr(topic_row$candidate_rows, "priority"))
-    length(setdiff(priorities, "sin evidencia suficiente")) >= 2
+    length(setdiff(priorities, "sin posición trazable")) >= 2
   })
 
   c(
@@ -243,13 +243,13 @@ build_comparison_uncertainties <- function(candidate_analysis, axes_comparison, 
   })
 
   axis_uncertainties <- purrr::map_chr(
-    purrr::keep(axes_comparison, \(axis_row) any(purrr::map_chr(axis_row$candidate_positions, "placement") == "Evidencia insuficiente")),
-    \(axis_row) paste0("Persisten vacíos de evidencia en el eje ", axis_row$axis_id, ".")
+    purrr::keep(axes_comparison, \(axis_row) any(purrr::map_chr(axis_row$candidate_positions, "placement") == "Señales programáticas pendientes")),
+    \(axis_row) paste0("Faltan señales programáticas comparables en el eje ", axis_row$axis_id, ".")
   )
 
   topic_uncertainties <- purrr::map_chr(
-    purrr::keep(topic_comparison, \(topic_row) any(purrr::map_chr(topic_row$candidate_rows, "priority") == "sin evidencia suficiente")),
-    \(topic_row) paste0("No todos los candidatos tienen evidencia suficiente en el tema ", topic_row$topic_id, ".")
+    purrr::keep(topic_comparison, \(topic_row) any(purrr::map_chr(topic_row$candidate_rows, "priority") == "sin posición trazable")),
+    \(topic_row) paste0("No todos los candidatos tienen una posición pública trazable en el tema ", topic_row$topic_id, ".")
   )
 
   unique(stats::na.omit(c(uncertainties, axis_uncertainties, topic_uncertainties)))

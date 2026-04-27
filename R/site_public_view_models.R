@@ -123,7 +123,7 @@ public_evidence_label <- function(state) {
   dplyr::case_when(
     identical(state, "solid") ~ "diferencia visible",
     identical(state, "partial") ~ "lectura parcial",
-    TRUE ~ "evidencia insuficiente"
+    TRUE ~ "posición trazable pendiente"
   )
 }
 
@@ -144,7 +144,7 @@ is_insufficient_public_value <- function(value) {
   normalized <- tolower(normalize_public_scalar(value, default = ""))
 
   normalized == "" ||
-    grepl("sin evidencia suficiente|sin base suficiente|evidencia insuficiente", normalized, perl = TRUE)
+    grepl("sin evidencia suficiente|sin base suficiente|evidencia insuficiente|sin posicion trazable|posición trazable pendiente", normalized, perl = TRUE)
 }
 
 topic_row_supported_candidates <- function(topic_row) {
@@ -226,7 +226,11 @@ candidate_lookup_public <- function(candidates) {
         slug = row$slug[[1]] %||% row$candidate_id[[1]],
         president_name = row$president_name[[1]] %||% row$candidate_id[[1]],
         watchlist_active = isTRUE(row$watchlist_active[[1]]),
-        watchlist_priority = row$watchlist_priority[[1]] %||% NA_integer_
+        watchlist_priority = row$watchlist_priority[[1]] %||% NA_integer_,
+        photo_url = row$photo_url[[1]] %||% "",
+        photo_alt = row$photo_alt[[1]] %||% row$president_name[[1]] %||% row$candidate_id[[1]],
+        photo_credit = row$photo_credit[[1]] %||% "",
+        photo_source_url = row$photo_source_url[[1]] %||% ""
       )
     }),
     candidates$candidate_id
@@ -263,12 +267,12 @@ build_public_comparison_summary <- function(topic_id, candidate_names, evidence_
       topic_label,
       ", solo ",
       candidate_phrase,
-      " cuenta hoy con evidencia suficiente para una lectura parcial; el resto sigue siendo desigual."
+      " cuenta hoy con material trazable para una lectura parcial; el resto sigue siendo desigual."
     ),
     TRUE ~ paste0(
       "En ",
       topic_label,
-      ", la evidencia pública sigue siendo insuficiente para sostener una comparación firme entre candidaturas."
+      ", todavía faltan posiciones públicas trazables para sostener una comparación firme entre candidaturas."
     )
   )
 }
@@ -386,12 +390,46 @@ build_public_key_comparison_note <- function(raw_note, comparison_blocks, daily_
   "Todavía no hay suficiente base comparativa para una lectura editorial fuerte."
 }
 
-build_homepage_roster <- function(candidates) {
+homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = tibble::tibble()) {
+  if (!is.data.frame(claims) || nrow(claims) == 0) {
+    return("Ficha en construcción con fuentes trazables.")
+  }
+
+  candidate_claims <- claims |>
+    dplyr::filter(.data$candidate_id == .env$candidate_id, .data$claim_type == "policy_proposal") |>
+    dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
+    dplyr::mutate(
+      root_label = dplyr::coalesce(.data$root_label, .data$topic_id),
+      root_sort_order = dplyr::coalesce(as.integer(.data$root_sort_order), 999L)
+    ) |>
+    dplyr::arrange(.data$root_sort_order, dplyr::desc(.data$specificity_score), dplyr::desc(.data$event_date))
+
+  if (nrow(candidate_claims) == 0) {
+    return("La ficha conserva contexto público, pero todavía requiere más propuestas explícitas para una síntesis programática densa.")
+  }
+
+  topics <- candidate_claims |>
+    dplyr::count(.data$root_label, sort = TRUE) |>
+    dplyr::slice_head(n = 3) |>
+    dplyr::pull(.data$root_label)
+  lead <- candidate_claims$summary_text[[1]]
+
+  paste0(
+    "La evidencia programática se concentra en ",
+    paste(topics, collapse = ", "),
+    ". Señal principal: ",
+    lead,
+    "."
+  )
+}
+
+build_homepage_roster <- function(candidates, claims = tibble::tibble(), taxonomy_lookup = tibble::tibble()) {
   if (nrow(candidates) == 0) {
     return(list())
   }
 
   ordered <- candidates |>
+    dplyr::filter(.data$watchlist_active %in% TRUE) |>
     dplyr::mutate(
       watchlist_sort = dplyr::if_else(
         .data$watchlist_active %in% TRUE,
@@ -409,7 +447,12 @@ build_homepage_roster <- function(candidates) {
       president_name = row$president_name[[1]] %||% row$candidate_id[[1]],
       watchlist_active = isTRUE(row$watchlist_active[[1]]),
       watchlist_priority = row$watchlist_priority[[1]] %||% NA_integer_,
-      href = paste0("candidatos/", row$slug[[1]] %||% row$candidate_id[[1]], ".html")
+      href = paste0("candidatos/", row$slug[[1]] %||% row$candidate_id[[1]], ".html"),
+      photo_url = row$photo_url[[1]] %||% "",
+      photo_alt = row$photo_alt[[1]] %||% row$president_name[[1]] %||% row$candidate_id[[1]],
+      photo_credit = row$photo_credit[[1]] %||% "",
+      photo_source_url = row$photo_source_url[[1]] %||% "",
+      policy_summary = homepage_candidate_summary(row$candidate_id[[1]], claims, taxonomy_lookup)
     )
   })
 }
@@ -429,6 +472,7 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
   comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
   validation_report <- read_public_json("validation_report.json", project_dir = project_dir)
   validation_status <- read_processed_table("validation_status.csv", project_dir = project_dir)
+  claims <- read_public_table("claim_records.json", project_dir = project_dir)
 
   top_changes <- artifact_section_by_id(homepage_brief, "top_changes")$body %||%
     artifact_section_by_id(daily_update, "what_changed")$body %||%
@@ -464,7 +508,7 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
     caveats = caveats,
     methodology_badge = validation_badge_view_model(validation_report, validation_status),
     comparison_blocks = comparison_blocks,
-    roster = build_homepage_roster(candidates),
+    roster = build_homepage_roster(candidates, claims = claims, taxonomy_lookup = taxonomy_lookup),
     empty_state = if (length(comparison_blocks) == 0) {
       "Todavía no hay suficientes diferencias comparables para destacar en portada."
     } else {
@@ -670,13 +714,13 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
 
   taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
   candidate_row <- candidates |>
-    dplyr::filter(.data$candidate_id == candidate_id) |>
+    dplyr::filter(.data$candidate_id == .env$candidate_id) |>
     dplyr::slice_head(n = 1)
   candidate_name <- candidate_row$president_name[[1]] %||% candidate_id
   candidate_slug <- candidate_row$slug[[1]] %||% candidate_id
 
   policy_claims <- claims |>
-    dplyr::filter(.data$candidate_id == candidate_id, .data$claim_type == "policy_proposal")
+    dplyr::filter(.data$candidate_id == .env$candidate_id, .data$claim_type == "policy_proposal")
 
   raw_documented_topic_ids <- unique(policy_claims$topic_id[!is.na(policy_claims$topic_id)])
   documented_topic_ids <- split(
@@ -719,103 +763,113 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
     comparable_sections = sections$comparable,
     documented_sections = sections$documented_only,
     source_library = sources |>
-      dplyr::filter(.data$candidate_id == candidate_id) |>
+      dplyr::filter(.data$candidate_id == .env$candidate_id) |>
       dplyr::arrange(dplyr::desc(.data$published_at)),
     empty_state = nrow(policy_claims) == 0
   )
 }
 
 build_comparison_view_model <- function(project_dir = ".") {
-  comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
   candidates <- read_candidate_registry_public(project_dir = project_dir)
   taxonomy <- read_taxonomy_public(project_dir = project_dir)
-  program_documents <- read_public_table("program_documents.json", project_dir = project_dir)
   claims <- read_public_table("claim_records.json", project_dir = project_dir)
+  sources <- read_public_table("source_records.json", project_dir = project_dir)
 
-  if (is.null(comparison_report) || length(comparison_report) == 0) {
-    return(list(topics = list(), empty_state = "Todavía no hay material público suficiente para comparar programas entre candidatos."))
+  watchlist_candidates <- candidates |>
+    dplyr::filter(.data$watchlist_active %in% TRUE) |>
+    dplyr::arrange(.data$watchlist_priority, .data$ballot_position)
+
+  if (nrow(watchlist_candidates) == 0 || nrow(claims) == 0) {
+    return(list(
+      topics = list(),
+      sources = sources,
+      empty_state = "Todavía no hay material público suficiente para comparar programas entre candidatos."
+    ))
   }
 
   taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
-  candidate_lookup <- candidate_lookup_public(candidates)
-  documents_by_candidate <- split(program_documents, program_documents$candidate_id)
-  documented_topic_lookup <- claims |>
-    dplyr::filter(.data$claim_type == "policy_proposal", !is.na(.data$topic_id)) |>
+  candidate_lookup <- candidate_lookup_public(watchlist_candidates)
+
+  comparison_claims <- claims |>
+    dplyr::filter(.data$candidate_id %in% watchlist_candidates$candidate_id) |>
+    dplyr::filter(.data$claim_type %in% c("policy_proposal", "campaign_status")) |>
     dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
-    dplyr::mutate(root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id)) |>
-    dplyr::distinct(.data$candidate_id, .data$root_topic_id)
-  documented_topic_ids <- split(documented_topic_lookup$root_topic_id, documented_topic_lookup$candidate_id)
-  comparable_topic_ids <- comparison_topic_ids_by_candidate(comparison_report, taxonomy_lookup = taxonomy_lookup)
+    dplyr::mutate(
+      root_topic_id = dplyr::coalesce(.data$root_topic_id, .data$topic_id),
+      root_label = dplyr::coalesce(.data$root_label, .data$topic_id),
+      root_description = dplyr::coalesce(.data$root_description, ""),
+      root_sort_order = dplyr::coalesce(as.integer(.data$root_sort_order), 999L)
+    ) |>
+    dplyr::filter(!.data$root_topic_id %in% c("vida-publica"))
 
-  topic_rows <- normalize_public_collection(comparison_report$topic_comparison)
-  topics <- lapply(topic_rows, function(topic_row) {
-    topic_request <- normalize_topic_request(normalize_public_scalar(topic_row$topic_id, default = "tema"), taxonomy_lookup = taxonomy_lookup)
-    root_topic_id <- topic_request$root_topic_id %||% normalize_public_scalar(topic_row$topic_id, default = "tema")
-    label <- topic_request$label %||% public_topic_label(root_topic_id)
-    topic_meta <- taxonomy_lookup |>
-      dplyr::filter(.data$root_topic_id == root_topic_id) |>
-      dplyr::slice_head(n = 1)
-    topic_description <- topic_meta$root_description[[1]] %||% ""
-    evidence_state <- comparison_topic_evidence_state(topic_row)
-    candidate_rows <- normalize_public_collection(topic_row$candidate_rows)
+  if (nrow(comparison_claims) == 0) {
+    return(list(
+      topics = list(),
+      sources = sources,
+      empty_state = "Todavía no hay propuestas públicas trazables para comparar en la watchlist."
+    ))
+  }
 
-    cards <- lapply(candidate_rows, function(row) {
-      candidate_id <- normalize_public_scalar(row$candidate_id, default = NA_character_)
-      candidate_meta <- candidate_lookup[[candidate_id]]
-      primary_doc <- documents_by_candidate[[candidate_id]]
-      if (!is.null(primary_doc) && nrow(primary_doc) > 0) {
-        primary_doc <- primary_doc |>
-          dplyr::arrange(dplyr::desc(.data$is_primary), dplyr::desc(.data$published_at)) |>
-          dplyr::slice_head(n = 1)
-      } else {
-        primary_doc <- tibble::tibble()
-      }
+  root_topics <- comparison_claims |>
+    dplyr::distinct(.data$root_topic_id, .data$root_label, .data$root_description, .data$root_sort_order) |>
+    dplyr::arrange(.data$root_sort_order, .data$root_label)
 
-      destination_state <- candidate_topic_state_public(
-        candidate_id = candidate_id,
-        root_topic_id = root_topic_id,
-        comparable_topic_ids = comparable_topic_ids,
-        documented_topic_ids = documented_topic_ids
-      )
+  topics <- lapply(seq_len(nrow(root_topics)), function(index) {
+    topic_meta <- root_topics[index, , drop = FALSE]
+    root_topic_id <- topic_meta$root_topic_id[[1]]
+    label <- topic_meta$root_label[[1]] %||% public_topic_label(root_topic_id)
+    topic_claims <- comparison_claims |>
+      dplyr::filter(.data$root_topic_id == .env$root_topic_id)
+    candidate_sections <- lapply(seq_len(nrow(watchlist_candidates)), function(candidate_index) {
+      candidate_row <- watchlist_candidates[candidate_index, , drop = FALSE]
+      candidate_id <- candidate_row$candidate_id[[1]]
+      candidate_claims <- topic_claims |>
+        dplyr::filter(.data$candidate_id == .env$candidate_id) |>
+        dplyr::arrange(dplyr::desc(.data$claim_type == "policy_proposal"), dplyr::desc(.data$specificity_score), dplyr::desc(.data$event_date)) |>
+        dplyr::distinct(.data$summary_text, .keep_all = TRUE)
 
       list(
         candidate_id = candidate_id,
-        candidate_name = candidate_meta$president_name %||% candidate_id,
-        href = if (identical(destination_state, "empty")) {
-          ""
-        } else {
-          paste0(
-            "candidatos/",
-            candidate_meta$slug %||% candidate_id,
-            ".html?from=comparador&topic=",
-            utils::URLencode(root_topic_id, reserved = TRUE),
-            "#propuestas-y-posiciones-publicas"
-          )
-        },
-        destination_state = destination_state,
-        destination_state_label = candidate_topic_state_label(destination_state),
-        priority = normalize_public_scalar(row$priority, default = "Sin evidencia suficiente"),
-        instrument = normalize_public_scalar(row$instrument, default = "Sin evidencia suficiente"),
-        specificity = normalize_public_scalar(row$specificity, default = "Sin evidencia suficiente"),
-        coherence = normalize_public_scalar(row$coherence, default = "Sin evidencia suficiente"),
-        feasibility = normalize_public_scalar(row$feasibility, default = "Sin evidencia suficiente"),
-        primary_document = if (nrow(primary_doc) == 0) NULL else as.list(primary_doc[1, , drop = FALSE])
+        candidate_name = candidate_row$president_name[[1]] %||% candidate_id,
+        href = paste0(
+          "candidatos/",
+          candidate_row$slug[[1]] %||% candidate_id,
+          ".html?from=comparador&topic=",
+          utils::URLencode(root_topic_id, reserved = TRUE),
+          "#propuestas-y-posiciones-publicas"
+        ),
+        state = if (nrow(candidate_claims) > 0) "documented" else "not_documented",
+        claim_rows = candidate_claims
       )
     })
+
+    candidates_with_claims <- vapply(candidate_sections, \(section) if (nrow(section$claim_rows) > 0) section$candidate_name else NA_character_, character(1))
+    candidates_with_claims <- stats::na.omit(candidates_with_claims)
+
+    summary <- if (length(candidates_with_claims) == 0) {
+      paste0("En ", label, ", la watchlist todavía no tiene propuestas trazables dentro del corpus publicado.")
+    } else {
+      paste0(
+        "En ",
+        label,
+        ", el contraste público se concentra en ",
+        paste(candidates_with_claims, collapse = ", "),
+        ". La comparación lee las propuestas como posiciones de política, no como simples estados de fuente."
+      )
+    }
 
     list(
       topic_id = root_topic_id,
       topic_label = label,
-      topic_description = topic_description,
-      summary = normalize_public_scalar(topic_row$summary, default = "Sin resumen comparativo publicado."),
-      evidence_state = evidence_state,
-      public_label = public_evidence_label(evidence_state),
-      candidate_cards = cards
+      topic_description = topic_meta$root_description[[1]] %||% "",
+      summary = summary,
+      candidate_sections = candidate_sections
     )
   })
 
   list(
     topics = topics,
+    sources = sources,
     empty_state = if (length(topics) == 0) "Todavía no hay filas comparativas públicas para el comparador programático." else NULL
   )
 }

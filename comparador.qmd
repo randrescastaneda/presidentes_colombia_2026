@@ -8,7 +8,7 @@ source("R/site_helpers.R")
 
 comparison <- build_comparison_view_model()
 
-cat('<p class="section-intro">La comparación se organiza por ámbitos de política pública y usa una misma matriz para cada candidatura: prioridad, instrumento, especificidad, coherencia y factibilidad. Cada tarjeta conserva enlaces directos al documento oficial base cuando ya está cargado en el corpus.</p>')
+cat('<p class="section-intro">La comparación se organiza como análisis narrativo de políticas. Cada sección explica qué propone cada candidatura de la watchlist, qué orientación revela y dónde quedan tensiones o vacíos. Las fuentes aparecen como notas junto a las afirmaciones sustantivas.</p>')
 
 emit_comparison_sections(comparison)
 ```

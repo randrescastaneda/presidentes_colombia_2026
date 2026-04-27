@@ -208,7 +208,7 @@ score_candidate_axes <- function(candidate_key, axis_matches, analysis_axes) {
       dplyr::pull(rationale_fragment)
 
     placement <- if (total_score < 0.45) {
-      "Evidencia insuficiente"
+      "Señales programáticas pendientes"
     } else if ((abs(pole_a_score - pole_b_score) / total_score) < 0.2) {
       "Mixto o tensionado"
     } else if (pole_a_score >= pole_b_score) {
@@ -217,7 +217,7 @@ score_candidate_axes <- function(candidate_key, axis_matches, analysis_axes) {
       pole_b
     }
 
-    rationale <- if (placement == "Evidencia insuficiente") {
+    rationale <- if (placement == "Señales programáticas pendientes") {
       paste0("No aparecen señales programáticas suficientes para ubicar este eje con seguridad: ", default_question)
     } else if (placement == "Mixto o tensionado") {
       paste0(
@@ -238,7 +238,7 @@ score_candidate_axes <- function(candidate_key, axis_matches, analysis_axes) {
     list(
       axis_id = axis_id,
       placement = placement,
-      confidence = if (placement == "Evidencia insuficiente") round(min(0.35, total_score), 2) else axis_confidence(pole_a_score, pole_b_score),
+      confidence = if (placement == "Señales programáticas pendientes") round(min(0.35, total_score), 2) else axis_confidence(pole_a_score, pole_b_score),
       rationale = rationale
     )
   })
@@ -492,12 +492,12 @@ compose_profile_overview <- function(candidate_row, candidate_claims, candidate_
 
 compose_political_philosophy <- function(ideology_axes) {
   if (length(ideology_axes) == 0) {
-    return("No hay evidencia suficiente para inferir una filosofía política subyacente.")
+    return("Aún no hay señales programáticas trazables para inferir una filosofía política subyacente.")
   }
 
   informative_axes <- purrr::keep(
     ideology_axes,
-    \(axis) axis$placement != "Evidencia insuficiente" && axis$confidence >= 0.45
+    \(axis) axis$placement != "Señales programáticas pendientes" && axis$confidence >= 0.45
   )
 
   if (length(informative_axes) == 0) {
@@ -541,7 +541,7 @@ compose_internal_coherence <- function(candidate_claims, candidate_notes) {
 
 compose_mainstream_distance <- function(ideology_axes, candidate_claims) {
   if (nrow(candidate_claims) == 0 || length(ideology_axes) == 0) {
-    return("No hay evidencia suficiente para ubicar la distancia frente al mainstream político.")
+    return("Aún no hay señales programáticas trazables para ubicar la distancia frente al mainstream político.")
   }
 
   placement_lookup <- purrr::set_names(
@@ -608,7 +608,7 @@ compose_strengths <- function(candidate_claims, ideology_axes, candidate_notes, 
 
   informative_axes <- purrr::keep(
     ideology_axes,
-    \(axis) axis$placement != "Evidencia insuficiente" && axis$confidence >= 0.55
+    \(axis) axis$placement != "Señales programáticas pendientes" && axis$confidence >= 0.55
   )
   if (length(informative_axes) >= 3) {
     strengths <- c(strengths, "La orientación programática ya muestra cierta consistencia en varios ejes analíticos.")
@@ -647,15 +647,15 @@ compose_uncertainties <- function(candidate_claims, ideology_axes, thematic_anal
   uncertainties <- character()
 
   if (nrow(candidate_claims) == 0) {
-    return(c("No hay evidencia suficiente para producir un análisis programático sólido."))
+    return(c("Aún no hay material público trazable suficiente para producir un análisis programático sólido."))
   }
 
-  insufficient_axes <- purrr::keep(ideology_axes, \(axis) axis$placement == "Evidencia insuficiente")
+  insufficient_axes <- purrr::keep(ideology_axes, \(axis) axis$placement == "Señales programáticas pendientes")
   if (length(insufficient_axes) > 0) {
     uncertainties <- c(
       uncertainties,
       paste0(
-        "Siguen con evidencia insuficiente varios ejes: ",
+        "Faltan señales programáticas comparables en varios ejes: ",
         paste(purrr::map_chr(insufficient_axes, "axis_id"), collapse = ", "),
         "."
       )
@@ -664,7 +664,7 @@ compose_uncertainties <- function(candidate_claims, ideology_axes, thematic_anal
 
   topic_uncertainty_count <- sum(purrr::map_int(thematic_analysis, \(topic) length(topic$uncertainties %||% character())))
   if (topic_uncertainty_count > 0) {
-    uncertainties <- c(uncertainties, "Los análisis temáticos todavía contienen vacíos sobre mecanismos, costos o secuencia de implementación.")
+    uncertainties <- c(uncertainties, "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación.")
   }
 
   unique(uncertainties)

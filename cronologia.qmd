@@ -8,22 +8,35 @@ source("R/site_helpers.R")
 
 claims <- read_processed_table("claim_records.csv")
 analysis_notes <- read_processed_table("analysis_notes.csv")
+sources <- read_processed_table("source_records.csv")
 candidates <- read_candidate_registry_public() |> dplyr::select(.data$candidate_id, .data$president_name)
+taxonomy <- read_taxonomy_public() |> dplyr::select(.data$topic_id, topic_label = .data$label_public)
 
-cat('<p class="section-intro">La cronología muestra cuándo apareció un claim público y qué tipo de nota analítica quedó publicada a partir de ese material.</p>')
+cat('<p class="section-intro">La cronología resume hechos y propuestas con tema inferido y síntesis sustantiva. No muestra filas vacías ni estados internos de ingesta.</p>')
 
 if (nrow(claims) == 0) {
   emit_callout("Todavía no hay eventos públicos en la cronología.", "note")
 } else {
   claim_timeline <- claims |>
     dplyr::left_join(candidates, by = "candidate_id") |>
-    dplyr::arrange(dplyr::desc(.data$event_date))
+    dplyr::left_join(taxonomy, by = "topic_id") |>
+    dplyr::mutate(topic_label = dplyr::coalesce(.data$topic_label, .data$topic_id, "Tema inferido")) |>
+    dplyr::arrange(dplyr::desc(.data$event_date), .data$president_name) |>
+    dplyr::slice_head(n = 80)
 
-  safe_kable(
-    claim_timeline |>
-      dplyr::select(.data$event_date, .data$president_name, .data$topic_id, .data$summary_text),
-    col.names = c("Fecha", "Candidato", "Tema", "Síntesis")
-  )
+  source_numbers <- source_number_lookup(sources)
+  items <- vapply(seq_len(nrow(claim_timeline)), function(index) {
+    row <- claim_timeline[index, , drop = FALSE]
+    paste0(
+      '<article class="timeline-item">',
+      '<p class="timeline-item__date">', escape_html(format_public_date(row$event_date[[1]])), '</p>',
+      '<h3>', escape_html(row$president_name[[1]] %||% row$candidate_id[[1]]), ' · ', escape_html(row$topic_label[[1]]), '</h3>',
+      '<p class="narrative-paragraph">', escape_html(row$summary_text[[1]]), ' ', external_claim_reference_html(row, sources, source_numbers), '</p>',
+      '</article>'
+    )
+  }, character(1))
+
+  cat(paste0('<div class="timeline-list">', paste(items, collapse = ""), '</div>'))
 }
 
 cat('\n## Notas analíticas publicadas\n')
@@ -35,10 +48,17 @@ if (nrow(analysis_notes) == 0) {
     dplyr::left_join(candidates, by = "candidate_id") |>
     dplyr::arrange(dplyr::desc(.data$confidence))
 
-  safe_kable(
-    notes |>
-      dplyr::select(.data$president_name, .data$analysis_type, .data$confidence, .data$public_reasoning_summary),
-    col.names = c("Candidato", "Tipo", "Confianza", "Resumen")
-  )
+  items <- vapply(seq_len(nrow(notes)), function(index) {
+    row <- notes[index, , drop = FALSE]
+    paste0(
+      '<article class="timeline-item timeline-item--analysis">',
+      '<h3>', escape_html(row$president_name[[1]] %||% row$candidate_id[[1]]), ' · ', escape_html(analysis_type_label(row$analysis_type[[1]])), '</h3>',
+      '<p class="narrative-paragraph">', escape_html(row$public_reasoning_summary[[1]]), '</p>',
+      '<p class="comparison-card__meta">Confianza ', escape_html(confidence_public_label(row$confidence[[1]])), '.</p>',
+      '</article>'
+    )
+  }, character(1))
+
+  cat(paste0('<div class="timeline-list">', paste(items, collapse = ""), '</div>'))
 }
 ```

@@ -52,7 +52,11 @@ read_candidate_registry_public <- function(project_dir = ".") {
             "coalition",
             "party_or_group",
             "source_url",
-            "tracking_note"
+            "tracking_note",
+            "photo_url",
+            "photo_alt",
+            "photo_credit",
+            "photo_source_url"
           )
         ),
         as.character
@@ -129,6 +133,15 @@ escape_html <- function(text) {
   escaped <- gsub("<", "&lt;", escaped, fixed = TRUE)
   escaped <- gsub(">", "&gt;", escaped, fixed = TRUE)
   gsub('"', "&quot;", escaped, fixed = TRUE)
+}
+
+if (!exists("normalize_public_match_text", inherits = TRUE)) {
+  normalize_public_match_text <- function(x) {
+    value <- paste(stats::na.omit(as.character(x %||% "")), collapse = " ")
+    value <- iconv(value, to = "ASCII//TRANSLIT")
+    value[is.na(value)] <- ""
+    tolower(value)
+  }
 }
 
 html_link <- function(label, url) {
@@ -283,6 +296,143 @@ source_links_from_ids <- function(source_ids_text, sources) {
   }, character(1)), collapse = ", ")
 }
 
+source_number_lookup <- function(sources) {
+  if (!is.data.frame(sources) || nrow(sources) == 0) {
+    return(stats::setNames(integer(), character()))
+  }
+
+  source_items <- sources |>
+    dplyr::distinct(.data$source_id, .keep_all = TRUE) |>
+    dplyr::arrange(dplyr::desc(.data$published_at), .data$source_name)
+
+  stats::setNames(seq_len(nrow(source_items)), source_items$source_id)
+}
+
+claim_reference_html <- function(claim_row, sources, source_numbers = NULL) {
+  source_id <- claim_row$source_id[[1]] %||% NA_character_
+  source_row <- source_row_by_id(source_id, sources)
+  if (nrow(source_row) == 0) {
+    return('<sup class="source-ref">[fuente]</sup>')
+  }
+
+  if (is.null(source_numbers)) {
+    source_numbers <- source_number_lookup(sources)
+  }
+
+  source_number <- source_numbers[[source_id]] %||% 1
+  label <- paste0("[", source_number, "]")
+  href <- paste0("#", source_anchor_id(source_id))
+  paste0('<sup class="source-ref"><a href="', escape_html(href), '">', escape_html(label), "</a></sup>")
+}
+
+external_claim_reference_html <- function(claim_row, sources, source_numbers = NULL) {
+  source_id <- claim_row$source_id[[1]] %||% NA_character_
+  source_row <- source_row_by_id(source_id, sources)
+  if (nrow(source_row) == 0) {
+    return('<sup class="source-ref">[fuente]</sup>')
+  }
+
+  if (is.null(source_numbers)) {
+    source_numbers <- source_number_lookup(sources)
+  }
+
+  source_number <- source_numbers[[source_id]] %||% 1
+  label <- paste0("[", source_number, "]")
+  paste0(
+    '<sup class="source-ref"><a href="',
+    escape_html(source_row$url[[1]] %||% ""),
+    '">',
+    escape_html(label),
+    "</a></sup>"
+  )
+}
+
+sentence_case_text <- function(text) {
+  value <- normalize_sentence(text)
+  if (value == "") {
+    return("")
+  }
+
+  paste0(toupper(substr(value, 1, 1)), substr(value, 2, nchar(value)))
+}
+
+claim_policy_sentence <- function(claim_row, candidate_name = NULL) {
+  text <- sentence_case_text(claim_row$summary_text[[1]] %||% claim_row$position_text[[1]] %||% "")
+  if (text == "") {
+    return("La fuente registra una posición pública relevante.")
+  }
+
+  text
+}
+
+topic_policy_reading <- function(topic_id, claim_rows, candidate_name) {
+  text <- normalize_public_match_text(paste(claim_rows$summary_text, claim_rows$position_text, collapse = " "))
+  topic <- topic_id %||% ""
+
+  if (grepl("fiscal|economia|productividad|empleo|emprendimiento", topic, perl = TRUE)) {
+    if (grepl("baja de impuestos|recorte|mercado|empresa|inversion|formalizacion|regimen simple", text, perl = TRUE)) {
+      return(paste0("La lectura económica apunta a una agenda de oferta: aliviar cargas, activar inversión privada y presentar la productividad como condición para financiar otras promesas."))
+    }
+    if (grepl("subsidio|redistrib|renta|social|estado|publico|desigualdad", text, perl = TRUE)) {
+      return(paste0("La orientación económica privilegia el rol redistributivo y coordinador del Estado, con énfasis en gasto social, cierre de brechas o intervención pública."))
+    }
+    return("La lectura económica es de manejo mixto: combina estabilidad macro, crecimiento y algún grado de intervención pública, pero todavía requiere mayor detalle de instrumentos.")
+  }
+
+  if (grepl("salud", topic, perl = TRUE)) {
+    if (grepl("eps|mixto|auditoria|pagaremos|deudas|orden", text, perl = TRUE)) {
+      return("En salud, la propuesta se mueve hacia corrección institucional del sistema existente: ordenar pagos, auditoría, aseguramiento o reglas de funcionamiento antes que reemplazo completo.")
+    }
+    return("En salud, la señal principal es de intervención para resolver acceso, medicamentos o atención represada; falta precisar con más detalle el balance entre financiación, prestadores y aseguramiento.")
+  }
+
+  if (grepl("seguridad|defensa|justicia|paz", topic, perl = TRUE)) {
+    if (grepl("carcel|pena de muerte|militar|pie de fuerza|ordenes de captura|mano dura|bombarde", text, perl = TRUE)) {
+      return("La agenda de seguridad enfatiza coerción estatal, expansión de capacidades policiales o militares y sanción penal; la tensión principal está en cómo equilibrar eficacia, derechos y capacidad institucional.")
+    }
+    if (grepl("paz|dialog|sometimiento|restaurativa|prevencion|oportunidades", text, perl = TRUE)) {
+      return("La lectura de seguridad combina control institucional con salidas negociadas, preventivas o territoriales; su punto crítico es demostrar que esos mecanismos reducen violencia sin producir impunidad.")
+    }
+    return("La posición se ubica en recuperación de autoridad y coordinación institucional, aunque todavía necesita más detalle operativo para evaluar resultados probables.")
+  }
+
+  if (grepl("educacion", topic, perl = TRUE)) {
+    return("En educación, la propuesta funciona como política de movilidad social y productividad: busca ampliar acceso, permanencia o capacidades, pero la evaluación depende de financiación, focalización y capacidad territorial.")
+  }
+
+  if (grepl("ambiente|energia|transicion|agua", topic, perl = TRUE)) {
+    return("La señal ambiental y energética conecta modelo productivo con sostenibilidad: el punto decisivo es si la transición se formula como cambio gradual, expansión de oferta o restricción a sectores extractivos.")
+  }
+
+  if (grepl("derechos|genero|cuidado", topic, perl = TRUE)) {
+    return("La agenda social y de derechos revela una concepción del Estado como garante de protección y acceso; el reto es convertir el enfoque en rutas institucionales, presupuesto y cobertura verificable.")
+  }
+
+  if (grepl("instituciones|anticorrupcion|reforma", topic, perl = TRUE)) {
+    return("La lectura institucional se concentra en reglas, controles y confianza pública; la calidad de la propuesta depende de si pasa de la consigna anticorrupción a mecanismos concretos de contratación, sanción y vigilancia.")
+  }
+
+  "La evidencia permite describir una orientación pública trazable; la principal cautela es no convertir una señal de campaña en un diseño completo cuando la fuente no entrega mecanismo, costo o secuencia."
+}
+
+topic_uncertainty_sentence <- function(claim_rows) {
+  if (nrow(claim_rows) == 0) {
+    return("No hay señales públicas suficientes en este tema dentro del corpus actual.")
+  }
+
+  low_specificity <- mean(claim_rows$specificity_score %||% 0, na.rm = TRUE) < 1.25
+  mechanism_count <- sum(!is.na(claim_rows$mechanism_text) & claim_rows$mechanism_text != "", na.rm = TRUE)
+
+  if (low_specificity && mechanism_count == 0) {
+    return("Lo menos claro es la implementación: la fuente permite conocer la prioridad, pero no todavía costos, secuencia ni responsables concretos.")
+  }
+  if (mechanism_count == 0) {
+    return("La postura es visible, pero la arquitectura de ejecución todavía queda incompleta.")
+  }
+
+  "Hay instrumentos identificables, aunque todavía falta contrastarlos con costos fiscales, tiempos de implementación y capacidad institucional."
+}
+
 claim_paragraph_html <- function(claim_row, sources) {
   source_row <- source_row_by_id(claim_row$source_id[[1]], sources)
   date_text <- format_public_date(claim_row$event_date[[1]])
@@ -314,7 +464,8 @@ claim_paragraph_html <- function(claim_row, sources) {
     ".</span> ",
     escape_html(topic_prefix),
     escape_html(position_text),
-    ".",
+    ". ",
+    claim_reference_html(claim_row, sources),
     escape_html(summary_extra),
     ' <span class="narrative-source">Fuente: ',
     source_reference_html(source_row),
@@ -354,7 +505,7 @@ emit_candidate_header <- function(candidate_meta, candidate_dossier) {
   }
 
   dossier_row <- if (nrow(candidate_dossier) == 0) tibble::tibble() else candidate_dossier[1, , drop = FALSE]
-  ideology_label <- dossier_row$ideology_label[[1]] %||% "Evidencia insuficiente"
+  ideology_label <- dossier_row$ideology_label[[1]] %||% "Señales programáticas pendientes"
   ideology_class <- ideology_family_class(ideology_label)
   last_event <- dossier_row$last_event_date[[1]] %||% NA
   total_claims <- dossier_row$total_claims[[1]] %||% 0
@@ -364,6 +515,28 @@ emit_candidate_header <- function(candidate_meta, candidate_dossier) {
   cat(
     paste0(
       '<div class="profile-hero">',
+      if (!is.na(candidate_meta$photo_url[[1]] %||% NA_character_) && candidate_meta$photo_url[[1]] %||% "" != "") {
+        paste0(
+          '<figure class="profile-hero__photo">',
+          '<img src="', escape_html(candidate_meta$photo_url[[1]]), '" alt="', escape_html(candidate_meta$photo_alt[[1]] %||% candidate_meta$president_name[[1]]), '">',
+          if (!is.na(candidate_meta$photo_credit[[1]] %||% NA_character_) && candidate_meta$photo_credit[[1]] %||% "" != "") {
+            paste0(
+              '<figcaption>',
+              if (!is.na(candidate_meta$photo_source_url[[1]] %||% NA_character_) && candidate_meta$photo_source_url[[1]] %||% "" != "") {
+                html_link(candidate_meta$photo_credit[[1]], candidate_meta$photo_source_url[[1]])
+              } else {
+                escape_html(candidate_meta$photo_credit[[1]])
+              },
+              '</figcaption>'
+            )
+          } else {
+            ""
+          },
+          '</figure>'
+        )
+      } else {
+        ""
+      },
       '<div class="profile-hero__main">',
       '<p class="eyebrow">Tarjetón ', candidate_meta$ballot_position[[1]], "</p>",
       '<p class="profile-hero__meta"><strong>Vicepresidencia:</strong> ', escape_html(candidate_meta$vicepresident_name[[1]]), "</p>",
@@ -388,7 +561,7 @@ emit_candidate_ideology <- function(candidate_dossier) {
   }
 
   dossier_row <- candidate_dossier[1, , drop = FALSE]
-  ideology_label <- dossier_row$ideology_label[[1]] %||% "Evidencia insuficiente"
+  ideology_label <- dossier_row$ideology_label[[1]] %||% "Señales programáticas pendientes"
   ideology_rationale <- dossier_row$ideology_rationale[[1]] %||% ""
   signal_count <- dossier_row$ideology_signal_count[[1]] %||% 0
   score_text <- if (!is.na(dossier_row$ideology_score[[1]] %||% NA)) {
@@ -489,95 +662,114 @@ emit_candidate_policy_sections <- function(candidate_policy, candidate_sources =
     return(invisible(NULL))
   }
 
-  render_topic_sections <- function(sections, bucket_id, heading, intro, sources) {
-    if (length(sections) == 0) {
-      return(
+  sources <- candidate_policy$source_library %||% tibble::tibble()
+  source_numbers <- source_number_lookup(sources)
+  all_sections <- c(
+    candidate_policy$comparable_sections %||% list(),
+    candidate_policy$documented_sections %||% list()
+  )
+
+  if (length(all_sections) == 0) {
+    emit_callout("Todavía no hay propuestas públicas trazables para este candidato.", "note")
+    return(invisible(NULL))
+  }
+
+  rendered_sections <- vapply(all_sections, function(section) {
+    claim_rows <- section$claim_rows |>
+      dplyr::arrange(dplyr::desc(.data$claim_type == "policy_proposal"), dplyr::desc(.data$specificity_score), dplyr::desc(.data$event_date)) |>
+      dplyr::distinct(.data$summary_text, .keep_all = TRUE)
+
+    lead_claim <- claim_rows[1, , drop = FALSE]
+    detail_claims <- if (nrow(claim_rows) > 1) claim_rows[2:min(nrow(claim_rows), 5), , drop = FALSE] else claim_rows[0, , drop = FALSE]
+
+    detail_paragraphs <- if (nrow(detail_claims) == 0) {
+      ""
+    } else {
+      paste(vapply(seq_len(nrow(detail_claims)), function(index) {
         paste0(
-          '<div class="prose-card" data-policy-bucket="', bucket_id, '">',
-          '<h3>', escape_html(heading), '</h3>',
-          '<p class="narrative-paragraph">', escape_html(intro), "</p>",
-          "</div>"
+          '<p class="narrative-paragraph">',
+          escape_html(claim_policy_sentence(detail_claims[index, , drop = FALSE], candidate_policy$candidate_name)),
+          " ",
+          claim_reference_html(detail_claims[index, , drop = FALSE], sources, source_numbers),
+          "</p>"
         )
-      )
+      }, character(1)), collapse = "")
     }
 
-    rendered_sections <- vapply(sections, function(section) {
-      claim_rows <- section$claim_rows
-      paragraphs <- vapply(seq_len(nrow(claim_rows)), function(index) {
-        claim_paragraph_html(claim_rows[index, , drop = FALSE], sources)
-      }, character(1))
-
-      paste0(
-        '<section class="topic-section" data-topic-id="', escape_html(section$topic_id), '" data-topic-state="', escape_html(section$state), '">',
-        '<div class="comparison-highlight__header">',
-        '<h3>', escape_html(section$topic_label), '</h3>',
-        '<span class="evidence-chip evidence-chip--', if (identical(section$state, "comparable")) "solid" else "partial", '">',
-        escape_html(section$state_label),
-        '</span>',
-        '</div>',
-        if (!is.na(section$topic_description) && section$topic_description != "") {
-          paste0('<p class="topic-section__intro">', escape_html(section$topic_description), "</p>")
-        } else {
-          ""
-        },
-        '<div class="prose-card">',
-        paste(paragraphs, collapse = ""),
-        "</div>",
-        "</section>"
-      )
-    }, character(1))
-
     paste0(
-      '<div class="policy-topic-bucket" data-policy-bucket="', bucket_id, '">',
-      '<div class="prose-card">',
-      '<h3>', escape_html(heading), '</h3>',
-      '<p class="narrative-paragraph">', escape_html(intro), "</p>",
-      '</div>',
-      paste(rendered_sections, collapse = "\n"),
-      "</div>"
+      '<section class="topic-section topic-section--narrative" data-topic-id="', escape_html(section$topic_id), '" data-topic-state="', escape_html(section$state), '">',
+      '<h3>', escape_html(section$topic_label), '</h3>',
+      if (!is.na(section$topic_description) && section$topic_description != "") {
+        paste0('<p class="topic-section__intro">', escape_html(section$topic_description), "</p>")
+      } else {
+        ""
+      },
+      '<div class="prose-card prose-card--policy">',
+      '<p class="narrative-paragraph"><strong>Qué está proponiendo.</strong> ',
+      escape_html(claim_policy_sentence(lead_claim, candidate_policy$candidate_name)),
+      " ",
+      claim_reference_html(lead_claim, sources, source_numbers),
+      "</p>",
+      detail_paragraphs,
+      '<p class="narrative-paragraph"><strong>Lectura política.</strong> ',
+      escape_html(topic_policy_reading(section$topic_id, claim_rows, candidate_policy$candidate_name)),
+      "</p>",
+      '<p class="narrative-paragraph"><strong>Cautela analítica.</strong> ',
+      escape_html(topic_uncertainty_sentence(claim_rows)),
+      "</p>",
+      "</div>",
+      "</section>"
+    )
+  }, character(1))
+
+  cat(paste(rendered_sections, collapse = "\n"))
+}
+
+emit_candidate_analysis <- function(candidate_analysis, candidate_sources, candidate_analysis_artifact = NULL) {
+  artifact_paragraphs <- character()
+
+  if (!is.null(candidate_analysis_artifact) && length(candidate_analysis_artifact) > 0) {
+    artifact_paragraphs <- c(
+      if (!is.na(candidate_analysis_artifact$political_philosophy %||% NA_character_)) {
+        paste0('<p class="narrative-paragraph"><strong>Filosofía política inferida.</strong> ', escape_html(candidate_analysis_artifact$political_philosophy), "</p>")
+      },
+      if (!is.na(candidate_analysis_artifact$internal_coherence %||% NA_character_)) {
+        paste0('<p class="narrative-paragraph"><strong>Coherencia interna.</strong> ', escape_html(candidate_analysis_artifact$internal_coherence), "</p>")
+      },
+      if (!is.na(candidate_analysis_artifact$mainstream_distance %||% NA_character_)) {
+        paste0('<p class="narrative-paragraph"><strong>Distancia frente al consenso político.</strong> ', escape_html(candidate_analysis_artifact$mainstream_distance), "</p>")
+      },
+      if (length(candidate_analysis_artifact$strengths %||% character()) > 0) {
+        paste0('<p class="narrative-paragraph"><strong>Fortalezas visibles.</strong> ', escape_html(paste(candidate_analysis_artifact$strengths, collapse = " ")), "</p>")
+      },
+      if (length(candidate_analysis_artifact$weaknesses %||% character()) > 0) {
+        paste0('<p class="narrative-paragraph"><strong>Límites y tensiones.</strong> ', escape_html(paste(candidate_analysis_artifact$weaknesses, collapse = " ")), "</p>")
+      }
     )
   }
 
-  cat(
-    paste(
-      c(
-        render_topic_sections(
-          candidate_policy$comparable_sections %||% list(),
-          bucket_id = "comparable",
-          heading = "Propuestas comparables",
-          intro = "Estas propuestas ya sostienen una comparación pública útil con otras candidaturas.",
-          sources = candidate_policy$source_library %||% tibble::tibble()
-        ),
-        render_topic_sections(
-          candidate_policy$documented_sections %||% list(),
-          bucket_id = "documented-only",
-          heading = "Propuestas documentadas aún no comparables",
-          intro = "Estas propuestas ya son publicables y trazables, pero todavía no tienen base suficiente para una comparación transversal firme.",
-          sources = candidate_policy$source_library %||% tibble::tibble()
-        )
-      ),
-      collapse = "\n"
-    )
-  )
-}
+  note_paragraphs <- character()
+  if (is.data.frame(candidate_analysis) && nrow(candidate_analysis) > 0) {
+    notes <- candidate_analysis |>
+      dplyr::arrange(dplyr::desc(.data$confidence))
 
-emit_candidate_analysis <- function(candidate_analysis, candidate_sources) {
-  if (nrow(candidate_analysis) == 0) {
+    note_paragraphs <- vapply(seq_len(nrow(notes)), function(index) {
+      analysis_paragraph_html(notes[index, , drop = FALSE], candidate_sources)
+    }, character(1))
+  }
+
+  paragraphs <- c(artifact_paragraphs, note_paragraphs)
+  paragraphs <- paragraphs[paragraphs != ""]
+
+  if (length(paragraphs) == 0) {
     emit_callout("Aún no hay notas analíticas públicas para esta candidatura.", "note")
     return(invisible(NULL))
   }
 
-  notes <- candidate_analysis |>
-    dplyr::arrange(dplyr::desc(.data$confidence))
-
-  paragraphs <- vapply(seq_len(nrow(notes)), function(index) {
-    analysis_paragraph_html(notes[index, , drop = FALSE], candidate_sources)
-  }, character(1))
-
-  cat(paste0('<div class="prose-card">', paste(paragraphs, collapse = ""), "</div>"))
+  cat(paste0('<div class="prose-card prose-card--analysis">', paste(paragraphs, collapse = ""), "</div>"))
 }
 
-program_document_href <- function(path_or_url, project_dir = ".") {
+program_document_href <- function(path_or_url, project_dir = ".", relative_prefix = "") {
   value <- path_or_url %||% ""
   if (is.na(value) || identical(value, "")) {
     return("")
@@ -603,19 +795,24 @@ program_document_href <- function(path_or_url, project_dir = ".") {
 
   project_root <- normalizePath(project_dir, winslash = "/", mustWork = FALSE)
   if (startsWith(resolved, paste0(project_root, "/"))) {
-    return(sub(paste0("^", stringr::fixed(project_root), "/?"), "", resolved))
+    relative_path <- sub(paste0("^", stringr::fixed(project_root), "/?"), "", resolved)
+    if (!is.na(relative_prefix) && relative_prefix != "" && !grepl("^([.][.]/|/)", relative_path, perl = TRUE)) {
+      return(paste0(relative_prefix, relative_path))
+    }
+
+    return(relative_path)
   }
 
   resolved
 }
 
-program_document_link_html <- function(path_or_url, label, project_dir = ".") {
+program_document_link_html <- function(path_or_url, label, project_dir = ".", relative_prefix = "") {
   value <- path_or_url %||% ""
   if (is.na(value) || identical(value, "")) {
     return("")
   }
 
-  href <- program_document_href(value, project_dir = project_dir)
+  href <- program_document_href(value, project_dir = project_dir, relative_prefix = relative_prefix)
 
   if (is.na(href) || identical(href, "")) {
     return("")
@@ -624,7 +821,7 @@ program_document_link_html <- function(path_or_url, label, project_dir = ".") {
   paste0('<a class="card-link" href="', escape_html(href), '">', escape_html(label), "</a>")
 }
 
-emit_candidate_program_documents <- function(candidate_program_documents, project_dir = ".") {
+emit_candidate_program_documents <- function(candidate_program_documents, project_dir = ".", relative_prefix = "") {
   if (nrow(candidate_program_documents) == 0) {
     emit_callout("Todavía no hay documento oficial del programa cargado para esta candidatura.", "note")
     return(invisible(NULL))
@@ -636,10 +833,16 @@ emit_candidate_program_documents <- function(candidate_program_documents, projec
 
   cards <- vapply(seq_len(nrow(rows)), function(index) {
     row <- rows[index, , drop = FALSE]
+    row_value <- function(name) {
+      if (!name %in% names(row)) {
+        return(NA_character_)
+      }
+      row[[name]][[1]]
+    }
     actions <- c(
-      program_document_link_html(row$pdf_path[[1]], "Abrir PDF", project_dir = project_dir),
-      program_document_link_html(row$markdown_path[[1]], "Abrir Markdown", project_dir = project_dir),
-      program_document_link_html(row$download_url[[1]], "Fuente oficial", project_dir = project_dir)
+      program_document_link_html(row$pdf_path[[1]], "PDF local", project_dir = project_dir, relative_prefix = relative_prefix),
+      program_document_link_html(row$markdown_path[[1]], "Markdown", project_dir = project_dir, relative_prefix = relative_prefix),
+      program_document_link_html(row_value("public_url") %||% row$download_url[[1]] %||% row$official_page_url[[1]], "Fuente oficial", project_dir = project_dir, relative_prefix = relative_prefix)
     )
     actions <- actions[actions != ""]
 
@@ -654,9 +857,7 @@ emit_candidate_program_documents <- function(candidate_program_documents, projec
       "<h3>", escape_html(row$title[[1]] %||% row$document_id[[1]]), "</h3>",
       '<p class="comparison-card__meta"><strong>Rol:</strong> ', escape_html(row$document_role[[1]] %||% "programa"), "</p>",
       '<p class="comparison-card__meta"><strong>Fecha:</strong> ', escape_html(format_public_date(row$published_at[[1]])), "</p>",
-      '<p class="comparison-card__meta"><strong>Estado:</strong> ', escape_html(row$coverage_label[[1]] %||% "Sin cobertura"), "</p>",
-      '<p class="comparison-card__meta"><strong>Descarga:</strong> ', escape_html(row$download_status[[1]] %||% "sin registrar"), "</p>",
-      '<p class="comparison-card__meta"><strong>Conversión:</strong> ', escape_html(row$conversion_status[[1]] %||% "sin registrar"), "</p>",
+      '<p class="comparison-card__meta">Documento usado como fuente programática trazable para esta ficha. Los enlaces permiten revisar el original y la conversión auditable.</p>',
       if (length(actions) > 0) {
         paste0('<div class="program-document-card__actions">', paste(actions, collapse = " · "), "</div>")
       } else {
@@ -710,59 +911,53 @@ emit_comparison_sections <- function(comparison_model, candidates = NULL, taxono
     }
 
     rendered_topics <- vapply(comparison_model$topics, function(topic) {
-      cards <- vapply(topic$candidate_cards, function(card) {
-        primary_doc <- card$primary_document
-        links <- c(
-          if (!is.null(primary_doc$pdf_path %||% NULL) && (primary_doc$pdf_path %||% "") != "") program_document_link_html(primary_doc$pdf_path, "PDF", project_dir = ".") else "",
-          if (!is.null(primary_doc$markdown_path %||% NULL) && (primary_doc$markdown_path %||% "") != "") program_document_link_html(primary_doc$markdown_path, "Markdown", project_dir = ".") else "",
-          if (!is.null(primary_doc$download_url %||% NULL) && (primary_doc$download_url %||% "") != "") program_document_link_html(primary_doc$download_url, "Fuente", project_dir = ".") else ""
-        )
-        links <- links[links != ""]
+      sources <- comparison_model$sources %||% tibble::tibble()
+      source_numbers <- source_number_lookup(sources)
+      candidate_blocks <- vapply(topic$candidate_sections, function(section) {
+        claim_rows <- section$claim_rows
+        if (!is.data.frame(claim_rows) || nrow(claim_rows) == 0) {
+          return(paste0(
+            '<article class="comparison-narrative-card comparison-narrative-card--empty">',
+            '<h3>', escape_html(section$candidate_name), '</h3>',
+            '<p class="narrative-paragraph">En el corpus publicado no aparece todavía una propuesta específica de esta candidatura sobre este tema. La comparación no rellena ese vacío con inferencias externas.</p>',
+            '</article>'
+          ))
+        }
+
+        selected <- claim_rows |>
+          dplyr::slice_head(n = 3)
+        claim_paragraphs <- paste(vapply(seq_len(nrow(selected)), function(index) {
+          paste0(
+            '<p class="narrative-paragraph">',
+            escape_html(claim_policy_sentence(selected[index, , drop = FALSE], section$candidate_name)),
+            " ",
+            external_claim_reference_html(selected[index, , drop = FALSE], sources, source_numbers),
+            "</p>"
+          )
+        }, character(1)), collapse = "")
 
         paste0(
-          '<article class="comparison-matrix-card">',
-          "<h3>", escape_html(card$candidate_name), "</h3>",
-          '<p class="comparison-card__meta"><strong>Destino en ficha:</strong> ',
-          if ((card$href %||% "") != "") {
-            paste0('<a class="card-link" href="', escape_html(card$href), '">', escape_html(card$destination_state_label), "</a>")
-          } else {
-            escape_html(card$destination_state_label)
-          },
+          '<article class="comparison-narrative-card">',
+          '<h3><a href="', escape_html(section$href), '">', escape_html(section$candidate_name), '</a></h3>',
+          '<p class="comparison-card__meta">Posiciones trazables en este eje: ', nrow(claim_rows), '.</p>',
+          claim_paragraphs,
+          '<p class="narrative-paragraph"><strong>Lectura comparativa.</strong> ',
+          escape_html(topic_policy_reading(topic$topic_id, claim_rows, section$candidate_name)),
           "</p>",
-          '<dl class="comparison-matrix-card__stats">',
-          '<div><dt>Prioridad</dt><dd>', escape_html(card$priority), "</dd></div>",
-          '<div><dt>Instrumento</dt><dd>', escape_html(card$instrument), "</dd></div>",
-          '<div><dt>Especificidad</dt><dd>', escape_html(card$specificity), "</dd></div>",
-          '<div><dt>Coherencia</dt><dd>', escape_html(card$coherence), "</dd></div>",
-          '<div><dt>Factibilidad</dt><dd>', escape_html(card$feasibility), "</dd></div>",
-          "</dl>",
-          if (!is.null(primary_doc)) {
-            paste0('<p class="comparison-card__meta"><strong>Documento base:</strong> ', escape_html(primary_doc$title %||% primary_doc$document_id %||% "sin documento oficial cargado"), "</p>")
-          } else {
-            '<p class="comparison-card__meta"><strong>Documento base:</strong> sin documento oficial cargado.</p>'
-          },
-          if (length(links) > 0) {
-            paste0('<div class="comparison-matrix-card__links">', paste(links, collapse = " · "), "</div>")
-          } else {
-            ""
-          },
-          "</article>"
+          '</article>'
         )
       }, character(1))
 
       paste0(
         '<section class="topic-section" data-topic-id="', escape_html(topic$topic_id), '">',
-        '<div class="comparison-highlight__header">',
         "<h2>", escape_html(topic$topic_label), "</h2>",
-        '<span class="evidence-chip evidence-chip--', escape_html(topic$evidence_state), '">', escape_html(topic$public_label), '</span>',
-        '</div>',
         if (!is.na(topic$topic_description) && topic$topic_description != "") {
           paste0('<p class="topic-section__intro">', escape_html(topic$topic_description), "</p>")
         } else {
           ""
         },
         '<p class="narrative-paragraph">', escape_html(topic$summary), "</p>",
-        '<div class="comparison-matrix-grid">', paste(cards, collapse = ""), "</div>",
+        '<div class="comparison-narrative-grid">', paste(candidate_blocks, collapse = ""), "</div>",
         "</section>"
       )
     }, character(1))
@@ -772,96 +967,10 @@ emit_comparison_sections <- function(comparison_model, candidates = NULL, taxono
   }
 
   if (is.null(comparison_model) || length(comparison_model) == 0) {
-    emit_callout("Todavía no hay material público suficiente para comparar programas entre candidatos.", "note")
-    return(invisible(NULL))
+    emit_callout("Todavía no hay material público trazable para comparar programas entre candidatos.", "note")
+  } else {
+    emit_callout("El comparador público usa el modelo narrativo por temas. Este artefacto no trae secciones narrativas para renderizar.", "note")
   }
 
-  topic_rows <- normalize_public_collection(comparison_model$topic_comparison)
-  if (length(topic_rows) == 0) {
-    emit_callout("Todavía no hay filas comparativas públicas para el comparador programático.", "note")
-    return(invisible(NULL))
-  }
-
-  taxonomy_lookup <- taxonomy_root_lookup(taxonomy)
-  topic_lookup <- taxonomy_lookup |>
-    dplyr::distinct(.data$root_topic_id, .data$root_label, .data$root_description, .data$root_sort_order)
-
-  candidate_order <- candidates |>
-    dplyr::mutate(
-      watchlist_rank = dplyr::if_else(.data$watchlist_active %in% TRUE, .data$watchlist_priority, 999L)
-    ) |>
-    dplyr::arrange(.data$watchlist_rank, .data$ballot_position)
-
-  documents_by_candidate <- split(program_documents, program_documents$candidate_id)
-
-  rendered_topics <- vapply(topic_rows, function(topic_row) {
-    topic_id <- normalize_public_scalar(topic_row$topic_id, default = "tema")
-    topic_meta <- topic_lookup |>
-      dplyr::filter(.data$root_topic_id == topic_id) |>
-      dplyr::slice_head(n = 1)
-
-    topic_label <- if (nrow(topic_meta) == 0) public_topic_label(topic_id) else topic_meta$root_label[[1]]
-    topic_description <- if (nrow(topic_meta) == 0) "" else topic_meta$root_description[[1]] %||% ""
-    candidate_rows <- normalize_public_collection(topic_row$candidate_rows)
-
-    cards <- vapply(seq_len(nrow(candidate_order)), function(index) {
-      candidate_row <- candidate_order[index, , drop = FALSE]
-      candidate_id <- candidate_row$candidate_id[[1]]
-      comparison_row <- purrr::keep(candidate_rows, \(row) identical(normalize_public_scalar(row$candidate_id, default = ""), candidate_id))
-      comparison_row <- if (length(comparison_row) == 0) NULL else comparison_row[[1]]
-      documents <- documents_by_candidate[[candidate_id]]
-      primary_doc <- if (is.null(documents) || nrow(documents) == 0) {
-        tibble::tibble()
-      } else {
-        documents |>
-          dplyr::arrange(dplyr::desc(.data$is_primary), dplyr::desc(.data$published_at)) |>
-          dplyr::slice_head(n = 1)
-      }
-
-      links <- c(
-        if (nrow(primary_doc) > 0) program_document_link_html(primary_doc$pdf_path[[1]], "PDF", project_dir = ".") else "",
-        if (nrow(primary_doc) > 0) program_document_link_html(primary_doc$markdown_path[[1]], "Markdown", project_dir = ".") else "",
-        if (nrow(primary_doc) > 0) program_document_link_html(primary_doc$download_url[[1]] %||% primary_doc$official_page_url[[1]], "Fuente", project_dir = ".") else ""
-      )
-      links <- links[links != ""]
-
-      paste0(
-        '<article class="comparison-matrix-card">',
-        "<h3>", escape_html(candidate_row$president_name[[1]]), "</h3>",
-        '<dl class="comparison-matrix-card__stats">',
-        '<div><dt>Prioridad</dt><dd>', escape_html(normalize_public_scalar(comparison_row$priority, default = "Sin evidencia suficiente")), "</dd></div>",
-        '<div><dt>Instrumento</dt><dd>', escape_html(normalize_public_scalar(comparison_row$instrument, default = "Sin evidencia suficiente")), "</dd></div>",
-        '<div><dt>Especificidad</dt><dd>', escape_html(normalize_public_scalar(comparison_row$specificity, default = "Sin evidencia suficiente")), "</dd></div>",
-        '<div><dt>Coherencia</dt><dd>', escape_html(normalize_public_scalar(comparison_row$coherence, default = "Sin evidencia suficiente")), "</dd></div>",
-        '<div><dt>Factibilidad</dt><dd>', escape_html(normalize_public_scalar(comparison_row$feasibility, default = "Sin evidencia suficiente")), "</dd></div>",
-        "</dl>",
-        if (nrow(primary_doc) > 0) {
-          paste0('<p class="comparison-card__meta"><strong>Documento base:</strong> ', escape_html(primary_doc$title[[1]] %||% primary_doc$document_id[[1]]), "</p>")
-        } else {
-          '<p class="comparison-card__meta"><strong>Documento base:</strong> sin documento oficial cargado.</p>'
-        },
-        if (length(links) > 0) {
-          paste0('<div class="comparison-matrix-card__links">', paste(links, collapse = " · "), "</div>")
-        } else {
-          ""
-        },
-        "</article>"
-      )
-    }, character(1))
-
-    paste0(
-      '<section class="topic-section">',
-      "<h2>", escape_html(topic_label), "</h2>",
-      if (!is.na(topic_description) && topic_description != "") {
-        paste0('<p class="topic-section__intro">', escape_html(topic_description), "</p>")
-      } else {
-        ""
-      },
-      '<p class="narrative-paragraph">', escape_html(normalize_public_scalar(topic_row$summary, default = "Sin resumen comparativo publicado.")), "</p>",
-      '<div class="comparison-matrix-grid">', paste(cards, collapse = ""), "</div>",
-      "</section>"
-    )
-  }, character(1))
-
-  cat(paste(rendered_topics, collapse = "\n"))
+  invisible(NULL)
 }

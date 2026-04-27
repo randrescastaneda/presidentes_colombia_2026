@@ -167,6 +167,7 @@ detect_analysis_notes <- function(claims, sources, min_confidence = 0.7) {
     dplyr::filter(
       claim_type == "policy_proposal",
       implementation_detail %in% c(FALSE, 0),
+      dplyr::coalesce(.data$specificity_score, 0) < 1,
       source_confidence >= min_confidence
     ) |>
     dplyr::transmute(
@@ -177,9 +178,9 @@ detect_analysis_notes <- function(claims, sources, min_confidence = 0.7) {
       source_ids = source_id,
       confidence = source_confidence,
       public_reasoning_summary = paste0(
-        "La propuesta registrada para ",
+        "La fuente permite identificar una prioridad sobre ",
         policy_key,
-        " no incluye suficiente detalle de implementación en la fuente analizada."
+        ", pero todavía no entrega mecanismo, costo o secuencia suficientes para evaluar implementación."
       )
     )
 
@@ -203,7 +204,7 @@ collapse_topic_labels <- function(claims, taxonomy) {
 
 label_ideology_score <- function(score, signal_count) {
   if (is.na(score) || signal_count < 1) {
-    return("Evidencia insuficiente")
+    return("Señales programáticas pendientes")
   }
 
   base_label <- dplyr::case_when(
@@ -333,7 +334,7 @@ build_candidate_dossiers <- function(candidates, claims, analysis_notes, sources
     dplyr::left_join(ideology_profiles, by = "candidate_id") |>
     dplyr::mutate(
       top_topics = dplyr::if_else(top_topics == "", "Sin temas públicos todavía", top_topics),
-      ideology_label = dplyr::coalesce(.data$ideology_label, "Evidencia insuficiente"),
+      ideology_label = dplyr::coalesce(.data$ideology_label, "Señales programáticas pendientes"),
       ideology_rationale = dplyr::coalesce(
         .data$ideology_rationale,
         "Todavía no hay suficientes señales programáticas mapeadas para ubicarlo en el espectro."

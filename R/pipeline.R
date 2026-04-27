@@ -14,11 +14,115 @@ load_candidate_registry <- function(project_dir) {
     show_col_types = FALSE
   ) |>
     dplyr::mutate(
-      dplyr::across(dplyr::any_of(c("candidate_id", "slug", "president_name", "vicepresident_name", "coalition", "party_or_group", "source_url", "tracking_note")), as.character),
+      dplyr::across(dplyr::any_of(c(
+        "candidate_id",
+        "slug",
+        "president_name",
+        "vicepresident_name",
+        "coalition",
+        "party_or_group",
+        "source_url",
+        "tracking_note",
+        "photo_url",
+        "photo_alt",
+        "photo_credit",
+        "photo_source_url"
+      )), as.character),
       dplyr::across(dplyr::any_of(c("ballot_position", "watchlist_priority")), as.integer),
       dplyr::across(dplyr::any_of("watchlist_active"), as.logical),
       dplyr::across(dplyr::any_of("source_date"), as.Date)
     )
+}
+
+empty_legacy_claims_tibble <- function() {
+  tibble::tibble(
+    claim_id = character(),
+    candidate_id = character(),
+    event_date = as.Date(character()),
+    source_id = character(),
+    claim_type = character(),
+    claim_type_id = character(),
+    policy_key = character(),
+    topic_id = character(),
+    subtopic_id = character(),
+    summary_text = character(),
+    position_text = character(),
+    position_key = character(),
+    stance_value = numeric(),
+    implementation_detail = logical(),
+    mechanism_text = character(),
+    target_population = character(),
+    problem_diagnosed = character(),
+    specificity_score = integer(),
+    ambiguity_flag = logical(),
+    insufficient_evidence_flag = logical(),
+    possible_contradiction_flag = logical(),
+    evidence_excerpt = character(),
+    inbox_batch = character(),
+    batch_date = as.Date(character())
+  )
+}
+
+load_inbox_claims <- function(project_dir) {
+  claim_files <- list_inbox_files(project_dir, "claims.csv")
+  if (length(claim_files) == 0) {
+    return(empty_legacy_claims_tibble())
+  }
+
+  normalize_legacy_claims <- function(path) {
+    claims <- readr::read_csv(path, show_col_types = FALSE)
+    if (nrow(claims) == 0) {
+      return(empty_legacy_claims_tibble())
+    }
+
+    for (column in c("subtopic_id", "mechanism_text", "target_population", "problem_diagnosed", "evidence_excerpt")) {
+      if (!column %in% names(claims)) {
+        claims[[column]] <- NA_character_
+      }
+    }
+    for (column in c("specificity_score")) {
+      if (!column %in% names(claims)) {
+        claims[[column]] <- NA_integer_
+      }
+    }
+    for (column in c("ambiguity_flag", "insufficient_evidence_flag", "possible_contradiction_flag")) {
+      if (!column %in% names(claims)) {
+        claims[[column]] <- FALSE
+      }
+    }
+
+    claims |>
+      dplyr::mutate(
+        event_date = as.Date(.data$event_date),
+        claim_type_id = dplyr::case_when(
+          .data$claim_type == "policy_proposal" & .data$implementation_detail %in% TRUE ~ "propuesta_concreta",
+          .data$claim_type == "policy_proposal" ~ "postura_general",
+          .data$claim_type == "biography" ~ "dato_contextual",
+          .data$claim_type == "campaign_status" ~ "critica_adversario",
+          TRUE ~ "dato_contextual"
+        ),
+        stance_value = suppressWarnings(as.numeric(.data$stance_value)),
+        implementation_detail = as.logical(.data$implementation_detail),
+        specificity_score = dplyr::coalesce(
+          suppressWarnings(as.integer(.data$specificity_score)),
+          dplyr::case_when(
+            .data$implementation_detail %in% TRUE ~ 2L,
+            .data$claim_type == "policy_proposal" ~ 1L,
+            TRUE ~ 0L
+          )
+        ),
+        evidence_excerpt = dplyr::coalesce(
+          dplyr::na_if(.data$evidence_excerpt, ""),
+          stringr::str_trunc(.data$position_text, 240)
+        ),
+        inbox_batch = basename(dirname(path)),
+        batch_date = as.Date(.data$event_date)
+      ) |>
+      dplyr::select(dplyr::all_of(names(empty_legacy_claims_tibble())))
+  }
+
+  purrr::map_dfr(claim_files, normalize_legacy_claims) |>
+    dplyr::distinct(.data$claim_id, .keep_all = TRUE)
 }
 
 load_inbox_sources <- function(project_dir) {
@@ -121,9 +225,23 @@ run_pipeline <- function(project_dir = ".") {
   source_packets <- build_source_packets(sources, source_text_files)
   write_source_packets(source_packets, project_dir)
   extraction_results <- materialize_extraction_results(project_dir = project_dir, source_packets = source_packets)
-  claims <- flatten_extraction_claims(extraction_results)
+  claims <- dplyr::bind_rows(
+    load_inbox_claims(project_dir),
+    flatten_extraction_claims(extraction_results)
+  ) |>
+    dplyr::distinct(.data$claim_id, .keep_all = TRUE) |>
+    repair_claims_for_publication(
+      sources = sources,
+      taxonomy = taxonomy,
+      candidates = candidates
+    )
 
   screened <- screen_public_records(claims, sources)
+  source_analysis_notes <- build_source_analysis_notes(
+    claims = screened$public_claims,
+    sources = screened$public_sources,
+    taxonomy = taxonomy
+  )
   analysis_notes <- detect_analysis_notes(screened$public_claims, screened$public_sources)
   latest_event_date <- if (nrow(screened$public_claims) == 0) {
     as.Date(NA)
@@ -211,6 +329,7 @@ run_pipeline <- function(project_dir = ".") {
     latest_event_date = as.character(latest_event_date),
     public_claim_count = nrow(screened$public_claims),
     public_source_count = nrow(screened$public_sources),
+    public_source_analysis_count = nrow(source_analysis_notes),
     public_analysis_note_count = nrow(analysis_notes),
     candidate_analysis_count = length(candidate_analysis),
     comparison_report_count = if (is.null(comparison_report)) 0 else 1,
@@ -244,6 +363,7 @@ run_pipeline <- function(project_dir = ".") {
   write_output_csv(pending_manual_sources, file.path(processed_dir, "manual_source_library.csv"))
   write_output_csv(program_documents_public, file.path(processed_dir, "program_documents.csv"))
   write_output_csv(screened$public_claims, file.path(processed_dir, "claim_records.csv"))
+  write_output_csv(source_analysis_notes, file.path(processed_dir, "source_analysis_notes.csv"))
   write_output_csv(screened$rejected_claims, file.path(processed_dir, "rejected_claims.csv"))
   write_output_csv(analysis_notes, file.path(processed_dir, "analysis_notes.csv"))
   write_output_csv(candidate_analysis_summary, file.path(processed_dir, "candidate_analysis_summary.csv"))
@@ -263,6 +383,7 @@ run_pipeline <- function(project_dir = ".") {
     write_output_json(pending_manual_sources, file.path(public_dir, "manual_source_library.json"))
     write_output_json(program_documents_public, file.path(public_dir, "program_documents.json"))
     write_output_json(screened$public_claims, file.path(public_dir, "claim_records.json"))
+    write_output_json(source_analysis_notes, file.path(public_dir, "source_analysis_notes.json"))
     write_output_json(analysis_notes, file.path(public_dir, "analysis_notes.json"))
     write_output_json(unname(candidate_analysis), file.path(public_dir, "candidate_analysis.json"))
     write_output_json(candidate_analysis_summary, file.path(public_dir, "candidate_analysis_summary.json"))
@@ -287,6 +408,7 @@ run_pipeline <- function(project_dir = ".") {
     pending_manual_sources = pending_manual_sources,
     program_documents = program_documents_public,
     claims = screened$public_claims,
+    source_analysis_notes = source_analysis_notes,
     rejected_claims = screened$rejected_claims,
     analysis_notes = analysis_notes,
     candidate_analysis = candidate_analysis,

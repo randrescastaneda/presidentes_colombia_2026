@@ -31,7 +31,7 @@ Producir piezas web claras, sobrias, comparables y metodologicamente disciplinad
 ## Reglas de incertidumbre
 
 - Marcar explicitamente:
-  - evidencia insuficiente
+  - señales programáticas pendientes
   - ambiguedad
   - contradiccion potencial no concluyente
   - bajo nivel de especificidad

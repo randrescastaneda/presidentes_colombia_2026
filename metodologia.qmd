@@ -31,7 +31,7 @@ cat(paste(notice, collapse = "\n"))
 - La etiqueta `izquierda`, `centro` o `derecha` no viene de la autodefinición del candidato.
 - Se calcula a partir de `policy_key` ya mapeados a señales ideológicas públicas y auditables.
 - Cada señal se pondera por el sentido de la postura y la confianza de la fuente.
-- Si hay muy poca evidencia mapeada, la app muestra `Evidencia insuficiente`.
+- Si hay muy pocas señales programáticas mapeadas, la app muestra `Señales programáticas pendientes`.
 
 ## Tiers de fuente
 

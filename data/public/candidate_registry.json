@@ -11,7 +11,11 @@
     "party_or_group": "Pacto Histórico",
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/5/58/Perfil_Iv%C3%A1n_Cepeda_%28cropped%29.jpg",
+    "photo_alt": "Foto de Iván Cepeda",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://es.wikipedia.org/wiki/Iv%C3%A1n_Cepeda"
   },
   {
     "candidate_id": "clara-lopez",
@@ -25,7 +29,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "claudia-lopez",
@@ -39,7 +47,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Claudia_Lopez_H_26.jpg",
+    "photo_alt": "Foto de Claudia López",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://en.wikipedia.org/wiki/Claudia_L%C3%B3pez"
   },
   {
     "candidate_id": "raul-botero",
@@ -53,7 +65,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "abelardo-de-la-espriella",
@@ -67,7 +83,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/A_de_la_Espriella.jpg",
+    "photo_alt": "Foto de Abelardo de la Espriella",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://es.wikipedia.org/wiki/Abelardo_de_la_Espriella"
   },
   {
     "candidate_id": "mauricio-lizcano",
@@ -81,7 +101,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "miguel-uribe",
@@ -95,7 +119,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "sondra-macollins",
@@ -109,7 +137,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "roy-barreras",
@@ -123,7 +155,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "carlos-caicedo",
@@ -137,7 +173,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "gustavo-matamoros",
@@ -151,7 +191,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Pendiente de priorización."
+    "tracking_note": "Pendiente de priorización.",
+    "photo_url": null,
+    "photo_alt": null,
+    "photo_credit": null,
+    "photo_source_url": null
   },
   {
     "candidate_id": "paloma-valencia",
@@ -165,7 +209,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Discurso_Paloma_Valencia.jpg/960px-Discurso_Paloma_Valencia.jpg",
+    "photo_alt": "Foto de Paloma Valencia",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://es.wikipedia.org/wiki/Paloma_Valencia"
   },
   {
     "candidate_id": "sergio-fajardo",
@@ -179,7 +227,11 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Sergio_Fajardo_2025.jpg",
+    "photo_alt": "Foto de Sergio Fajardo",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://en.wikipedia.org/wiki/Sergio_Fajardo"
   },
   {
     "candidate_id": "luis-gilberto-murillo",
@@ -193,6 +245,10 @@
     "party_or_group": null,
     "source_url": "https://www.registraduria.gov.co/Conozca-la-posicion-de-los-candidatos-presidenciales-en-la-tarjeta-electoral.html",
     "source_date": "2026-03-25",
-    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública."
+    "tracking_note": "Watchlist inicial por relevancia electoral y cobertura pública.",
+    "photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/20240521_posesi%C3%B3n_canciller_Murillo-Joel_Gonz%C3%A1lez1536_%28Cropped%29.jpg/960px-20240521_posesi%C3%B3n_canciller_Murillo-Joel_Gonz%C3%A1lez1536_%28Cropped%29.jpg",
+    "photo_alt": "Foto de Luis Gilberto Murillo",
+    "photo_credit": "Wikimedia Commons",
+    "photo_source_url": "https://en.wikipedia.org/wiki/Luis_Gilberto_Murillo"
   }
 ]

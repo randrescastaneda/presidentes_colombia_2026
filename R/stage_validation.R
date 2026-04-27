@@ -115,7 +115,7 @@ collect_artifact_text <- function(candidate_analysis, comparison_report, editori
 has_explicit_uncertainty <- function(candidate_analysis, comparison_report) {
   candidate_ok <- purrr::every(candidate_analysis, function(artifact) {
     length(artifact$uncertainties %||% character()) > 0 ||
-      length(purrr::keep(artifact$ideology_axes %||% list(), \(axis) identical(axis$placement %||% "", "Evidencia insuficiente"))) == 0
+      length(purrr::keep(artifact$ideology_axes %||% list(), \(axis) identical(axis$placement %||% "", "Señales programáticas pendientes"))) == 0
   })
 
   comparison_ok <- is.null(comparison_report) || length(comparison_report$uncertainties %||% character()) > 0

@@ -1,12 +1,60 @@
 [
   {
-    "digest_date": "2026-02-18",
+    "digest_date": "2026-01-15",
     "total_claims": 1,
     "total_candidates": 1,
     "total_analysis_notes": 0
   },
   {
+    "digest_date": "2026-02-18",
+    "total_claims": 10,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-02-27",
+    "total_claims": 3,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
     "digest_date": "2026-03-01",
+    "total_claims": 2,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-04",
+    "total_claims": 2,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-08",
+    "total_claims": 5,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-19",
+    "total_claims": 14,
+    "total_candidates": 14,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-24",
+    "total_claims": 3,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-26",
+    "total_claims": 7,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-03-31",
     "total_claims": 1,
     "total_candidates": 1,
     "total_analysis_notes": 0
@@ -18,16 +66,40 @@
     "total_analysis_notes": 0
   },
   {
-    "digest_date": "2026-04-14",
-    "total_claims": 3,
+    "digest_date": "2026-04-07",
+    "total_claims": 1,
     "total_candidates": 1,
-    "total_analysis_notes": 1
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-04-13",
+    "total_claims": 1,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-04-14",
+    "total_claims": 6,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-04-15",
+    "total_claims": 2,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-04-16",
+    "total_claims": 4,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
   },
   {
     "digest_date": "2026-04-18",
-    "total_claims": 54,
+    "total_claims": 66,
     "total_candidates": 14,
-    "total_analysis_notes": 7
+    "total_analysis_notes": 0
   },
   {
     "digest_date": "2026-04-19",
@@ -45,19 +117,19 @@
     "digest_date": "2026-04-21",
     "total_claims": 4,
     "total_candidates": 2,
-    "total_analysis_notes": 1
+    "total_analysis_notes": 0
   },
   {
     "digest_date": "2026-04-22",
     "total_claims": 4,
     "total_candidates": 2,
-    "total_analysis_notes": 1
+    "total_analysis_notes": 0
   },
   {
     "digest_date": "2026-04-23",
-    "total_claims": 65,
+    "total_claims": 61,
     "total_candidates": 13,
-    "total_analysis_notes": 8
+    "total_analysis_notes": 0
   },
   {
     "digest_date": "2026-04-24",

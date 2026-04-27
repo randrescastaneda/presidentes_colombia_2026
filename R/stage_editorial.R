@@ -37,12 +37,12 @@ build_candidate_profile_package <- function(artifact, candidates, report_date = 
     source_ids = artifact$source_ids %||% character(),
     claim_ids = artifact$claim_ids %||% character(),
     sections = list(
-      build_editorial_section("profile_overview", "Perfil general", "description", artifact$profile_overview %||% "Sin evidencia suficiente."),
-      build_editorial_section("political_philosophy", "Filosofía política", "inference", artifact$political_philosophy %||% "Sin evidencia suficiente."),
+      build_editorial_section("profile_overview", "Perfil general", "description", artifact$profile_overview %||% "Sin síntesis trazable publicada."),
+      build_editorial_section("political_philosophy", "Filosofía política", "inference", artifact$political_philosophy %||% "Sin señales programáticas trazables suficientes."),
       build_editorial_section("thematic_proposals", "Propuestas por áreas", "mixed", collapse_theme_summaries(artifact$thematic_analysis, "description")),
-      build_editorial_section("internal_coherence", "Coherencia interna", "evaluation", artifact$internal_coherence %||% "Sin evidencia suficiente."),
+      build_editorial_section("internal_coherence", "Coherencia interna", "evaluation", artifact$internal_coherence %||% "Sin señales trazables suficientes."),
       build_editorial_section("multidimensional_ideology", "Ubicación ideológica multidimensional", "inference", collapse_theme_summaries(artifact$ideology_axes, "rationale")),
-      build_editorial_section("mainstream_distance", "Distancia frente al mainstream", "evaluation", artifact$mainstream_distance %||% "Sin evidencia suficiente."),
+      build_editorial_section("mainstream_distance", "Distancia frente al mainstream", "evaluation", artifact$mainstream_distance %||% "Sin señales trazables suficientes."),
       build_editorial_section("strengths", "Fortalezas programáticas", "evaluation", paste(artifact$strengths %||% "Sin fortalezas identificables todavía.", collapse = " ")),
       build_editorial_section("weaknesses_and_uncertainties", "Debilidades e incertidumbres", "evaluation", paste(c(artifact$weaknesses, artifact$uncertainties) %||% "Sin detalle suficiente.", collapse = " "))
     )
@@ -121,7 +121,7 @@ build_daily_update_package <- function(claims, candidates, report_date = Sys.Dat
           "La revisión diaria debe leer estos cambios como actualización incremental, no como reescritura completa del programa."
         }
       ),
-      build_editorial_section("open_questions", "Preguntas abiertas", "evaluation", "La publicación diaria debe seguir marcando explícitamente qué temas siguen con evidencia insuficiente o baja especificidad.")
+      build_editorial_section("open_questions", "Preguntas abiertas", "evaluation", "La publicación diaria debe seguir marcando explícitamente qué temas tienen posición pública trazable, cuáles sólo permiten inferencias cautelosas y dónde falta detalle de implementación.")
     )
   )
 }
