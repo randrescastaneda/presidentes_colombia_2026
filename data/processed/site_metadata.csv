@@ -1,2 +1,2 @@
 updated_at,latest_event_date,public_claim_count,public_source_count,public_source_analysis_count,public_analysis_note_count,candidate_analysis_count,comparison_report_count,editorial_package_count,source_text_file_count,manual_source_registry_count,promoted_manual_source_count,pending_manual_source_count,program_document_count,primary_program_document_count,source_packet_count,extraction_result_count,pipeline_mode,validation_status
-2026-04-27 13:51:59 UTC,2026-04-24,223,84,84,0,14,1,17,9,205,33,123,6,6,84,91,structured_extraction_auto,pass
+2026-04-28 20:09:42 UTC,2026-04-24,227,86,86,0,14,1,17,9,205,35,124,6,6,86,91,structured_extraction_auto,pass

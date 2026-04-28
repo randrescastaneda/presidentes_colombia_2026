@@ -178,24 +178,24 @@ compact_public_claim_summary <- function(claim_row, source_row = tibble::tibble(
   source_title <- source_row$title[[1]] %||% ""
   if (
     !summary_looks_like_placeholder(current, source_title) &&
-      nchar(current) <= 320
+      nchar(current) <= 700
   ) {
     return(stringr::str_squish(current))
   }
 
   candidate <- extract_meaningful_sentence(claim_row$position_text[[1]] %||% "")
   if (!is.na(candidate) && candidate != "" && !summary_looks_like_placeholder(candidate, source_title)) {
-    return(stringr::str_trunc(candidate, 320))
+    return(stringr::str_trunc(candidate, 700))
   }
 
   quote <- extract_meaningful_sentence(source_row$quote_text[[1]] %||% "")
   if (!is.na(quote) && quote != "" && !summary_looks_like_placeholder(quote, source_title)) {
-    return(stringr::str_trunc(quote, 320))
+    return(stringr::str_trunc(quote, 700))
   }
 
   title_summary <- title_based_public_summary(source_title, candidate_name = candidate_name)
   if (!is.na(title_summary) && title_summary != "") {
-    return(stringr::str_trunc(title_summary, 320))
+    return(stringr::str_trunc(title_summary, 700))
   }
 
   "La fuente aporta información pública trazable sobre la candidatura."
@@ -250,7 +250,7 @@ source_policy_positions_text <- function(source_claims) {
   selected <- if (nrow(policy_claims) > 0) policy_claims else source_claims
   selected <- selected |>
     dplyr::distinct(.data$summary_text, .keep_all = TRUE) |>
-    dplyr::slice_head(n = 4)
+    dplyr::slice_head(n = 8)
 
   paste(selected$summary_text, collapse = " | ")
 }
@@ -296,7 +296,7 @@ build_source_analysis_notes <- function(claims, sources, taxonomy = tibble::tibb
     purrr::map_dfr(function(source_claims) {
       source_id <- source_claims$source_id[[1]]
       source_row <- sources |>
-        dplyr::filter(.data$source_id == source_id) |>
+        dplyr::filter(.data$source_id == .env$source_id) |>
         dplyr::slice_head(n = 1)
 
       if (nrow(source_row) == 0) {

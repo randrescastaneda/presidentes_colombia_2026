@@ -300,14 +300,14 @@
     "title": "Óscar Mauricio Lizcano Arango: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Óscar Mauricio Lizcano Arango.",
     "candidate_ids": "mauricio-lizcano",
-    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e"],
-    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2"],
+    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
+    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2", "src-manual-78dafdfc-claim-1", "src-manual-78dafdfc-claim-2"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Óscar Mauricio Lizcano Arango cuenta con 15 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. La mezcla observada de afirmaciones es dato_contextual=12, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Óscar Mauricio Lizcano Arango cuenta con 17 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. La mezcla observada de afirmaciones es dato_contextual=14, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
@@ -359,14 +359,14 @@
     "title": "Miguel Uribe Londoño: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Miguel Uribe Londoño.",
     "candidate_ids": "miguel-uribe",
-    "source_ids": ["src-20260418-miguel-profile", "src-manual-15c36428", "src-manual-40347029"],
-    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
+    "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
+    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-51298b3e-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Miguel Uribe Londoño cuenta con 7 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública. La mezcla observada de afirmaciones es dato_contextual=7, lo que permite una lectura programática todavía provisional pero ya comparable."
+        "body": "Miguel Uribe Londoño cuenta con 9 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Vida pública y trayectoria. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable."
       },
       {
         "section_id": "political_philosophy",
@@ -378,7 +378,7 @@
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "trayectoria-publica: En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Economista, abogado, periodista y docente; compite desde la centroderecha Candidato Presidencial 2026 | Colombia"
+        "body": "trayectoria-publica: En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Economista, abogado, periodista y docente; compite desde la centroderecha Candidato Presidencial 2026 | Colombia vida-publica: En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La fuente registra un hecho público asociado a Miguel Uribe Londoño: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño."
       },
       {
         "section_id": "internal_coherence",
@@ -402,7 +402,7 @@
         "section_id": "strengths",
         "heading": "Fortalezas programáticas",
         "content_type": "evaluation",
-        "body": "Hay mayor desarrollo relativo en temas como trayectoria-publica. No se observan contradicciones internas fuertes en la evidencia disponible."
+        "body": "Hay mayor desarrollo relativo en temas como trayectoria-publica, vida-publica. No se observan contradicciones internas fuertes en la evidencia disponible."
       },
       {
         "section_id": "weaknesses_and_uncertainties",

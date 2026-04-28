@@ -989,9 +989,9 @@
   {
     "analysis_id": "candidate-analysis-mauricio-lizcano-2026-04-24",
     "candidate_id": "mauricio-lizcano",
-    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e"],
-    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2"],
-    "profile_overview": "Óscar Mauricio Lizcano Arango cuenta con 15 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. La mezcla observada de afirmaciones es dato_contextual=12, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
+    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2", "src-manual-78dafdfc-claim-1", "src-manual-78dafdfc-claim-2"],
+    "profile_overview": "Óscar Mauricio Lizcano Arango cuenta con 17 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. La mezcla observada de afirmaciones es dato_contextual=14, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; tecnocracia_vs_populismo: Populismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1122,9 +1122,9 @@
   {
     "analysis_id": "candidate-analysis-miguel-uribe-2026-04-24",
     "candidate_id": "miguel-uribe",
-    "source_ids": ["src-20260418-miguel-profile", "src-manual-15c36428", "src-manual-40347029"],
-    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
-    "profile_overview": "Miguel Uribe Londoño cuenta con 7 afirmaciones trazables en 3 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública. La mezcla observada de afirmaciones es dato_contextual=7, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
+    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-51298b3e-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
+    "profile_overview": "Miguel Uribe Londoño cuenta con 9 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Vida pública y trayectoria. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1202,11 +1202,25 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+      },
+      {
+        "topic_id": "vida-publica",
+        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La fuente registra un hecho público asociado a Miguel Uribe Londoño: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como trayectoria-publica.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como trayectoria-publica, vida-publica.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
     "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
