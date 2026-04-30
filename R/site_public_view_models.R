@@ -794,6 +794,12 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
     )
   }
 
+  policy_dossier_source_ids <- if (is.null(policy_dossier)) {
+    character()
+  } else {
+    normalize_public_vector(policy_dossier$source_ids)
+  }
+
   list(
     candidate_id = candidate_id,
     candidate_slug = candidate_slug,
@@ -804,7 +810,7 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
     documented_sections = sections$documented_only,
     editorial_sections = if (is.null(policy_dossier)) list() else normalize_public_collection(policy_dossier$sections),
     source_library = sources |>
-      dplyr::filter(.data$candidate_id == .env$candidate_id) |>
+      dplyr::filter(.data$candidate_id == .env$candidate_id | .data$source_id %in% .env$policy_dossier_source_ids) |>
       dplyr::arrange(dplyr::desc(.data$published_at)),
     empty_state = nrow(policy_claims) == 0
   )

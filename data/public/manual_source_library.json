@@ -1204,6 +1204,20 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
+    "entry_id": "manual-40e48c71",
+    "candidate_id": null,
+    "source_name": "Facebook",
+    "source_tier": "social",
+    "source_type": "social-profile",
+    "url": "https://www.facebook.com/NoticiasCaracol/videos/colombia-decide-su-energ%c3%ada-debate-con-los-candidatos-presidenciales-en-noticias-/1676112483406944",
+    "title": "1676112483406944",
+    "published_at": null,
+    "status": "pending_classification",
+    "status_reason": "validated_by_http",
+    "candidate_confidence": 0,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
     "entry_id": "manual-75682018",
     "candidate_id": null,
     "source_name": "Consejo Nacional Electoral",
@@ -1533,20 +1547,6 @@
     "source_type": "webpage",
     "url": "https://www.elnuevosiglo.com.co/politica/las-propuestas-mas-osadas-de-los-candidatos-presidenciales",
     "title": "Las propuestas más osadas y audaces de los candidatos presidenciales | El Nuevo Siglo",
-    "published_at": null,
-    "status": "pending_classification",
-    "status_reason": "validated_by_http",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-40e48c71",
-    "candidate_id": null,
-    "source_name": "Facebook",
-    "source_tier": "social",
-    "source_type": "social-profile",
-    "url": "https://www.facebook.com/NoticiasCaracol/videos/colombia-decide-su-energ%c3%ada-debate-con-los-candidatos-presidenciales-en-noticias-/1676112483406944",
-    "title": "Los candidatos presidenciales se miden, frente a frente, en el debate de Noticias Caracol &#039;Colombia Decide su Energía&#039; para exponer sus propuestas en materia energética. Petróleo, minería, gas, energía y servicios públicos son los temas por los que lanzan propuestas los aspirantes a la Presidencia de Colombia. | Noticias Caracol",
     "published_at": null,
     "status": "pending_classification",
     "status_reason": "validated_by_http",
