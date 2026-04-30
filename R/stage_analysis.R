@@ -446,7 +446,7 @@ compose_profile_overview <- function(candidate_row, candidate_claims, candidate_
   if (nrow(candidate_claims) == 0) {
     return(paste0(
       candidate_name,
-      " todavía no cuenta con evidencia programática suficiente en el sistema; por ahora solo puede describirse como un caso de cobertura inicial o insuficiente."
+      " todavía no tiene una agenda programática suficientemente visible en las fuentes revisadas; por ahora la ficha debe leerse como cobertura inicial."
     ))
   }
 
@@ -464,29 +464,11 @@ compose_profile_overview <- function(candidate_row, candidate_claims, candidate_
     unique(candidate_claims$topic_id)
   }
 
-  claim_mix <- candidate_claims |>
-    dplyr::count(claim_type_id, sort = TRUE)
-
-  mix_text <- if (nrow(claim_mix) == 0) {
-    "sin una mezcla clasificable de afirmaciones"
-  } else {
-    paste(
-      paste0(claim_mix$claim_type_id, "=", claim_mix$n),
-      collapse = ", "
-    )
-  }
-
   paste0(
     candidate_name,
-    " cuenta con ",
-    nrow(candidate_claims),
-    " afirmaciones trazables en ",
-    nrow(candidate_sources),
-    " fuentes públicas. La evidencia disponible se concentra sobre todo en ",
+    " aparece públicamente con una agenda que gira principalmente alrededor de ",
     paste(topic_labels, collapse = ", "),
-    ". La mezcla observada de afirmaciones es ",
-    mix_text,
-    ", lo que permite una lectura programática todavía provisional pero ya comparable."
+    ". Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas."
   )
 }
 

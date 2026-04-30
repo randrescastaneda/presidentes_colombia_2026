@@ -365,6 +365,167 @@ claim_policy_sentence <- function(claim_row, candidate_name = NULL) {
   text
 }
 
+clean_policy_claim_text <- function(claim_row) {
+  value <- claim_row$position_text[[1]] %||% claim_row$summary_text[[1]] %||% ""
+  value <- normalize_sentence(value)
+
+  if (value == "" || grepl("fuente incorporada desde data|pdf oficial de propuestas hospedado", normalize_public_match_text(value), perl = TRUE)) {
+    value <- normalize_sentence(claim_row$summary_text[[1]] %||% "")
+  }
+
+  value <- gsub("^La fuente registra un hecho público asociado a [^:]+:\\s*", "", value, perl = TRUE)
+  value <- gsub("^(Infobae|EL PAÍS|El País|El Tiempo|Forbes|Caracol Radio|RTVC|Semana|Noticias RCN|Canal 1)\\s+(reporta|resume|registra)\\s+que\\s+", "", value, ignore.case = TRUE, perl = TRUE)
+  value <- gsub("^(Infobae|EL PAÍS|El País|El Tiempo|Forbes|Caracol Radio|RTVC|Semana|Noticias RCN|Canal 1)\\s+(reporta|resume|registra)\\s+", "", value, ignore.case = TRUE, perl = TRUE)
+  value <- stringr::str_squish(value)
+
+  if (value == "") {
+    return("La candidatura dejó una señal pública relevante sobre este tema")
+  }
+
+  sentence_case_text(value)
+}
+
+policy_claim_sentence_html <- function(claim_row, sources, source_numbers = NULL, external = FALSE) {
+  reference <- if (external) {
+    external_claim_reference_html(claim_row, sources, source_numbers)
+  } else {
+    claim_reference_html(claim_row, sources, source_numbers)
+  }
+
+  paste0(
+    escape_html(clean_policy_claim_text(claim_row)),
+    " ",
+    reference
+  )
+}
+
+policy_claims_narrative_html <- function(claim_rows, sources, source_numbers = NULL, limit = 7, external = FALSE) {
+  if (!is.data.frame(claim_rows) || nrow(claim_rows) == 0) {
+    return("")
+  }
+
+  selected <- claim_rows |>
+    dplyr::distinct(.data$summary_text, .data$position_text, .keep_all = TRUE) |>
+    dplyr::slice_head(n = limit)
+
+  sentences <- vapply(seq_len(nrow(selected)), function(index) {
+    paste0(policy_claim_sentence_html(selected[index, , drop = FALSE], sources, source_numbers, external = external), ".")
+  }, character(1))
+
+  paste(sentences, collapse = " ")
+}
+
+topic_candidate_lead_sentence <- function(topic_id, claim_rows, candidate_name) {
+  topic <- normalize_public_match_text(topic_id %||% "")
+  text <- normalize_public_match_text(paste(claim_rows$summary_text, claim_rows$position_text, claim_rows$mechanism_text, collapse = " "))
+
+  if (grepl("fiscal|economia|productividad|empleo|emprendimiento", topic, perl = TRUE)) {
+    if (grepl("recortar|40 %|impuesto|cuatro por mil|gasolina|inversion extranjera|hidrocarburo|mineria", text, perl = TRUE)) {
+      return(paste0("La apuesta económica de ", candidate_name, " apunta a un Estado más pequeño, menor carga tributaria y reactivación de sectores productivos intensivos en inversión."))
+    }
+    return(paste0("La propuesta económica de ", candidate_name, " combina crecimiento, manejo fiscal y promesas de activación productiva."))
+  }
+
+  if (grepl("salud", topic, perl = TRUE)) {
+    if (grepl("90 dias|10 billones|emergencia|choque", text, perl = TRUE)) {
+      return(paste0("En salud, ", candidate_name, " presenta la crisis del sistema como un problema que requiere un choque inmediato de financiación y gestión."))
+    }
+    return(paste0("En salud, ", candidate_name, " concentra su mensaje en corregir fallas de acceso, financiación o prestación del sistema."))
+  }
+
+  if (grepl("seguridad|defensa|justicia", topic, perl = TRUE)) {
+    if (grepl("megacarcel|carcel|drones|fumigacion|bombardeo|pie de fuerza|ordenes de captura", text, perl = TRUE)) {
+      return(paste0("En seguridad y justicia, ", candidate_name, " plantea una agenda de autoridad fuerte: más coerción estatal, expansión penitenciaria y uso intensivo de fuerza pública."))
+    }
+    return(paste0("En seguridad y justicia, ", candidate_name, " propone recuperar capacidad estatal frente al crimen y al desorden institucional."))
+  }
+
+  if (grepl("paz|relaciones-exteriores", topic, perl = TRUE)) {
+    if (grepl("jep|estados unidos|israel|bombardeo|fumigacion", text, perl = TRUE)) {
+      return(paste0("En paz y política internacional, ", candidate_name, " marca distancia con la arquitectura de justicia transicional y privilegia alianzas externas asociadas a seguridad dura."))
+    }
+    return(paste0("En paz y política internacional, ", candidate_name, " deja ver cómo conectaría seguridad, diplomacia y orden institucional."))
+  }
+
+  if (grepl("reforma|instituciones|anticorrupcion", topic, perl = TRUE)) {
+    return(paste0("En instituciones, ", candidate_name, " usa esta agenda para definir qué tipo de reglas políticas considera necesarias para gobernar y competir."))
+  }
+
+  if (grepl("ambiente|energia|transicion|agua|tierras|transporte|vivienda", topic, perl = TRUE)) {
+    return(paste0("En este frente territorial y productivo, ", candidate_name, " conecta infraestructura, recursos y capacidad estatal con promesas de desarrollo."))
+  }
+
+  paste0("En este tema, ", candidate_name, " deja una señal programática que permite leer prioridades de gobierno y tensiones de implementación.")
+}
+
+candidate_topic_essay_html <- function(section, claim_rows, candidate_name, sources, source_numbers) {
+  topic_label <- tolower(section$topic_label %||% section$topic_id %||% "este tema")
+  claim_text <- policy_claims_narrative_html(claim_rows, sources, source_numbers, limit = 8)
+  if (claim_text == "") {
+    claim_text <- "Todavía no hay una formulación suficientemente clara para describir esta agenda con precisión."
+  }
+
+  paste0(
+    '<div class="prose-card prose-card--policy">',
+    '<p class="narrative-paragraph">',
+    escape_html(topic_candidate_lead_sentence(section$topic_id, claim_rows, candidate_name)),
+    " En ",
+    escape_html(topic_label),
+    ", los instrumentos visibles son estos: ",
+    claim_text,
+    "</p>",
+    '<p class="narrative-paragraph">',
+    escape_html(topic_policy_reading(section$topic_id, claim_rows, candidate_name)),
+    " ",
+    escape_html(topic_implication_sentence(section$topic_id, claim_rows, candidate_name)),
+    "</p>",
+    '<p class="narrative-paragraph">La lectura política todavía debe tomarse con cautela. ',
+    escape_html(topic_uncertainty_sentence(claim_rows)),
+    " Esa cautela no elimina la señal programática: indica qué tendría que aclarar la campaña para que la promesa pueda evaluarse como política pública completa.</p>",
+    "</div>"
+  )
+}
+
+comparison_candidate_paragraph_html <- function(section, topic_id, sources, source_numbers) {
+  claim_rows <- section$claim_rows
+  candidate_name <- section$candidate_name %||% section$candidate_id
+
+  if (!is.data.frame(claim_rows) || nrow(claim_rows) == 0) {
+    return(paste0(
+      '<p class="narrative-paragraph"><strong>',
+      escape_html(candidate_name),
+      ".</strong> En las fuentes publicadas todavía no aparece una propuesta específica sobre este tema. Por ahora, cualquier comparación tendría que esperar una formulación más clara de la campaña.</p>"
+    ))
+  }
+
+  paste0(
+    '<p class="narrative-paragraph"><strong>',
+    escape_html(candidate_name),
+    ".</strong> ",
+    policy_claims_narrative_html(claim_rows, sources, source_numbers, limit = 6, external = TRUE),
+    " ",
+    escape_html(topic_policy_reading(topic_id, claim_rows, candidate_name)),
+    " ",
+    escape_html(topic_implication_sentence(topic_id, claim_rows, candidate_name)),
+    "</p>"
+  )
+}
+
+comparison_topic_essay_html <- function(topic, sources, source_numbers) {
+  candidate_paragraphs <- vapply(topic$candidate_sections, function(section) {
+    comparison_candidate_paragraph_html(section, topic$topic_id, sources, source_numbers)
+  }, character(1))
+
+  paste0(
+    '<div class="prose-card prose-card--comparison">',
+    '<p class="narrative-paragraph">',
+    escape_html(topic$summary %||% ""),
+    "</p>",
+    paste(candidate_paragraphs, collapse = ""),
+    "</div>"
+  )
+}
+
 topic_policy_reading <- function(topic_id, claim_rows, candidate_name) {
   text <- normalize_public_match_text(paste(claim_rows$summary_text, claim_rows$position_text, collapse = " "))
   topic <- topic_id %||% ""
@@ -417,7 +578,7 @@ topic_policy_reading <- function(topic_id, claim_rows, candidate_name) {
 
 topic_uncertainty_sentence <- function(claim_rows) {
   if (nrow(claim_rows) == 0) {
-    return("No hay señales públicas suficientes en este tema dentro del corpus actual.")
+    return("Todavía no hay una posición pública suficientemente clara sobre este tema.")
   }
 
   low_specificity <- mean(claim_rows$specificity_score %||% 0, na.rm = TRUE) < 1.25
@@ -487,110 +648,47 @@ source_note_reference_html <- function(source_id, sources, source_numbers = NULL
   paste0('<sup class="source-ref"><a href="', escape_html(href), '">', escape_html(label), "</a></sup>")
 }
 
-candidate_topic_overview_html <- function(section, claim_rows, candidate_name, sources, source_numbers) {
-  source_count <- length(claim_source_ids(claim_rows))
-  first_date <- suppressWarnings(min(as.Date(claim_rows$event_date), na.rm = TRUE))
-  last_date <- suppressWarnings(max(as.Date(claim_rows$event_date), na.rm = TRUE))
-  date_span <- if (!is.infinite(first_date) && !is.infinite(last_date) && !is.na(first_date) && !is.na(last_date)) {
-    paste0("entre ", format_public_date(first_date), " y ", format_public_date(last_date))
-  } else {
-    "en las fuentes disponibles"
+replace_editorial_source_tokens <- function(text, sources, source_numbers = NULL, external = FALSE) {
+  if (is.null(source_numbers)) {
+    source_numbers <- source_number_lookup(sources)
   }
 
-  paste0(
-    '<p class="narrative-paragraph"><strong>Lectura integrada.</strong> En ',
-    escape_html(tolower(section$topic_label)),
-    ", el corpus reúne ",
-    nrow(claim_rows),
-    " ",
-    ifelse(nrow(claim_rows) == 1, "afirmación trazable", "afirmaciones trazables"),
-    " de ",
-    escape_html(candidate_name),
-    " en ",
-    source_count,
-    " fuente",
-    ifelse(source_count == 1, "", "s"),
-    " ",
-    escape_html(date_span),
-    ". Leídas en conjunto, esas fuentes no sólo registran menciones aisladas: permiten reconstruir prioridades, instrumentos tentativos y vacíos de implementación para evaluar la orientación de política pública.</p>"
-  )
+  rendered <- escape_html(text %||% "")
+  matches <- gregexpr("\\{src:([^}]+)\\}", text %||% "", perl = TRUE)
+  tokens <- regmatches(text %||% "", matches)[[1]]
+  if (length(tokens) == 0 || identical(tokens, character(0)) || tokens[[1]] == "-1") {
+    return(rendered)
+  }
+
+  for (token in unique(tokens)) {
+    source_id <- gsub("^\\{src:|\\}$", "", token)
+    rendered <- gsub(
+      escape_html(token),
+      source_note_reference_html(source_id, sources, source_numbers, external = external),
+      rendered,
+      fixed = TRUE
+    )
+  }
+
+  rendered
 }
 
-candidate_topic_source_note_html <- function(section, source_analysis_notes, sources, source_numbers, claim_rows = NULL, limit = 8) {
-  if (!is.data.frame(source_analysis_notes) || nrow(source_analysis_notes) == 0) {
+editorial_markdown_body_html <- function(body, sources, source_numbers = NULL, external = FALSE) {
+  value <- body %||% ""
+  if (is.na(value) || value == "") {
     return("")
   }
 
-  section_source_ids <- if (is.data.frame(claim_rows) && nrow(claim_rows) > 0) claim_source_ids(claim_rows) else character()
-  matching <- vapply(seq_len(nrow(source_analysis_notes)), function(index) {
-    note_row <- source_analysis_notes[index, , drop = FALSE]
-    source_note_matches_topic(note_row, section$topic_id) || note_row$source_id[[1]] %in% section_source_ids
-  }, logical(1))
+  paragraphs <- unlist(strsplit(value, "\\n[[:space:]]*\\n", perl = TRUE), use.names = FALSE)
+  paragraphs <- paragraphs[stringr::str_squish(paragraphs) != ""]
 
-  notes <- source_analysis_notes[matching, , drop = FALSE] |>
-    dplyr::distinct(.data$source_id, .keep_all = TRUE) |>
-    dplyr::slice_head(n = limit)
-
-  if (nrow(notes) == 0) {
-    return("")
-  }
-
-  paragraphs <- vapply(seq_len(nrow(notes)), function(index) {
-    note <- notes[index, , drop = FALSE]
+  paste(vapply(paragraphs, function(paragraph) {
     paste0(
-      '<p class="narrative-paragraph"><strong>Fuente analizada.</strong> ',
-      escape_html(normalize_sentence(note$substantive_summary[[1]] %||% note$policy_positions[[1]] %||% "")),
-      " ",
-      source_note_reference_html(note$source_id[[1]], sources, source_numbers),
+      '<p class="narrative-paragraph">',
+      replace_editorial_source_tokens(stringr::str_squish(paragraph), sources, source_numbers, external = external),
       "</p>"
     )
-  }, character(1))
-
-  paste(paragraphs, collapse = "")
-}
-
-comparison_topic_overview_html <- function(topic) {
-  sections <- topic$candidate_sections %||% list()
-  documented <- purrr::keep(sections, \(section) is.data.frame(section$claim_rows) && nrow(section$claim_rows) > 0)
-  empty <- purrr::keep(sections, \(section) !is.data.frame(section$claim_rows) || nrow(section$claim_rows) == 0)
-  documented_names <- vapply(documented, \(section) section$candidate_name %||% section$candidate_id, character(1))
-  empty_names <- vapply(empty, \(section) section$candidate_name %||% section$candidate_id, character(1))
-  source_count <- length(unique(unlist(lapply(documented, \(section) claim_source_ids(section$claim_rows)))))
-  claim_count <- sum(vapply(documented, \(section) nrow(section$claim_rows), integer(1)))
-
-  documented_text <- if (length(documented_names) == 0) {
-    "ninguna candidatura de la watchlist"
-  } else {
-    paste(documented_names, collapse = ", ")
-  }
-  empty_text <- if (length(empty_names) == 0) {
-    "ninguna candidatura queda sin señal en este eje"
-  } else {
-    paste(empty_names, collapse = ", ")
-  }
-
-  paste0(
-    '<div class="prose-card prose-card--comparison">',
-    '<p class="narrative-paragraph"><strong>Mapa del debate.</strong> En ',
-    escape_html(tolower(topic$topic_label)),
-    ", el corpus público contiene ",
-    claim_count,
-    " ",
-    ifelse(claim_count == 1, "afirmación trazable", "afirmaciones trazables"),
-    " distribuida",
-    ifelse(claim_count == 1, "", "s"),
-    " en ",
-    source_count,
-    " fuente",
-    ifelse(source_count == 1, "", "s"),
-    ". La comparación sustantiva se apoya hoy en ",
-    escape_html(documented_text),
-    ". Queda con señal pendiente o más débil: ",
-    escape_html(empty_text),
-    ".</p>",
-    '<p class="narrative-paragraph"><strong>Cómo leer la diferencia.</strong> El contraste no se limita a contar menciones: compara prioridades, instrumentos, orientación de Estado, grado de coerción o redistribución, y nivel de detalle operativo. Cuando una candidatura tiene menos fuentes, se dice explícitamente para no presentar simetría artificial.</p>',
-    "</div>"
-  )
+  }, character(1)), collapse = "")
 }
 
 claim_paragraph_html <- function(claim_row, sources) {
@@ -668,9 +766,7 @@ emit_candidate_header <- function(candidate_meta, candidate_dossier) {
   ideology_label <- dossier_row$ideology_label[[1]] %||% "Señales programáticas pendientes"
   ideology_class <- ideology_family_class(ideology_label)
   last_event <- dossier_row$last_event_date[[1]] %||% NA
-  total_claims <- dossier_row$total_claims[[1]] %||% 0
-  total_sources <- dossier_row$total_sources[[1]] %||% 0
-  total_notes <- dossier_row$total_analysis_notes[[1]] %||% 0
+  top_topics <- dossier_row$top_topics[[1]] %||% "Agenda en construcción"
 
   cat(
     paste0(
@@ -705,9 +801,7 @@ emit_candidate_header <- function(candidate_meta, candidate_dossier) {
       "</div>",
       '<div class="profile-hero__aside">',
       '<span class="spectrum-chip spectrum-chip--', ideology_class, '">', escape_html(ideology_label), "</span>",
-      '<p class="profile-hero__meta"><strong>Hallazgos:</strong> ', total_claims, "</p>",
-      '<p class="profile-hero__meta"><strong>Fuentes:</strong> ', total_sources, "</p>",
-      '<p class="profile-hero__meta"><strong>Notas IA:</strong> ', total_notes, "</p>",
+      '<p class="profile-hero__meta"><strong>Énfasis visibles:</strong> ', escape_html(top_topics), "</p>",
       "</div>",
       "</div>"
     )
@@ -723,27 +817,16 @@ emit_candidate_ideology <- function(candidate_dossier) {
   dossier_row <- candidate_dossier[1, , drop = FALSE]
   ideology_label <- dossier_row$ideology_label[[1]] %||% "Señales programáticas pendientes"
   ideology_rationale <- dossier_row$ideology_rationale[[1]] %||% ""
-  signal_count <- dossier_row$ideology_signal_count[[1]] %||% 0
-  score_text <- if (!is.na(dossier_row$ideology_score[[1]] %||% NA)) {
-    format(round(dossier_row$ideology_score[[1]], 2), nsmall = 2)
-  } else {
-    "sin cálculo"
-  }
 
   cat(
     paste0(
       '<div class="prose-card">',
       '<p class="narrative-paragraph"><strong>Ubicación analítica provisional:</strong> ',
       escape_html(ideology_label),
-      '. Este indicador se calcula con reglas públicas sobre políticas ya mapeadas, ponderadas por trazabilidad de fuente y señal ideológica. ',
-      'Se apoyó en ',
-      signal_count,
-      ' señales programáticas y arrojó un puntaje agregado de ',
-      escape_html(score_text),
-      ".</p>",
+      '. La etiqueta resume la orientación que sugieren sus propuestas públicas, no una autodefinición oficial ni una calificación cerrada.</p>',
       '<p class="narrative-paragraph">',
       escape_html(ideology_rationale),
-      ' Este índice no reemplaza la lectura directa del programa, pero sí da una orientación rápida sobre hacia dónde empujan sus propuestas concretas.</p>',
+      ' La lectura debe contrastarse con las secciones temáticas, donde se ve con más claridad qué instrumentos concretos empujan esa orientación.</p>',
       "</div>"
     )
   )
@@ -824,6 +907,26 @@ emit_candidate_policy_sections <- function(candidate_policy, candidate_sources =
 
   sources <- candidate_policy$source_library %||% tibble::tibble()
   source_numbers <- source_number_lookup(sources)
+
+  editorial_sections <- normalize_public_collection(candidate_policy$editorial_sections %||% list())
+  if (length(editorial_sections) > 0) {
+    rendered_sections <- vapply(editorial_sections, function(section) {
+      paste0(
+        '<section class="topic-section topic-section--narrative" data-topic-id="',
+        escape_html(section$section_id %||% ""),
+        '" data-topic-state="editorial_dossier">',
+        '<h3>', escape_html(section$heading %||% section$section_id %||% "Tema"), '</h3>',
+        '<div class="prose-card prose-card--policy">',
+        editorial_markdown_body_html(section$body %||% "", sources, source_numbers),
+        "</div>",
+        "</section>"
+      )
+    }, character(1))
+
+    cat(paste(rendered_sections, collapse = "\n"))
+    return(invisible(NULL))
+  }
+
   all_sections <- c(
     candidate_policy$comparable_sections %||% list(),
     candidate_policy$documented_sections %||% list()
@@ -839,28 +942,6 @@ emit_candidate_policy_sections <- function(candidate_policy, candidate_sources =
       dplyr::arrange(dplyr::desc(.data$claim_type == "policy_proposal"), dplyr::desc(.data$specificity_score), dplyr::desc(.data$event_date)) |>
       dplyr::distinct(.data$summary_text, .keep_all = TRUE)
 
-    displayed_claims <- claim_rows |>
-      dplyr::slice_head(n = 12)
-
-    claim_paragraphs <- paste(vapply(seq_len(nrow(displayed_claims)), function(index) {
-        paste0(
-          '<p class="narrative-paragraph">',
-          escape_html(claim_policy_sentence(displayed_claims[index, , drop = FALSE], candidate_policy$candidate_name)),
-          " ",
-          claim_reference_html(displayed_claims[index, , drop = FALSE], sources, source_numbers),
-          "</p>"
-        )
-      }, character(1)), collapse = "")
-
-    source_note_paragraphs <- candidate_topic_source_note_html(
-      section = section,
-      source_analysis_notes = source_analysis_notes,
-      sources = sources,
-      source_numbers = source_numbers,
-      claim_rows = claim_rows,
-      limit = 8
-    )
-
     paste0(
       '<section class="topic-section topic-section--narrative" data-topic-id="', escape_html(section$topic_id), '" data-topic-state="', escape_html(section$state), '">',
       '<h3>', escape_html(section$topic_label), '</h3>',
@@ -869,21 +950,7 @@ emit_candidate_policy_sections <- function(candidate_policy, candidate_sources =
       } else {
         ""
       },
-      '<div class="prose-card prose-card--policy">',
-      candidate_topic_overview_html(section, claim_rows, candidate_policy$candidate_name, sources, source_numbers),
-      '<p class="narrative-paragraph"><strong>Qué está proponiendo.</strong> Estas son las señales sustantivas que aparecen en las fuentes revisadas, ordenadas por especificidad y fecha.</p>',
-      claim_paragraphs,
-      source_note_paragraphs,
-      '<p class="narrative-paragraph"><strong>Lectura política.</strong> ',
-      escape_html(topic_policy_reading(section$topic_id, claim_rows, candidate_policy$candidate_name)),
-      "</p>",
-      '<p class="narrative-paragraph"><strong>Implicaciones de política pública.</strong> ',
-      escape_html(topic_implication_sentence(section$topic_id, claim_rows, candidate_policy$candidate_name)),
-      "</p>",
-      '<p class="narrative-paragraph"><strong>Cautela analítica.</strong> ',
-      escape_html(topic_uncertainty_sentence(claim_rows)),
-      "</p>",
-      "</div>",
+      candidate_topic_essay_html(section, claim_rows, candidate_policy$candidate_name, sources, source_numbers),
       "</section>"
     )
   }, character(1))
@@ -1079,46 +1146,6 @@ emit_comparison_sections <- function(comparison_model, candidates = NULL, taxono
     rendered_topics <- vapply(comparison_model$topics, function(topic) {
       sources <- comparison_model$sources %||% tibble::tibble()
       source_numbers <- source_number_lookup(sources)
-      candidate_blocks <- vapply(topic$candidate_sections, function(section) {
-        claim_rows <- section$claim_rows
-        if (!is.data.frame(claim_rows) || nrow(claim_rows) == 0) {
-          return(paste0(
-            '<article class="comparison-narrative-card comparison-narrative-card--empty">',
-            '<h3>', escape_html(section$candidate_name), '</h3>',
-            '<p class="narrative-paragraph">En el corpus publicado no aparece todavía una propuesta específica de esta candidatura sobre este tema. La comparación no rellena ese vacío con inferencias externas.</p>',
-            '</article>'
-          ))
-        }
-
-        selected <- claim_rows |>
-          dplyr::slice_head(n = 8)
-        claim_paragraphs <- paste(vapply(seq_len(nrow(selected)), function(index) {
-          paste0(
-            '<p class="narrative-paragraph">',
-            escape_html(claim_policy_sentence(selected[index, , drop = FALSE], section$candidate_name)),
-            " ",
-            external_claim_reference_html(selected[index, , drop = FALSE], sources, source_numbers),
-            "</p>"
-          )
-        }, character(1)), collapse = "")
-
-        paste0(
-          '<article class="comparison-narrative-card">',
-          '<h3><a href="', escape_html(section$href), '">', escape_html(section$candidate_name), '</a></h3>',
-          '<p class="comparison-card__meta">Posiciones trazables en este eje: ', nrow(claim_rows), ' en ', length(claim_source_ids(claim_rows)), ' fuente', ifelse(length(claim_source_ids(claim_rows)) == 1, "", "s"), '.</p>',
-          '<p class="narrative-paragraph"><strong>Resumen interpretativo.</strong> ',
-          escape_html(topic_policy_reading(topic$topic_id, claim_rows, section$candidate_name)),
-          "</p>",
-          claim_paragraphs,
-          '<p class="narrative-paragraph"><strong>Implicación comparativa.</strong> ',
-          escape_html(topic_implication_sentence(topic$topic_id, claim_rows, section$candidate_name)),
-          "</p>",
-          '<p class="narrative-paragraph"><strong>Punto débil de la evidencia.</strong> ',
-          escape_html(topic_uncertainty_sentence(claim_rows)),
-          "</p>",
-          '</article>'
-        )
-      }, character(1))
 
       paste0(
         '<section class="topic-section" data-topic-id="', escape_html(topic$topic_id), '">',
@@ -1128,9 +1155,15 @@ emit_comparison_sections <- function(comparison_model, candidates = NULL, taxono
         } else {
           ""
         },
-        '<p class="narrative-paragraph">', escape_html(topic$summary), "</p>",
-        comparison_topic_overview_html(topic),
-        '<div class="comparison-narrative-grid">', paste(candidate_blocks, collapse = ""), "</div>",
+        if (!is.null(topic$body) && (topic$body %||% "") != "") {
+          paste0(
+            '<div class="prose-card prose-card--comparison">',
+            editorial_markdown_body_html(topic$body, sources, source_numbers, external = TRUE),
+            "</div>"
+          )
+        } else {
+          comparison_topic_essay_html(topic, sources, source_numbers)
+        },
         "</section>"
       )
     }, character(1))

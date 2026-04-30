@@ -270,6 +270,10 @@ run_pipeline <- function(project_dir = ".") {
   )
   write_comparison_report(comparison_report, project_dir = project_dir, report_date = report_date)
   comparison_report_summary <- comparison_report_summary_tibble(comparison_report)
+  candidate_policy_dossiers <- load_candidate_policy_dossiers(project_dir)
+  comparison_essays <- load_comparison_essays(project_dir)
+  candidate_policy_dossiers_index <- candidate_policy_dossiers_tibble(candidate_policy_dossiers)
+  comparison_essays_index <- comparison_essays_tibble(comparison_essays)
   editorial_packages <- build_editorial_packages(
     candidate_analysis = candidate_analysis,
     comparison_report = comparison_report,
@@ -334,6 +338,8 @@ run_pipeline <- function(project_dir = ".") {
     candidate_analysis_count = length(candidate_analysis),
     comparison_report_count = if (is.null(comparison_report)) 0 else 1,
     editorial_package_count = length(editorial_packages),
+    candidate_policy_dossier_count = length(candidate_policy_dossiers),
+    comparison_essay_count = length(comparison_essays),
     source_text_file_count = nrow(source_text_files),
     manual_source_registry_count = nrow(manual_source_registry),
     promoted_manual_source_count = nrow(promoted_manual_sources),
@@ -371,6 +377,8 @@ run_pipeline <- function(project_dir = ".") {
   write_output_csv(dossiers, file.path(processed_dir, "candidate_dossiers.csv"))
   write_output_csv(daily_digest, file.path(processed_dir, "daily_digest.csv"))
   write_output_csv(editorial_package_index, file.path(processed_dir, "editorial_package_index.csv"))
+  write_output_csv(candidate_policy_dossiers_index, file.path(processed_dir, "candidate_policy_dossiers.csv"))
+  write_output_csv(comparison_essays_index, file.path(processed_dir, "comparison_essays.csv"))
   write_output_csv(site_metadata, file.path(processed_dir, "site_metadata.csv"))
   write_output_csv(validation_status, file.path(processed_dir, "validation_status.csv"))
   write_output_csv(ideology_rules, file.path(processed_dir, "ideology_rules.csv"))
@@ -392,6 +400,8 @@ run_pipeline <- function(project_dir = ".") {
     write_output_json(daily_digest, file.path(public_dir, "daily_digest.json"))
     write_output_json(editorial_packages, file.path(public_dir, "editorial_packages.json"))
     write_output_json(editorial_package_index, file.path(public_dir, "editorial_package_index.json"))
+    write_output_json(unname(candidate_policy_dossiers), file.path(public_dir, "candidate_policy_dossiers.json"))
+    write_output_json(unname(comparison_essays), file.path(public_dir, "comparison_essays.json"))
     write_output_json(site_metadata, file.path(public_dir, "site_metadata.json"))
     write_output_json(ideology_rules, file.path(public_dir, "ideology_rules.json"))
   }
@@ -417,6 +427,8 @@ run_pipeline <- function(project_dir = ".") {
     comparison_report_summary = comparison_report_summary,
     editorial_packages = editorial_packages,
     editorial_package_index = editorial_package_index,
+    candidate_policy_dossiers = candidate_policy_dossiers,
+    comparison_essays = comparison_essays,
     dossiers = dossiers,
     daily_digest = daily_digest,
     site_metadata = site_metadata,

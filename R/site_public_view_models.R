@@ -94,6 +94,29 @@ read_editorial_packages_public <- function(project_dir = ".") {
   )
 }
 
+read_candidate_policy_dossiers_public <- function(project_dir = ".") {
+  dossiers <- read_public_json("candidate_policy_dossiers.json", project_dir = project_dir)
+
+  normalize_public_collection(dossiers)
+}
+
+read_comparison_essays_public <- function(project_dir = ".") {
+  essays <- read_public_json("comparison_essays.json", project_dir = project_dir)
+
+  normalize_public_collection(essays)
+}
+
+find_candidate_policy_dossier_public <- function(candidate_id, project_dir = ".") {
+  dossiers <- read_candidate_policy_dossiers_public(project_dir = project_dir)
+  matches <- purrr::keep(dossiers, \(dossier) identical(normalize_public_scalar(dossier$candidate_id, default = ""), candidate_id))
+
+  if (length(matches) == 0) {
+    return(NULL)
+  }
+
+  matches[[1]]
+}
+
 find_public_artifact <- function(artifacts, artifact_type) {
   matches <- purrr::keep(artifacts, \(artifact) identical(artifact$artifact_type %||% NA_character_, artifact_type))
 
@@ -390,7 +413,16 @@ build_public_key_comparison_note <- function(raw_note, comparison_blocks, daily_
   "Todavía no hay suficiente base comparativa para una lectura editorial fuerte."
 }
 
-homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = tibble::tibble()) {
+homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = tibble::tibble(), policy_dossier = NULL) {
+  if (!is.null(policy_dossier)) {
+    sections <- normalize_public_collection(policy_dossier$sections)
+    first_policy <- purrr::detect(sections, \(section) normalize_public_scalar(section$section_id, default = "") != "trayectoria-contexto")
+    body <- normalize_public_scalar(first_policy$body, default = "")
+    if (body != "") {
+      return(stringr::str_trunc(gsub("\\{src:[^}]+\\}", "", body), 320))
+    }
+  }
+
   if (!is.data.frame(claims) || nrow(claims) == 0) {
     return("Ficha en construcción con fuentes trazables.")
   }
@@ -415,15 +447,15 @@ homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = t
   lead <- candidate_claims$summary_text[[1]]
 
   paste0(
-    "La evidencia programática se concentra en ",
+    "Su agenda pública se mueve sobre todo alrededor de ",
     paste(topics, collapse = ", "),
-    ". Señal principal: ",
+    ". La señal más visible por ahora es esta: ",
     lead,
     "."
   )
 }
 
-build_homepage_roster <- function(candidates, claims = tibble::tibble(), taxonomy_lookup = tibble::tibble()) {
+build_homepage_roster <- function(candidates, claims = tibble::tibble(), taxonomy_lookup = tibble::tibble(), policy_dossiers = list()) {
   if (nrow(candidates) == 0) {
     return(list())
   }
@@ -452,7 +484,12 @@ build_homepage_roster <- function(candidates, claims = tibble::tibble(), taxonom
       photo_alt = row$photo_alt[[1]] %||% row$president_name[[1]] %||% row$candidate_id[[1]],
       photo_credit = row$photo_credit[[1]] %||% "",
       photo_source_url = row$photo_source_url[[1]] %||% "",
-      policy_summary = homepage_candidate_summary(row$candidate_id[[1]], claims, taxonomy_lookup)
+      policy_summary = homepage_candidate_summary(
+        row$candidate_id[[1]],
+        claims,
+        taxonomy_lookup,
+        policy_dossier = policy_dossiers[[row$candidate_id[[1]]]]
+      )
     )
   })
 }
@@ -470,6 +507,8 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
   homepage_brief <- find_public_artifact(editorial_packages, "homepage_brief")
   daily_update <- find_public_artifact(editorial_packages, "daily_update")
   comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
+  policy_dossiers <- read_candidate_policy_dossiers_public(project_dir = project_dir)
+  policy_dossiers_by_candidate <- stats::setNames(policy_dossiers, purrr::map_chr(policy_dossiers, \(dossier) normalize_public_scalar(dossier$candidate_id, default = "")))
   validation_report <- read_public_json("validation_report.json", project_dir = project_dir)
   validation_status <- read_processed_table("validation_status.csv", project_dir = project_dir)
   claims <- read_public_table("claim_records.json", project_dir = project_dir)
@@ -508,7 +547,7 @@ build_homepage_view_model <- function(project_dir = ".", comparison_limit = 3) {
     caveats = caveats,
     methodology_badge = validation_badge_view_model(validation_report, validation_status),
     comparison_blocks = comparison_blocks,
-    roster = build_homepage_roster(candidates, claims = claims, taxonomy_lookup = taxonomy_lookup),
+    roster = build_homepage_roster(candidates, claims = claims, taxonomy_lookup = taxonomy_lookup, policy_dossiers = policy_dossiers_by_candidate),
     empty_state = if (length(comparison_blocks) == 0) {
       "Todavía no hay suficientes diferencias comparables para destacar en portada."
     } else {
@@ -711,6 +750,7 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
   sources <- read_public_table("source_records.json", project_dir = project_dir)
   taxonomy <- read_taxonomy_public(project_dir = project_dir)
   comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
+  policy_dossier <- find_candidate_policy_dossier_public(candidate_id, project_dir = project_dir)
 
   taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
   candidate_row <- candidates |>
@@ -762,6 +802,7 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
     topic_focus = if (is.null(topic_focus)) NULL else c(topic_focus, list(state = focus_state, state_label = candidate_topic_state_label(focus_state))),
     comparable_sections = sections$comparable,
     documented_sections = sections$documented_only,
+    editorial_sections = if (is.null(policy_dossier)) list() else normalize_public_collection(policy_dossier$sections),
     source_library = sources |>
       dplyr::filter(.data$candidate_id == .env$candidate_id) |>
       dplyr::arrange(dplyr::desc(.data$published_at)),
@@ -774,6 +815,7 @@ build_comparison_view_model <- function(project_dir = ".") {
   taxonomy <- read_taxonomy_public(project_dir = project_dir)
   claims <- read_public_table("claim_records.json", project_dir = project_dir)
   sources <- read_public_table("source_records.json", project_dir = project_dir)
+  comparison_essays <- read_comparison_essays_public(project_dir = project_dir)
 
   watchlist_candidates <- candidates |>
     dplyr::filter(.data$watchlist_active %in% TRUE) |>
@@ -789,6 +831,27 @@ build_comparison_view_model <- function(project_dir = ".") {
 
   taxonomy_lookup <- taxonomy_root_lookup_public(taxonomy)
   candidate_lookup <- candidate_lookup_public(watchlist_candidates)
+
+  if (length(comparison_essays) > 0) {
+    topics <- lapply(comparison_essays, function(essay) {
+      topic_id <- normalize_public_scalar(essay$topic_id, default = "tema")
+      topic_request <- normalize_topic_request(topic_id, taxonomy_lookup = taxonomy_lookup)
+      list(
+        topic_id = topic_id,
+        topic_label = normalize_public_scalar(essay$title, default = topic_request$label %||% public_topic_label(topic_id)),
+        topic_description = "",
+        body = normalize_public_scalar(essay$body, default = ""),
+        source_ids = normalize_public_vector(essay$source_ids),
+        candidate_sections = list()
+      )
+    })
+
+    return(list(
+      topics = topics,
+      sources = sources,
+      empty_state = NULL
+    ))
+  }
 
   comparison_claims <- claims |>
     dplyr::filter(.data$candidate_id %in% watchlist_candidates$candidate_id) |>
@@ -847,14 +910,14 @@ build_comparison_view_model <- function(project_dir = ".") {
     candidates_with_claims <- stats::na.omit(candidates_with_claims)
 
     summary <- if (length(candidates_with_claims) == 0) {
-      paste0("En ", label, ", la watchlist todavía no tiene propuestas trazables dentro del corpus publicado.")
+      paste0("En ", label, ", todavía falta una propuesta pública suficientemente clara en la watchlist para comparar posiciones de fondo.")
     } else {
       paste0(
         "En ",
         label,
-        ", el contraste público se concentra en ",
+        ", la diferencia política aparece en cómo ",
         paste(candidates_with_claims, collapse = ", "),
-        ". La comparación lee las propuestas como posiciones de política, no como simples estados de fuente."
+        " definen prioridades, instrumentos y límites de acción estatal."
       )
     }
 

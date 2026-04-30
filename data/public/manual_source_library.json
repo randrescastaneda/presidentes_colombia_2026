@@ -224,20 +224,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-3f7a8a93",
-    "candidate_id": null,
-    "source_name": "Elpais Com",
-    "source_tier": "established-media",
-    "source_type": "article",
-    "url": "https://elpais.com/america-colombia/2026-04-18/valencia-fajardo-lopez-y-roy-coinciden-en-reactivar-el-sector-minero-energetico.html",
-    "title": "Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
-    "published_at": "2026-04-18",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http",
-    "candidate_confidence": 0.4,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-5ec43518",
     "candidate_id": null,
     "source_name": "Bluradio Com",
@@ -286,7 +272,7 @@
     "source_tier": "established-media",
     "source_type": "article",
     "url": "https://www.las2orillas.co/estos-son-los-9-candidatos-que-junto-a-cepeda-y-de-la-espriella-estaran-en-la-pelea-por-la-presidencia-de-colombia/",
-    "title": "Estos son los 14 candidatos que junto a Cepeda y De la - Las2orillas.co",
+    "title": "Estos son los 14 candidatos que junto a Cepeda y De la Espriella estarán en la pelea por la Presidencia de Colombia",
     "published_at": "2026-03-09",
     "status": "pending_classification",
     "status_reason": "validated_by_http",
@@ -413,7 +399,7 @@
     "source_type": "webpage",
     "url": "https://www.pares.com.co/elecciones-colombia-2026/",
     "title": "Elecciones Colombia 2026 - Pares",
-    "published_at": "2026-04-28",
+    "published_at": "2026-04-29",
     "status": "pending_classification",
     "status_reason": "validated_by_http",
     "candidate_confidence": 0,

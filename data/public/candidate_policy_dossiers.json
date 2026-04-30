@@ -1,0 +1,368 @@
+[
+  {
+    "candidate_id": "abelardo-de-la-espriella",
+    "path": "./data/analysis/candidate_policy_dossiers/abelardo-de-la-espriella.md",
+    "source_ids": ["src-20260418-abelardo-infobae", "src-20260420-abelardo-program-pdf", "src-20260424-abelardo-colpensiones-elpais", "src-20260422-abelardo-infobae", "src-20260418-abelardo-profile"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "La propuesta económica de Abelardo de la Espriella parte de una tesis de ruptura: el Estado sería demasiado grande, costoso y capturado, y por eso habría que reducirlo para liberar inversión, aliviar impuestos y recuperar crecimiento. En entrevista habló de recortar hasta 40% del Estado mediante eliminación de cargos y contratos que considera sobrantes, y vinculó esa poda con la reducción de cargas como el 4x1000 y gravámenes a la gasolina.{src:src-20260418-abelardo-infobae} Su programa oficial modera la cifra en una ruta de ajuste hasta una cuarta parte del aparato estatal, con superávit fiscal primario, fortalecimiento del comité de regla fiscal, reducción de trámites, revisión de entidades como Invima, ICA, superintendencias, notariado, licencias ambientales y DIAN, y una regla de desregulación de \"una entra y dos salen\".{src:src-20260420-abelardo-program-pdf}\n\nEsa arquitectura revela una visión de mercado en la que el Estado debe concentrarse en seguridad, justicia, infraestructura básica y reglas, no en administrar sectores ni expandir nóminas. La promesa de crecer por encima de 5% o 7% descansa en hidrocarburos, minería, altillanura, turismo, energías renovables, industria 4.0, inversión extranjera y seguridad jurídica.{src:src-20260418-abelardo-infobae}{src:src-20260420-abelardo-program-pdf} La implicación es fuerte: recortar nómina paralela, fusionar agencias y bajar impuestos puede mejorar expectativas empresariales si hay ejecución real, pero también puede reducir capacidades públicas si el ajuste no distingue duplicidad, clientelismo y funciones críticas. Falta aclarar qué entidades, contratos y programas desaparecerían, cómo se protegerían salud, educación y seguridad durante el ajuste, y qué ingresos reemplazarían los impuestos eliminados.",
+        "source_ids": ["src-20260418-abelardo-infobae", "src-20260420-abelardo-program-pdf"]
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "En salud, de la Espriella presenta la crisis como una emergencia de gestión y financiación, no como una invitación a desmontar todo el sistema. En la entrevista recogida por Infobae prometió un plan de emergencia de 90 días con 10 billones de pesos para estabilizar el sistema.{src:src-20260418-abelardo-infobae} Su programa oficial desarrolla esa idea como un plan de choque: revisar ajustes a la UPC, restablecer flujo de recursos, recuperar medicamentos y tratamientos, proteger pacientes crónicos, fortalecer atención primaria, imponer revisiones trimestrales a EPS, retomar presupuestos máximos, controlar precios de tecnologías y medicamentos, y limitar costos administrativos de EPS.{src:src-20260420-abelardo-program-pdf}\n\nLa propuesta intenta corregir tres problemas concretos: iliquidez, demoras en medicamentos y tratamientos, y pérdida de control sobre recursos. El instrumento central no es una reforma estructural del aseguramiento sino una intervención presidencial de corto plazo con caja, auditoría y disciplina administrativa.{src:src-20260420-abelardo-program-pdf} La implicación es que su gobierno buscaría salvar lo que considera funcional del modelo mientras castiga o corrige ineficiencias; eso lo diferencia de candidatos que proponen un rediseño más gradual del sistema o un sistema integrado de salud y cuidado. Lo pendiente es crucial: de dónde salen los 10 billones, qué se paga primero, cómo se evitaría que el choque sea sólo liquidez temporal, y qué pasaría con EPS intervenidas, ADRES y hospitales después de los primeros 90 días.",
+        "source_ids": ["src-20260418-abelardo-infobae", "src-20260420-abelardo-program-pdf"]
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "La agenda educativa de de la Espriella está subordinada a productividad, tecnología y movilidad social. Su programa propone ciclos cortos en inteligencia artificial, computación cuántica, robótica, bilingüismo, servicios y economía del cuidado; también plantea evaluación docente, créditos blandos, programa de méritos, educación terciaria, educación tecnológica y virtual, Universidad Virtual en Casa, conectividad y computadores gratuitos.{src:src-20260420-abelardo-program-pdf} El problema que dice resolver es una trayectoria rota: baja cobertura temprana, deserción, poca transición a educación superior y bajo desempeño en lectura y matemáticas.{src:src-20260420-abelardo-program-pdf}\n\nLa visión de Estado es menos universalista que habilitadora: el Estado financiaría acceso, conectividad e incentivos, pero el contenido de la reforma mira hacia empleabilidad, mérito y adaptación productiva. Frente a Claudia López y Sergio Fajardo, que convierten educación en centro de movilidad social y pacto territorial, de la Espriella la usa como parte de un proyecto de competitividad y disciplina estatal. Falta precisar financiación, relación con universidades públicas, rol del SENA, formación docente y cómo se evitaría que la educación virtual amplíe brechas rurales si conectividad, acompañamiento y calidad no llegan al mismo tiempo.",
+        "source_ids": "src-20260420-abelardo-program-pdf"
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "Esta es la zona más definida de su candidatura. De la Espriella propone recuperar control territorial, aumentar pie de fuerza, renovar alianzas con Estados Unidos e Israel, usar drones, fumigación y bombardeos contra economías ilícitas, construir diez megacárceles privadas en zonas apartadas y cambiar el esquema penitenciario.{src:src-20260418-abelardo-infobae} Su programa oficial endurece esa línea: destruir 330.000 hectáreas de coca con fumigación aérea, erradicación manual, persecución de capitales, extinción de dominio exprés, sustitución y extradición; desmontar milicias, respaldar a la Fuerza Pública, recuperar cárceles, fortalecer inteligencia y crear un Bloque de Búsqueda contra la Extorsión con veteranos y reservistas.{src:src-20260420-abelardo-program-pdf}\n\nLa visión es punitiva y de autoridad fuerte: el crimen aparece como enemigo de libertad y paz, y el Estado se legitima por monopolizar armas, territorio, cárceles e inteligencia.{src:src-20260420-abelardo-program-pdf} A diferencia de Fajardo, que habla de autoridad democrática con prevención y justicia, o Murillo, que combina sometimiento con tecnología y oportunidades, de la Espriella privilegia coerción, sanción y disuasión rápida. La implicación es alta en costos, derechos y capacidad: megacárceles, bombardeos, fumigación y expansión de fuerza requieren presupuesto, controles operacionales, coordinación judicial y manejo de daños colaterales. Falta aclarar régimen contractual de cárceles privadas, estándares de derechos humanos, control civil de inteligencia y cómo se judicializaría masivamente sin colapsar Fiscalía y jueces.",
+        "source_ids": ["src-20260418-abelardo-infobae", "src-20260420-abelardo-program-pdf"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Su política de paz parte de una negación frontal de la \"Paz Total\": el programa la califica como traición y afirma que con criminales no habrá negociación.{src:src-20260420-abelardo-program-pdf} En entrevista prometió eliminar la JEP por considerarla costosa e ineficaz, y en seguridad propuso reforzar alianzas con Estados Unidos e Israel para capacidades militares, tecnológicas y de inteligencia.{src:src-20260418-abelardo-infobae} También plantea extradición, destrucción de economías ilegales y persecución financiera como parte de la arquitectura antidrogas.{src:src-20260420-abelardo-program-pdf}\n\nLa diferencia con Iván Cepeda es máxima: donde Cepeda defiende profundizar la paz total y la justicia transicional, de la Espriella quiere cerrar esa puerta y reemplazarla por sometimiento, cárcel y cooperación internacional dura. También se separa de Murillo y Fajardo, que aceptan mecanismos de sometimiento o diálogo bajo condiciones. La implicación sería una reorientación del Estado desde negociación política hacia autoridad penal y militar. Falta aclarar si la eliminación de la JEP es constitucionalmente viable, qué ocurriría con compromisos del Acuerdo Final, víctimas, comparecientes y sanciones propias, y cómo distinguiría grupos con agenda política, crimen organizado y economías ilícitas.",
+        "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260418-abelardo-infobae"]
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "En ambiente y energía, de la Espriella subordina la transición al crecimiento, la seguridad energética y la autosuficiencia. Su programa promete recuperar exploración y producción de petróleo y gas, tratar el gas como asunto estratégico, acelerar campos descubiertos y costa afuera, evaluar yacimientos no convencionales, transformar el sistema eléctrico de la Costa Caribe, defender Ecopetrol, respaldar minería legal de oro, cobre, plata y tierras raras, y separar formalización minera de persecución a minería criminal.{src:src-20260420-abelardo-program-pdf} También conecta altillanura, agroindustria, energías renovables, nuevas energías, energía nuclear y licenciamientos exprés con crecimiento.{src:src-20260420-abelardo-program-pdf}\n\nEl problema que identifica no es el extractivismo sino la inseguridad jurídica, la caída de inversión y la pérdida de autosuficiencia. La visión de Estado es facilitadora: permisos más rápidos, criterio técnico, inversión formal y uso de recursos naturales para estabilidad fiscal. Esto contrasta con Murillo, que hace de ambiente y biodiversidad una identidad de desarrollo, y con Cepeda, que habla de transición concertada. La implicación es que el país podría priorizar reservas, tarifas y recaudo sobre restricciones ambientales. Falta aclarar cómo operarían consultas a comunidades, licencias exprés y minería estratégica sin debilitar participación, biodiversidad y control territorial.",
+        "source_ids": "src-20260420-abelardo-program-pdf"
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "La agenda social más concreta del programa aparece en mujeres, cuidado, maternidad y campo. De la Espriella propone enfrentar la violencia contra la mujer como problema de orden público, rutas judiciales aceleradas en máximo 72 horas, atención psicológica y jurídica 24/7, metas de reducción de violencia y feminicidios, subsidio progresivo de maternidad, registro nacional del cuidado, seguridad social subsidiada, formación para cuidadoras, fondo de 500.000 millones para autonomía económica y formalización de emprendimientos femeninos.{src:src-20260420-abelardo-program-pdf} En pensiones, su reacción contra el traslado de fondos privados a Colpensiones muestra defensa del ahorro individual y sospecha frente a la intervención gubernamental sobre cuentas privadas.{src:src-20260424-abelardo-colpensiones-elpais}\n\nLa visión de derechos está filtrada por familia, orden y autonomía económica: protege a mujeres y cuidadores, pero lo hace con énfasis en judicialización, subsidios focalizados, emprendimiento y seguridad social, no desde una agenda amplia de diversidad o derechos sexuales. Frente a Fajardo y Claudia López, que desarrollan diversidad, cuidado y protección como sistemas de derechos, de la Espriella presenta una política social más focalizada y moralmente conservadora. Falta precisar aborto, población LGBTIQ+, enfoque étnico, financiación permanente del cuidado y compatibilidad entre recorte del Estado y nuevas capacidades sociales.",
+        "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260424-abelardo-colpensiones-elpais"]
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Su institucionalismo combina constitucionalismo, anticorrupción y desconfianza hacia la burocracia. El programa propone lealtad a la Constitución, rechazo a una constituyente, defensa de jueces, prensa e instituciones, separación de poderes, prohibición constitucional de la \"combinación de todas las formas de lucha\", limpieza inmediata de cabezas de entidades públicas, y arranque de gobierno con metas en los primeros 100 días.{src:src-20260420-abelardo-program-pdf} En anticorrupción plantea un Bloque de Búsqueda contra la Corrupción dirigido por el presidente, inteligencia financiera, policía judicial, extinción de dominio exprés, gobierno trazable, reforma de contratación pública, cooperación internacional y contratación en blockchain hacia 2030.{src:src-20260420-abelardo-program-pdf}\n\nLa tensión está en que el programa defiende separación de poderes, pero concentra instrumentos anticorrupción y de limpieza institucional bajo liderazgo presidencial. Su postura sobre debates también revela una idea selectiva de deliberación: planteó limitar debates a candidatos con mayores opciones porque incluir a todos impediría discutir de fondo.{src:src-20260422-abelardo-infobae} La diferencia con Claudia López es clara: ambos hablan de ordenar la casa, pero ella enfatiza debates incluyentes, descentralización y reglas públicas; él privilegia depuración, disciplina y eficacia ejecutiva. Falta aclarar controles al Bloque Anticorrupción, garantías de debido proceso y criterios objetivos para distinguir limpieza institucional de purga política.",
+        "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260422-abelardo-infobae"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "De la Espriella llega como abogado penalista y empresario con alta exposición pública, asociado a defensas judiciales polémicas y a una candidatura que se presenta como outsider de autoridad.{src:src-20260418-abelardo-profile} Ese origen importa porque su programa mezcla identidad antipolitiquera, patriotismo constitucional, promesa de mano dura y confianza en gestión privada. La candidatura no se limita a \"menos Estado\": ofrece un Estado más pequeño en economía, pero más intenso en policía, cárceles, inteligencia, anticorrupción y disciplina institucional.{src:src-20260418-abelardo-infobae}{src:src-20260420-abelardo-program-pdf}\n\nSu apuesta se diferencia del centro tecnocrático de Fajardo, del regionalismo ambiental de Murillo, del progresismo de Cepeda y del orden social-descentralizador de Claudia López. También compite con Paloma Valencia en la derecha de seguridad y mercado, pero con un tono más plebiscitario y disruptivo. La pregunta pendiente es si esa combinación de recorte estatal y expansión coercitiva puede ejecutarse sin contradicción presupuestal: menos aparato administrativo, menos impuestos y más cárceles, pie de fuerza, tecnología, salud de choque y control territorial exigen una secuencia fiscal todavía no demostrada.",
+        "source_ids": ["src-20260418-abelardo-profile", "src-20260418-abelardo-infobae", "src-20260420-abelardo-program-pdf"]
+      }
+    ]
+  },
+  {
+    "candidate_id": "claudia-lopez",
+    "path": "./data/analysis/candidate_policy_dossiers/claudia-lopez.md",
+    "source_ids": ["src-20260418-claudia-program", "src-20260418-claudia-forbes", "src-20260420-claudia-program-pdf", "src-20260422-claudia-infobae", "src-20260419-claudia-energia-elpais", "src-20260424-claudia-debates-elpais", "src-20260418-claudia-profile"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "Claudia López propone \"ordenar la casa\" sin borrar todo lo existente: defender conquistas sociales, corregir crisis y poner productividad regional en el centro. Su programa habla de un Estado útil, soberano y legítimo, finanzas responsables, descentralización y autonomía fiscal regional, educación conectada con trabajo, apoyo a micronegocios, crédito e incentivos.{src:src-20260418-claudia-program} En Forbes planteó una nueva regla fiscal y reducción tributaria condicionada a crecimiento, continuidad selectiva de reformas y modelo mixto de salud.{src:src-20260418-claudia-forbes}\n\nLa visión combina Estado social con disciplina fiscal: no es una agenda de recorte radical ni de expansión sin límites. El mercado aparece como generador de empleo privado y formal, mientras el Estado debe pagar a tiempo, no endeudarse sin razón y gastar sin corrupción.{src:src-20260418-claudia-program} Frente a Fajardo, comparte método y responsabilidad; frente a Cepeda, es menos continuista; frente a Paloma y Abelardo, no reduce la economía a alivios tributarios y seguridad. Falta precisar cuantías de recaudo, regla fiscal, impuestos específicos y metas de productividad.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260418-claudia-forbes"]
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "Claudia define salud como una de las crisis urgentes: tratamientos y medicamentos no pueden depender de filas o autorizaciones interminables.{src:src-20260418-claudia-program} En Forbes defendió mantener un sistema mixto de salud, lo que la separa tanto de un reemplazo estatal total como de una defensa acrítica del modelo actual.{src:src-20260418-claudia-forbes} Su programa habla de recuperar el sistema resolviendo parálisis financiera y conectando salud con cuidado, salud mental, discapacidad y ciclo de vida.{src:src-20260418-claudia-program}\n\nEl instrumento central es reordenar financiación y prestación para que la garantía sea verificable. La implicación es que intentaría preservar pluralidad de actores, pero con mayor control público, información y enfoque territorial. Se diferencia de Paloma y Abelardo, que enfatizan choque financiero de 90 o 100 días; Claudia formula salud dentro de un sistema más amplio de cuidado y protección. Falta aclarar pago de deudas, rol de EPS, red pública, ADRES y costo fiscal.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260418-claudia-forbes"]
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "Educación es una de sus tres reformas de movilidad: un millón de becas de educación y trabajo para jóvenes, mujeres y mayores de 50 años, conectadas con empleo, emprendimiento y productividad.{src:src-20260418-claudia-program} El programa propone educación posmedia integrada, calidad, pertinencia territorial y articulación con cadenas productivas, especialmente para mujeres, jóvenes y economía popular.{src:src-20260420-claudia-program-pdf} La educación no aparece aislada sino como el puente entre cuidado, empleo formal y productividad regional.\n\nLa visión de Estado es habilitadora y territorial: becas, formación y cuidado liberan tiempo y aumentan ingreso. Frente a Fajardo, que hace de educación su marca histórica y la liga a ciencia e innovación, Claudia la presenta como parte de un paquete de soluciones para que \"la vida alcance\". Falta precisar criterios de asignación, instituciones ejecutoras, financiación, calidad y relación con universidades, SENA y empresas.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf"]
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "Claudia propone seguridad legítima, control territorial y justicia efectiva. Su programa diagnostica expansión criminal, pérdida de control estatal y fracaso de políticas que prometieron paz sin construir Estado, seguridad, justicia y desarrollo.{src:src-20260418-claudia-program} Plantea fortalecer Fuerza Pública, recuperar control regional, Fiscalía Antimafia, cárceles seguras, justicia restaurativa y sanción, sin adoptar el modelo Bukele, que rechazó explícitamente en entrevista.{src:src-20260422-claudia-infobae}\n\nLa visión se diferencia de la derecha dura: acepta firmeza contra crimen, pero insiste en legitimidad, Estado de derecho, inversión social y presencia territorial. También se distancia de Cepeda porque critica tanto incumplimientos del Acuerdo como improvisación de la Paz Total.{src:src-20260418-claudia-program} Falta aclarar cómo funcionaría la Fiscalía Antimafia, qué reformas penales impulsaría, cómo financiaría cárceles seguras y cómo equilibraría justicia restaurativa con castigo efectivo.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260422-claudia-infobae"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Claudia no plantea una paz total abierta ni una ruptura punitiva total; propone cuidar el proceso de paz cumpliendo lo pactado, pero sin prometer paz a organizaciones que sigan delinquiendo.{src:src-20260418-claudia-program} Su diagnóstico es que Duque incumplió el Acuerdo y Petro improvisó una Paz Total sin resultados, lo que la ubica en una línea de cumplimiento condicionado, seguridad territorial y desarrollo regional.{src:src-20260418-claudia-program}\n\nLa implicación es un Estado que negocia menos desde la retórica y más desde condiciones verificables: presencia estatal, justicia, oportunidades y control de rentas criminales. Frente a Cepeda, es más crítica de la Paz Total; frente a Paloma y Abelardo, no abandona el Acuerdo ni convierte todo en captura. Falta precisar sometimiento, beneficios, víctimas, JEP, cooperación internacional y política con Venezuela.",
+        "source_ids": "src-20260418-claudia-program"
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "Claudia conecta ambiente con agua, territorio, productividad regional y minería con enfoque social. Su programa trata el agua como derecho y bien común, propone llevar agua potable a regiones excluidas y ordenar el uso del suelo.{src:src-20260418-claudia-program} En el foro reseñado por EL PAÍS planteó incorporar a la población en decisiones minero-energéticas y usar licenciamiento con enfoque social.{src:src-20260419-claudia-energia-elpais}\n\nLa visión es territorial: recursos naturales no sólo como renta, sino como condición de vida, conflicto y desarrollo regional. Se diferencia de Paloma y Abelardo porque no presenta la reactivación energética como prioridad aislada de participación y territorio; se diferencia de Murillo porque su identidad ambiental es menos biográfica y más de gobierno regional. Falta precisar hidrocarburos, carbón, transición, tarifas, licencias, consulta previa y metas climáticas.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260419-claudia-energia-elpais"]
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "El sistema de cuidado es una pieza central: Claudia propone institucionalizarlo desde municipios para liberar a mujeres de trabajo no remunerado, permitirles estudiar o generar ingresos y articular cuidado infantil, cuidadores, salud, protección social y empleo.{src:src-20260418-claudia-program} También plantea protección contra violencias basadas en género, autonomía económica, servicios de cuidado y una política de género territorial.{src:src-20260420-claudia-program-pdf}\n\nLa visión de derechos es práctica: no se limita a reconocimiento, sino que busca servicios, tiempo y autonomía. Frente a de la Espriella, que habla de mujeres desde orden público y subsidios, Claudia propone sistema social; frente a Fajardo, comparte enfoque de cuidado, pero lo vincula más directamente con productividad y municipio. Falta aclarar cobertura, financiación permanente, gobernanza municipal, personal cuidador y coordinación con salud, ICBF y educación.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf"]
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Su programa insiste en cero corrupción, descentralización y autonomía regional como condiciones de gobernabilidad.{src:src-20260418-claudia-program} En campaña pidió tres debates de una hora con todos los candidatos, incluso proponiendo grupos por sorteo si el número dificulta el formato, lo que revela una concepción incluyente de deliberación electoral.{src:src-20260424-claudia-debates-elpais} También plantea sacar politiqueros y corruptos del gobierno, cortar intermediación y fortalecer control sobre contratación.{src:src-20260418-claudia-program}\n\nLa diferencia con Abelardo es que Claudia asocia anticorrupción con reglas, inclusión y Estado que funciona; Abelardo la asocia con depuración presidencial y bloque de búsqueda. Falta precisar reforma política, contratación, lobby, financiación electoral y cómo descentralizar sin reproducir captura local. Su promesa depende de convertir \"gobierno de soluciones\" en procedimientos verificables.",
+        "source_ids": ["src-20260418-claudia-program", "src-20260424-claudia-debates-elpais"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "Claudia López llega como exalcaldesa de Bogotá, exsenadora y ganadora de la Consulta de las Soluciones.{src:src-20260418-claudia-profile} Su programa intenta ubicarse fuera de la división izquierda-derecha y habla a mayorías que quieren seguridad, salud, empleo, cuidado y productividad sin corrupción.{src:src-20260418-claudia-program} Esa estrategia la pone en el centro reformista: crítica a Petro, crítica a la derecha punitiva pura y énfasis en gestión.\n\nSu fortaleza es un programa extenso con hilo claro: ordenar, cuidar y desarrollar regiones. Su riesgo es prometer simultáneamente seguridad, cuidado, becas, vivienda, salud y descentralización fiscal sin mostrar todavía una aritmética completa. La candidatura se diferencia de Fajardo por tono más combativo y social, de Murillo por menos ambientalismo identitario, de Cepeda por menor continuidad con Petro y de la derecha por mayor énfasis en cuidado y legitimidad.",
+        "source_ids": ["src-20260418-claudia-profile", "src-20260418-claudia-program"]
+      }
+    ]
+  },
+  {
+    "candidate_id": "ivan-cepeda",
+    "path": "./data/analysis/candidate_policy_dossiers/ivan-cepeda.md",
+    "source_ids": ["src-20260418-ivan-economia", "src-20260420-ivan-program-pdf", "src-20260418-ivan-profile", "src-20260418-ivan-program-home", "src-20260418-abelardo-infobae", "src-20260424-paloma-seguridad-elpais", "src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260419-ivan-debate-elpais"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "Iván Cepeda presenta continuidad económica con el gobierno Petro, pero intenta rodearla de responsabilidad fiscal y transición productiva. La entrevista registrada por Infobae lo ubica defendiendo los principales ejes macroeconómicos del actual gobierno y afirmando que no hubo el desplome anticipado por sus críticos.{src:src-20260418-ivan-economia} Su pieza programática del Pacto Histórico conecta esa continuidad con salario digno, matrícula cero, economía social, economía solidaria, formalización laboral e innovación científica, especialmente en el Pacífico.{src:src-20260420-ivan-program-pdf} La visión de Estado es coordinadora: el mercado no desaparece, pero el Estado orienta redistribución, trabajo y sectores estratégicos.\n\nLa diferencia frente a de la Espriella y Paloma Valencia es que Cepeda no propone aliviar la economía reduciendo radicalmente Estado o impuestos, sino profundizando el \"cambio\" y defendiendo avances sociales. Frente a Fajardo, su énfasis es más político-programático y menos tecnocrático; frente a Murillo, menos regional-productivo y más de continuidad progresista. Falta aclarar regla fiscal, tributación, deuda, crecimiento privado y productividad más allá de consignas de continuidad, porque una agenda de derechos necesita fuentes de financiación sostenibles.",
+        "source_ids": ["src-20260418-ivan-economia", "src-20260420-ivan-program-pdf"]
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "El material público de Cepeda disponible en el repo no desarrolla todavía una propuesta sanitaria tan densa como las de Claudia López, Paloma Valencia, Sergio Fajardo o Abelardo de la Espriella. Lo más cercano en su folleto es la defensa general del cambio social y del gasto público que hizo posible mayor presupuesto educativo y medidas laborales, pero no aparece una arquitectura clara de EPS, ADRES, atención primaria, deudas hospitalarias o medicamentos.{src:src-20260420-ivan-program-pdf} Por trazabilidad, la lectura debe ser cauta: su ubicación en el Pacto Histórico permite inferir afinidad con una visión de salud como derecho y con mayor intervención estatal, pero este dossier no debe convertir esa afinidad en propuesta detallada.\n\nLa implicación política es un vacío comparativo. Mientras Fajardo habla de nuevo orden del sistema, Claudia de sistema mixto e integral, Paloma de resolver atenciones represadas y Abelardo de choque de 90 días, Cepeda aún necesita decir cómo corregiría la crisis concreta de acceso, medicamentos y financiación. Falta aclarar modelo de aseguramiento, flujo de recursos, rol de EPS, red pública, talento humano y costos.",
+        "source_ids": "src-20260420-ivan-program-pdf"
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "Educación sí aparece como continuidad de proyecto social. El folleto del Pacto Histórico reivindica matrícula cero, \"Más Jóvenes en la U\", aumento presupuestal y propone multicampus universitarios donde no hay acceso a educación superior, educación climática y ética interespecie, memoria histórica sobre esclavitud, despojo y resistencias afro, campesinas e indígenas, e innovación científica y biotecnología para el Pacífico.{src:src-20260420-ivan-program-pdf} También se registra su trayectoria como senador y defensor de derechos humanos, lo que ayuda a entender por qué la educación aparece unida a memoria, reparación y ciudadanía.{src:src-20260418-ivan-profile}\n\nLa visión de Estado es expansiva y reparadora: educación superior, memoria histórica y ciencia regional son instrumentos para corregir desigualdades. Frente a Fajardo, que la conecta con ciencia, tecnología y productividad desde una lógica de capacidades, Cepeda la conecta con justicia histórica y continuidad del cambio. Falta precisión operativa: cupos, universidades responsables, financiación, estándares de calidad, articulación con SENA y reglas para que la memoria histórica no quede sólo como currículo declarativo.",
+        "source_ids": ["src-20260420-ivan-program-pdf", "src-20260418-ivan-profile"]
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "La evidencia de seguridad en Cepeda está más vinculada a paz, justicia social y derechos humanos que a expansión penal. Su página de campaña presenta un programa para profundizar justicia social y paz total.{src:src-20260418-ivan-program-home} Su perfil público lo ubica como senador, filósofo y defensor de derechos humanos, con una trayectoria marcada por víctimas y paz.{src:src-20260418-ivan-profile} En clave de seguridad, eso sugiere una lectura donde el problema no es sólo criminalidad sino persistencia de violencia política, desigualdad territorial y falta de implementación de acuerdos.\n\nLa diferencia con Paloma Valencia y de la Espriella es estructural: ellos parten de captura, cárcel, fumigación y reactivación de órdenes; Cepeda parte de paz, justicia y derechos. Frente a Fajardo y Murillo, comparte la idea de presencia estatal, pero con menos detalle operacional sobre Fuerza Pública, Fiscalía o cárceles en los materiales actuales. Falta aclarar respuesta a extorsión, secuestro, control urbano, reclutamiento, economías ilícitas y capacidad militar sin perder garantías.",
+        "source_ids": ["src-20260418-ivan-program-home", "src-20260418-ivan-profile"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Cepeda tiene aquí su señal más nítida: profundizar la paz total y defender el acumulado del Acuerdo Final. Su página oficial presenta la paz total como parte central del programa y su folleto recuerda que Cepeda fue facilitador del proceso de paz con las FARC, mientras Aída Quilcué participó en La Habana por el CRIC y aportó al capítulo étnico.{src:src-20260418-ivan-program-home}{src:src-20260420-ivan-program-pdf} La candidatura usa esa trayectoria para ubicarse como continuidad de una política de negociación, víctimas, enfoque étnico y justicia transicional.\n\nLa implicación es que el Estado de Cepeda privilegiaría acuerdos, implementación y reparación sobre una estrategia predominantemente punitiva. Esa posición lo separa de de la Espriella, que quiere eliminar la JEP, y de Paloma, que quiere reactivar órdenes de captura contra gestores de paz.{src:src-20260418-abelardo-infobae}{src:src-20260424-paloma-seguridad-elpais} Falta aclarar condiciones de negociación, líneas rojas frente a reincidencia, sometimiento de estructuras criminales, reparación a víctimas y mecanismos para que paz total no sea percibida como impunidad.",
+        "source_ids": ["src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260418-abelardo-infobae", "src-20260424-paloma-seguridad-elpais"]
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "Cepeda propone una transición energética concertada con actores productivos y sociales, no un cierre abrupto ni una expansión extractiva sin condiciones.{src:src-20260418-ivan-economia} En Tunja, su campaña conectó transición energética, tierra para campesinos y reactivación ferroviaria para Boyacá.{src:src-20260418-ivan-tunja} Esa combinación muestra una agenda territorial: energía, transporte férreo y tierra funcionan como piezas de desarrollo regional y no sólo como política sectorial.\n\nLa visión de Estado es planificadora y territorial. Se diferencia de de la Espriella y Paloma porque no pone el centro en hidrocarburos, fracking o licenciamiento rápido; se diferencia de Murillo porque su énfasis ambiental viene menos desarrollado como bioeconomía y más como transición del proyecto progresista. Falta precisar ritmo de transición, hidrocarburos, Ecopetrol, tarifas, consulta previa, financiación ferroviaria y cómo evitar choques entre metas climáticas, empleo y recaudo.",
+        "source_ids": ["src-20260418-ivan-economia", "src-20260418-ivan-tunja"]
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "La candidatura de Cepeda habla desde derechos humanos, víctimas, pueblos indígenas y continuidad de políticas sociales. El folleto destaca la historia de Cepeda y Quilcué como víctimas del Estado, defensores de derechos humanos y participantes del proceso de paz, y enlaza ese relato con matrícula cero, salarios dignos, formalización laboral y economía solidaria.{src:src-20260420-ivan-program-pdf} El instrumento político no aparece como un listado tecnocrático de subsidios sino como profundización de derechos, reconocimiento y reparación.\n\nLa implicación es que su Estado sería garante y redistributivo, con prioridad en poblaciones históricamente excluidas. Frente a Claudia López y Fajardo, el detalle sobre cuidado, mujeres, diversidad y protección social está menos desarrollado en los documentos visibles; frente a de la Espriella, la diferencia es que Cepeda parte de derechos y no de orden familiar o focalización conservadora. Falta aclarar sistema de cuidado, pensiones, transferencias, aborto, diversidad, discapacidad, infancia y financiación.",
+        "source_ids": "src-20260420-ivan-program-pdf"
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Cepeda ha puesto anticorrupción como eje público: la campaña anunció una Ley Nacional contra la corrupción y la justicia social.{src:src-20260418-ivan-anticorrup} También pidió debates de fondo con Paloma Valencia y Abelardo de la Espriella, lo que muestra una estrategia de contraste programático contra las derechas más visibles.{src:src-20260419-ivan-debate-elpais} La visión institucional combina control de corrupción con deliberación política y continuidad del Pacto Histórico.\n\nEl punto débil es la arquitectura. Falta saber si la ley anticorrupción incluye contratación, lobby, financiación electoral, protección a denunciantes, sanciones, datos abiertos o reforma de órganos de control. Frente a Claudia López y Paloma, que detallan más controles e instrumentos, Cepeda necesita bajar de principio a diseño. La pregunta central es cómo evitaría que una agenda de transformación amplíe discrecionalidad estatal sin controles proporcionales.",
+        "source_ids": ["src-20260418-ivan-anticorrup", "src-20260419-ivan-debate-elpais"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "Cepeda es senador del Pacto Histórico y defensor de derechos humanos; su biografía pública está marcada por el asesinato de su padre Manuel Cepeda, la condena al Estado y su papel en procesos de paz.{src:src-20260418-ivan-profile}{src:src-20260420-ivan-program-pdf} Esa trayectoria explica la coherencia de su candidatura: continuidad del gobierno Petro, paz, memoria, derechos y justicia social.\n\nSu fortaleza es identidad programática clara; su límite es que varios temas de gobierno cotidiano todavía aparecen menos detallados que en programas extensos de otros candidatos. Si de la Espriella y Paloma ofrecen autoridad y mercado, Fajardo método, Claudia soluciones con Estado territorial y Murillo futuro regional sostenible, Cepeda ofrece defensa del cambio progresista. Falta traducir esa identidad en planes sectoriales comparables en salud, seguridad operativa, productividad y finanzas.",
+        "source_ids": ["src-20260418-ivan-profile", "src-20260420-ivan-program-pdf"]
+      }
+    ]
+  },
+  {
+    "candidate_id": "luis-gilberto-murillo",
+    "path": "./data/analysis/candidate_policy_dossiers/luis-gilberto-murillo.md",
+    "source_ids": ["src-20260418-murillo-espectador", "src-20260420-murillo-program-home", "src-20260418-murillo-profile", "src-20260421-murillo-tiempo"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "Murillo formula la economía desde regiones, oportunidades y sostenibilidad. En El Espectador habló de construir desarrollo regional y de mirar al futuro, con educación, puertos y alianzas como instrumentos para abrir oportunidades.{src:src-20260418-murillo-espectador} Su sitio oficial propone impuestos verdes, lucha contra evasión, austeridad en gasto público y priorización de cada peso hacia educación, salud, agua y oportunidades para la Colombia olvidada.{src:src-20260420-murillo-program-home} La productividad aparece menos como desregulación y más como inclusión regional.\n\nLa visión de Estado es habilitadora y territorial: usar finanzas públicas, infraestructura, educación y ambiente para cerrar brechas. Se diferencia de Paloma y Abelardo porque no pone la prioridad en bajar impuestos generales ni en hidrocarburos; se diferencia de Fajardo porque su hilo más fuerte es región-biodiversidad-equidad. Falta aclarar regla fiscal, tamaño de impuestos verdes, inversión privada, metas de crecimiento y sectores líderes.",
+        "source_ids": ["src-20260418-murillo-espectador", "src-20260420-murillo-program-home"]
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "La fuente programática de Murillo menciona salud como prioridad para asignar gasto junto a educación, agua y oportunidades.{src:src-20260420-murillo-program-home} Sin embargo, el corpus disponible no ofrece todavía un diseño de sistema de salud comparable al de Fajardo, Claudia, Paloma o Abelardo. La lectura responsable es que Murillo asocia salud con equidad territorial y gasto público focalizado, no que tenga ya una reforma sanitaria completa.\n\nLa implicación es un vacío relevante: si su candidatura quiere sostener una imagen de futuro y oportunidades, necesita explicar medicamentos, EPS, red rural, hospitales, salud pública, deudas y financiación. Su biografía ambiental y regional ayuda a anticipar sensibilidad por territorios apartados, pero no sustituye una propuesta sectorial. Falta una arquitectura sanitaria con instrumentos, costos y responsables.",
+        "source_ids": "src-20260420-murillo-program-home"
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "Murillo pone educación en el centro de movilidad regional. En El Espectador planteó eliminar muros para que los jóvenes accedan a educación y oportunidades, y su sitio oficial dice que la educación será el corazón del gobierno.{src:src-20260418-murillo-espectador}{src:src-20260420-murillo-program-home} El problema que busca resolver es territorial: regiones como el Chocó no sólo necesitan cupos, sino caminos hacia empleo, innovación y liderazgo.\n\nLa visión es de igualdad de oportunidades con sello regional. Frente a Fajardo, que desarrolla educación como sistema nacional de capacidades, Murillo la usa como llave de inclusión territorial y reconciliación con la Colombia periférica. Frente a Claudia, comparte becas y oportunidades pero con menos detalle instrumental. Falta precisar metas de cobertura, financiación, primera infancia, educación superior, SENA, maestros y calidad.",
+        "source_ids": ["src-20260418-murillo-espectador", "src-20260420-murillo-program-home"]
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "Murillo propone atender problemas críticos de seguridad con tecnología, justicia efectiva y cooperación regional.{src:src-20260418-murillo-espectador} Su sitio oficial resume seguridad mediante Ley de Sometimiento a la Justicia para desmantelar estructuras criminales sin impunidad, tecnología avanzada y cooperación con países vecinos.{src:src-20260420-murillo-program-home} También conecta desarrollo con sustitución de economías ilícitas mediante inversión, créditos blandos y vías.{src:src-20260420-murillo-program-home}\n\nLa visión no es blanda ni puramente punitiva: combina sometimiento, inteligencia, prevención y oportunidades. Se diferencia de de la Espriella y Paloma porque no centra el mensaje en cárceles, fumigación o pie de fuerza; se diferencia de Cepeda porque habla de desmantelar estructuras sin impunidad. Falta aclarar Fuerza Pública, Fiscalía, cárceles, beneficios jurídicos, control territorial y metas de reducción de violencia.",
+        "source_ids": ["src-20260418-murillo-espectador", "src-20260420-murillo-program-home"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Murillo tiene una ventaja biográfica: excanciller, exembajador y figura con experiencia internacional.{src:src-20260418-murillo-profile} En entrevista con EL TIEMPO defendió su gestión y dijo contribuir como ciudadano en relaciones clave como Estados Unidos y Venezuela.{src:src-20260421-murillo-tiempo} En su programa, seguridad y desarrollo se conectan con cooperación de países vecinos y sometimiento judicial de estructuras criminales.{src:src-20260420-murillo-program-home}\n\nLa visión internacional es pragmática, regional y diplomática. Frente a Fajardo, comparte política exterior de Estado; frente a Cepeda, es menos centrada en paz total; frente a Paloma y Abelardo, menos alineada con una alianza militar dura y más con cooperación vecinal. Falta aclarar comercio, Venezuela, migración, narcotráfico, JEP, implementación del Acuerdo y relación con Estados Unidos bajo un eventual gobierno.",
+        "source_ids": ["src-20260418-murillo-profile", "src-20260421-murillo-tiempo", "src-20260420-murillo-program-home"]
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "Ambiente es el núcleo identitario de Murillo. Su sitio habla de transición energética justa, impuestos verdes, reforestación, protección de la naturaleza creando empleo y desarrollo sostenible.{src:src-20260420-murillo-program-home} Su biografía pública lo ubica como ingeniero de minas, exministro de Ambiente, exgobernador del Chocó y líder asociado a clima, biodiversidad, inclusión social y desarrollo territorial.{src:src-20260420-murillo-program-home}{src:src-20260418-murillo-profile}\n\nLa visión de Estado es de bioeconomía y justicia territorial: cuidar ambiente no como restricción sino como estrategia de prosperidad regional. Eso lo separa de Paloma y Abelardo, que priorizan seguridad energética e inversión extractiva, y de Fajardo, que formula una transición técnica. Falta aclarar hidrocarburos, minería legal, regalías, licencias, impuestos verdes, tarifas y cómo convertir biodiversidad en ingresos sostenibles.",
+        "source_ids": ["src-20260420-murillo-program-home", "src-20260418-murillo-profile"]
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "Murillo habla desde equidad regional, inclusión social y oportunidades para todos. Su sitio lo presenta como líder dedicado a un país más justo y sostenible, con sello de equidad en regiones, comunidades y paz territorial.{src:src-20260420-murillo-program-home} La propuesta de dirigir gasto hacia educación, salud, agua y oportunidades para la Colombia olvidada revela una agenda de protección territorial más que una lista detallada de subsidios.{src:src-20260420-murillo-program-home}\n\nLa implicación es que los derechos se leen desde territorio: Chocó, regiones periféricas, comunidades y acceso a bienes básicos. Frente a Claudia y Fajardo, el detalle en cuidado, género, diversidad y protección social aún es menor; frente a Cepeda, comparte sensibilidad por exclusión, pero con una narrativa ambiental y regional. Falta aclarar mujeres, cuidado, diversidad, pensiones, infancia, discapacidad y transferencias.",
+        "source_ids": "src-20260420-murillo-program-home"
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Murillo propone fortalecer democracia sin dividir, modernizar el Estado, abrir participación, pactar acuerdos amplios y reformar para devolver confianza sin Constituyente.{src:src-20260420-murillo-program-home} Su perfil diplomático y de gobierno sugiere una política institucional de consensos, no de ruptura.{src:src-20260418-murillo-profile} También plantea austeridad y lucha contra evasión como parte del manejo público.{src:src-20260420-murillo-program-home}\n\nLa visión se diferencia de los discursos de depuración dura: no propone \"limpiar\" el Estado desde arriba ni concentrar anticorrupción en un bloque presidencial; habla de modernización, participación y acuerdos. Falta detalle sobre contratación, lobby, órganos de control, financiación política, gobierno digital y sanciones. Para competir con Fajardo y Claudia, necesita convertir el lenguaje de confianza en mecanismos.",
+        "source_ids": ["src-20260420-murillo-program-home", "src-20260418-murillo-profile"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "Murillo es excanciller, exembajador, exministro de Ambiente y exgobernador del Chocó; su relato público combina experiencia internacional, región, biodiversidad y construcción de consensos.{src:src-20260418-murillo-profile}{src:src-20260420-murillo-program-home} Esa trayectoria le da una identidad singular en la watchlist: no es el candidato de mano dura, ni el de continuidad pura, ni el centro tecnocrático clásico, sino una oferta regional-ambiental con credenciales diplomáticas.\n\nSu fortaleza es una narrativa clara de futuro sostenible; su principal limitación es la falta de detalle sectorial en salud, seguridad operativa, fiscalidad y protección social. Si quiere diferenciarse de Fajardo y Claudia, necesita demostrar que su enfoque territorial no es sólo biografía sino diseño de gobierno con metas, costos y secuencia.",
+        "source_ids": ["src-20260418-murillo-profile", "src-20260420-murillo-program-home"]
+      }
+    ]
+  },
+  {
+    "candidate_id": "paloma-valencia",
+    "path": "./data/analysis/candidate_policy_dossiers/paloma-valencia.md",
+    "source_ids": ["src-20260418-paloma-elpais", "src-20260420-paloma-program-pdf", "src-20260418-paloma-eltiempo", "src-20260424-paloma-seguridad-elpais", "src-20260419-paloma-energia-elpais", "src-20260419-paloma-debate-elpais", "src-20260418-paloma-profile", "src-manual-1cf85d8c"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "Paloma Valencia propone una economía de menor carga tributaria, seguridad jurídica y reactivación de inversión. EL PAÍS resume su programa como más fracking, más militares y menos impuestos, y registra que busca reducir cargas y reactivar sectores minero-energéticos.{src:src-20260418-paloma-elpais} Su Plan Integrado plantea un marco de \"estabilizar\" el país y de dar presencia real del Estado para que negocios, campesinos, mujeres y niños puedan vivir sin que el crimen decida.{src:src-20260420-paloma-program-pdf} También propone modificar la Ley Escalera para formalización empresarial, lo que ubica la productividad en simplificación, empleo privado y emprendimiento.{src:src-20260418-paloma-eltiempo}\n\nLa visión de Estado es de derecha clásica con un matiz de ejecución social: menos impuestos y más seguridad para invertir, pero con programas de vivienda, salud y atención represada. Se parece a de la Espriella en mercado y autoridad, aunque Paloma formula más instrumentos sectoriales dentro de un plan programático amplio. Falta aclarar costo fiscal de bajar impuestos mientras aumenta defensa, cárceles, cupos penitenciarios, salud y vivienda.",
+        "source_ids": ["src-20260418-paloma-elpais", "src-20260420-paloma-program-pdf", "src-20260418-paloma-eltiempo"]
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "Su propuesta de salud se concentra en resolver acumulados visibles de atención. El Plan 10 plantea resolver 10 millones de atenciones represadas en medicamentos, citas y procedimientos durante los primeros 100 días, compras centralizadas transitorias de medicamentos prioritarios, pago de deuda estatal a prestadores vía titularización y ajuste de la UPC para 2027 según necesidades reales del paciente.{src:src-20260420-paloma-program-pdf} EL PAÍS recoge esa agenda como una de las piezas de su plan de estabilización.{src:src-20260418-paloma-elpais}\n\nLa lógica no es reemplazar por completo el sistema sino hacerlo funcionar con caja, reglas y gerencia. Frente a Abelardo, comparte plan de choque y rescate financiero, pero Paloma detalla represamientos, UPC, titularización y compras. Frente a Fajardo y Claudia, el énfasis es menos deliberativo y más de ejecución rápida. Falta aclarar gobernanza de EPS, fuente de recursos, priorización clínica y cómo evitar que compras centralizadas transitorias se vuelvan cuello de botella.",
+        "source_ids": ["src-20260420-paloma-program-pdf", "src-20260418-paloma-elpais"]
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "Paloma propone permitir que familias de menores ingresos elijan colegio privado con apoyo público y usa la educación como instrumento de movilidad desde la demanda familiar.{src:src-20260418-paloma-eltiempo} Su programa también vincula seguridad de entornos escolares, prevención de drogas y rutas para mujeres víctimas con justicia y cuidado.{src:src-20260420-paloma-program-pdf} La señal educativa es menos sistémica que la de Fajardo o Claudia, pero coherente con una visión donde competencia, elección y orden territorial deben producir mejores resultados.\n\nLa implicación es que parte del presupuesto podría moverse hacia subsidios o apoyos a familias, no sólo a oferta pública. Eso abre preguntas sobre calidad, segregación, regulación de colegios privados y garantía rural. Falta precisar cobertura, montos, criterios de elegibilidad, relación con educación pública y cómo conecta educación con formación técnica, SENA y productividad.",
+        "source_ids": ["src-20260418-paloma-eltiempo", "src-20260420-paloma-program-pdf"]
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "Seguridad es el corazón de la candidatura. Paloma propone aumentar el gasto en seguridad y defensa en cerca de 20 billones durante el cuatrienio, acercarse a 4% del PIB, incorporar 30.000 militares y 30.000 policías, usar drones y ciberinteligencia, militarizar estratégicamente vías y zonas de secuestro, aplicar extinción de dominio exprés, bloquear comunicaciones en cárceles, endurecer penas para reincidentes, crear juzgados itinerantes y construir cupos penitenciarios y carcelarios con trabajo obligatorio.{src:src-20260420-paloma-program-pdf} Además presentó un borrador de decreto para reactivar órdenes de captura contra criminales nombrados gestores de paz y endurecer el manejo de quienes delinquen desde prisión.{src:src-20260424-paloma-seguridad-elpais}\n\nLa visión es autoridad con arquitectura legal: más pie de fuerza, tecnología, jueces, cárceles y castigo cierto. A diferencia de de la Espriella, que enfatiza ruptura y megacárceles, Paloma detalla una cadena más institucional de defensa, Fiscalía, jueces y prisiones. Frente a Fajardo, comparte recuperación de autoridad, pero con mayor dureza penal y menos prevención social. Falta aclarar financiación, derechos en militarización, control de uso de fuerza y capacidad real de la justicia para absorber más capturas.",
+        "source_ids": ["src-20260420-paloma-program-pdf", "src-20260424-paloma-seguridad-elpais"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Paloma marca distancia con la política de paz del gobierno Petro. Su decreto propuesto contra gestores de paz parte de la idea de que personas vinculadas a delitos no deben conservar beneficios si siguen delinquiendo.{src:src-20260424-paloma-seguridad-elpais} En política internacional, su programa propone cooperación estratégica, especialmente para inteligencia y capacidades, y reactivación de relaciones de seguridad con aliados.{src:src-20260420-paloma-program-pdf}\n\nSu visión se ubica entre la autoridad punitiva de de la Espriella y el institucionalismo de Fajardo: no formula eliminación de la JEP como eje visible en estas fuentes, pero sí busca desmontar incentivos de negociación que percibe como impunidad. La implicación sería un giro desde diálogos amplios hacia captura, sometimiento y cumplimiento estricto. Falta aclarar qué canales de sometimiento mantendría, cómo trataría el Acuerdo Final, víctimas, reincidentes y grupos con presencia territorial.",
+        "source_ids": ["src-20260424-paloma-seguridad-elpais", "src-20260420-paloma-program-pdf"]
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "Paloma defiende reactivar el sector minero-energético y usar gas, carbón, hidrocarburos y renovables como base de energía suficiente y crecimiento.{src:src-20260419-paloma-energia-elpais} Su programa habla de energía para crecer, destrabar inversión, garantizar tarifas justas, usar recursos disponibles, acelerar renovables, optimizar transmisión y permitir participación comunitaria en beneficios.{src:src-20260420-paloma-program-pdf} La fuente de El Tiempo también registra energía eólica, solar y geotérmica dentro de su propuesta.{src:src-20260418-paloma-eltiempo}\n\nLa visión es pragmática y pro-oferta: transición sí, pero sin restringir hidrocarburos o minería legal. Frente a Murillo, que hace de ambiente una agenda de biodiversidad y desarrollo sostenible, Paloma prioriza seguridad energética, tarifas e inversión. Falta aclarar fracking, licencias, consulta previa, emisiones, protección de agua y cómo repartir beneficios sin aumentar conflicto territorial.",
+        "source_ids": ["src-20260419-paloma-energia-elpais", "src-20260420-paloma-program-pdf", "src-20260418-paloma-eltiempo"]
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "El programa de Paloma incluye instrumentos de protección para mujeres víctimas de violencia: un juez para toda la familia, acompañamiento hacia autonomía económica y juzgados especializados de \"una familia, un solo juez\".{src:src-20260420-paloma-program-pdf} También conecta seguridad con condiciones para que la mujer pueda denunciar, el niño ir al colegio y el campesino sembrar.{src:src-20260420-paloma-program-pdf} En vivienda propone entregar viviendas iniciales o soluciones habitacionales, usando hábitat como política social y de empleo.{src:src-20260418-paloma-eltiempo}\n\nLa agenda de derechos es protectora pero no expansiva en diversidad. Se enfoca en familia, víctimas, seguridad y autonomía económica. Se diferencia de Claudia y Fajardo, que hablan con más claridad de género, cuidado, diversidad y sistemas sociales; y de de la Espriella, que tiene una agenda de mujeres más explícitamente conservadora y de orden público. Falta aclarar aborto, población LGBTIQ+, cuidado, discapacidad y protección social permanente.",
+        "source_ids": ["src-20260420-paloma-program-pdf", "src-20260418-paloma-eltiempo"]
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Paloma enmarca su programa como estabilización institucional: seguridad, salud, energía, productividad y anticorrupción. Su Plan Integrado propone inteligencia artificial y auditoría en tiempo real para prevenir corrupción, controles sobre contratación, castigo efectivo, protección a denunciantes y rediseño estatal para cerrar espacios de captura.{src:src-20260420-paloma-program-pdf} En campaña aceptó debates y pidió moderador independiente y canal nacional, lo que indica interés en confrontación pública regulada.{src:src-20260419-paloma-debate-elpais}\n\nLa visión institucional mezcla Estado fuerte para castigar y Estado liviano para invertir. El contraste con Claudia está en que ambas prometen ordenar y combatir corrupción, pero Paloma lo ata más a seguridad y mercado; Claudia lo ata a descentralización y gobierno de soluciones. Falta precisar reformas electorales, independencia de órganos de control, financiación política y salvaguardas contra uso partidista de inteligencia anticorrupción.",
+        "source_ids": ["src-20260420-paloma-program-pdf", "src-20260419-paloma-debate-elpais"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "Paloma Valencia llega como senadora del Centro Democrático y figura de la derecha uribista, con Juan Daniel Oviedo como fórmula vicepresidencial.{src:src-20260418-paloma-profile} Su perfil le permite hablar a un electorado que prioriza seguridad, mercado, orden y rechazo a la Paz Total. La campaña ha usado el Plan 10 y la idea de \"seguridad total\" para diferenciarse de la continuidad progresista y del centro.{src:src-manual-1cf85d8c}{src:src-20260424-paloma-seguridad-elpais}\n\nSu dossier muestra una candidatura de derecha programática: menos impuestos, más defensa, reactivación minero-energética, salud de choque y anticorrupción tecnológica. Compite con de la Espriella por autoridad, pero busca verse más institucional y sectorial. Falta probar consistencia fiscal y operacional: muchas promesas tienen costos simultáneos y requieren capacidad estatal que la misma agenda de reducción de cargas podría tensionar.",
+        "source_ids": ["src-20260418-paloma-profile", "src-manual-1cf85d8c", "src-20260424-paloma-seguridad-elpais"]
+      }
+    ]
+  },
+  {
+    "candidate_id": "sergio-fajardo",
+    "path": "./data/analysis/candidate_policy_dossiers/sergio-fajardo.md",
+    "source_ids": ["src-20260420-fajardo-program-pdf", "src-20260418-fajardo-official", "src-20260418-sergio-profile", "src-20260423-fajardo-espectador", "src-20260419-sergio-energia-elpais", "src-20260419-sergio-debate-elpais"],
+    "sections": [
+      {
+        "section_id": "economia",
+        "heading": "Economía, fiscal y productividad",
+        "body": "Fajardo organiza su programa en crisis, esperanza y dignidad: primero recuperar estabilidad institucional, luego abrir crecimiento productivo, y finalmente traducirlo en inclusión social.{src:src-20260420-fajardo-program-pdf} En finanzas públicas propone regla fiscal, manejo responsable de recursos, control del gasto, lucha contra evasión, revisión de beneficios tributarios, ordenamiento de subsidios energéticos y rescate financiero del sistema de salud.{src:src-20260420-fajardo-program-pdf} La productividad aparece como transformación de capacidades: educación, ciencia, innovación, emprendimiento, desarrollo productivo, agricultura, turismo e infraestructura.{src:src-20260420-fajardo-program-pdf}\n\nLa visión es tecnocrática y gradualista: Estado competente, mercado productivo y reglas creíbles. Se diferencia de Cepeda porque no parte de continuidad ideológica, y de Paloma o Abelardo porque no promete crecimiento principalmente por bajar impuestos y fuerza dura. Falta aclarar magnitudes fiscales, reformas tributarias específicas y cómo priorizar inversión social si el ajuste fiscal es exigente.",
+        "source_ids": "src-20260420-fajardo-program-pdf"
+      },
+      {
+        "section_id": "salud",
+        "heading": "Salud",
+        "body": "Fajardo diagnostica colapso institucional, improvisación y opacidad en salud, y propone un nuevo orden con acceso oportuno, calidad, sostenibilidad financiera y gestión del riesgo.{src:src-20260418-fajardo-official}{src:src-20260420-fajardo-program-pdf} Su programa plantea Puesto de Mando Presidencial, reforma financiera, nuevo modelo de pago, acuerdo de punto final, fortalecimiento de atención primaria, medicina familiar y comunitaria, salud mental, interoperabilidad de historias clínicas, analítica de datos y transparencia.{src:src-20260420-fajardo-program-pdf}\n\nLa propuesta intenta corregir funcionamiento antes que ideologizar el modelo. Frente a Paloma y Abelardo, el énfasis es menos \"choque de caja\" y más rediseño ordenado de reglas, pagos e información. Frente a Claudia, comparte sistema mixto y cuidado territorial, pero Fajardo detalla más la dimensión técnica de datos y gestión del riesgo. Falta definir rol final de EPS, cronograma legislativo, fuentes de financiación y cómo se pagarán deudas sin romper la regla fiscal.",
+        "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf"]
+      },
+      {
+        "section_id": "educacion",
+        "heading": "Educación",
+        "body": "Educación es la marca histórica de Fajardo y el centro de su capítulo de esperanza. Su programa la llama puerta de la esperanza y la articula con ciencia, tecnología, innovación, emprendimiento y modelo productivo.{src:src-20260420-fajardo-program-pdf} También se registra su trayectoria como exalcalde de Medellín y exgobernador de Antioquia asociado a educación y transparencia.{src:src-20260418-sergio-profile}\n\nLa visión es de capacidades: educación no sólo como derecho sino como infraestructura humana para productividad, convivencia y movilidad. Se diferencia de Claudia porque no la presenta principalmente como becas y cuidado, sino como sistema de largo plazo conectado con ciencia y economía. Falta precisar financiación, cobertura por niveles, relación con educación pública, SENA, universidades regionales y resultados medibles.",
+        "source_ids": ["src-20260420-fajardo-program-pdf", "src-20260418-sergio-profile"]
+      },
+      {
+        "section_id": "seguridad-justicia",
+        "heading": "Seguridad, justicia y defensa",
+        "body": "Fajardo propone Plan Guardián: recuperar control territorial, fortalecer seguridad ciudadana, cerrar paso al crimen transnacional y combinar inteligencia, Fuerza Pública, justicia, prevención y presencia del Estado dentro del Estado de derecho.{src:src-20260420-fajardo-program-pdf} En entrevista con El Espectador afirmó que se multiplicó el mundo criminal por todo el país y cuestionó que la campaña estuviera atrapada en polarización en vez de discutir propuestas.{src:src-20260423-fajardo-espectador}\n\nSu visión es autoridad democrática: firmeza sin salto autoritario, coerción con prevención y coordinación institucional. Frente a Paloma y Abelardo, comparte preocupación por control territorial pero evita formular seguridad como pura punición. Frente a Cepeda, es más explícito en Fuerza Pública e inteligencia. Falta precisar pie de fuerza, costos, cárceles, reforma penal, controles a inteligencia y metas por región.",
+        "source_ids": ["src-20260420-fajardo-program-pdf", "src-20260423-fajardo-espectador"]
+      },
+      {
+        "section_id": "politica-internacional-paz",
+        "heading": "Paz y política internacional",
+        "body": "Fajardo condiciona cualquier diálogo de paz a resultados concretos: sólo habría diálogos con condiciones claras que desactiven economías ilícitas y reduzcan violencia.{src:src-20260418-fajardo-official} En política exterior propone recuperar una política de Estado, fortalecer Cancillería, relaciones sólidas con Estados Unidos, Unión Europea, China y vecinos, y cooperación en seguridad, migración, comercio, innovación y desarrollo regional.{src:src-20260420-fajardo-program-pdf}\n\nLa diferencia con Cepeda es que no promete profundizar la Paz Total sino someterla a método y resultados. La diferencia con de la Espriella es que no cierra toda negociación: la acepta bajo condiciones y legalidad. La implicación es una diplomacia pragmática y una paz de desempeño verificable. Falta aclarar beneficios jurídicos, JEP, sometimiento, tratamiento de disidencias y coordinación con Venezuela.",
+        "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf"]
+      },
+      {
+        "section_id": "ambiente-energia",
+        "heading": "Ambiente, energía y territorio",
+        "body": "Fajardo propone transición energética sin improvisación ni apagones: seguridad de suministro, instituciones técnicas, gradualidad, renovables, gas y petróleo como puente, tarifas más justas y participación comunitaria.{src:src-20260420-fajardo-program-pdf} En el foro reseñado por EL PAÍS sostuvo que el desarrollo energético debe ser sostenible y legal, y que la minería ilegal no puede financiar mafias.{src:src-20260419-sergio-energia-elpais}\n\nLa visión no es anti-extractiva ni extractivista pura: busca una transición administrada por evidencia y estabilidad regulatoria. Se diferencia de Paloma y Abelardo porque pone límites ambientales y técnicos; se diferencia de Murillo porque su ambientalismo es menos identitario y más de gestión. Falta precisar nuevas exploraciones, carbono, licencias, consulta previa, comunidades energéticas y metas de reducción de tarifas.",
+        "source_ids": ["src-20260420-fajardo-program-pdf", "src-20260419-sergio-energia-elpais"]
+      },
+      {
+        "section_id": "derechos-genero-proteccion-social",
+        "heading": "Derechos, género y protección social",
+        "body": "Fajardo dedica una línea a mujeres y dignidad social: voz, protección frente a violencias basadas en género y oportunidades.{src:src-20260418-fajardo-official} Su programa amplía esa lógica a inclusión social, mínimo digno, empleo productivo, vivienda, cultura, deporte, poblaciones, discapacidad, primera infancia, juventud, personas mayores, diversidad sexual, víctimas, habitantes de calle, migrantes y colombianos en el exterior.{src:src-20260420-fajardo-program-pdf}\n\nLa visión es universalista y técnica: derechos garantizados con programas, no sólo declaraciones. Frente a Claudia, comparte cuidado e inclusión pero con más despliegue temático; frente a Cepeda, menos memoria política y más administración de capacidades. El riesgo es amplitud: muchas poblaciones y programas pueden dispersar prioridades. Falta aclarar costos, responsables, indicadores y qué se implementaría primero.",
+        "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf"]
+      },
+      {
+        "section_id": "instituciones-anticorrupcion",
+        "heading": "Instituciones, anticorrupción y reforma política",
+        "body": "Fajardo propone pasar de un modelo reactivo a uno de anticipación, detección y reacción contra robo de recursos públicos.{src:src-20260418-fajardo-official} Su programa plantea Agencia Anticorrupción, datos abiertos, trazabilidad, protección a denunciantes, ley de lobby, lista de control para corruptos, DIAN y superintendencias activas, y fortalecimiento de justicia sin privilegios ni impunidad.{src:src-20260420-fajardo-program-pdf}\n\nLa visión institucional es de integridad administrativa: prevenir antes de castigar, pero castigar cuando corresponda. Se diferencia de Abelardo por menor personalización presidencial y de Paloma por menos énfasis en seguridad como eje de anticorrupción. Falta precisar independencia de la agencia, dientes sancionatorios, coordinación con Fiscalía y órganos de control, y reformas políticas más allá de transparencia.",
+        "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf"]
+      },
+      {
+        "section_id": "trayectoria-contexto",
+        "heading": "Trayectoria y contexto político",
+        "body": "Fajardo se presenta como alternativa a la polarización Petro-Uribe y dijo estar listo para debatir con quienes no representan esa división.{src:src-20260419-sergio-debate-elpais} Su trayectoria de exalcalde y exgobernador se asocia a educación, transparencia y gobierno técnico.{src:src-20260418-sergio-profile} El programa \"Cambio. Serio. Seguro.\" intenta ocupar el centro: firmeza en seguridad, responsabilidad fiscal y derechos sociales sin extremos.{src:src-20260420-fajardo-program-pdf}\n\nSu fortaleza es coherencia metodológica y programa amplio; su límite es político: convertir moderación técnica en coalición gobernable. Frente a Claudia compite por centro reformista, frente a Murillo por futuro y oportunidades, frente a Cepeda por agenda social y frente a la derecha por seguridad con legalidad. Falta traducir el método en prioridades de primeros 100 días.",
+        "source_ids": ["src-20260419-sergio-debate-elpais", "src-20260418-sergio-profile", "src-20260420-fajardo-program-pdf"]
+      }
+    ]
+  }
+]

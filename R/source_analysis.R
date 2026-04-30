@@ -232,6 +232,14 @@ repair_claims_for_publication <- function(claims, sources, taxonomy, candidates 
     claim_row$topic_id <- inferred_topic
     claim_row$summary_text <- summary
     claim_row$position_text <- stringr::str_squish(position)
+    if ("evidence_excerpt" %in% names(claim_row) &&
+        grepl("fuente incorporada desde data", claim_row$evidence_excerpt[[1]] %||% "", ignore.case = TRUE)) {
+      claim_row$evidence_excerpt <- summary
+    }
+    if ("quote_text" %in% names(claim_row) &&
+        grepl("data/added_manually", claim_row$quote_text[[1]] %||% "", ignore.case = TRUE)) {
+      claim_row$quote_text <- summary
+    }
     claim_row$insufficient_evidence_flag <- FALSE
     claim_row
   })

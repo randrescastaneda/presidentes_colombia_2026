@@ -1,6 +1,6 @@
 [
   {
-    "updated_at": "2026-04-28 20:09:42 UTC",
+    "updated_at": "2026-04-29 21:20:58 UTC",
     "latest_event_date": "2026-04-24",
     "public_claim_count": 227,
     "public_source_count": 86,
@@ -9,10 +9,12 @@
     "candidate_analysis_count": 14,
     "comparison_report_count": 1,
     "editorial_package_count": 17,
+    "candidate_policy_dossier_count": 6,
+    "comparison_essay_count": 9,
     "source_text_file_count": 9,
     "manual_source_registry_count": 205,
     "promoted_manual_source_count": 35,
-    "pending_manual_source_count": 124,
+    "pending_manual_source_count": 123,
     "program_document_count": 6,
     "primary_program_document_count": 6,
     "source_packet_count": 86,

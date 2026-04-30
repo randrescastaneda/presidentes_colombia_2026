@@ -4,7 +4,7 @@
     "candidate_id": "ivan-cepeda",
     "source_ids": ["src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260418-ivan-economia", "src-20260421-ivan-vanguardia", "src-20260419-ivan-debate-elpais", "src-20260418-ivan-profile", "src-manual-195a1706"],
     "claim_ids": ["claim-20260418-ivan-bio", "claim-20260418-ivan-paz-total", "claim-20260418-ivan-economia", "claim-20260418-ivan-transicion", "claim-20260418-ivan-anticorrupcion", "claim-20260418-ivan-tierras", "claim-20260418-ivan-tren", "claim-20260419-ivan-reto-debate", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-program-home-claim-1", "src-20260420-ivan-program-pdf-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-ivan-profile-claim-1", "src-manual-195a1706-claim-1", "src-manual-195a1706-claim-2"],
-    "profile_overview": "Iván Cepeda Castro cuenta con 21 afirmaciones trazables en 9 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Fiscal, Educación superior. La mezcla observada de afirmaciones es dato_contextual=11, postura_general=5, propuesta_concreta=3, critica_adversario=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Iván Cepeda Castro aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Fiscal, Educación superior. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -99,7 +99,7 @@
       },
       {
         "topic_id": "educacion-superior",
-        "description": "En Educación superior, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Iván Cepeda Castro: Iván Cepeda Senador de la República de Colombia.",
+        "description": "En Educación superior, la evidencia pública observada se concentra en posturas o prioridades generales. Hallazgo manual validado para seguimiento editorial: Iván Cepeda Senador de la República de Colombia",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -249,7 +249,7 @@
     "candidate_id": "clara-lopez",
     "source_ids": ["src-20260418-clara-renuncia", "src-20260418-clara-profile", "src-manual-2c779d51", "src-manual-6e32a8d5"],
     "claim_ids": ["claim-20260418-clara-bio", "claim-20260418-clara-renuncia", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2", "src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-manual-2c779d51-claim-1", "src-manual-2c779d51-claim-2", "src-manual-6e32a8d5-claim-1", "src-manual-6e32a8d5-claim-2"],
-    "profile_overview": "Clara Eugenia López Obregón cuenta con 10 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Educación superior, Vida pública y trayectoria. La mezcla observada de afirmaciones es dato_contextual=8, critica_adversario=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Clara Eugenia López Obregón aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Educación superior, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; apertura_vs_soberanismo: Apertura. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -316,7 +316,7 @@
     "thematic_analysis": [
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La renuncia fue formalizada ante la Registraduría y deja su casilla en blanco La fuente registra un hecho público asociado a Clara Eugenia López Obregón: Clara López inscribe oficialmente su candidatura presidencial 2026.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La renuncia fue formalizada ante la Registraduría y deja su casilla en blanco Hallazgo manual validado para seguimiento editorial: Clara López inscribe oficialmente su candidatura presidencial 2026",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -368,7 +368,7 @@
     "candidate_id": "claudia-lopez",
     "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf", "src-20260418-claudia-forbes", "src-20260424-claudia-debates-elpais", "src-20260422-claudia-infobae", "src-20260419-claudia-energia-elpais", "src-20260418-claudia-profile", "src-manual-05f40435", "src-manual-09f50ce0", "src-manual-1e42b541"],
     "claim_ids": ["claim-20260418-claudia-bio", "claim-20260418-claudia-seguridad", "claim-20260418-claudia-justicia", "claim-20260418-claudia-cuidado", "claim-20260418-claudia-genero", "claim-20260418-claudia-educacion", "claim-20260418-claudia-vivienda", "claim-20260418-claudia-agua", "claim-20260418-claudia-fiscal", "claim-20260418-claudia-salud", "claim-20260419-claudia-mineria-social", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260424-claudia-debates-elpais-claim-1", "src-20260424-claudia-debates-elpais-claim-2", "src-20260424-claudia-debates-elpais-claim-3", "src-20260422-claudia-infobae-claim-1", "src-20260422-claudia-infobae-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-manual-05f40435-claim-1", "src-manual-05f40435-claim-2", "src-manual-09f50ce0-claim-1", "src-manual-09f50ce0-claim-2", "src-manual-1e42b541-claim-1", "src-manual-1e42b541-claim-2"],
-    "profile_overview": "Claudia Nayibe López Hernández cuenta con 31 afirmaciones trazables en 10 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Vida pública y trayectoria, Educación superior. La mezcla observada de afirmaciones es propuesta_concreta=12, dato_contextual=11, postura_general=5, critica_adversario=3, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Claudia Nayibe López Hernández aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria, Educación superior. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -449,7 +449,7 @@
       },
       {
         "topic_id": "vida-publica",
-        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. EL PAÍS recoge que López quiere incorporar a las comunidades con licenciamiento social y sacar a los criminales de la minería. La fuente registra un hecho público asociado a Claudia Nayibe López Hernández: Claudia López presentó su plan de gobierno: habla de seguridad con enfoque social y apuesta por superar la polarización.",
+        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. EL PAÍS recoge que López quiere incorporar a las comunidades con licenciamiento social y sacar a los criminales de la minería. Hallazgo manual validado para seguimiento editorial: Claudia López presentó su plan de gobierno: habla de seguridad con enfoque social y apuesta por superar la polarización",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -627,7 +627,7 @@
     "candidate_id": "raul-botero",
     "source_ids": ["src-20260418-santiago-caracol", "src-20260418-raul-profile"],
     "claim_ids": ["claim-20260418-raul-bio", "claim-20260418-santiago-pena-muerte", "claim-20260418-santiago-fuerza-publica", "src-20260418-santiago-caracol-claim-1", "src-20260418-santiago-caracol-claim-2", "src-20260418-raul-profile-claim-1", "src-20260418-raul-profile-claim-2"],
-    "profile_overview": "Raúl Santiago Botero Jaramillo cuenta con 7 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en Defensa y soberanía, Productividad y crecimiento, Justicia e instituciones penales. La mezcla observada de afirmaciones es dato_contextual=5, postura_general=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Raúl Santiago Botero Jaramillo aparece públicamente con una agenda que gira principalmente alrededor de Defensa y soberanía, Productividad y crecimiento, Justicia e instituciones penales. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -760,7 +760,7 @@
     "candidate_id": "abelardo-de-la-espriella",
     "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260424-abelardo-colpensiones-elpais", "src-20260418-abelardo-infobae", "src-20260422-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-abelardo-profile", "src-manual-21c82915"],
     "claim_ids": ["claim-20260418-abelardo-bio", "claim-20260418-abelardo-estado", "claim-20260418-abelardo-jep", "claim-20260418-abelardo-impuestos", "claim-20260418-abelardo-carceles", "claim-20260418-abelardo-seguridad", "claim-20260418-abelardo-economia", "claim-20260418-abelardo-salud", "claim-20260419-abelardo-acepta-debate", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260424-abelardo-colpensiones-elpais-claim-1", "src-20260424-abelardo-colpensiones-elpais-claim-2", "src-20260424-abelardo-colpensiones-elpais-claim-3", "src-20260418-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-manual-21c82915-claim-1", "src-manual-21c82915-claim-2"],
-    "profile_overview": "Abelardo Gabriel de la Espriella cuenta con 24 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Fiscal, Reforma política, Productividad y crecimiento. La mezcla observada de afirmaciones es dato_contextual=12, propuesta_concreta=7, postura_general=3, critica_adversario=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Abelardo Gabriel de la Espriella aparece públicamente con una agenda que gira principalmente alrededor de Fiscal, Reforma política, Productividad y crecimiento. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -883,7 +883,7 @@
       },
       {
         "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Abelardo Gabriel de la Espriella: Así es el plan de Abelardo de la Espriella para recuperar el control territorial en 90 días.",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Hallazgo manual validado para seguimiento editorial: Así es el plan de Abelardo de la Espriella para recuperar el control territorial en 90 días | Política | Caracol Radio",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -991,7 +991,7 @@
     "candidate_id": "mauricio-lizcano",
     "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
     "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2", "src-manual-78dafdfc-claim-1", "src-manual-78dafdfc-claim-2"],
-    "profile_overview": "Óscar Mauricio Lizcano Arango cuenta con 17 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. La mezcla observada de afirmaciones es dato_contextual=14, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Óscar Mauricio Lizcano Arango aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; tecnocracia_vs_populismo: Populismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1124,7 +1124,7 @@
     "candidate_id": "miguel-uribe",
     "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
     "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-51298b3e-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
-    "profile_overview": "Miguel Uribe Londoño cuenta con 9 afirmaciones trazables en 4 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Vida pública y trayectoria. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1205,7 +1205,7 @@
       },
       {
         "topic_id": "vida-publica",
-        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La fuente registra un hecho público asociado a Miguel Uribe Londoño: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño.",
+        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Hallazgo manual validado para seguimiento editorial: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -1229,7 +1229,7 @@
     "candidate_id": "sondra-macollins",
     "source_ids": ["src-20260418-sondra-profile", "src-manual-62b0ca5e"],
     "claim_ids": ["claim-20260418-sondra-bio", "src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2", "src-manual-62b0ca5e-claim-1", "src-manual-62b0ca5e-claim-2"],
-    "profile_overview": "Sondra Macollins Garvin Pinto cuenta con 5 afirmaciones trazables en 2 fuentes públicas. La evidencia disponible se concentra sobre todo en Defensa y soberanía, Trayectoria pública, Controversias públicas. La mezcla observada de afirmaciones es dato_contextual=4, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Sondra Macollins Garvin Pinto aparece públicamente con una agenda que gira principalmente alrededor de Defensa y soberanía, Trayectoria pública, Controversias públicas. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1310,7 +1310,7 @@
       },
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Sondra Macollins Garvin Pinto: Sondra Macollins presidencia: sus propuestas de gobierno en Cablenoticias.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Hallazgo manual validado para seguimiento editorial: Sondra Macollins presidencia: sus propuestas de gobierno en Cablenoticias",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1348,7 +1348,7 @@
     "candidate_id": "roy-barreras",
     "source_ids": ["src-20260418-roy-efe", "src-20260418-roy-profile", "src-manual-3ba61356", "src-manual-1ce02e20", "src-manual-7087b35f", "src-manual-5aa471d6"],
     "claim_ids": ["claim-20260418-roy-bio", "claim-20260418-roy-productividad", "claim-20260418-roy-paz", "src-20260418-roy-efe-claim-1", "src-20260418-roy-profile-claim-1", "src-manual-3ba61356-claim-1", "src-manual-3ba61356-claim-2", "src-manual-1ce02e20-claim-1", "src-manual-1ce02e20-claim-2", "src-manual-7087b35f-claim-1", "src-manual-7087b35f-claim-2", "src-manual-5aa471d6-claim-1", "src-manual-5aa471d6-claim-2"],
-    "profile_overview": "Roy Leonardo Barreras Montealegre cuenta con 13 afirmaciones trazables en 6 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Justicia e instituciones penales, Paz y conflicto armado. La mezcla observada de afirmaciones es dato_contextual=9, postura_general=2, diagnostico_problema=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Roy Leonardo Barreras Montealegre aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Justicia e instituciones penales, Paz y conflicto armado. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1415,7 +1415,7 @@
     "thematic_analysis": [
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. RTVC resume la trayectoria institucional de Roy Barreras. La fuente registra un hecho público asociado a Roy Leonardo Barreras Montealegre: Roy Barreras propuso cambios en el período presidencial que afectaría a los actuales alcaldes y gobernadores: “Tendrían que gobernar dos años más”.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. RTVC resume la trayectoria institucional de Roy Barreras. Hallazgo manual validado para seguimiento editorial: Roy Barreras propuso cambios en el período presidencial que afectaría a los actuales alcaldes y gobernadores: “Tendrían que gobernar dos años más”",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1495,7 +1495,7 @@
     "candidate_id": "carlos-caicedo",
     "source_ids": ["src-20260418-caicedo-caracol", "src-20260418-carlos-profile", "src-manual-20013e75", "src-manual-2e1819df", "src-manual-1dc39c95"],
     "claim_ids": ["claim-20260418-carlos-bio", "claim-20260418-carlos-educacion", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2", "src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-manual-20013e75-claim-1", "src-manual-20013e75-claim-2", "src-manual-2e1819df-claim-2", "src-manual-1dc39c95-claim-1", "src-manual-1dc39c95-claim-2"],
-    "profile_overview": "Carlos Eduardo Caicedo Omar cuenta con 11 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Educación superior, Paz y conflicto armado. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Carlos Eduardo Caicedo Omar aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Educación superior, Paz y conflicto armado. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1628,7 +1628,7 @@
     "candidate_id": "gustavo-matamoros",
     "source_ids": ["src-20260418-gustavo-profile", "src-manual-30548c04", "src-manual-25877365", "src-manual-5e114fad", "src-manual-4dc0f536"],
     "claim_ids": ["claim-20260418-gustavo-bio", "src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2", "src-manual-30548c04-claim-1", "src-manual-30548c04-claim-2", "src-manual-25877365-claim-1", "src-manual-25877365-claim-2", "src-manual-5e114fad-claim-1", "src-manual-5e114fad-claim-2", "src-manual-4dc0f536-claim-1", "src-manual-4dc0f536-claim-2"],
-    "profile_overview": "Gustavo Matamoros Camacho cuenta con 11 afirmaciones trazables en 5 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Paz y conflicto armado, Vida pública y trayectoria. La mezcla observada de afirmaciones es dato_contextual=8, propuesta_concreta=2, postura_general=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Gustavo Matamoros Camacho aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Paz y conflicto armado, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1695,7 +1695,7 @@
     "thematic_analysis": [
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. General retirado; centra su campaña en seguridad y presencia institucional La fuente registra un hecho público asociado a Gustavo Matamoros Camacho: Gustavo Matamoros quién es el general que quiere ser presidente de Colombia perfil y trayectoria del candidato.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. General retirado; centra su campaña en seguridad y presencia institucional Hallazgo manual validado para seguimiento editorial: Gustavo Matamoros quién es el general que quiere ser presidente de Colombia perfil y trayectoria del candidato | Noticas Hoy | EL ESPECTADOR",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1709,7 +1709,7 @@
       },
       {
         "topic_id": "paz",
-        "description": "En Paz y conflicto armado, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. ¿Qué hará con la JEP Gustavo Matamoros si llega a la Presidencia? La fuente registra un hecho público asociado a Gustavo Matamoros Camacho: ¿Qué hará con la JEP Gustavo Matamoros si llega a la Presidencia?.",
+        "description": "En Paz y conflicto armado, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. ¿Qué hará con la JEP Gustavo Matamoros si llega a la Presidencia? Hallazgo manual validado para seguimiento editorial: ¿Qué hará con la JEP Gustavo Matamoros si llega a la Presidencia?",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -1747,7 +1747,7 @@
     "candidate_id": "paloma-valencia",
     "source_ids": ["src-20260418-paloma-official", "src-20260420-paloma-program-pdf", "src-20260424-paloma-seguridad-elpais", "src-20260419-paloma-debate-elpais", "src-20260419-paloma-energia-elpais", "src-20260418-paloma-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-eltiempo", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-21c198da"],
     "claim_ids": ["claim-20260418-paloma-bio", "claim-20260418-paloma-energia", "claim-20260418-paloma-vias", "claim-20260418-paloma-educacion", "claim-20260418-paloma-formalizacion", "claim-20260418-paloma-vivienda", "claim-20260418-paloma-seguridad", "claim-20260418-paloma-salud", "claim-20260418-paloma-carceles", "claim-20260419-paloma-energia-foro", "claim-20260419-paloma-acepta-debate", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260424-paloma-seguridad-elpais-claim-1", "src-20260424-paloma-seguridad-elpais-claim-2", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-eltiempo-claim-1", "src-manual-10314ccb-claim-1", "src-manual-10314ccb-claim-2", "src-manual-1cf85d8c-claim-1", "src-manual-1cf85d8c-claim-2", "src-manual-21c198da-claim-1", "src-manual-21c198da-claim-2"],
-    "profile_overview": "Paloma Susana Valencia Laserna cuenta con 32 afirmaciones trazables en 11 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Vida pública y trayectoria, Defensa y soberanía. La mezcla observada de afirmaciones es dato_contextual=14, propuesta_concreta=14, critica_adversario=2, postura_general=2, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Paloma Susana Valencia Laserna aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria, Defensa y soberanía. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Mixto o tensionado; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1884,7 +1884,7 @@
       },
       {
         "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Mano firme contra la criminalidad: las propuestas de Paloma Valencia La fuente registra un hecho público asociado a Paloma Susana Valencia Laserna: Mano firme contra la criminalidad: las propuestas de Paloma Valencia - Canal 1.",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Mano firme contra la criminalidad: las propuestas de Paloma Valencia Hallazgo manual validado para seguimiento editorial: Mano firme contra la criminalidad: las propuestas de Paloma Valencia",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -2020,7 +2020,7 @@
     "candidate_id": "sergio-fajardo",
     "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf", "src-20260423-fajardo-espectador", "src-20260419-sergio-debate-elpais", "src-20260419-sergio-energia-elpais", "src-20260418-sergio-profile", "src-manual-4895df7e"],
     "claim_ids": ["claim-20260418-sergio-bio", "claim-20260418-fajardo-seguridad", "claim-20260418-fajardo-paz", "claim-20260418-fajardo-anticorrupcion", "claim-20260418-fajardo-salud", "claim-20260418-fajardo-mujeres", "claim-20260419-sergio-energia-legalidad", "claim-20260419-fajardo-listo-debate", "src-20260418-fajardo-official-claim-1", "src-20260420-fajardo-program-pdf-claim-1", "src-20260423-fajardo-espectador-claim-1", "src-20260423-fajardo-espectador-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-manual-4895df7e-claim-1", "src-manual-4895df7e-claim-2"],
-    "profile_overview": "Sergio Fajardo Valderrama cuenta con 19 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Seguridad ciudadana, Anticorrupción y transparencia. La mezcla observada de afirmaciones es dato_contextual=9, postura_general=7, critica_adversario=2, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Sergio Fajardo Valderrama aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Seguridad ciudadana, Anticorrupción y transparencia. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -2087,7 +2087,7 @@
     "thematic_analysis": [
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta que Fajardo dijo estar listo para debatir y pidió incluir a quienes no representan la polarización Petro-Uribe La fuente registra un hecho público asociado a Sergio Fajardo Valderrama: Vea aquí las propuestas de Sergio Fajardo para presidente 2026.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta que Fajardo dijo estar listo para debatir y pidió incluir a quienes no representan la polarización Petro-Uribe Hallazgo manual validado para seguimiento editorial: Vea aquí las propuestas de Sergio Fajardo para presidente 2026 | 360",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -2251,7 +2251,7 @@
     "candidate_id": "luis-gilberto-murillo",
     "source_ids": ["src-20260420-murillo-program-home", "src-20260418-murillo-espectador", "src-20260421-murillo-tiempo", "src-20260418-murillo-elpais", "src-20260418-murillo-profile", "src-manual-40921854", "src-manual-5bbd0995"],
     "claim_ids": ["claim-20260418-murillo-bio", "claim-20260418-murillo-educacion", "claim-20260418-murillo-seguridad", "claim-20260418-murillo-puertos", "claim-20260418-murillo-alianza", "claim-20260418-murillo-regiones", "src-20260420-murillo-program-home-claim-1", "src-20260418-murillo-espectador-claim-1", "src-20260421-murillo-tiempo-claim-1", "src-20260421-murillo-tiempo-claim-2", "src-20260418-murillo-elpais-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-manual-40921854-claim-1", "src-manual-40921854-claim-2", "src-manual-5bbd0995-claim-1", "src-manual-5bbd0995-claim-2"],
-    "profile_overview": "Luis Gilberto Murillo Urrutia cuenta con 17 afirmaciones trazables en 7 fuentes públicas. La evidencia disponible se concentra sobre todo en Trayectoria pública, Relaciones exteriores, Educación. La mezcla observada de afirmaciones es dato_contextual=9, postura_general=6, critica_adversario=1, propuesta_concreta=1, lo que permite una lectura programática todavía provisional pero ya comparable.",
+    "profile_overview": "Luis Gilberto Murillo Urrutia aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Relaciones exteriores, Educación. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -2318,7 +2318,7 @@
     "thematic_analysis": [
       {
         "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Excanciller y exgobernador; desarrollo sostenible e inclusión regional marcan su trayectoria La fuente registra un hecho público asociado a Luis Gilberto Murillo Urrutia: Luis Gilberto Murillo busca la Presidencia: quién es, cargos, hoja de vida, por qué renunció a Cancillería.",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Excanciller y exgobernador; desarrollo sostenible e inclusión regional marcan su trayectoria Hallazgo manual validado para seguimiento editorial: Luis Gilberto Murillo busca la Presidencia: quién es, cargos, hoja de vida, por qué renunció a Cancillería | Noticias hoy | EL ESPECTADOR",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
