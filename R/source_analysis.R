@@ -27,6 +27,14 @@ normalize_public_match_vector <- function(x) {
   tolower(values)
 }
 
+row_value <- function(row, column, default = "") {
+  if (!is.data.frame(row) || nrow(row) == 0 || !column %in% names(row)) {
+    return(default)
+  }
+
+  row[[column]][[1]] %||% default
+}
+
 is_blank_topic <- function(value, taxonomy = NULL) {
   if (length(value) == 0 || all(is.na(value))) {
     return(TRUE)
@@ -84,9 +92,9 @@ infer_topic_id_for_claim <- function(claim_row, source_row = tibble::tibble(), t
     claim_row$mechanism_text[[1]] %||% "",
     claim_row$target_population[[1]] %||% "",
     claim_row$problem_diagnosed[[1]] %||% "",
-    source_row$title[[1]] %||% "",
-    source_row$quote_text[[1]] %||% "",
-    source_row$source_type[[1]] %||% ""
+    row_value(source_row, "title"),
+    row_value(source_row, "quote_text"),
+    row_value(source_row, "source_type")
   ))
 
   rules <- topic_inference_rules()
@@ -114,7 +122,7 @@ summary_looks_like_placeholder <- function(text, source_title = "") {
   normalized == "" ||
     normalized %in% c("programa de gobierno", "plan integrado de gobierno", "programa oficial", "fuente incorporada desde data") ||
     normalized == title_norm ||
-    grepl("fuente incorporada desde data|pdf oficial descargable|tabla de contenido|captura parcial del sitio oficial|^#\\s", normalized, perl = TRUE) ||
+    grepl("fuente incorporada desde data|hallazgo manual validado|pdf oficial descargable|tabla de contenido|captura parcial del sitio oficial|^#\\s", normalized, perl = TRUE) ||
     nchar(normalized) < 20
 }
 
@@ -128,7 +136,7 @@ extract_meaningful_sentence <- function(text) {
   pieces <- unlist(strsplit(raw, "(?<=[.!?])\\s+|\\s+-\\s+|\\n", perl = TRUE))
   pieces <- stringr::str_squish(pieces)
   pieces <- pieces[nchar(pieces) >= 35 & nchar(pieces) <= 260]
-  pieces <- pieces[!grepl("tabla de contenido|fuente oficial|estado de acceso|whatsapp|contacto|pagina [0-9]|fuente incorporada desde data|validated_by_http|^https?://", normalize_public_match_vector(pieces), perl = TRUE)]
+  pieces <- pieces[!grepl("tabla de contenido|fuente oficial|estado de acceso|whatsapp|contacto|pagina [0-9]|fuente incorporada desde data|hallazgo manual validado|validated_by_http|^https?://", normalize_public_match_vector(pieces), perl = TRUE)]
 
   if (length(pieces) == 0) {
     return("")
@@ -175,7 +183,7 @@ title_based_public_summary <- function(source_title, candidate_name = "") {
 
 compact_public_claim_summary <- function(claim_row, source_row = tibble::tibble(), candidate_name = "") {
   current <- claim_row$summary_text[[1]] %||% ""
-  source_title <- source_row$title[[1]] %||% ""
+  source_title <- row_value(source_row, "title")
   if (
     !summary_looks_like_placeholder(current, source_title) &&
       nchar(current) <= 700
@@ -188,7 +196,7 @@ compact_public_claim_summary <- function(claim_row, source_row = tibble::tibble(
     return(stringr::str_trunc(candidate, 700))
   }
 
-  quote <- extract_meaningful_sentence(source_row$quote_text[[1]] %||% "")
+  quote <- extract_meaningful_sentence(row_value(source_row, "quote_text"))
   if (!is.na(quote) && quote != "" && !summary_looks_like_placeholder(quote, source_title)) {
     return(stringr::str_trunc(quote, 700))
   }
@@ -225,7 +233,7 @@ repair_claims_for_publication <- function(claims, sources, taxonomy, candidates 
     summary <- compact_public_claim_summary(claim_row, source_row, candidate_name = candidate_name)
     position <- claim_row$position_text[[1]] %||% ""
 
-    if (summary_looks_like_placeholder(position, source_row$title[[1]] %||% "") || nchar(position) > 900) {
+    if (summary_looks_like_placeholder(position, row_value(source_row, "title")) || nchar(position) > 900) {
       position <- summary
     }
 
@@ -296,7 +304,7 @@ build_source_analysis_notes <- function(claims, sources, taxonomy = tibble::tibb
   }
 
   topic_lookup <- taxonomy |>
-    dplyr::select(.data$topic_id, topic_label = .data$label_public)
+    dplyr::select("topic_id", topic_label = "label_public")
 
   claims |>
     dplyr::left_join(topic_lookup, by = "topic_id") |>

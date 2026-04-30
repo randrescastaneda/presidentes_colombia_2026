@@ -506,7 +506,7 @@ default_manual_source_url_validator <- function(url) {
   )
 
   result <- tryCatch(
-    system2("curl", args = args, stdout = TRUE, stderr = TRUE),
+    suppressWarnings(system2("curl", args = args, stdout = TRUE, stderr = TRUE)),
     error = function(error) structure(conditionMessage(error), status = 1L)
   )
 
@@ -650,7 +650,7 @@ build_promoted_manual_sources <- function(registry, batch_label = as.character(S
       source_name = .data$source_name,
       url = .data$final_url,
       title = .data$title,
-      quote_text = paste0("Hallazgo manual validado para seguimiento editorial: ", .data$title),
+      quote_text = .data$title,
       confidence = pmax(.data$candidate_confidence, 0.75),
       inbox_batch = batch_label,
       discovery_method = .data$discovery_method,

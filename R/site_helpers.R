@@ -245,12 +245,12 @@ taxonomy_root_lookup <- function(taxonomy) {
       root_sort_order = unname(sort_lookup[.data$root_topic_id])
     ) |>
     dplyr::select(
-      .data$topic_id,
-      .data$topic_label,
-      .data$root_topic_id,
-      .data$root_label,
-      .data$root_description,
-      .data$root_sort_order
+      "topic_id",
+      "topic_label",
+      "root_topic_id",
+      "root_label",
+      "root_description",
+      "root_sort_order"
     )
 }
 
