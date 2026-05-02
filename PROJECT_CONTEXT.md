@@ -44,6 +44,7 @@ Estado actual:
 - el contrato público de homepage ahora incluye handoff contextual hacia fichas: links con `?from=homepage&topic=...#propuestas-y-posiciones-publicas`, síntesis pública de comparaciones y degradación segura cuando faltan candidatos o metadata auxiliar
 - `data/added_manually/` ahora funciona como canal de descubrimiento curado: produce `data/state/manual_source_registry.csv`, promueve automáticamente URLs válidas con metadata mínima y publica una capa de `fuentes por clasificar` para enlaces útiles aún no integrados al corpus candidato-trazable
 - `data/analysis/daily_source_reviews/` registra la bitácora diaria de fuentes evaluadas y alimenta `fuentes-evaluadas.qmd`; las fuentes multi-candidato no deben promoverse automáticamente desde `data/added_manually/` sin candidato, fecha y uso editorial confirmados
+- `scripts/verify_daily_automation.R` escribe `data/automation/run_reports/YYYY-MM-DD.*` y bloquea commit/push automático si fallan validación pública, topic_id, frases internas, render de fuentes evaluadas o promociones ambiguas desde ingesta manual
 
 ## Estado Git Consolidado
 
@@ -54,6 +55,7 @@ Al cierre de esta sesión:
 - `gh-pages` existe como rama remota de deployment
 - las ramas de trabajo previas de contratos, ingesta manual, viabilidad y fuentes evaluadas fueron incorporadas a `main`
 - la automatización diaria quedó configurada para correr sobre `main`, validar, commitear y hacer `push origin main` solo cuando las verificaciones pasen
+- la automatización diaria debe ejecutar `scripts/verify_daily_automation.R --date=YYYY-MM-DD --notify` antes de commitear; `--check-oracle` puede usarse como smoke test adicional cuando se quiera probar ChatGPT/Oracle
 
 Commits importantes:
 
@@ -122,3 +124,4 @@ Instrucción operativa persistente:
 - reforzar el estado incremental para reruns parciales por candidato y por fuente
 - seguir ampliando reglas y cobertura del validador metodológico
 - decidir si la promoción automática desde `data/added_manually/` necesita fetch de metadata más profundo para aumentar la tasa de fuentes promovidas
+- monitorear la primera corrida desatendida posterior al hardening para confirmar que el reporte diario, commit y push se completan sin intervención humana

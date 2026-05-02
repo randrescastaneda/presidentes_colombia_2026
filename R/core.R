@@ -114,11 +114,22 @@ detect_analysis_notes <- function(claims, sources, min_confidence = 0.7) {
     ))
   }
 
-  enriched_claims <- claims |>
+  normalized_claims <- claims
+  for (column_name in c("specificity_score", "implementation_detail")) {
+    if (!column_name %in% names(normalized_claims)) {
+      normalized_claims[[column_name]] <- NA
+    }
+  }
+
+  enriched_claims <- normalized_claims |>
     dplyr::inner_join(
       sources |>
         dplyr::select(source_id, source_confidence = confidence, published_at),
       by = "source_id"
+    ) |>
+    dplyr::mutate(
+      specificity_score = dplyr::coalesce(as.numeric(.data$specificity_score), 0),
+      implementation_detail = dplyr::coalesce(.data$implementation_detail, FALSE)
     ) |>
     dplyr::arrange(candidate_id, policy_key, event_date, published_at)
 

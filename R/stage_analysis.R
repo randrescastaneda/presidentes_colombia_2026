@@ -374,7 +374,11 @@ build_thematic_analysis <- function(candidate_claims, analysis_notes, taxonomy =
       topic_label <- topic_lookup |>
         dplyr::filter(topic_id == topic_key) |>
         dplyr::pull(label_public)
-      topic_label <- topic_label[[1]] %||% topic_key
+      topic_label <- if (length(topic_label) == 0 || is.na(topic_label[[1]]) || topic_label[[1]] == "") {
+        topic_key
+      } else {
+        topic_label[[1]]
+      }
 
       topic_notes <- analysis_notes |>
         dplyr::filter(candidate_id == topic_claims$candidate_id[[1]]) |>

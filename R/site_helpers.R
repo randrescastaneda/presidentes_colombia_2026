@@ -302,7 +302,15 @@ source_number_lookup <- function(sources) {
   }
 
   source_items <- sources |>
-    dplyr::distinct(.data$source_id, .keep_all = TRUE) |>
+    dplyr::distinct(.data$source_id, .keep_all = TRUE)
+  if (!"published_at" %in% names(source_items)) {
+    source_items$published_at <- as.POSIXct(NA)
+  }
+  if (!"source_name" %in% names(source_items)) {
+    source_items$source_name <- ""
+  }
+
+  source_items <- source_items |>
     dplyr::arrange(dplyr::desc(.data$published_at), .data$source_name)
 
   stats::setNames(seq_len(nrow(source_items)), source_items$source_id)

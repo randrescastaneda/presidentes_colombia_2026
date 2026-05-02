@@ -285,24 +285,24 @@ infer_manual_source_candidate <- function(normalized_url, context_hint, candidat
     ))
   }
 
-  corpus <- paste(
-    iconv(normalized_url %||% "", to = "ASCII//TRANSLIT"),
-    iconv(context_hint %||% "", to = "ASCII//TRANSLIT"),
-    sep = " "
-  ) |>
+  normalized_url_text <- iconv(normalized_url %||% "", to = "ASCII//TRANSLIT") |>
     tolower()
+  normalized_context_text <- iconv(context_hint %||% "", to = "ASCII//TRANSLIT") |>
+    tolower()
+  corpus <- paste(normalized_url_text, normalized_context_text, sep = " ")
 
-  score_candidate <- function(entry) {
+  score_candidate <- function(entry, text) {
     score <- 0
+    compact_text <- gsub("[^a-z0-9]+", "", text)
 
     for (phrase in entry$phrases) {
-      if (nzchar(phrase) && grepl(phrase, gsub("[^a-z0-9]+", "", corpus), fixed = TRUE)) {
+      if (nzchar(phrase) && grepl(phrase, compact_text, fixed = TRUE)) {
         score <- score + 3
       }
     }
 
     for (token in entry$tokens) {
-      if (nzchar(token) && grepl(token, corpus, fixed = TRUE)) {
+      if (nzchar(token) && grepl(token, text, fixed = TRUE)) {
         score <- score + 1
       }
     }
@@ -310,7 +310,7 @@ infer_manual_source_candidate <- function(normalized_url, context_hint, candidat
     score
   }
 
-  scores <- vapply(alias_map, score_candidate, numeric(1))
+  scores <- vapply(alias_map, score_candidate, numeric(1), text = corpus)
   if (length(scores) == 0 || max(scores) <= 0) {
     return(list(
       candidate_id = NA_character_,
@@ -323,6 +323,19 @@ infer_manual_source_candidate <- function(normalized_url, context_hint, candidat
   top_candidate <- names(ordered)[[1]]
   top_score <- ordered[[1]]
   runner_up <- if (length(ordered) >= 2) ordered[[2]] else 0
+
+  url_scores <- vapply(alias_map, score_candidate, numeric(1), text = normalized_url_text)
+  context_scores <- vapply(alias_map, score_candidate, numeric(1), text = normalized_context_text)
+  context_candidate_ids <- names(context_scores[context_scores >= 2])
+  top_url_score <- url_scores[[top_candidate]] %||% 0
+
+  if (length(context_candidate_ids) >= 2 && top_url_score < 2) {
+    return(list(
+      candidate_id = NA_character_,
+      candidate_confidence = min(0.6, top_score / 5),
+      candidate_match_method = "ambiguous_multi_candidate_context"
+    ))
+  }
 
   if (top_score < 2 || top_score <= runner_up) {
     return(list(
@@ -596,6 +609,11 @@ build_manual_source_registry <- function(project_dir = ".", candidates = NULL, v
         !is.na(published_at) ~ "promoted",
       TRUE ~ "pending_classification"
     )
+    status_reason <- paste(
+      validation$status_reason %||% "unknown",
+      candidate_guess$candidate_match_method %||% "unknown",
+      sep = "|"
+    )
 
     tibble::tibble(
       entry_id = entry_id,
@@ -615,7 +633,7 @@ build_manual_source_registry <- function(project_dir = ".", candidates = NULL, v
       published_at = as.POSIXct(published_at, tz = "UTC"),
       validation_status = validation$validation_status %||% "invalid",
       public_status = public_status,
-      status_reason = validation$status_reason %||% "unknown",
+      status_reason = status_reason,
       http_status = as.integer(validation$http_status %||% NA_integer_),
       reachable = isTRUE(validation$reachable),
       discovery_method = "manual_added_file",

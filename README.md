@@ -23,8 +23,14 @@ Proyecto base para investigar, estructurar y publicar hallazgos sobre las candid
 Rscript scripts/run_daily_update.R
 ```
 
-5. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state/` y `docs/`.
-6. Si `validation_report.json` queda en `block`, no se debe renderizar ni publicar el sitio.
+5. Ejecutar la verificación operativa:
+
+```bash
+Rscript scripts/verify_daily_automation.R --date=YYYY-MM-DD --notify
+```
+
+6. Revisar `data/staging/`, `data/processed/`, `data/public/`, `data/state`, `data/automation/run_reports/` y `docs/`.
+7. Si `validation_report.json` o el reporte diario quedan en `block`, no se debe publicar ni commitear la corrida.
 
 ## Estructura principal
 
@@ -34,6 +40,7 @@ Rscript scripts/run_daily_update.R
 - `data/inbox/`: insumos diarios de investigación.
 - `data/added_manually/`: listas curadas manualmente de URLs para descubrimiento y promoción semiautomática.
 - `data/analysis/daily_source_reviews/`: bitácora diaria de fuentes evaluadas, con decisión editorial sobre qué incorporar, reservar o descartar.
+- `data/automation/run_reports/`: reportes diarios de verificación operativa antes de commitear o publicar una corrida automatizada.
 - `data/staging/`: artefactos intermedios por etapa analítica.
 - `data/state/`: estado incremental para fuentes y candidatos.
 - `data/processed/`: tablas consolidadas listas para auditoría.
@@ -100,6 +107,29 @@ Esta capa responde tres preguntas operativas:
 - qué vacíos quedaron pendientes para investigación posterior
 
 Las fuentes multi-candidato o de contexto electoral no se promueven automáticamente al intake público por inferencia de texto. Solo pasan a `data/inbox/` o `data/added_manually/` cuando hay candidato, fecha y uso editorial confirmados.
+
+## Verificación De Automatización
+
+`scripts/verify_daily_automation.R` es el checklist ejecutable de la corrida diaria. Revisa:
+
+- `validation_report.json`
+- `topic_id` vacío en claims públicos
+- frases internas prohibidas en artefactos públicos
+- render de la revisión diaria en `docs/fuentes-evaluadas.html`
+- promociones ambiguas desde `data/added_manually/`
+- estado de Oracle/ChatGPT cuando se ejecuta con `--check-oracle`
+
+El script escribe JSON y Markdown en `data/automation/run_reports/YYYY-MM-DD.*`. Si hay bloqueos, sale con código distinto de cero para impedir commit/push automático. Con `--notify`, muestra una notificación local en macOS.
+
+Checklist desatendido esperado:
+
+1. `git checkout main`
+2. `git pull --ff-only origin main`
+3. crear o actualizar `data/analysis/daily_source_reviews/YYYY-MM-DD.*`
+4. agregar a `data/inbox/` solo fuentes con candidato y uso editorial confirmados
+5. `Rscript scripts/run_daily_update.R`
+6. `Rscript scripts/verify_daily_automation.R --date=YYYY-MM-DD --notify`
+7. commit y `git push origin main` solo si todo pasa
 
 ## Contexto Persistente
 

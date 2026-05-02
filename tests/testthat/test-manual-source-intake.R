@@ -1,3 +1,25 @@
+write_manual_source_test_taxonomy <- function(project_dir) {
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "economia", NA_character_, "Economía", "economia", "Marco fiscal, inflación, crecimiento, impuestos y gasto público.", TRUE, 1,
+      "empleo-empresa", NA_character_, "Empleo y empresa", "empleo-empresa", "Trabajo, emprendimiento, formalización, salarios y regulación empresarial.", TRUE, 2,
+      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 3,
+      "educacion", NA_character_, "Educación", "educacion", "Primera infancia, colegios, educación superior, calidad y financiación.", TRUE, 4,
+      "seguridad-justicia", NA_character_, "Seguridad y justicia", "seguridad-justicia", "Seguridad ciudadana, Fuerza Pública, justicia, cárceles y crimen organizado.", TRUE, 5,
+      "pobreza-desigualdad", NA_character_, "Pobreza, desigualdad y protección social", "pobreza-desigualdad", "Transferencias, hambre, movilidad social, protección y redistribución.", TRUE, 6,
+      "agro-rural", NA_character_, "Agro y ruralidad", "agro-rural", "Campo, tierras, seguridad alimentaria, vías rurales y desarrollo territorial.", TRUE, 7,
+      "ambiente-energia", NA_character_, "Ambiente y energía", "ambiente-energia", "Transición energética, licencias, agua, clima y biodiversidad.", TRUE, 8,
+      "vivienda-infraestructura", NA_character_, "Vivienda e infraestructura", "vivienda-infraestructura", "Vivienda, transporte, conectividad y obras públicas.", TRUE, 9,
+      "derechos-genero", NA_character_, "Derechos, aborto y género", "derechos-genero", "Aborto, identidad de género, familia, libertades civiles e igualdad.", TRUE, 10,
+      "instituciones-anticorrupcion", NA_character_, "Instituciones y anticorrupción", "instituciones-anticorrupcion", "Reforma política, transparencia, contratación, ramas del poder y controles.", TRUE, 11,
+      "politica-internacional-paz", NA_character_, "Política internacional y paz", "politica-internacional-paz", "Relaciones exteriores, comercio, migración, defensa y paz total.", TRUE, 12,
+      "vida-publica", NA_character_, "Vida pública y trayectoria", "vida-publica", "Trayectoria pública, redes de poder, controversias y antecedentes de interés público.", FALSE, 13
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+}
+
 test_that("build_manual_source_registry extracts, normalizes, and aggregates manual URLs", {
   project_dir <- tempfile()
   dir.create(project_dir)
@@ -105,6 +127,63 @@ test_that("build_promoted_manual_sources and pending library split registry rows
   expect_equal(pending$status[[1]], "pending_classification")
 })
 
+test_that("manual source inference does not promote multi-candidate context by alias alone", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  dir.create(file.path(project_dir, "data", "added_manually"), recursive = TRUE)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "ivan-cepeda", "ivan-cepeda", "Iván Cepeda Castro", "Aída Marina Quilcué Vivas", 1, TRUE, 1,
+      "paloma-valencia", "paloma-valencia", "Paloma Valencia", "Juan Daniel Oviedo", 2, TRUE, 2,
+      "claudia-lopez", "claudia-lopez", "Claudia López", "Leonardo Huerta", 3, TRUE, 3
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  writeLines(
+    "Iván Cepeda Paloma Valencia Claudia López encuesta y contexto: https://example.com/2026/05/02/encuesta-presidencial.html",
+    file.path(project_dir, "data", "added_manually", "daily.md")
+  )
+
+  validator <- function(url) {
+    list(
+      reachable = TRUE,
+      final_url = url,
+      http_status = 200L,
+      title = "Encuesta presidencial",
+      published_at = as.POSIXct("2026-05-02 00:00:00", tz = "UTC"),
+      validation_status = "reachable",
+      status_reason = "validated_by_http"
+    )
+  }
+
+  registry <- build_manual_source_registry(project_dir = project_dir, validator = validator)
+
+  expect_equal(nrow(registry), 1)
+  expect_equal(registry$public_status[[1]], "pending_classification")
+  expect_equal(registry$candidate_match_method[[1]], "ambiguous_multi_candidate_context")
+})
+
+test_that("manual source inference still promotes candidate-specific URLs", {
+  candidates <- tibble::tribble(
+    ~candidate_id, ~slug, ~president_name,
+    "ivan-cepeda", "ivan-cepeda", "Iván Cepeda Castro",
+    "paloma-valencia", "paloma-valencia", "Paloma Valencia"
+  )
+
+  guess <- infer_manual_source_candidate(
+    normalized_url = "https://palomavalencia.com/propuestas.html",
+    context_hint = "Iván Cepeda y Paloma Valencia aparecen en una revisión de fuentes.",
+    candidates = candidates
+  )
+
+  expect_equal(guess$candidate_id, "paloma-valencia")
+  expect_equal(guess$candidate_match_method, "alias_score")
+})
+
 test_that("run_pipeline promotes validated manual sources and publishes pending manual library", {
   project_dir <- tempfile()
   dir.create(project_dir)
@@ -113,13 +192,7 @@ test_that("run_pipeline promotes validated manual sources and publishes pending 
   dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
   dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
 
-  readr::write_csv(
-    tibble::tribble(
-      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
-      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1
-    ),
-    file.path(project_dir, "config", "taxonomy_v1.csv")
-  )
+  write_manual_source_test_taxonomy(project_dir)
 
   readr::write_csv(
     tibble::tribble(
@@ -185,13 +258,7 @@ test_that("run_pipeline prefers inbox sources over duplicated promoted manual so
   dir.create(file.path(project_dir, "data", "processed"), recursive = TRUE)
   dir.create(file.path(project_dir, "data", "public"), recursive = TRUE)
 
-  readr::write_csv(
-    tibble::tribble(
-      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
-      "salud", NA_character_, "Salud", "salud", "Sistema de salud", TRUE, 1
-    ),
-    file.path(project_dir, "config", "taxonomy_v1.csv")
-  )
+  write_manual_source_test_taxonomy(project_dir)
 
   readr::write_csv(
     tibble::tribble(

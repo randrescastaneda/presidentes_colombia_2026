@@ -413,6 +413,21 @@ build_public_key_comparison_note <- function(raw_note, comparison_blocks, daily_
   "Todavía no hay suficiente base comparativa para una lectura editorial fuerte."
 }
 
+ensure_public_claim_columns <- function(claims) {
+  ensure_public_table_columns(
+    claims,
+    list(
+      claim_type = NA_character_,
+      candidate_id = NA_character_,
+      source_id = NA_character_,
+      specificity_score = 0,
+      event_date = as.Date(NA),
+      summary_text = NA_character_,
+      topic_id = NA_character_
+    )
+  )
+}
+
 homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = tibble::tibble(), policy_dossier = NULL) {
   if (!is.null(policy_dossier)) {
     sections <- normalize_public_collection(policy_dossier$sections)
@@ -427,7 +442,7 @@ homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = t
     return("Ficha en construcción con fuentes trazables.")
   }
 
-  candidate_claims <- claims |>
+  candidate_claims <- ensure_public_claim_columns(claims) |>
     dplyr::filter(.data$candidate_id == .env$candidate_id, .data$claim_type == "policy_proposal") |>
     dplyr::left_join(taxonomy_lookup, by = "topic_id") |>
     dplyr::mutate(
@@ -746,7 +761,7 @@ build_candidate_policy_topic_sections <- function(candidate_claims, taxonomy_loo
 
 build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, from = NULL, project_dir = ".") {
   candidates <- read_candidate_registry_public(project_dir = project_dir)
-  claims <- read_public_table("claim_records.json", project_dir = project_dir)
+  claims <- ensure_public_claim_columns(read_public_table("claim_records.json", project_dir = project_dir))
   sources <- read_public_table("source_records.json", project_dir = project_dir)
   taxonomy <- read_taxonomy_public(project_dir = project_dir)
   comparison_report <- read_public_json("comparison_report.json", project_dir = project_dir)
@@ -759,7 +774,7 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
   candidate_name <- candidate_row$president_name[[1]] %||% candidate_id
   candidate_slug <- candidate_row$slug[[1]] %||% candidate_id
 
-  policy_claims <- claims |>
+  policy_claims <- ensure_public_claim_columns(claims) |>
     dplyr::filter(.data$candidate_id == .env$candidate_id, .data$claim_type == "policy_proposal")
 
   raw_documented_topic_ids <- unique(policy_claims$topic_id[!is.na(policy_claims$topic_id)])
@@ -819,7 +834,7 @@ build_candidate_policy_view_model <- function(candidate_id, topic_id = NULL, fro
 build_comparison_view_model <- function(project_dir = ".") {
   candidates <- read_candidate_registry_public(project_dir = project_dir)
   taxonomy <- read_taxonomy_public(project_dir = project_dir)
-  claims <- read_public_table("claim_records.json", project_dir = project_dir)
+  claims <- ensure_public_claim_columns(read_public_table("claim_records.json", project_dir = project_dir))
   sources <- read_public_table("source_records.json", project_dir = project_dir)
   comparison_essays <- read_comparison_essays_public(project_dir = project_dir)
 
