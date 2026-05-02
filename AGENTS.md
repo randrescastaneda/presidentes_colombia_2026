@@ -45,8 +45,8 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 ## Estado Técnico Esperado
 
 - Branch de trabajo: `main`
-- Remoto: `origin = https://github.com/randrescastaneda/presidentes_colombia_2026.git`
-- GitHub Pages: `https://randrescastaneda.github.io/presidentes_colombia_2026/`
+- Remoto: `origin = https://github.com/randrescastaneda/candidatos_presidenciales_colombia_2026.git`
+- GitHub Pages: `https://randrescastaneda.github.io/candidatos_presidenciales_colombia_2026/`
 - Workflow principal: `.github/workflows/publish.yml`
 - Automatización diaria: `colombia-2026-fuentes-evaluadas`
 

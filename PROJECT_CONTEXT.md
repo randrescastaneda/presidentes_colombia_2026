@@ -12,10 +12,10 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 
 ## Snapshot Operativo
 
-- Repo GitHub: `randrescastaneda/presidentes_colombia_2026`
+- Repo GitHub: `randrescastaneda/candidatos_presidenciales_colombia_2026`
 - Rama de desarrollo: `main`
 - Rama de publicación: `origin/gh-pages`
-- Sitio público: `https://randrescastaneda.github.io/presidentes_colombia_2026/`
+- Sitio público: `https://randrescastaneda.github.io/candidatos_presidenciales_colombia_2026/`
 - Workflow de publicación: `.github/workflows/publish.yml`
 - Automatización diaria activa: `colombia-2026-fuentes-evaluadas`, programada a las 05:45
 
