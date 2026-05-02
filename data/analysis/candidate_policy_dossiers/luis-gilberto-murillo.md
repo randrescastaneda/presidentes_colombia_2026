@@ -8,7 +8,7 @@ La visión de Estado es habilitadora y territorial: usar finanzas públicas, inf
 
 ## Salud {#salud}
 
-La fuente programática de Murillo menciona salud como prioridad para asignar gasto junto a educación, agua y oportunidades.{src:src-20260420-murillo-program-home} Sin embargo, el corpus disponible no ofrece todavía un diseño de sistema de salud comparable al de Fajardo, Claudia, Paloma o Abelardo. La lectura responsable es que Murillo asocia salud con equidad territorial y gasto público focalizado, no que tenga ya una reforma sanitaria completa.
+La fuente programática de Murillo menciona salud como prioridad para asignar gasto junto a educación, agua y oportunidades.{src:src-20260420-murillo-program-home} Sin embargo, las fuentes disponibles no ofrecen todavía un diseño de sistema de salud comparable al de Fajardo, Claudia, Paloma o Abelardo. La lectura responsable es que Murillo asocia salud con equidad territorial y gasto público focalizado, no que tenga ya una reforma sanitaria completa.
 
 La implicación es un vacío relevante: si su candidatura quiere sostener una imagen de futuro y oportunidades, necesita explicar medicamentos, EPS, red rural, hospitales, salud pública, deudas y financiación. Su biografía ambiental y regional ayuda a anticipar sensibilidad por territorios apartados, pero no sustituye una propuesta sectorial. Falta una arquitectura sanitaria con instrumentos, costos y responsables.
 

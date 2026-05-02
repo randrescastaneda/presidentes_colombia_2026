@@ -1,6 +1,6 @@
 # Project Context
 
-Última actualización: 2026-04-23
+Última actualización: 2026-05-02
 
 ## Resumen
 
@@ -17,7 +17,7 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 - Rama de publicación: `origin/gh-pages`
 - Sitio público: `https://randrescastaneda.github.io/presidentes_colombia_2026/`
 - Workflow de publicación: `.github/workflows/publish.yml`
-- Automatización diaria activa: `colombia-2026-diario`
+- Automatización diaria activa: `colombia-2026-fuentes-evaluadas`, programada a las 05:45
 
 ## Estado Arquitectónico
 
@@ -43,6 +43,7 @@ Estado actual:
 - la homepage pública ya consume un view-model derivado desde `homepage_brief`, `comparison_report` y `validation_report`, en vez de depender solo de tablas procesadas legacy
 - el contrato público de homepage ahora incluye handoff contextual hacia fichas: links con `?from=homepage&topic=...#propuestas-y-posiciones-publicas`, síntesis pública de comparaciones y degradación segura cuando faltan candidatos o metadata auxiliar
 - `data/added_manually/` ahora funciona como canal de descubrimiento curado: produce `data/state/manual_source_registry.csv`, promueve automáticamente URLs válidas con metadata mínima y publica una capa de `fuentes por clasificar` para enlaces útiles aún no integrados al corpus candidato-trazable
+- `data/analysis/daily_source_reviews/` registra la bitácora diaria de fuentes evaluadas y alimenta `fuentes-evaluadas.qmd`; las fuentes multi-candidato no deben promoverse automáticamente desde `data/added_manually/` sin candidato, fecha y uso editorial confirmados
 
 ## Estado Git Consolidado
 
@@ -51,13 +52,15 @@ Al cierre de esta sesión:
 - solo existe una worktree activa, la principal
 - la rama local activa es `main`
 - `gh-pages` existe como rama remota de deployment
-- el árbol local está limpio
+- las ramas de trabajo previas de contratos, ingesta manual, viabilidad y fuentes evaluadas fueron incorporadas a `main`
+- la automatización diaria quedó configurada para correr sobre `main`, validar, commitear y hacer `push origin main` solo cuando las verificaciones pasen
 
 Commits importantes:
 
 - `06ebc7f` `Inicializa monitor presidencial Colombia 2026`
 - `5da7308` `Corrige workflow de GitHub Pages`
 - `586d03a` `Documenta operación y contexto del repo`
+- `b49a3d3` `Merge pull request #3 from randrescastaneda/codex/deepen-policy-viability`
 
 ## Deployment
 

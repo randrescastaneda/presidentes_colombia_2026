@@ -48,7 +48,7 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 - Remoto: `origin = https://github.com/randrescastaneda/presidentes_colombia_2026.git`
 - GitHub Pages: `https://randrescastaneda.github.io/presidentes_colombia_2026/`
 - Workflow principal: `.github/workflows/publish.yml`
-- Automatización diaria: `colombia-2026-diario`
+- Automatización diaria: `colombia-2026-fuentes-evaluadas`
 
 ## Uso De Family Brain
 

@@ -33,6 +33,7 @@ Rscript scripts/run_daily_update.R
 - `schemas/`: contratos JSON para artefactos estructurados intermedios.
 - `data/inbox/`: insumos diarios de investigación.
 - `data/added_manually/`: listas curadas manualmente de URLs para descubrimiento y promoción semiautomática.
+- `data/analysis/daily_source_reviews/`: bitácora diaria de fuentes evaluadas, con decisión editorial sobre qué incorporar, reservar o descartar.
 - `data/staging/`: artefactos intermedios por etapa analítica.
 - `data/state/`: estado incremental para fuentes y candidatos.
 - `data/processed/`: tablas consolidadas listas para auditoría.
@@ -87,6 +88,18 @@ El repo ahora tiene una capa adicional de descubrimiento en `data/added_manually
 - deja visibles las URLs válidas pero todavía ambiguas en la biblioteca pública de fuentes como `Fuentes por clasificar`
 
 Esto permite ampliar cobertura sin relajar la regla editorial principal: no convertir enlaces débiles o rotos en evidencia pública trazable.
+
+## Fuentes Evaluadas
+
+La automatización diaria registra una bitácora pública de revisión en `data/analysis/daily_source_reviews/` y la renderiza en `fuentes-evaluadas.qmd`.
+
+Esta capa responde tres preguntas operativas:
+
+- qué fuentes se revisaron cada día
+- cuáles entraron al análisis o al contexto público
+- qué vacíos quedaron pendientes para investigación posterior
+
+Las fuentes multi-candidato o de contexto electoral no se promueven automáticamente al intake público por inferencia de texto. Solo pasan a `data/inbox/` o `data/added_manually/` cuando hay candidato, fecha y uso editorial confirmados.
 
 ## Contexto Persistente
 

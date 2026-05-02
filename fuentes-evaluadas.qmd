@@ -1,0 +1,27 @@
+---
+title: "Fuentes evaluadas"
+---
+
+```{r}
+#| results: asis
+review_dir <- file.path("data", "analysis", "daily_source_reviews")
+review_files <- if (dir.exists(review_dir)) {
+  list.files(review_dir, pattern = "[.]md$", full.names = TRUE)
+} else {
+  character()
+}
+
+cat('<p class="section-intro">Registro diario de busqueda editorial: que se reviso, que se incorporo y que queda pendiente antes de entrar al analisis publico.</p>')
+
+if (length(review_files) == 0) {
+  cat("\n\nTodavia no hay revisiones diarias registradas.\n")
+} else {
+  review_files <- sort(review_files, decreasing = TRUE)
+  for (path in review_files) {
+    lines <- readLines(path, warn = FALSE, encoding = "UTF-8")
+    cat("\n\n")
+    cat(paste(lines, collapse = "\n"))
+    cat("\n\n")
+  }
+}
+```

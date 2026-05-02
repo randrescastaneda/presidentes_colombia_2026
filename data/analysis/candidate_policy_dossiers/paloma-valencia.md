@@ -50,7 +50,7 @@ La visión institucional mezcla Estado fuerte para castigar y Estado liviano par
 
 ## Trayectoria y contexto político {#trayectoria-contexto}
 
-Paloma Valencia llega como senadora del Centro Democrático y figura de la derecha uribista, con Juan Daniel Oviedo como fórmula vicepresidencial.{src:src-20260418-paloma-profile} Su perfil le permite hablar a un electorado que prioriza seguridad, mercado, orden y rechazo a la Paz Total. La campaña ha usado el Plan 10 y la idea de "seguridad total" para diferenciarse de la continuidad progresista y del centro.{src:src-manual-1cf85d8c}{src:src-20260424-paloma-seguridad-elpais}
+Paloma Valencia llega como senadora del Centro Democrático y figura de la derecha uribista, con Juan Daniel Oviedo como fórmula vicepresidencial.{src:src-20260418-paloma-profile} Su perfil le permite hablar a un electorado que prioriza seguridad, mercado, orden y rechazo a la Paz Total. La campaña ha usado el Plan 10 y la idea de "seguridad total" para diferenciarse de la continuidad progresista y del centro.{src:src-20260424-paloma-seguridad-elpais}
 
 Su dossier muestra una candidatura de derecha programática: menos impuestos, más defensa, reactivación minero-energética, salud de choque y anticorrupción tecnológica. Compite con de la Espriella por autoridad, pero busca verse más institucional y sectorial. Falta probar consistencia fiscal y operacional: muchas promesas tienen costos simultáneos y requieren capacidad estatal que la misma agenda de reducción de cargas podría tensionar.
 

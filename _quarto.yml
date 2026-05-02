@@ -20,6 +20,8 @@ website:
         text: Cronología
       - href: fuentes.qmd
         text: Fuentes
+      - href: fuentes-evaluadas.qmd
+        text: Fuentes evaluadas
       - href: metodologia.qmd
         text: Metodología
   page-footer:
