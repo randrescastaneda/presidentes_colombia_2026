@@ -50,7 +50,7 @@ test_that("site helpers expose homepage view models when sourced in isolation", 
 test_that("index page marks HTML-emitting chunks as asis", {
   index_lines <- readLines(file.path(project_root, "index.qmd"), warn = FALSE)
 
-  expect_equal(sum(index_lines == "#| results: asis"), 4)
+  expect_equal(sum(index_lines == "#| results: asis"), 3)
 })
 
 test_that("index page is driven by homepage view models instead of raw legacy tables", {
@@ -60,9 +60,9 @@ test_that("index page is driven by homepage view models instead of raw legacy ta
   expect_match(index_text, "build_homepage_view_model\\(")
   expect_no_match(index_text, "read_processed_table\\(\"claim_records.csv\"\\)")
   expect_no_match(index_text, "read_processed_table\\(\"analysis_notes.csv\"\\)")
-  expect_match(index_text, "## Comparaciones destacadas")
-  expect_match(index_text, "## Cómo leer esta portada")
-  expect_match(index_text, "## Cobertura completa")
+  expect_match(index_text, "## Watchlist")
+  expect_match(index_text, "## Comparación política")
+  expect_match(index_text, "Leer comparador narrativo")
 })
 
 test_that("generated candidate pages mark output chunks as asis", {

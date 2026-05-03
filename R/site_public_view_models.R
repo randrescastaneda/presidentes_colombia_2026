@@ -236,7 +236,26 @@ validation_badge_view_model <- function(validation_report, validation_status = N
   )
 }
 
+ensure_public_candidate_columns <- function(candidates) {
+  ensure_public_table_columns(
+    candidates,
+    list(
+      candidate_id = NA_character_,
+      slug = NA_character_,
+      president_name = NA_character_,
+      watchlist_active = FALSE,
+      watchlist_priority = NA_integer_,
+      ballot_position = NA_integer_,
+      photo_url = "",
+      photo_alt = "",
+      photo_credit = "",
+      photo_source_url = ""
+    )
+  )
+}
+
 candidate_lookup_public <- function(candidates) {
+  candidates <- ensure_public_candidate_columns(candidates)
   if (nrow(candidates) == 0) {
     return(list())
   }
@@ -471,6 +490,7 @@ homepage_candidate_summary <- function(candidate_id, claims, taxonomy_lookup = t
 }
 
 build_homepage_roster <- function(candidates, claims = tibble::tibble(), taxonomy_lookup = tibble::tibble(), policy_dossiers = list()) {
+  candidates <- ensure_public_candidate_columns(candidates)
   if (nrow(candidates) == 0) {
     return(list())
   }

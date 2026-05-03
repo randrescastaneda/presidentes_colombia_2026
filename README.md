@@ -121,6 +121,12 @@ Las fuentes multi-candidato o de contexto electoral no se promueven automáticam
 
 El script escribe JSON y Markdown en `data/automation/run_reports/YYYY-MM-DD.*`. Si hay bloqueos, sale con código distinto de cero para impedir commit/push automático. Con `--notify`, muestra una notificación local en macOS.
 
+`scripts/check_daily_automation_health.R` es el monitor posterior a la corrida. Revisa que exista el reporte del día, que no esté en `block`, que no esté obsoleto y que la bitácora diaria tenga Markdown y CSV. Está pensado para correr después de la automatización desatendida:
+
+```bash
+Rscript scripts/check_daily_automation_health.R --date=YYYY-MM-DD --max-age-hours=30 --notify
+```
+
 Checklist desatendido esperado:
 
 1. `git checkout main`

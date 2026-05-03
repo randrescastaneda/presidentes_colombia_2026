@@ -45,6 +45,7 @@ Estado actual:
 - `data/added_manually/` ahora funciona como canal de descubrimiento curado: produce `data/state/manual_source_registry.csv`, promueve automáticamente URLs válidas con metadata mínima y publica una capa de `fuentes por clasificar` para enlaces útiles aún no integrados al corpus candidato-trazable
 - `data/analysis/daily_source_reviews/` registra la bitácora diaria de fuentes evaluadas y alimenta `fuentes-evaluadas.qmd`; las fuentes multi-candidato no deben promoverse automáticamente desde `data/added_manually/` sin candidato, fecha y uso editorial confirmados
 - `scripts/verify_daily_automation.R` escribe `data/automation/run_reports/YYYY-MM-DD.*` y bloquea commit/push automático si fallan validación pública, topic_id, frases internas, render de fuentes evaluadas o promociones ambiguas desde ingesta manual
+- `scripts/check_daily_automation_health.R` revisa después de la corrida que el reporte diario exista, no esté bloqueado ni obsoleto, y que la bitácora diaria tenga Markdown y CSV
 
 ## Estado Git Consolidado
 
@@ -124,4 +125,4 @@ Instrucción operativa persistente:
 - reforzar el estado incremental para reruns parciales por candidato y por fuente
 - seguir ampliando reglas y cobertura del validador metodológico
 - decidir si la promoción automática desde `data/added_manually/` necesita fetch de metadata más profundo para aumentar la tasa de fuentes promovidas
-- monitorear la primera corrida desatendida posterior al hardening para confirmar que el reporte diario, commit y push se completan sin intervención humana
+- monitorear la primera corrida desatendida posterior al hardening con `scripts/check_daily_automation_health.R --date=YYYY-MM-DD --max-age-hours=30 --notify`; si pasa, el pendiente operativo queda cerrado

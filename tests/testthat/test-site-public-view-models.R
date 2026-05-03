@@ -118,7 +118,7 @@ test_that("build_homepage_view_model normalizes homepage artifacts and evidence 
   expect_equal(model$comparison_blocks[[1]]$handoff$section_anchor, "topic-salud")
   expect_equal(model$comparison_blocks[[1]]$handoff$fallback_destination, "comparador.html")
   expect_equal(model$comparison_blocks[[1]]$handoff$candidate_destinations[[1]]$href, "candidatos/candidata-a.html?from=homepage&topic=salud#propuestas-y-posiciones-publicas")
-  expect_true(any(vapply(model$roster, \(entry) identical(entry$candidate_id, "c"), logical(1))))
+  expect_false(any(vapply(model$roster, \(entry) identical(entry$candidate_id, "c"), logical(1))))
   expect_false("c" %in% model$comparison_blocks[[1]]$candidate_ids)
 })
 
@@ -400,11 +400,11 @@ test_that("build_comparison_view_model derives comparison destinations from publ
 
   expect_length(model$topics, 1)
   expect_equal(model$topics[[1]]$topic_label, "Salud")
-  expect_equal(model$topics[[1]]$candidate_cards[[1]]$destination_state, "comparable")
-  expect_equal(model$topics[[1]]$candidate_cards[[1]]$href, "candidatos/candidata-a.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
-  expect_equal(model$topics[[1]]$candidate_cards[[2]]$destination_state, "documented_only")
-  expect_equal(model$topics[[1]]$candidate_cards[[2]]$href, "candidatos/candidato-b.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
-  expect_equal(model$topics[[1]]$candidate_cards[[1]]$primary_document$title, "Programa A")
+  expect_equal(model$topics[[1]]$candidate_sections[[1]]$state, "documented")
+  expect_equal(model$topics[[1]]$candidate_sections[[1]]$href, "candidatos/candidata-a.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
+  expect_equal(model$topics[[1]]$candidate_sections[[2]]$state, "documented")
+  expect_equal(model$topics[[1]]$candidate_sections[[2]]$href, "candidatos/candidato-b.html?from=comparador&topic=salud#propuestas-y-posiciones-publicas")
+  expect_equal(nrow(model$topics[[1]]$candidate_sections[[1]]$claim_rows), 1)
 })
 
 test_that("build_candidate_policy_view_model separates comparable and documented-only topics", {
