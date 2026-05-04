@@ -49,6 +49,7 @@ El proyecto investiga propuestas, movimientos de campaña, contexto público y a
 - GitHub Pages: `https://randrescastaneda.github.io/candidatos_presidenciales_colombia_2026/`
 - Workflow principal: `.github/workflows/publish.yml`
 - Automatización diaria: `colombia-2026-fuentes-evaluadas`
+- La automatización diaria debe preparar una worktree limpia desde `origin/main` y finalizar con integración a `main`; no debe depender del estado del checkout principal.
 
 ## Uso De Family Brain
 

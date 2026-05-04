@@ -127,15 +127,28 @@ El script escribe JSON y Markdown en `data/automation/run_reports/YYYY-MM-DD.*`.
 Rscript scripts/check_daily_automation_health.R --date=YYYY-MM-DD --max-age-hours=30 --notify
 ```
 
+La automatización no debe trabajar directamente sobre el checkout principal del editor. Debe crear primero una worktree limpia desde `origin/main`:
+
+```bash
+scripts/prepare_daily_automation_worktree.sh --date=YYYY-MM-DD
+```
+
+La investigación, edición de fuentes y render se hacen dentro del `WORKTREE_PATH` que imprime ese comando. Al terminar, la misma worktree debe validarse, commitearse y empujarse a `main` con:
+
+```bash
+scripts/finalize_daily_automation_worktree.sh --worktree WORKTREE_PATH --date=YYYY-MM-DD
+```
+
+Este cierre vuelve a ejecutar `scripts/run_daily_update.R`, corre `scripts/verify_daily_automation.R`, hace `git push origin HEAD:main` solo si todo pasa, intenta fast-forward del checkout principal cuando está limpio y elimina la worktree/rama temporal. Si algo falla, la worktree queda disponible para inspección y no se publica.
+
 Checklist desatendido esperado:
 
-1. `git checkout main`
-2. `git pull --ff-only origin main`
+1. preparar worktree limpia desde `origin/main`
+2. investigar fuentes recientes desde esa worktree aislada
 3. crear o actualizar `data/analysis/daily_source_reviews/YYYY-MM-DD.*`
 4. agregar a `data/inbox/` solo fuentes con candidato y uso editorial confirmados
-5. `Rscript scripts/run_daily_update.R`
-6. `Rscript scripts/verify_daily_automation.R --date=YYYY-MM-DD --notify`
-7. commit y `git push origin main` solo si todo pasa
+5. finalizar con `scripts/finalize_daily_automation_worktree.sh --worktree WORKTREE_PATH --date=YYYY-MM-DD`
+6. confirmar que no quedaron ramas temporales ni worktrees sin integrar
 
 ## Contexto Persistente
 

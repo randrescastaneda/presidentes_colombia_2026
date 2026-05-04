@@ -1,6 +1,6 @@
 # Project Context
 
-Última actualización: 2026-05-02
+Última actualización: 2026-05-04
 
 ## Resumen
 
@@ -18,6 +18,7 @@ Antes de trabajar en este repo, Codex debe consultar `Family Brain` con `project
 - Sitio público: `https://randrescastaneda.github.io/candidatos_presidenciales_colombia_2026/`
 - Workflow de publicación: `.github/workflows/publish.yml`
 - Automatización diaria activa: `colombia-2026-fuentes-evaluadas`, programada a las 05:45
+- La automatización diaria debe correr en worktree aislada y limpia, no sobre el checkout principal compartido.
 
 ## Estado Arquitectónico
 
@@ -47,16 +48,18 @@ Estado actual:
 - `scripts/verify_daily_automation.R` escribe `data/automation/run_reports/YYYY-MM-DD.*` sin estado git volátil y bloquea commit/push automático si fallan validación pública, topic_id, frases internas, render de fuentes evaluadas, promociones ambiguas desde ingesta manual o la conciliación editorial de `daily_source_reviews`
 - las filas de `daily_source_reviews/*.csv` aceptan `candidate_id` único, `multiple` o listas `candidate_id` separadas por `|`; cuando una fila usa `editorial_action=incorporar`, debe reconciliar contra un `source_id` de `data/inbox/*/sources.csv`, un bloque `## Structured claims` en `source_texts/<source_id>.md` y los campos publicados en `data/processed/claim_records.csv`, incluido `evidence_excerpt`
 - `scripts/check_daily_automation_health.R` revisa después de la corrida que el reporte diario exista, no esté bloqueado ni obsoleto, y que la bitácora diaria tenga Markdown y CSV
+- `scripts/prepare_daily_automation_worktree.sh` crea una worktree temporal desde `origin/main` para la automatización diaria
+- `scripts/finalize_daily_automation_worktree.sh` rerenderiza, verifica, commitea, empuja `HEAD:main`, intenta fast-forward local cuando el checkout principal está limpio y elimina la worktree/rama temporal
 
 ## Estado Git Consolidado
 
 Al cierre de esta sesión:
 
-- solo existe una worktree activa, la principal
+- solo debe persistir una worktree activa, la principal; la automatización puede crear worktrees temporales, pero debe eliminarlas al finalizar correctamente
 - la rama local activa es `main`
 - `gh-pages` existe como rama remota de deployment
 - las ramas de trabajo previas de contratos, ingesta manual, viabilidad y fuentes evaluadas fueron incorporadas a `main`
-- la automatización diaria quedó configurada para correr sobre `main`, validar, commitear y hacer `push origin main` solo cuando las verificaciones pasen
+- la automatización diaria quedó configurada para preparar una worktree limpia desde `origin/main`, validar allí, commitear y hacer `git push origin HEAD:main` solo cuando las verificaciones pasen
 - la automatización diaria debe ejecutar `scripts/verify_daily_automation.R --date=YYYY-MM-DD --notify` antes de commitear; `--check-oracle` puede usarse como smoke test adicional cuando se quiera probar ChatGPT/Oracle
 
 Commits importantes:
@@ -127,3 +130,4 @@ Instrucción operativa persistente:
 - seguir ampliando reglas y cobertura del validador metodológico
 - decidir si la promoción automática desde `data/added_manually/` necesita fetch de metadata más profundo para aumentar la tasa de fuentes promovidas
 - monitorear la primera corrida desatendida posterior al hardening con `scripts/check_daily_automation_health.R --date=YYYY-MM-DD --max-age-hours=30 --notify`; si pasa, el pendiente operativo queda cerrado
+- si una corrida falla antes de finalizar, revisar la worktree temporal bajo `.automation-worktrees/`; no debe dejarse como rama de trabajo permanente
