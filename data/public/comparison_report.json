@@ -47,7 +47,7 @@
         {
           "candidate_id": "ivan-cepeda",
           "placement": "Redistribucion",
-          "confidence": 0.95
+          "confidence": 0.93
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -913,10 +913,10 @@
         {
           "candidate_id": "ivan-cepeda",
           "priority": "alta",
-          "instrument": "instrumentos o mecanismos parcialmente explicitados",
+          "instrument": "posturas o prioridades generales",
           "specificity": "alta",
           "coherence": "con tensiones visibles",
-          "feasibility": "parcialmente evaluable"
+          "feasibility": "incierta"
         },
         {
           "candidate_id": "abelardo-de-la-espriella",
@@ -1145,10 +1145,10 @@
         {
           "candidate_id": "paloma-valencia",
           "priority": "alta",
-          "instrument": "instrumentos o mecanismos parcialmente explicitados",
-          "specificity": "alta",
+          "instrument": "posturas o prioridades generales",
+          "specificity": "media",
           "coherence": "con tensiones visibles",
-          "feasibility": "parcialmente evaluable"
+          "feasibility": "incierta"
         },
         {
           "candidate_id": "claudia-lopez",
@@ -1772,6 +1772,60 @@
       "summary": "El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa."
     },
     {
+      "topic_id": "vivienda-infraestructura",
+      "candidate_rows": [
+        {
+          "candidate_id": "ivan-cepeda",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "abelardo-de-la-espriella",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "paloma-valencia",
+          "priority": "alta",
+          "instrument": "instrumentos o mecanismos parcialmente explicitados",
+          "specificity": "alta",
+          "coherence": "con tensiones visibles",
+          "feasibility": "parcialmente evaluable"
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "sergio-fajardo",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "luis-gilberto-murillo",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        }
+      ],
+      "summary": "El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa."
+    },
+    {
       "topic_id": "reforma-politica",
       "candidate_rows": [
         {
@@ -1824,9 +1878,63 @@
         }
       ],
       "summary": "El tema permite comparación útil porque destacan ivan-cepeda, abelardo-de-la-espriella, claudia-lopez con mayor prioridad relativa."
+    },
+    {
+      "topic_id": "empleo-empresa",
+      "candidate_rows": [
+        {
+          "candidate_id": "ivan-cepeda",
+          "priority": "alta",
+          "instrument": "instrumentos o mecanismos parcialmente explicitados",
+          "specificity": "alta",
+          "coherence": "con tensiones visibles",
+          "feasibility": "parcialmente evaluable"
+        },
+        {
+          "candidate_id": "abelardo-de-la-espriella",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "paloma-valencia",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "claudia-lopez",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "sergio-fajardo",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        },
+        {
+          "candidate_id": "luis-gilberto-murillo",
+          "priority": "sin posición trazable",
+          "instrument": "sin posición trazable",
+          "specificity": "sin posición trazable",
+          "coherence": "sin posición trazable",
+          "feasibility": "sin base suficiente"
+        }
+      ],
+      "summary": "El tema permite comparación útil porque destacan ivan-cepeda con mayor prioridad relativa."
     }
   ],
   "convergences": ["Convergencia en estado_vs_mercado: La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Estado coordinador.", "Convergencia en centralizacion_vs_territorializacion: La evidencia disponible acerca a los candidatos comparados a una misma zona del eje: Territorializacion.", "Convergencia temática en trayectoria-publica: El tema permite comparación útil porque destacan ivan-cepeda, abelardo-de-la-espriella, paloma-valencia, claudia-lopez, sergio-fajardo, luis-gilberto-murillo con mayor prioridad relativa."],
   "divergences": ["Diferencia en institucionalismo_vs_personalismo: La comparación muestra diferencias sustantivas en este eje: Institucionalismo vs. Personalismo.", "Diferencia en tecnocracia_vs_populismo: La comparación muestra diferencias sustantivas en este eje: Populismo vs. Tecnocracia.", "Diferencia en apertura_vs_soberanismo: La comparación muestra diferencias sustantivas en este eje: Soberanismo vs. Mixto o tensionado.", "Diferencia en seguridad_negociacion_vs_punitivismo: La comparación muestra diferencias sustantivas en este eje: Seguridad negociada vs. Punitivismo.", "Diferencia temática en paz: El tema permite comparación útil porque destacan abelardo-de-la-espriella con mayor prioridad relativa.", "Diferencia temática en transicion-energetica: El tema permite comparación útil porque destacan ivan-cepeda, paloma-valencia con mayor prioridad relativa.", "Diferencia temática en anticorrupcion: El tema permite comparación útil porque destacan ivan-cepeda con mayor prioridad relativa.", "Diferencia temática en transporte: El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa.", "Diferencia temática en justicia: El tema permite comparación útil porque destacan ivan-cepeda, abelardo-de-la-espriella, paloma-valencia con mayor prioridad relativa.", "Diferencia temática en educacion-superior: El tema permite comparación útil porque destacan ivan-cepeda, paloma-valencia, claudia-lopez con mayor prioridad relativa.", "Diferencia temática en defensa: El tema permite comparación útil porque destacan paloma-valencia con mayor prioridad relativa.", "Diferencia temática en salud: El tema permite comparación útil porque destacan abelardo-de-la-espriella, paloma-valencia, luis-gilberto-murillo con mayor prioridad relativa.", "Diferencia temática en productividad: El tema permite comparación útil porque destacan abelardo-de-la-espriella con mayor prioridad relativa.", "Diferencia temática en vida-publica: El tema permite comparación útil porque destacan abelardo-de-la-espriella, paloma-valencia, claudia-lopez con mayor prioridad relativa.", "Diferencia temática en educacion: El tema permite comparación útil porque destacan luis-gilberto-murillo con mayor prioridad relativa."],
-  "uncertainties": ["ivan-cepeda: Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "abelardo-de-la-espriella: Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "paloma-valencia: Faltan señales programáticas comparables en varios ejes: conservadurismo_vs_progresismo_cultural.", "claudia-lopez: Faltan señales programáticas comparables en varios ejes: tecnocracia_vs_populismo, apertura_vs_soberanismo.", "sergio-fajardo: Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, apertura_vs_soberanismo.", "luis-gilberto-murillo: Faltan señales programáticas comparables en varios ejes: institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Faltan señales programáticas comparables en el eje redistribucion_vs_libertad_economica.", "Faltan señales programáticas comparables en el eje universalismo_vs_focalizacion.", "Faltan señales programáticas comparables en el eje institucionalismo_vs_personalismo.", "Faltan señales programáticas comparables en el eje gradualismo_vs_disrupcion.", "Faltan señales programáticas comparables en el eje tecnocracia_vs_populismo.", "Faltan señales programáticas comparables en el eje apertura_vs_soberanismo.", "Faltan señales programáticas comparables en el eje conservadurismo_vs_progresismo_cultural.", "Faltan señales programáticas comparables en el eje seguridad_negociacion_vs_punitivismo.", "No todos los candidatos tienen una posición pública trazable en el tema controversias-publicas.", "No todos los candidatos tienen una posición pública trazable en el tema redes-poder.", "No todos los candidatos tienen una posición pública trazable en el tema paz.", "No todos los candidatos tienen una posición pública trazable en el tema fiscal.", "No todos los candidatos tienen una posición pública trazable en el tema transicion-energetica.", "No todos los candidatos tienen una posición pública trazable en el tema anticorrupcion.", "No todos los candidatos tienen una posición pública trazable en el tema tierras.", "No todos los candidatos tienen una posición pública trazable en el tema transporte.", "No todos los candidatos tienen una posición pública trazable en el tema seguridad-ciudadana.", "No todos los candidatos tienen una posición pública trazable en el tema justicia.", "No todos los candidatos tienen una posición pública trazable en el tema proteccion-social.", "No todos los candidatos tienen una posición pública trazable en el tema genero-diversidad.", "No todos los candidatos tienen una posición pública trazable en el tema educacion-superior.", "No todos los candidatos tienen una posición pública trazable en el tema vivienda.", "No todos los candidatos tienen una posición pública trazable en el tema agua-ambiente.", "No todos los candidatos tienen una posición pública trazable en el tema aseguramiento-salud.", "No todos los candidatos tienen una posición pública trazable en el tema educacion-basica.", "No todos los candidatos tienen una posición pública trazable en el tema emprendimiento.", "No todos los candidatos tienen una posición pública trazable en el tema defensa.", "No todos los candidatos tienen una posición pública trazable en el tema salud.", "No todos los candidatos tienen una posición pública trazable en el tema relaciones-exteriores.", "No todos los candidatos tienen una posición pública trazable en el tema productividad.", "No todos los candidatos tienen una posición pública trazable en el tema desigualdad.", "No todos los candidatos tienen una posición pública trazable en el tema vida-publica.", "No todos los candidatos tienen una posición pública trazable en el tema educacion.", "No todos los candidatos tienen una posición pública trazable en el tema reforma-politica."]
+  "uncertainties": ["ivan-cepeda: Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "abelardo-de-la-espriella: Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "paloma-valencia: Faltan señales programáticas comparables en varios ejes: conservadurismo_vs_progresismo_cultural.", "claudia-lopez: Faltan señales programáticas comparables en varios ejes: tecnocracia_vs_populismo, apertura_vs_soberanismo.", "sergio-fajardo: Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, apertura_vs_soberanismo.", "luis-gilberto-murillo: Faltan señales programáticas comparables en varios ejes: institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Faltan señales programáticas comparables en el eje redistribucion_vs_libertad_economica.", "Faltan señales programáticas comparables en el eje universalismo_vs_focalizacion.", "Faltan señales programáticas comparables en el eje institucionalismo_vs_personalismo.", "Faltan señales programáticas comparables en el eje gradualismo_vs_disrupcion.", "Faltan señales programáticas comparables en el eje tecnocracia_vs_populismo.", "Faltan señales programáticas comparables en el eje apertura_vs_soberanismo.", "Faltan señales programáticas comparables en el eje conservadurismo_vs_progresismo_cultural.", "Faltan señales programáticas comparables en el eje seguridad_negociacion_vs_punitivismo.", "No todos los candidatos tienen una posición pública trazable en el tema controversias-publicas.", "No todos los candidatos tienen una posición pública trazable en el tema redes-poder.", "No todos los candidatos tienen una posición pública trazable en el tema paz.", "No todos los candidatos tienen una posición pública trazable en el tema fiscal.", "No todos los candidatos tienen una posición pública trazable en el tema transicion-energetica.", "No todos los candidatos tienen una posición pública trazable en el tema anticorrupcion.", "No todos los candidatos tienen una posición pública trazable en el tema tierras.", "No todos los candidatos tienen una posición pública trazable en el tema transporte.", "No todos los candidatos tienen una posición pública trazable en el tema seguridad-ciudadana.", "No todos los candidatos tienen una posición pública trazable en el tema justicia.", "No todos los candidatos tienen una posición pública trazable en el tema proteccion-social.", "No todos los candidatos tienen una posición pública trazable en el tema genero-diversidad.", "No todos los candidatos tienen una posición pública trazable en el tema educacion-superior.", "No todos los candidatos tienen una posición pública trazable en el tema vivienda.", "No todos los candidatos tienen una posición pública trazable en el tema agua-ambiente.", "No todos los candidatos tienen una posición pública trazable en el tema aseguramiento-salud.", "No todos los candidatos tienen una posición pública trazable en el tema educacion-basica.", "No todos los candidatos tienen una posición pública trazable en el tema emprendimiento.", "No todos los candidatos tienen una posición pública trazable en el tema defensa.", "No todos los candidatos tienen una posición pública trazable en el tema salud.", "No todos los candidatos tienen una posición pública trazable en el tema relaciones-exteriores.", "No todos los candidatos tienen una posición pública trazable en el tema productividad.", "No todos los candidatos tienen una posición pública trazable en el tema desigualdad.", "No todos los candidatos tienen una posición pública trazable en el tema vida-publica.", "No todos los candidatos tienen una posición pública trazable en el tema educacion.", "No todos los candidatos tienen una posición pública trazable en el tema vivienda-infraestructura.", "No todos los candidatos tienen una posición pública trazable en el tema reforma-politica.", "No todos los candidatos tienen una posición pública trazable en el tema empleo-empresa."]
 }

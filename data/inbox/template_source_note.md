@@ -8,8 +8,9 @@
 
 ## Structured claims
 
-Opcional pero recomendado cuando ya quieras dejar la extracción casi cerrada desde la misma nota fuente.
+Obligatorio cuando la revisión diaria marque la fuente como `incorporar`.
 Puedes repetir tantos bloques como necesites.
+Las claves pueden escribirse como `- key:` o ``- `key`:``; no cambies los nombres de campo.
 
 ### Claim 1
 

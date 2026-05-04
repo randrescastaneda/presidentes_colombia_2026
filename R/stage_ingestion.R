@@ -50,40 +50,6 @@ read_source_text_content <- function(path) {
   paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
 }
 
-parse_source_note_metadata <- function(text) {
-  if (is.na(text) || identical(text, "")) {
-    return(list())
-  }
-
-  lines <- strsplit(text, "\n", fixed = TRUE)[[1]]
-  metadata_lines <- lines[grepl("^\\s*-\\s+[A-Za-z0-9_]+\\s*:", lines)]
-
-  if (length(metadata_lines) == 0) {
-    return(list())
-  }
-
-  pairs <- regmatches(
-    metadata_lines,
-    regexec("^\\s*-\\s+([A-Za-z0-9_]+)\\s*:\\s*(.*)$", metadata_lines, perl = TRUE)
-  )
-
-  values <- purrr::map(pairs, function(match) {
-    if (length(match) < 3) {
-      return(NULL)
-    }
-
-    key <- trimws(match[[2]])
-    value <- trimws(match[[3]])
-    if (identical(value, "")) {
-      value <- NA_character_
-    }
-    stats::setNames(list(value), key)
-  })
-
-  purrr::compact(values) |>
-    purrr::flatten()
-}
-
 build_source_packets <- function(sources, source_text_files = tibble::tibble()) {
   if (nrow(sources) == 0) {
     return(list())

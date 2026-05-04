@@ -6,6 +6,7 @@ suppressPackageStartupMessages({
   library(purrr)
   library(readr)
   library(tibble)
+  library(stringr)
 })
 
 option_value <- function(name, default = NULL) {
@@ -33,6 +34,8 @@ review_date <- as.Date(option_value("--date", as.character(Sys.Date())))
 notify <- has_flag("notify")
 check_oracle <- has_flag("check-oracle")
 
+source(file.path(project_dir, "R", "source_note_parsing.R"), local = FALSE)
+
 read_csv_safe <- function(path) {
   if (!file.exists(path)) {
     return(tibble::tibble())
@@ -45,6 +48,15 @@ read_json_safe <- function(path) {
     return(NULL)
   }
   jsonlite::fromJSON(path, simplifyVector = FALSE)
+}
+
+extract_review_structured_claim_blocks <- function(path) {
+  if (!file.exists(path)) {
+    return(list())
+  }
+
+  text <- paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+  extract_structured_claim_blocks(text)
 }
 
 run_command <- function(command, args = character(), timeout = 60) {
@@ -78,6 +90,19 @@ banned_patterns <- c(
 claims <- read_csv_safe(file.path(project_dir, "data", "processed", "claim_records.csv"))
 validation_report <- read_json_safe(file.path(project_dir, "data", "public", "validation_report.json"))
 manual_registry <- read_csv_safe(file.path(project_dir, "data", "processed", "manual_source_registry.csv"))
+candidate_registry <- read_csv_safe(file.path(project_dir, "config", "candidate_registry.csv"))
+daily_review <- read_csv_safe(file.path(project_dir, "data", "analysis", "daily_source_reviews", paste0(review_date, ".csv")))
+inbox_source_files <- list.files(file.path(project_dir, "data", "inbox"), pattern = "^sources[.]csv$", recursive = TRUE, full.names = TRUE)
+daily_sources <- purrr::map_dfr(inbox_source_files, function(path) {
+  read_csv_safe(path) |>
+    dplyr::mutate(inbox_batch = basename(dirname(path)))
+})
+source_text_lookup <- tibble::tibble(
+  source_id = tools::file_path_sans_ext(basename(list.files(file.path(project_dir, "data", "inbox"), pattern = "[.]md$", recursive = TRUE, full.names = TRUE))),
+  source_text_path = list.files(file.path(project_dir, "data", "inbox"), pattern = "[.]md$", recursive = TRUE, full.names = TRUE)
+) |>
+  dplyr::filter(grepl("/source_texts/", .data$source_text_path, fixed = TRUE)) |>
+  dplyr::distinct(source_id, .keep_all = TRUE)
 
 checks <- list()
 
@@ -176,6 +201,379 @@ checks <- append(checks, list(check_result(
   list(entries = ambiguous_promoted)
 )))
 
+allowed_editorial_actions <- c("incorporar", "incorporar_contexto", "reservar", "no_incorporar")
+required_review_columns <- c("candidate_id", "source_name", "published_at", "title", "url", "editorial_action")
+missing_review_columns <- setdiff(required_review_columns, names(daily_review))
+invalid_review_actions <- if (nrow(daily_review) == 0 || !"editorial_action" %in% names(daily_review)) {
+  tibble::tibble()
+} else {
+  daily_review |>
+    dplyr::filter(!.data$editorial_action %in% allowed_editorial_actions)
+}
+known_candidate_ids <- candidate_registry$candidate_id %||% character()
+valid_review_candidate_id <- function(value) {
+  value <- normalize_source_note_optional_text(value)
+  if (is.na(value) || identical(value, "multiple")) {
+    return(!is.na(value))
+  }
+
+  candidate_ids <- unlist(strsplit(value, "\\|", perl = TRUE))
+  candidate_ids <- stringr::str_squish(candidate_ids)
+  length(candidate_ids) > 0 && all(candidate_ids %in% known_candidate_ids)
+}
+invalid_review_candidates <- if (nrow(daily_review) == 0 || !"candidate_id" %in% names(daily_review)) {
+  tibble::tibble()
+} else {
+  daily_review |>
+    dplyr::filter(!vapply(.data$candidate_id, valid_review_candidate_id, logical(1)))
+}
+blank_required_review_fields <- if (nrow(daily_review) == 0 || length(missing_review_columns) > 0) {
+  tibble::tibble()
+} else {
+  daily_review |>
+    dplyr::filter(if_any(dplyr::all_of(required_review_columns), \(value) is.na(value) | !nzchar(as.character(value))))
+}
+review_contract_failures <- list(
+  missing_columns = missing_review_columns,
+  invalid_actions = invalid_review_actions,
+  invalid_candidates = invalid_review_candidates,
+  blank_required_fields = blank_required_review_fields
+)
+review_contract_passes <- nrow(daily_review) > 0 &&
+  length(missing_review_columns) == 0 &&
+  nrow(invalid_review_actions) == 0 &&
+  nrow(invalid_review_candidates) == 0 &&
+  nrow(blank_required_review_fields) == 0
+checks <- append(checks, list(check_result(
+  "daily_source_review_contract",
+  if (review_contract_passes) "pass" else "block",
+  if (review_contract_passes) "Daily source review CSV uses valid actions, candidates, and required fields." else "Daily source review CSV has invalid actions, candidates, missing columns, or blank required fields.",
+  review_contract_failures
+)))
+
+source_lookup <- if (nrow(daily_sources) == 0) {
+  tibble::tibble(
+    source_id = character(),
+    inbox_candidate_id = character(),
+    url = character(),
+    inbox_batch = character(),
+    source_text_path = character()
+  )
+} else {
+  daily_sources |>
+    dplyr::mutate(
+      source_id = as.character(.data$source_id),
+      url = as.character(.data$url),
+      inbox_candidate_id = as.character(.data$candidate_id)
+    ) |>
+    dplyr::left_join(source_text_lookup, by = "source_id") |>
+    dplyr::select("source_id", "inbox_candidate_id", "url", dplyr::any_of("inbox_batch"), dplyr::any_of("source_text_path")) |>
+    dplyr::distinct(source_id, .keep_all = TRUE)
+}
+
+single_review_candidate_id <- function(value) {
+  value <- normalize_source_note_optional_text(value)
+  if (is.na(value) || identical(value, "multiple") || grepl("\\|", value, fixed = FALSE)) {
+    return(NA_character_)
+  }
+
+  value
+}
+
+review_prepared <- if (review_contract_passes) {
+  prepared <- daily_review
+  if (!"source_id" %in% names(prepared)) {
+    prepared$source_id <- NA_character_
+  }
+
+  prepared |>
+    dplyr::mutate(
+      review_row_id = dplyr::row_number(),
+      review_source_id = normalize_source_note_optional_text(.data$source_id),
+      url = as.character(.data$url),
+      candidate_id = as.character(.data$candidate_id),
+      single_candidate_id = vapply(.data$candidate_id, single_review_candidate_id, character(1))
+    ) |>
+    dplyr::select(-source_id)
+} else {
+  tibble::tibble()
+}
+
+resolve_review_source <- function(row) {
+  review_source_id <- row$review_source_id[[1]]
+  if (!is.na(review_source_id)) {
+    matched <- source_lookup |>
+      dplyr::filter(.data$source_id == !!review_source_id)
+
+    return(row |>
+      dplyr::mutate(
+        source_id = if (nrow(matched) == 1) matched$source_id[[1]] else NA_character_,
+        inbox_candidate_id = if (nrow(matched) == 1) matched$inbox_candidate_id[[1]] else NA_character_,
+        inbox_batch = if (nrow(matched) == 1) matched$inbox_batch[[1]] else NA_character_,
+        source_text_path = if (nrow(matched) == 1) matched$source_text_path[[1]] else NA_character_,
+        source_match_count = nrow(matched),
+        source_resolution_method = "source_id"
+      ))
+  }
+
+  candidates <- source_lookup |>
+    dplyr::filter(.data$url == row$url[[1]])
+  single_candidate <- row$single_candidate_id[[1]]
+  if (!is.na(single_candidate)) {
+    candidates <- candidates |>
+      dplyr::filter(.data$inbox_candidate_id == !!single_candidate)
+  }
+
+  row |>
+    dplyr::mutate(
+      source_id = if (nrow(candidates) == 1) candidates$source_id[[1]] else NA_character_,
+      inbox_candidate_id = if (nrow(candidates) == 1) candidates$inbox_candidate_id[[1]] else NA_character_,
+      inbox_batch = if (nrow(candidates) == 1) candidates$inbox_batch[[1]] else NA_character_,
+      source_text_path = if (nrow(candidates) == 1) candidates$source_text_path[[1]] else NA_character_,
+      source_match_count = nrow(candidates),
+      source_resolution_method = "candidate_url"
+    )
+}
+
+review_with_sources <- if (nrow(review_prepared) == 0) {
+  tibble::tibble()
+} else {
+  purrr::map_dfr(seq_len(nrow(review_prepared)), \(i) resolve_review_source(review_prepared[i, , drop = FALSE]))
+}
+
+ambiguous_source_matches <- if (nrow(review_with_sources) == 0) {
+  tibble::tibble()
+} else {
+  review_with_sources |>
+    dplyr::filter(.data$source_match_count > 1)
+}
+
+provided_source_id_not_found <- if (nrow(review_with_sources) == 0) {
+  tibble::tibble()
+} else {
+  review_with_sources |>
+    dplyr::filter(!is.na(.data$review_source_id), .data$source_match_count == 0)
+}
+
+incorporate_without_source <- if (nrow(review_with_sources) == 0) {
+  tibble::tibble()
+} else {
+  review_with_sources |>
+    dplyr::filter(.data$editorial_action == "incorporar", is.na(.data$source_id) | !nzchar(.data$source_id))
+}
+non_incorporated_with_claims <- if (nrow(review_with_sources) == 0 || nrow(claims) == 0 || !"source_id" %in% names(claims)) {
+  tibble::tibble()
+} else {
+  review_with_sources |>
+    dplyr::filter(.data$editorial_action != "incorporar", !is.na(.data$source_id), nzchar(.data$source_id)) |>
+    dplyr::inner_join(claims |> dplyr::select(source_id) |> dplyr::distinct(), by = "source_id")
+}
+
+claim_value <- function(data, field) {
+  if (!field %in% names(data) || nrow(data) == 0) {
+    return(rep(NA_character_, nrow(data)))
+  }
+
+  vapply(data[[field]], normalize_source_note_comparison_text, character(1))
+}
+
+expected_claims_from_blocks <- function(blocks, row, source_id, source_text_path) {
+  purrr::imap_dfr(blocks, function(block, block_index) {
+    tibble::tibble(
+      source_id = source_id,
+      block_index = block_index,
+      review_row_id = row$review_row_id[[1]],
+      review_url = row$url[[1]],
+      review_candidate_id = row$candidate_id[[1]],
+      source_text_path = source_text_path,
+      candidate_id = normalize_source_note_optional_text(block$candidate_id %||% row$candidate_id[[1]]),
+      claim_type_id = normalize_source_note_claim_type(block$claim_type %||% NA_character_, default = NA_character_),
+      topic_id = normalize_source_note_optional_text(block$topic_id),
+      subtopic_id = normalize_source_note_optional_text(block$subtopic_id),
+      policy_key = normalize_source_note_optional_text(block$policy_key),
+      evidence_excerpt = normalize_source_note_comparison_text(block$evidence_excerpt)
+    )
+  })
+}
+
+observed_claims_for_source <- function(source_claims, source_id, source_text_path, row) {
+  if (nrow(source_claims) == 0) {
+    return(tibble::tibble(
+      source_id = character(),
+      observed_claim_id = character(),
+      review_row_id = integer(),
+      review_url = character(),
+      review_candidate_id = character(),
+      source_text_path = character(),
+      candidate_id = character(),
+      claim_type_id = character(),
+      topic_id = character(),
+      subtopic_id = character(),
+      policy_key = character(),
+      evidence_excerpt = character()
+    ))
+  }
+
+  tibble::tibble(
+    source_id = source_id,
+    observed_claim_id = source_claims$claim_id %||% NA_character_,
+    review_row_id = row$review_row_id[[1]],
+    review_url = row$url[[1]],
+    review_candidate_id = row$candidate_id[[1]],
+    source_text_path = source_text_path,
+    candidate_id = claim_value(source_claims, "candidate_id"),
+    claim_type_id = claim_value(source_claims, "claim_type_id"),
+    topic_id = claim_value(source_claims, "topic_id"),
+    subtopic_id = claim_value(source_claims, "subtopic_id"),
+    policy_key = claim_value(source_claims, "policy_key"),
+    evidence_excerpt = claim_value(source_claims, "evidence_excerpt")
+  )
+}
+
+reconcile_curated_source <- function(row) {
+  source_id <- row$source_id[[1]]
+  source_text_path <- row$source_text_path[[1]]
+  blocks <- extract_review_structured_claim_blocks(source_text_path)
+  if (length(blocks) == 0) {
+    return(tibble::tibble(
+      mismatch_type = "missing_structured_claims",
+      source_id = source_id,
+      block_index = NA_integer_,
+      review_row_id = row$review_row_id[[1]],
+      review_url = row$url[[1]],
+      review_candidate_id = row$candidate_id[[1]],
+      source_text_path = source_text_path,
+      expected_candidate_id = NA_character_,
+      expected_claim_type_id = NA_character_,
+      expected_topic_id = NA_character_,
+      expected_subtopic_id = NA_character_,
+      expected_policy_key = NA_character_,
+      expected_evidence_excerpt = NA_character_,
+      observed_claim_id = NA_character_,
+      observed_candidate_id = NA_character_,
+      observed_claim_type_id = NA_character_,
+      observed_topic_id = NA_character_,
+      observed_subtopic_id = NA_character_,
+      observed_policy_key = NA_character_,
+      observed_evidence_excerpt = NA_character_,
+      observed_claim_count = sum(claims$source_id == source_id, na.rm = TRUE)
+    ))
+  }
+
+  source_claims <- claims |>
+    dplyr::filter(.data$source_id == !!source_id)
+  expected <- expected_claims_from_blocks(blocks, row, source_id, source_text_path)
+  observed <- observed_claims_for_source(source_claims, source_id, source_text_path, row)
+  key_fields <- c("source_id", "candidate_id", "claim_type_id", "topic_id", "subtopic_id", "policy_key", "evidence_excerpt")
+
+  invalid_expected <- expected |>
+    dplyr::filter(is.na(.data$claim_type_id)) |>
+    dplyr::transmute(
+      mismatch_type = "invalid_structured_claim_type",
+      source_id,
+      block_index,
+      review_row_id,
+      review_url,
+      review_candidate_id,
+      source_text_path,
+      expected_candidate_id = candidate_id,
+      expected_claim_type_id = claim_type_id,
+      expected_topic_id = topic_id,
+      expected_subtopic_id = subtopic_id,
+      expected_policy_key = policy_key,
+      expected_evidence_excerpt = evidence_excerpt,
+      observed_claim_id = NA_character_,
+      observed_candidate_id = NA_character_,
+      observed_claim_type_id = NA_character_,
+      observed_topic_id = NA_character_,
+      observed_subtopic_id = NA_character_,
+      observed_policy_key = NA_character_,
+      observed_evidence_excerpt = NA_character_,
+      observed_claim_count = nrow(source_claims)
+    )
+
+  valid_expected <- expected |>
+    dplyr::filter(!is.na(.data$claim_type_id))
+  missing_expected <- valid_expected |>
+    dplyr::anti_join(observed |> dplyr::select(dplyr::all_of(key_fields)), by = key_fields) |>
+    dplyr::transmute(
+      mismatch_type = "missing_expected_claim",
+      source_id,
+      block_index,
+      review_row_id,
+      review_url,
+      review_candidate_id,
+      source_text_path,
+      expected_candidate_id = candidate_id,
+      expected_claim_type_id = claim_type_id,
+      expected_topic_id = topic_id,
+      expected_subtopic_id = subtopic_id,
+      expected_policy_key = policy_key,
+      expected_evidence_excerpt = evidence_excerpt,
+      observed_claim_id = NA_character_,
+      observed_candidate_id = NA_character_,
+      observed_claim_type_id = NA_character_,
+      observed_topic_id = NA_character_,
+      observed_subtopic_id = NA_character_,
+      observed_policy_key = NA_character_,
+      observed_evidence_excerpt = NA_character_,
+      observed_claim_count = nrow(source_claims)
+    )
+
+  extra_observed <- observed |>
+    dplyr::anti_join(valid_expected |> dplyr::select(dplyr::all_of(key_fields)), by = key_fields) |>
+    dplyr::transmute(
+      mismatch_type = "extra_observed_claim",
+      source_id,
+      block_index = NA_integer_,
+      review_row_id,
+      review_url,
+      review_candidate_id,
+      source_text_path,
+      expected_candidate_id = NA_character_,
+      expected_claim_type_id = NA_character_,
+      expected_topic_id = NA_character_,
+      expected_subtopic_id = NA_character_,
+      expected_policy_key = NA_character_,
+      expected_evidence_excerpt = NA_character_,
+      observed_claim_id,
+      observed_candidate_id = candidate_id,
+      observed_claim_type_id = claim_type_id,
+      observed_topic_id = topic_id,
+      observed_subtopic_id = subtopic_id,
+      observed_policy_key = policy_key,
+      observed_evidence_excerpt = evidence_excerpt,
+      observed_claim_count = nrow(source_claims)
+    )
+
+  dplyr::bind_rows(invalid_expected, missing_expected, extra_observed)
+}
+
+curated_mismatches <- if (nrow(review_with_sources) == 0 || nrow(claims) == 0) {
+  tibble::tibble()
+} else {
+  review_with_sources |>
+    dplyr::filter(.data$editorial_action == "incorporar", !is.na(.data$source_id), nzchar(.data$source_id)) |>
+    purrr::pmap_dfr(function(...) reconcile_curated_source(tibble::as_tibble(list(...))))
+}
+curated_reconciliation_passes <- nrow(ambiguous_source_matches) == 0 &&
+  nrow(provided_source_id_not_found) == 0 &&
+  nrow(incorporate_without_source) == 0 &&
+  nrow(non_incorporated_with_claims) == 0 &&
+  nrow(curated_mismatches) == 0
+checks <- append(checks, list(check_result(
+  "daily_source_review_claim_reconciliation",
+  if (curated_reconciliation_passes) "pass" else "block",
+  if (curated_reconciliation_passes) "Incorporated curated sources reconcile with claim_records and non-incorporated review rows do not create claims." else "Daily source review decisions diverge from inbox sources or processed claims.",
+  list(
+    ambiguous_source_matches = ambiguous_source_matches,
+    provided_source_id_not_found = provided_source_id_not_found,
+    incorporate_without_source = incorporate_without_source,
+    non_incorporated_with_claims = non_incorporated_with_claims,
+    curated_mismatches = curated_mismatches
+  )
+)))
+
 oracle_status <- "skipped"
 oracle_output <- character()
 if (isTRUE(check_oracle)) {
@@ -203,7 +601,6 @@ checks <- append(checks, list(check_result(
   list(output = paste(utils::tail(oracle_output, 20), collapse = "\n"))
 )))
 
-git_status <- run_command("git", c("-C", project_dir, "status", "--short", "--branch"), timeout = 15)
 block_count <- sum(vapply(checks, \(check) identical(check$status, "block"), logical(1)))
 warn_count <- sum(vapply(checks, \(check) identical(check$status, "warn"), logical(1)))
 overall_status <- if (block_count > 0) {
@@ -225,8 +622,7 @@ report <- list(
     overall_status == "pass_with_warnings" ~ paste(warn_count, "automation checks produced warnings."),
     TRUE ~ "All automation checks passed."
   ),
-  checks = checks,
-  git_status = paste(git_status, collapse = "\n")
+  checks = checks
 )
 
 report_dir <- file.path(project_dir, "data", "automation", "run_reports")
@@ -248,13 +644,7 @@ markdown_lines <- c(
       paste0("- `", check$check_id, "`: ", check$status),
       paste0("  ", check$message)
     )
-  })),
-  "",
-  "## Git status",
-  "",
-  "```",
-  paste(git_status, collapse = "\n"),
-  "```"
+  }))
 )
 writeLines(markdown_lines, md_path, useBytes = TRUE)
 

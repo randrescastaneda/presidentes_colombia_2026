@@ -107,107 +107,52 @@ load_claim_type_taxonomy <- function(project_dir = ".") {
 }
 
 normalize_contract_claim_type <- function(value, allowed_types = character()) {
-  normalized <- normalize_extraction_text(value)
-
-  guess <- dplyr::case_when(
-    grepl("propuesta", normalized, perl = TRUE) ~ "propuesta_concreta",
-    grepl("postura", normalized, perl = TRUE) ~ "postura_general",
-    grepl("diagnost", normalized, perl = TRUE) ~ "diagnostico_problema",
-    grepl("slogan|consigna", normalized, perl = TRUE) ~ "slogan",
-    grepl("critica|adversar", normalized, perl = TRUE) ~ "critica_adversario",
-    grepl("promesa", normalized, perl = TRUE) ~ "promesa_vaga",
-    TRUE ~ "dato_contextual"
-  )
-
-  if (length(allowed_types) > 0 && !guess %in% allowed_types) {
-    return("dato_contextual")
-  }
-
-  guess
+  normalize_source_note_claim_type(value, allowed_types = allowed_types, default = "dato_contextual")
 }
 
-parse_markdown_key_values <- function(lines) {
-  matches <- regmatches(
-    lines,
-    regexec("^\\s*-\\s+([A-Za-z0-9_]+)\\s*:\\s*(.*)$", lines, perl = TRUE)
-  )
-
-  values <- purrr::map(matches, function(match) {
-    if (length(match) < 3) {
-      return(NULL)
-    }
-
-    key <- trimws(match[[2]])
-    value <- clean_optional_value(match[[3]])
-    stats::setNames(list(value), key)
-  })
-
-  purrr::compact(values) |>
-    purrr::flatten()
+validate_structured_candidate_id <- function(candidate_id, candidates) {
+  candidate_id <- clean_optional_value(candidate_id)
+  if (is.na(candidate_id) || nrow(candidates) == 0) {
+    return(candidate_id)
+  }
+  if (candidate_id %in% candidates$candidate_id) {
+    return(candidate_id)
+  }
+  NA_character_
 }
 
-extract_markdown_section_lines <- function(lines, heading_pattern) {
-  heading_idx <- grep(heading_pattern, lines, perl = TRUE)
-  if (length(heading_idx) == 0) {
-    return(character())
+validate_structured_topic_id <- function(topic_id, taxonomy) {
+  topic_id <- clean_optional_value(topic_id)
+  if (is.na(topic_id) || nrow(taxonomy) == 0) {
+    return(topic_id)
   }
-
-  start_idx <- heading_idx[[1]] + 1
-  if (start_idx > length(lines)) {
-    return(character())
+  if (topic_id %in% taxonomy$topic_id) {
+    return(topic_id)
   }
-
-  next_heading <- grep("^##\\s+", lines, perl = TRUE)
-  next_heading <- next_heading[next_heading > heading_idx[[1]]]
-  end_idx <- if (length(next_heading) == 0) length(lines) else next_heading[[1]] - 1
-
-  if (end_idx < start_idx) {
-    return(character())
-  }
-
-  lines[start_idx:end_idx]
+  NA_character_
 }
 
-extract_structured_claim_blocks <- function(text) {
-  if (is.na(text) || identical(text, "")) {
-    return(list())
+validate_structured_subtopic_id <- function(subtopic_id, topic_id, taxonomy) {
+  subtopic_id <- clean_optional_value(subtopic_id)
+  if (is.na(subtopic_id) || nrow(taxonomy) == 0) {
+    return(subtopic_id)
+  }
+  if (is.na(topic_id)) {
+    return(NA_character_)
   }
 
-  lines <- strsplit(text, "\n", fixed = TRUE)[[1]]
-  section_lines <- extract_markdown_section_lines(lines, "^##\\s+Structured claims\\s*$")
-  if (length(section_lines) == 0) {
-    return(list())
+  subtopic_row <- taxonomy |>
+    dplyr::filter(.data$topic_id == subtopic_id)
+
+  if (nrow(subtopic_row) == 0) {
+    return(NA_character_)
   }
 
-  block_markers <- grep("^###\\s+", section_lines, perl = TRUE)
-  if (length(block_markers) == 0) {
-    parsed <- parse_markdown_key_values(section_lines)
-    return(if (length(parsed) == 0) list() else list(parsed))
+  if (!is.na(topic_id) && !is.na(subtopic_row$parent_topic_id[[1]]) && !identical(subtopic_row$parent_topic_id[[1]], topic_id)) {
+    return(NA_character_)
   }
 
-  purrr::map(seq_along(block_markers), function(i) {
-    start_idx <- block_markers[[i]] + 1
-    end_idx <- if (i == length(block_markers)) length(section_lines) else block_markers[[i + 1]] - 1
-    parse_markdown_key_values(section_lines[start_idx:end_idx])
-  }) |>
-    purrr::keep(\(block) length(block) > 0)
-}
-
-extract_source_text_body <- function(text) {
-  if (is.na(text) || identical(text, "")) {
-    return("")
-  }
-
-  lines <- strsplit(text, "\n", fixed = TRUE)[[1]]
-  body_lines <- extract_markdown_section_lines(lines, "^##\\s+Source text or cleaned transcript\\s*$")
-
-  if (length(body_lines) == 0) {
-    body_lines <- lines[!grepl("^\\s*-\\s+[A-Za-z0-9_]+\\s*:", lines, perl = TRUE)]
-    body_lines <- body_lines[!grepl("^##\\s+Structured claims\\s*$", body_lines, perl = TRUE)]
-    body_lines <- body_lines[!grepl("^###\\s+", body_lines, perl = TRUE)]
-  }
-
-  stringr::str_squish(paste(body_lines, collapse = "\n"))
+  subtopic_id
 }
 
 build_candidate_alias_table <- function(candidates) {
@@ -444,9 +389,23 @@ claim_from_structured_block <- function(block, packet, index, project_dir = ".")
     sep = " "
   )
 
-  candidate_id <- clean_optional_value(block$candidate_id) %||%
+  explicit_candidate_id <- clean_optional_value(block$candidate_id)
+  candidate_id <- if (!is.na(explicit_candidate_id)) {
+    validate_structured_candidate_id(explicit_candidate_id, candidates)
+  } else {
     (first_character_or_na(detect_candidate_ids_from_text(body_text, packet, candidates)) %||% first_character_or_na(packet$candidate_hints) %||% NA_character_)
-  topic_id <- clean_optional_value(block$topic_id) %||% detect_topic_id_from_text(body_text, taxonomy)
+  }
+
+  explicit_topic_id <- clean_optional_value(block$topic_id)
+  topic_id <- if (!is.na(explicit_topic_id)) {
+    validate_structured_topic_id(explicit_topic_id, taxonomy)
+  } else {
+    detect_topic_id_from_text(body_text, taxonomy)
+  }
+
+  explicit_subtopic_id <- clean_optional_value(block$subtopic_id)
+  subtopic_id <- validate_structured_subtopic_id(explicit_subtopic_id, topic_id, taxonomy)
+  subtopic_invalid <- !is.na(explicit_subtopic_id) && is.na(subtopic_id)
   mechanism_text <- clean_optional_value(block$mechanism_text) %||% infer_mechanism_text(body_text)
   claim_type_id <- normalize_contract_claim_type(
     clean_optional_value(block$claim_type) %||% infer_claim_type_from_text(body_text, mechanism_text),
@@ -460,7 +419,7 @@ claim_from_structured_block <- function(block, packet, index, project_dir = ".")
     summary_text = clean_optional_value(block$summary_text) %||% clean_optional_value(block$position_text) %||% clean_optional_value(packet$captured_excerpt) %||% "",
     position_text = clean_optional_value(block$position_text) %||% clean_optional_value(block$summary_text) %||% "",
     topic_id = topic_id %||% NA_character_,
-    subtopic_id = clean_optional_value(block$subtopic_id),
+    subtopic_id = subtopic_id,
     policy_key = clean_optional_value(block$policy_key) %||% derive_policy_key(topic_id, body_text),
     mechanism_text = mechanism_text,
     target_population = clean_optional_value(block$target_population) %||% infer_target_population(body_text),
@@ -468,7 +427,7 @@ claim_from_structured_block <- function(block, packet, index, project_dir = ".")
     stance_value = coerce_extraction_numeric(block$stance_value),
     specificity_score = coerce_extraction_integer(block$specificity_score, infer_specificity_score(claim_type_id, body_text, mechanism_text)),
     ambiguity_flag = coerce_extraction_flag(block$ambiguity_flag, infer_ambiguity_flag(body_text)),
-    insufficient_evidence_flag = coerce_extraction_flag(block$insufficient_evidence_flag, is.na(candidate_id) || is.na(topic_id)),
+    insufficient_evidence_flag = coerce_extraction_flag(block$insufficient_evidence_flag, is.na(candidate_id) || is.na(topic_id) || isTRUE(subtopic_invalid)),
     possible_contradiction_flag = coerce_extraction_flag(block$possible_contradiction_flag, FALSE),
     evidence_excerpt = clean_optional_value(block$evidence_excerpt) %||% stringr::str_trunc(clean_optional_value(packet$captured_excerpt) %||% body_text, 240)
   )
