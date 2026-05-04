@@ -96,6 +96,154 @@ test_that("materialize_extraction_results can derive structured claims from sour
   expect_equal(flattened$mechanism_text[[1]], "Auditoria fuerte")
 })
 
+test_that("structured source notes accept markdown key formatting", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  ensure_contract_layout(project_dir)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "empleo-empresa", NA_character_, "Empleo y empresa", "empleo-empresa", "Trabajo y empresa", TRUE, 1,
+      "mercado-laboral", "empleo-empresa", "Mercado laboral", "mercado-laboral", "Trabajo formal", TRUE, 2
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "ivan-cepeda", "ivan-cepeda", "Iván Cepeda", "Aída Quilcué", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  sources <- tibble::tribble(
+    ~source_id, ~candidate_id, ~published_at, ~source_tier, ~source_type, ~source_name, ~url, ~title, ~quote_text, ~confidence, ~inbox_batch,
+    "src-1", NA_character_, as.POSIXct("2026-04-20 10:00:00", tz = "UTC"), "official", "program", "Programa", "https://example.com/a", "Empleo", "Estatuto del trabajo", 0.95, "2026-04-20"
+  )
+
+  note_path <- file.path(project_dir, "src-1.md")
+  writeLines(
+    c(
+      "- `source_id`: src-1",
+      "- `candidate_hint`: ivan-cepeda",
+      "",
+      "## Structured claims",
+      "",
+      "### Claim 1",
+      "- `candidate_id`: ivan-cepeda",
+      "- `claim_type`: posicion_publica",
+      "- `topic_id`: empleo-empresa",
+      "- `subtopic_id`: mercado-laboral",
+      "- `policy_key`: estatuto-trabajo-y-concertacion-sindical",
+      "esta linea no es clave valor",
+      "- `summary_text`: Impulsar concertacion laboral.",
+      "- `position_text`: Impulsar estatuto del trabajo con concertacion sindical.",
+      "- `mechanism_text`: Concertacion sindical",
+      "- `target_population`: trabajadores",
+      "- `problem_diagnosed`: informalidad laboral",
+      "- `evidence_excerpt`: Impulsar estatuto del trabajo con concertacion sindical.",
+      "",
+      "## Source text or cleaned transcript",
+      "",
+      "Impulsar estatuto del trabajo con concertacion sindical."
+    ),
+    note_path
+  )
+
+  source_text_files <- tibble::tibble(
+    batch_date = as.Date("2026-04-20"),
+    source_id = "src-1",
+    path = note_path
+  )
+
+  source_packets <- build_source_packets(sources, source_text_files)
+  extraction_results <- materialize_extraction_results(project_dir, source_packets = source_packets)
+  flattened <- flatten_extraction_claims(extraction_results)
+
+  expect_equal(source_packets[[1]]$capture_method, "source_text_file")
+  expect_true("ivan-cepeda" %in% source_packets[[1]]$candidate_hints)
+  expect_equal(flattened$candidate_id[[1]], "ivan-cepeda")
+  expect_equal(flattened$claim_type_id[[1]], "postura_general")
+  expect_equal(flattened$topic_id[[1]], "empleo-empresa")
+  expect_equal(flattened$subtopic_id[[1]], "mercado-laboral")
+  expect_equal(flattened$policy_key[[1]], "estatuto-trabajo-y-concertacion-sindical")
+  expect_equal(flattened$mechanism_text[[1]], "Concertacion sindical")
+  expect_equal(flattened$target_population[[1]], "trabajadores")
+  expect_equal(flattened$problem_diagnosed[[1]], "informalidad laboral")
+  expect_equal(flattened$evidence_excerpt[[1]], "Impulsar estatuto del trabajo con concertacion sindical.")
+})
+
+test_that("structured source notes flag invalid candidate, topic, and subtopic metadata", {
+  project_dir <- tempfile()
+  dir.create(project_dir)
+  dir.create(file.path(project_dir, "config"), recursive = TRUE)
+  ensure_contract_layout(project_dir)
+
+  readr::write_csv(
+    tibble::tribble(
+      ~topic_id, ~parent_topic_id, ~label_public, ~slug, ~description, ~is_core, ~sort_order,
+      "empleo-empresa", NA_character_, "Empleo y empresa", "empleo-empresa", "Trabajo y empresa", TRUE, 1,
+      "mercado-laboral", "empleo-empresa", "Mercado laboral", "mercado-laboral", "Trabajo formal", TRUE, 2
+    ),
+    file.path(project_dir, "config", "taxonomy_v1.csv")
+  )
+
+  readr::write_csv(
+    tibble::tribble(
+      ~candidate_id, ~slug, ~president_name, ~vicepresident_name, ~ballot_position, ~watchlist_active, ~watchlist_priority,
+      "ivan-cepeda", "ivan-cepeda", "Iván Cepeda", "Aída Quilcué", 1, TRUE, 1
+    ),
+    file.path(project_dir, "config", "candidate_registry.csv")
+  )
+
+  sources <- tibble::tribble(
+    ~source_id, ~candidate_id, ~published_at, ~source_tier, ~source_type, ~source_name, ~url, ~title, ~quote_text, ~confidence, ~inbox_batch,
+    "src-1", NA_character_, as.POSIXct("2026-04-20 10:00:00", tz = "UTC"), "official", "program", "Programa", "https://example.com/a", "Empleo", "Estatuto del trabajo", 0.95, "2026-04-20"
+  )
+
+  note_path <- file.path(project_dir, "src-1.md")
+  writeLines(
+    c(
+      "- `source_id`: src-1",
+      "",
+      "## Structured claims",
+      "",
+      "### Claim 1",
+      "- `candidate_id`: candidato-inexistente",
+      "- `claim_type`: propuesta_concreta",
+      "- `topic_id`: tema-inexistente",
+      "- `subtopic_id`: mercado-laboral",
+      "- `policy_key`: estatuto-trabajo-y-concertacion-sindical",
+      "- `summary_text`: Impulsar concertacion laboral.",
+      "- `position_text`: Impulsar estatuto del trabajo con concertacion sindical.",
+      "- `evidence_excerpt`: Impulsar estatuto del trabajo con concertacion sindical.",
+      "",
+      "## Source text or cleaned transcript",
+      "",
+      "Impulsar estatuto del trabajo con concertacion sindical."
+    ),
+    note_path
+  )
+
+  source_text_files <- tibble::tibble(
+    batch_date = as.Date("2026-04-20"),
+    source_id = "src-1",
+    path = note_path
+  )
+
+  source_packets <- build_source_packets(sources, source_text_files)
+  extraction_results <- materialize_extraction_results(project_dir, source_packets = source_packets)
+  flattened <- flatten_extraction_claims(extraction_results)
+
+  expect_true(is.na(flattened$candidate_id[[1]]))
+  expect_true(is.na(flattened$topic_id[[1]]))
+  expect_true(is.na(flattened$subtopic_id[[1]]))
+  expect_true(flattened$insufficient_evidence_flag[[1]])
+})
+
 test_that("run_pipeline can derive claim records from explicit extraction results without claims.csv", {
   project_dir <- tempfile()
   dir.create(project_dir)

@@ -4,6 +4,8 @@
 
 Iván Cepeda presenta continuidad económica con el gobierno Petro, pero intenta rodearla de responsabilidad fiscal y transición productiva. La entrevista registrada por Infobae lo ubica defendiendo los principales ejes macroeconómicos del actual gobierno y afirmando que no hubo el desplome anticipado por sus críticos.{src:src-20260418-ivan-economia} Su pieza programática del Pacto Histórico conecta esa continuidad con salario digno, matrícula cero, economía social, economía solidaria, formalización laboral e innovación científica, especialmente en el Pacífico.{src:src-20260420-ivan-program-pdf} La visión de Estado es coordinadora: el mercado no desaparece, pero el Estado orienta redistribución, trabajo y sectores estratégicos.
 
+La fuente sindical del 1 de mayo agrega un mecanismo politico mas concreto al eje laboral: Cepeda se comprometio con dialogo permanente con centrales obreras, estatuto del trabajo, formalizacion justa, proteccion social, politica de cuidado, mejoras pensionales y reforma laboral para trabajadores campesinos y rurales.{src:src-20260502-ivan-trabajo-sindicatos-api} Esto no resuelve la aritmetica economica general, pero si cambia la lectura del dossier: su agenda de empleo no es solo continuidad retorica del Pacto Historico, sino una ruta de concertacion social donde los sindicatos tendrian interlocucion privilegiada.
+
 La diferencia frente a de la Espriella y Paloma Valencia es que Cepeda no propone aliviar la economía reduciendo radicalmente Estado o impuestos, sino profundizando el "cambio" y defendiendo avances sociales. Frente a Fajardo, su énfasis es más político-programático y menos tecnocrático; frente a Murillo, menos regional-productivo y más de continuidad progresista. Falta aclarar regla fiscal, tributación, deuda, crecimiento privado y productividad más allá de consignas de continuidad, porque una agenda de derechos necesita fuentes de financiación sostenibles.
 
 ## Salud {#salud}
@@ -44,6 +46,8 @@ La visión de Estado es planificadora y territorial. Se diferencia de de la Espr
 
 La candidatura de Cepeda habla desde derechos humanos, víctimas, pueblos indígenas y continuidad de políticas sociales. El folleto destaca la historia de Cepeda y Quilcué como víctimas del Estado, defensores de derechos humanos y participantes del proceso de paz, y enlaza ese relato con matrícula cero, salarios dignos, formalización laboral y economía solidaria.{src:src-20260420-ivan-program-pdf} El instrumento político no aparece como un listado tecnocrático de subsidios sino como profundización de derechos, reconocimiento y reparación.
 
+La nueva fuente laboral refuerza esa lectura porque une sindicalismo, formalizacion, cuidado, pensiones y trabajadores rurales en una misma agenda social.{src:src-20260502-ivan-trabajo-sindicatos-api} Su valor no esta en el respaldo politico de las centrales, sino en que permite observar que Cepeda intentaria convertir la interlocucion sindical en mecanismo de gobierno para politicas sociales y laborales.
+
 La implicación es que su Estado sería garante y redistributivo, con prioridad en poblaciones históricamente excluidas. Frente a Claudia López y Fajardo, el detalle sobre cuidado, mujeres, diversidad y protección social está menos desarrollado en los documentos visibles; frente a de la Espriella, la diferencia es que Cepeda parte de derechos y no de orden familiar o focalización conservadora. Falta aclarar sistema de cuidado, pensiones, transferencias, aborto, diversidad, discapacidad, infancia y financiación.
 
 ## Instituciones, anticorrupción y reforma política {#instituciones-anticorrupcion}
@@ -63,6 +67,8 @@ Su fortaleza es identidad programática clara; su límite es que varios temas de
 ## Viabilidad fiscal y administrativa {#viabilidad-fiscal}
 
 La viabilidad de Cepeda depende de resolver una tensión propia de la continuidad progresista: promete sostener y profundizar derechos, educación pública, paz, transición energética y economía social, pero todavía no muestra una arquitectura fiscal equivalente a esa ambición.{src:src-20260418-ivan-economia}{src:src-20260420-ivan-program-pdf} Defender que "no se produjo el desplome" ayuda a responder críticas macroeconómicas, pero no sustituye un plan de recaudo, gasto, deuda y productividad para un eventual gobierno propio.{src:src-20260418-ivan-economia}
+
+El compromiso con estatuto del trabajo, formalizacion justa, proteccion social, cuidado, mejoras pensionales y reforma laboral rural aumenta la densidad programatica laboral, pero tambien sube la exigencia de implementacion.{src:src-20260502-ivan-trabajo-sindicatos-api} Para que esa agenda sea evaluable falta explicar secuencia legislativa, costos fiscales, efectos sobre empleo formal, relacion con empresas y reglas de concertacion cuando sindicatos, empresarios y gobierno no coincidan.
 
 Administrativamente, su desafío es pasar de agenda legislativa y moral a capacidad ejecutiva. Paz total, educación pública, trenes regionales, transición energética, memoria histórica, derechos y anticorrupción requieren ministerios coordinados, entidades territoriales, Fuerza Pública, Fiscalía, Congreso y presupuesto plurianual.{src:src-20260418-ivan-program-home}{src:src-20260420-ivan-program-pdf} La continuidad con el Pacto Histórico puede darle base política, pero también lo obliga a explicar qué corregiría de la experiencia Petro.
 

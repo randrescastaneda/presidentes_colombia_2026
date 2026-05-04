@@ -16,7 +16,7 @@
       {
         "axis_id": "redistribucion_vs_libertad_economica",
         "placement": "Redistribucion",
-        "confidence": 0.95,
+        "confidence": 0.93,
         "rationale": "Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social"
       },
       {
@@ -126,20 +126,6 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
-        "topic_id": "justicia",
-        "description": "En Justicia e instituciones penales, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La nota reporta que la campana de Ivan Cepeda recibio el respaldo del Comando Central Unitario y de varias centrales obreras durante la jornada del 1 de mayo. En su intervencion... Programa para profundizar justicia social y paz total.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
-      {
         "topic_id": "transicion-energetica",
         "description": "En Transición energética, la evidencia pública observada se concentra en posturas o prioridades generales. Cepeda plantea una transición energética concertada con actores productivos y sociales. Transición energética, tierra para campesinos y tren para Boyacá.",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
@@ -180,6 +166,34 @@
         },
         "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
+      },
+      {
+        "topic_id": "empleo-empresa",
+        "description": "En Empleo y empresa, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Se compromete a mantener concertacion permanente con las centrales obreras e impulsar un estatuto del trabajo con formalizacion justa, proteccion social y mejoras pensionales.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "justicia",
+        "description": "En Justicia e instituciones penales, la evidencia pública observada se concentra en posturas o prioridades generales. Programa para profundizar justicia social y paz total.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
         "topic_id": "paz",
@@ -241,7 +255,7 @@
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
     "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, reforma-politica.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": [],
+    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
@@ -1855,20 +1869,6 @@
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
-        "topic_id": "vivienda",
-        "description": "En Vivienda, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La campana de Paloma Valencia informo desde Villavicencio y Acacias un paquete de propuestas para el Meta. El anuncio mas concreto fue la prioridad a la Via al Llano: intervenir... El programa de Valencia incluye vivienda progresiva.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
-      {
         "topic_id": "defensa",
         "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Paloma Valencia lanza desde Barranquilla su propuesta de \"seguridad total\" y promete reactivar todas las ordenes de captura. Acompanada por Alvaro Uribe, presento un borrador de...",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
@@ -1922,6 +1922,20 @@
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "vivienda",
+        "description": "En Vivienda, la evidencia pública observada se concentra en posturas o prioridades generales. El programa de Valencia incluye vivienda progresiva. Energía, vías terciarias, educación, vivienda progresiva y formalización.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
@@ -2006,6 +2020,20 @@
           "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "vivienda-infraestructura",
+        "description": "En Vivienda e infraestructura, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Prioriza resolver la Via al Llano con una nueva concesion integral, intervencion de mas de 100 puntos criticos y una ruta alterna por el Sisga.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
