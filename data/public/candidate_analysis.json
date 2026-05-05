@@ -71,7 +71,7 @@
     "thematic_analysis": [
       {
         "topic_id": "reforma-politica",
-        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. El articulo describe la tension entre la insistencia del presidente Petro en una Asamblea Nacional Constituyente y la necesidad de Ivan Cepeda de mantener un frente amplio con l... Su campana prioriza un acuerdo nacional para tramitar reformas por el Congreso y no asume la Constituyente como bandera cerrada, aunque tampoco la descarta del todo.",
+        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. El articulo describe la tension entre la insistencia del presidente Petro en una Asamblea Nacional Constituyente y la necesidad de Ivan Cepeda de mantener un frente amplio con l... Su campaña prioriza un acuerdo nacional para tramitar reformas por el Congreso y no asume la Constituyente como bandera cerrada, aunque tampoco la descarta del todo.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -855,7 +855,7 @@
       },
       {
         "topic_id": "reforma-politica",
-        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Abelardo de la Espriella planteo limitar los debates a quienes considera con mayores opciones y dijo que incluir a todos impediria un debate de fondo. no va a haber debate': choque politico por restricciones en campana presidencial",
+        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Abelardo de la Espriella planteo limitar los debates a quienes considera con mayores opciones y dijo que incluir a todos impediria un debate de fondo. no va a haber debate': choque politico por restricciones en campaña presidencial",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1870,7 +1870,7 @@
       },
       {
         "topic_id": "defensa",
-        "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Paloma Valencia lanza desde Barranquilla su propuesta de \"seguridad total\" y promete reactivar todas las ordenes de captura. Acompanada por Alvaro Uribe, presento un borrador de...",
+        "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Paloma Valencia lanza desde Barranquilla su propuesta de \"seguridad total\" y promete reactivar todas las ordenes de captura. Acompañada por Alvaro Uribe, presento un borrador de...",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -2129,7 +2129,7 @@
       },
       {
         "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Planteo que la criminalidad se ha expandido por el pais y cuestiono que la campana siga atrapada en la polarizacion en vez de discutir propuestas. La página oficial de Sergio Fajardo centra su apertura de campaña en seguridad.",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Planteo que la criminalidad se ha expandido por el pais y cuestiono que la campaña siga atrapada en la polarizacion en vez de discutir propuestas. La página oficial de Sergio Fajardo centra su apertura de campaña en seguridad.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -2374,7 +2374,7 @@
       },
       {
         "topic_id": "relaciones-exteriores",
-        "description": "En Relaciones exteriores, la evidencia pública observada se concentra en posturas o prioridades generales. Defendio su gestion sobre pasaportes y planteo que su campana busca representar a la Colombia olvidada. Murillo vincula infraestructura y comercio exterior como eje económico.",
+        "description": "En Relaciones exteriores, la evidencia pública observada se concentra en posturas o prioridades generales. Defendio su gestion sobre pasaportes y planteo que su campaña busca representar a la Colombia olvidada. Murillo vincula infraestructura y comercio exterior como eje económico.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -2444,7 +2444,7 @@
       },
       {
         "topic_id": "salud",
-        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. **Educacion para el desarrollo** La educacion sera el corazon de este gobierno: quien cuida a sus ninos y apuesta por sus maestros, construye su futuro",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. **Educacion para el desarrollo** La educacion sera el corazon de este gobierno: quien cuida a sus niños y apuesta por sus maestros, construye su futuro",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {

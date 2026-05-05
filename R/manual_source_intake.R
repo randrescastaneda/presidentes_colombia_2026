@@ -467,7 +467,7 @@ extract_manual_title <- function(text, url = NA_character_) {
   title_match <- stringr::str_trim(title_match)
 
   if (nzchar(title_match)) {
-    return(title_match)
+    return(normalize_spanish_enye_text(title_match))
   }
 
   slug <- sub("^https?://", "", url %||% "")
@@ -483,7 +483,43 @@ extract_manual_title <- function(text, url = NA_character_) {
     return(manual_source_name_from_url(url))
   }
 
-  tools::toTitleCase(slug)
+  normalize_spanish_enye_text(tools::toTitleCase(slug))
+}
+
+normalize_spanish_enye_text <- function(text) {
+  if (is.null(text)) {
+    return(text)
+  }
+
+  replacements <- c(
+    "CAMPANAS" = "CAMPAÑAS", "CAMPANA" = "CAMPAÑA",
+    "Campanas" = "Campañas", "Campana" = "Campaña",
+    "campanas" = "campañas", "campana" = "campaña",
+    "NINOS" = "NIÑOS", "NINO" = "NIÑO",
+    "NINAS" = "NIÑAS", "NINA" = "NIÑA",
+    "Ninos" = "Niños", "Nino" = "Niño",
+    "Ninas" = "Niñas", "Nina" = "Niña",
+    "ninos" = "niños", "nino" = "niño",
+    "ninas" = "niñas", "nina" = "niña",
+    "ACOMPANADA" = "ACOMPAÑADA", "ACOMPANADO" = "ACOMPAÑADO",
+    "ACOMPANAMIENTO" = "ACOMPAÑAMIENTO", "ACOMPANAR" = "ACOMPAÑAR",
+    "Acompanada" = "Acompañada", "Acompanado" = "Acompañado",
+    "Acompanamiento" = "Acompañamiento", "Acompanar" = "Acompañar",
+    "acompanada" = "acompañada", "acompanado" = "acompañado",
+    "acompanamiento" = "acompañamiento", "acompanar" = "acompañar",
+    "SENALES" = "SEÑALES", "SENAL" = "SEÑAL",
+    "Senales" = "Señales", "Senal" = "Señal",
+    "senales" = "señales", "senal" = "señal",
+    "NARINO" = "NARIÑO", "Narino" = "Nariño", "narino" = "nariño"
+  )
+
+  normalized <- text
+  for (from in names(replacements)) {
+    pattern <- paste0("(?<![\\p{L}\\p{N}_])", from, "(?![\\p{L}\\p{N}_])")
+    normalized <- gsub(pattern, replacements[[from]], normalized, perl = TRUE, useBytes = FALSE)
+  }
+
+  normalized
 }
 
 default_manual_source_url_validator <- function(url) {
@@ -629,7 +665,7 @@ build_manual_source_registry <- function(project_dir = ".", candidates = NULL, v
       candidate_id = candidate_guess$candidate_id %||% NA_character_,
       candidate_confidence = candidate_guess$candidate_confidence %||% 0,
       candidate_match_method = candidate_guess$candidate_match_method %||% "unknown",
-      title = validation$title %||% extract_manual_title("", url = final_url),
+      title = normalize_spanish_enye_text(validation$title %||% extract_manual_title("", url = final_url)),
       published_at = as.POSIXct(published_at, tz = "UTC"),
       validation_status = validation$validation_status %||% "invalid",
       public_status = public_status,
@@ -667,8 +703,8 @@ build_promoted_manual_sources <- function(registry, batch_label = as.character(S
       source_type = .data$source_type,
       source_name = .data$source_name,
       url = .data$final_url,
-      title = .data$title,
-      quote_text = .data$title,
+      title = normalize_spanish_enye_text(.data$title),
+      quote_text = normalize_spanish_enye_text(.data$title),
       confidence = pmax(.data$candidate_confidence, 0.75),
       inbox_batch = batch_label,
       discovery_method = .data$discovery_method,
@@ -690,7 +726,7 @@ build_pending_manual_source_library <- function(registry) {
       source_tier = .data$source_tier,
       source_type = .data$source_type,
       url = .data$final_url,
-      title = .data$title,
+      title = normalize_spanish_enye_text(.data$title),
       published_at = .data$published_at,
       status = .data$public_status,
       status_reason = .data$status_reason,

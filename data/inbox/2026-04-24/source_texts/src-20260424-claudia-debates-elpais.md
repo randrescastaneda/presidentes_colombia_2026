@@ -4,7 +4,7 @@
 - `captured_at`: 2026-04-24T10:31:45-04:00
 - `capture_method`: web_search_manual_curation
 - `candidate_hint`: claudia-lopez
-- `notes`: EL PAIS liveblog entry publicada el 2026-04-23 a las 11:43 -05. Hallazgo institucional y de campana sobre debates presidenciales.
+- `notes`: EL PAIS liveblog entry publicada el 2026-04-23 a las 11:43 -05. Hallazgo institucional y de campaña sobre debates presidenciales.
 
 ## Structured claims
 

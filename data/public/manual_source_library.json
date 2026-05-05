@@ -9,7 +9,7 @@
     "title": "Claudia López",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -23,7 +23,7 @@
     "title": "El tigre importado: Abelardo de la Espriella copia a Bukele, Milei y Trump para triunfar en la extrema derecha - Revista RAYA",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -37,7 +37,7 @@
     "title": "Elecciones en Colombia 2026: Paloma Valencia propone bajar impuestos y reactivar el sector petrolero",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -51,7 +51,7 @@
     "title": "IvanCepedaCast",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -65,7 +65,7 @@
     "title": "PalomaValenciaL",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -79,7 +79,7 @@
     "title": "Plan de Gobierno Claudia Lopez",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -93,7 +93,7 @@
     "title": "Roy Barreras (&#064;roybarreras) • Instagram photos and videos",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -107,7 +107,7 @@
     "title": "Sondra Macollins | Candidata Presidencial 2026",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.99,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -121,7 +121,7 @@
     "title": "Elecciones Presidenciales 2026 Propuestas Candidato Abelardo Espriella PP5141713",
     "published_at": "2026-04-15",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.7,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -135,7 +135,7 @@
     "title": "“La única forma para no ganar las elecciones es que me maten”: Santiago Botero - Canal 1",
     "published_at": "2026-03-26",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.7,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -149,7 +149,7 @@
     "title": "Las propuestas del empresario Santiago Botero para llegar a la presidencia en 2026 | 10AM Hoy por hoy | Caracol Radio",
     "published_at": "2024-12-12",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.7,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -163,7 +163,7 @@
     "title": "Carlosecaicedo",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.7,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -177,7 +177,7 @@
     "title": "LuisGMurillo",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|alias_score",
     "candidate_confidence": 0.7,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -191,7 +191,7 @@
     "title": "Gustavo Matamoros no apoyar&#xE1; a Iv&#xE1;n Cepeda en segunda vuelta",
     "published_at": "2026-04-01",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.6,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -205,7 +205,7 @@
     "title": "Sergio Fajardo comparó sus propuestas de gobierno con las de Abelardo de la Espriella: “La diferencia entre un proyecto serio y la improvisación” - Infobae",
     "published_at": "2026-03-17",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.6,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -219,8 +219,36 @@
     "title": "¿Habrá debate presidencial entre los candidatos punteros? esto respondieron Valencia, De la Espriella, López y Fajardo | EL ESPECTADOR",
     "published_at": "2026-04-19",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.4,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-3f7a8a93",
+    "candidate_id": null,
+    "source_name": "Elpais Com",
+    "source_tier": "established-media",
+    "source_type": "article",
+    "url": "https://elpais.com/america-colombia/2026-04-18/valencia-fajardo-lopez-y-roy-coinciden-en-reactivar-el-sector-minero-energetico.html",
+    "title": "Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
+    "published_at": "2026-04-18",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|ambiguous_match",
+    "candidate_confidence": 0.4,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-69553ce9",
+    "candidate_id": null,
+    "source_name": "Elpais Com",
+    "source_tier": "established-media",
+    "source_type": "topic-page",
+    "url": "https://elpais.com/america-colombia/elecciones-presidenciales/2026-04-21/de-la-espriella-recurre-a-la-mano-dura-de-bukele-y-la-motosierra-de-milei-para-apuntalar-su-programa-de-gobierno.html",
+    "title": "De la Espriella recurre a la mano dura de Bukele y la motosierra de Milei para apuntalar su programa de gobierno | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
+    "published_at": "2026-04-21",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|ambiguous_match",
+    "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
@@ -233,7 +261,7 @@
     "title": "Iván Cepeda dice que sí debatirá una vez se den las garantías con otros candidatos",
     "published_at": "2026-04-20",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -247,7 +275,7 @@
     "title": "Las claves de la campaña Matamoros en las presidenciales: descartó trabajar con candidatos que “tienen el wifi del señor” - Infobae",
     "published_at": "2026-03-29",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -261,7 +289,7 @@
     "title": "El futuro del campo en las propuestas presidenciales - Revista RAYA",
     "published_at": "2026-03-22",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -275,7 +303,7 @@
     "title": "Estos son los 14 candidatos que junto a Cepeda y De la - Las2orillas.co",
     "published_at": "2026-03-09",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -289,7 +317,21 @@
     "title": "La decisión del CNE contra Cepeda busca reconfigurar el mapa electoral - Revista RAYA",
     "published_at": "2026-02-12",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
+    "candidate_confidence": 0.2,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-5784e426",
+    "candidate_id": null,
+    "source_name": "Magdalenanoticias Co",
+    "source_tier": "reference",
+    "source_type": "webpage",
+    "url": "https://magdalenanoticias.co/caicedo-le-reafirma-a-petro-propuesta-de-un-frente-unido-para-impedir-el-regreso-de-la-derecha-a-la-presidencia/",
+    "title": "Caicedo le reafirma a Petro propuesta de un Frente Unido para impedir el regreso de la derecha a la Presidencia - Magdalena Noticias",
+    "published_at": "2025-12-02",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -303,7 +345,7 @@
     "title": "Murillo oficializó su aspiración presidencial para 2026: “No soy el candidato de ningún político” | Actualidad | WRadio",
     "published_at": "2025-05-22",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -317,7 +359,7 @@
     "title": "ABDELAESPRIELLA",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -331,21 +373,7 @@
     "title": "CUENTAS CLARAS",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
-    "candidate_confidence": 0.2,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-5784e426",
-    "candidate_id": null,
-    "source_name": "Magdalenanoticias Co",
-    "source_tier": "reference",
-    "source_type": "webpage",
-    "url": "https://magdalenanoticias.co/caicedo-le-reafirma-a-petro-propuesta-de-un-frente-unido-para-impedir-el-regreso-de-la-derecha-a-la-presidencia",
-    "title": "Caicedo Le Reafirma a Petro Propuesta De Un Frente Unido Para Impedir El Regreso De La Derecha a La Presidencia",
-    "published_at": null,
-    "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -359,7 +387,7 @@
     "title": "Candidatos presidenciales expusieron propuestas ante gobernadores, sin Cepeda",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -373,7 +401,7 @@
     "title": "Gnralmatamoros",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -387,7 +415,7 @@
     "title": "Gustavo Matamoros Presidente 2026 - 2030",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -401,7 +429,7 @@
     "title": "Elecciones Colombia 2026 - Pares",
     "published_at": "2026-04-29",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -415,7 +443,7 @@
     "title": "Así funciona Voto Informado: la app gratuita que quiere cambiar la forma de votar en Colombia",
     "published_at": "2026-04-20",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -429,7 +457,7 @@
     "title": "Carrera por la Presidencia: propuestas y visiones opuestas para la economía",
     "published_at": "2026-04-20",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -443,7 +471,7 @@
     "title": "¿Qué proponen los candidatos punteros en las encuestas presidenciales?",
     "published_at": "2026-04-20",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -457,7 +485,7 @@
     "title": "LA DEFENSA NACIONAL EN LA CAMPAÑA ELECTORAL",
     "published_at": "2026-04-19",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -471,7 +499,7 @@
     "title": "La bitácora electoral de PARES: así está el panorama político a seis semanas de las presidenciales - Pares",
     "published_at": "2026-04-17",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -485,7 +513,7 @@
     "title": "#CongresoNaturgas2026 | Debate candidatos presidenciales sobre el sector energético - YouTube",
     "published_at": "2026-04-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -499,7 +527,7 @@
     "title": "Debate &#x27;Colombia decide su energía&#x27; de Noticias Caracol EN VIVO: siga el diálogo entre los candidatos presidenciales - NoticiasCaracol",
     "published_at": "2026-04-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -513,7 +541,7 @@
     "title": "Gobernadores plantean a candidatos presidenciales propuesta de autonomía fiscal para las regiones - La Prensa Oriente",
     "published_at": "2026-04-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -527,7 +555,7 @@
     "title": "Minería ilegal en Colombia: las propuestas de candidatos presidenciales para enfrentarla - NoticiasCaracol",
     "published_at": "2026-04-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -541,7 +569,7 @@
     "title": "¿Cómo reconstruirían los candidatos presidenciales la confianza en la democracia? - NoticiasCaracol",
     "published_at": "2026-04-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -555,7 +583,7 @@
     "title": "Cumbre de gobernadores: candidatos presidenciales presentan sus propuestas a regiones - BluRadio",
     "published_at": "2026-04-15",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -569,7 +597,7 @@
     "title": "“Premiar afinidades y bloquear territorios”: candidatos critican relación Petro-regiones | EL ESPECTADOR",
     "published_at": "2026-04-15",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -583,7 +611,7 @@
     "title": "‘Las regiones proponen, los candidatos responden’, foro clave para el desarrollo territorial",
     "published_at": "2026-04-14",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -597,7 +625,7 @@
     "title": "Partidos pol&#xED;ticos definen apoyos rumbo a las elecciones presidenciales 2026 | Noticias RCN",
     "published_at": "2026-04-13",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -611,7 +639,7 @@
     "title": "La campaña presidencial: tres modelos de seguridad en disputa",
     "published_at": "2026-04-12",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -625,7 +653,7 @@
     "title": "Asointermedias pone sobre la mesa 10 propuestas para el próximo presidente de Colombia - Semana",
     "published_at": "2026-04-09",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -639,7 +667,7 @@
     "title": "Candidatos presidenciales debaten en El Espectador sobre el futuro de la energía y las regiones | Noticias hoy | EL ESPECTADOR",
     "published_at": "2026-04-06",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -653,7 +681,7 @@
     "title": "Defensores de la patria | Abelardo de la Espriella",
     "published_at": "2026-04-06",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -667,7 +695,7 @@
     "title": "Justicia social, redistribución y reconocimiento en la campaña presidencial - Revista RAYA",
     "published_at": "2026-04-05",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -681,7 +709,7 @@
     "title": "Candidato presidencial colombiano asegura que Trump &quot;hizo que Am&#xE9;rica creciera&quot; y habla de sus propuestas en exclusiva con NTN24 | NTN24.COM",
     "published_at": "2026-03-31",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -695,7 +723,7 @@
     "title": "Libertank presenta el &#xED;ndice de libertad econ&#xF3;mica Voto Libre 2026 para evaluar candidatos | AsuntosLegales.co",
     "published_at": "2026-03-30",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -709,7 +737,7 @@
     "title": "Los candidatos y la economía: ¿en qué se diferencian sus propuestas?",
     "published_at": "2026-03-29",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -723,7 +751,7 @@
     "title": "Conozca las razones que dan para votar por estos candidatos a la Presidencia: tienen fuerza en Caldas",
     "published_at": "2026-03-24",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -737,7 +765,7 @@
     "title": "Anatomía de las candidaturas presidenciales",
     "published_at": "2026-03-22",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -751,7 +779,21 @@
     "title": "Elecciones presidenciales 2026 en Colombia: fecha del sorteo del tarjetón",
     "published_at": "2026-03-21",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
+    "candidate_confidence": 0,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-2dbdb863",
+    "candidate_id": null,
+    "source_name": "Elpais Com",
+    "source_tier": "established-media",
+    "source_type": "topic-page",
+    "url": "https://elpais.com/america-colombia/elecciones-presidenciales/2026-03-16/el-camino-a-las-elecciones-presidenciales-colombia-2026-en-vivo.html",
+    "title": "Las campañas presidenciales en Colombia - 16 de marzo | Luis Carlos Reyes ya no será el compañero de fórmula de Mauricio Lizcano | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
+    "published_at": "2026-03-18",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -765,7 +807,7 @@
     "title": "Cómo manejarían la economía Fajardo, Cepeda, Valencia y De la Espriella",
     "published_at": "2026-03-17",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -779,7 +821,7 @@
     "title": "Los 14 candidatos que buscan ser presidente de Colombia en este 2026 - Pares",
     "published_at": "2026-03-17",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -793,7 +835,7 @@
     "title": "Vota al Pacto Histórico e Iván Cepeda",
     "published_at": "2026-03-16",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -807,7 +849,7 @@
     "title": "Elecciones Colombia 2026: estos son los 14 candidatos presidenciales inscritos - El País",
     "published_at": "2026-03-14",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -821,7 +863,7 @@
     "title": "La lista de los candidatos a las elecciones presidenciales del 31 de mayo",
     "published_at": "2026-03-14",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -835,7 +877,7 @@
     "title": "Estos son los 14 candidatos presidenciales inscritos en la Registraduría para la primera vuelta: nombres y fórmulas",
     "published_at": "2026-03-13",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -849,7 +891,7 @@
     "title": "Estos son los 14 candidatos presidenciales que se inscribieron ante la Registradur&#xED;a | Noticias RCN",
     "published_at": "2026-03-13",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -863,7 +905,7 @@
     "title": "¿Quiénes competirán en la primera vuelta presidencial 2026? Así quedó la lista | KienyKe",
     "published_at": "2026-03-09",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -877,7 +919,7 @@
     "title": "Definidos 3 candidatos presidenciales Colombia 2026: Nombres y fotos ¿Son de derecha o de izquierda? | Actualidad | Caracol Radio",
     "published_at": "2026-03-08",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -891,7 +933,7 @@
     "title": "Estos son los candidatos más fuertes para la primera vuelta presidencial | 360",
     "published_at": "2026-03-08",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -905,7 +947,7 @@
     "title": "Estos son los candidatos que competir&#xE1;n en la primera vuelta del 31 de mayo",
     "published_at": "2026-03-08",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -919,7 +961,7 @@
     "title": "Este es el panorama electoral. Colombia a pocos días de las elecciones del 8 de marzo - Pares",
     "published_at": "2026-03-04",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -933,7 +975,7 @@
     "title": "La plata se ve en la calle, pero no en la rendición de cuentas: 66,2 % de las candidaturas al Congreso no han reportado nada. - Transparencia por Colombia",
     "published_at": "2026-03-04",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -947,7 +989,7 @@
     "title": "Así fueron los cierres de campaña de algunos candidatos presidenciales: discursos, propuestas y concentraciones - Infobae",
     "published_at": "2026-03-01",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -961,7 +1003,7 @@
     "title": "Los candidatos de la consulta Frente por la Vida hablan de constituyente, seguridad y la izquierda | Noticias RCN",
     "published_at": "2026-02-15",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -975,7 +1017,7 @@
     "title": "Elecciones 2026, cara o sello - Canal 1",
     "published_at": "2026-02-11",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -989,7 +1031,7 @@
     "title": "Elecciones 2026, un año clave",
     "published_at": "2026-02-03",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1003,7 +1045,7 @@
     "title": "Candidatos de La Gran Consulta lanzaron particulares propuestas en materia salud, corrupci&#xF3;n y ni&#xF1;ez | Noticias RCN",
     "published_at": "2026-01-25",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1017,7 +1059,7 @@
     "title": "El Debate de la Gente 2026: ¿Cómo participar?",
     "published_at": "2026-01-23",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1031,7 +1073,7 @@
     "title": "Los protagonistas de La Gran Consulta por Colombia confrontan opiniones | 6AM W | Caracol Radio",
     "published_at": "2026-01-22",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1045,7 +1087,7 @@
     "title": "El debate de la gente | Estas son las propuestas de las precandidatas del Centro Democr&#xE1;tico | Noticias RCN",
     "published_at": "2025-12-09",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1059,7 +1101,7 @@
     "title": "&#xBF;Qu&#xE9; va a hacer el pr&#xF3;ximo presidente por el campo colombiano?",
     "published_at": "2025-12-05",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1073,7 +1115,7 @@
     "title": "Ley que obligaría a candidatos a asistir a debates todavía no se ha aprobado: apenas está en trámite | ColombiaCheck",
     "published_at": "2025-11-20",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1087,7 +1129,7 @@
     "title": "El debate de la gente | Estas son las propuestas de los candidatos de la Fuerza de las Regiones | Noticias RCN",
     "published_at": "2025-11-19",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1101,7 +1143,7 @@
     "title": "Financiamiento de los precandidatos presidenciales en Colombia - Transparencia por Colombia",
     "published_at": "2025-10-21",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1115,7 +1157,7 @@
     "title": "Presidenciales 2026: cuál es la influencia de los ultraprocesados",
     "published_at": "2025-09-07",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1129,7 +1171,7 @@
     "title": "Las propuestas de los precandidatos para 2026 en el sector de transporte de carga",
     "published_at": "2025-07-25",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1143,7 +1185,7 @@
     "title": "20250305 Resolucion 2580 Del 05 03 2025 Calendario Electoral Presidente De La Republica 2026",
     "published_at": "2025-03-05",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1157,7 +1199,7 @@
     "title": "Elecciones en Colombia 2026: Últimas noticias en Blu Radio",
     "published_at": "2024-07-22",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1171,7 +1213,7 @@
     "title": "Publicaciones biblioteca &#187; Página 11 de 31 &#187; ICP",
     "published_at": "2022-09-12",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1185,7 +1227,7 @@
     "title": "Elecciones Colombia - Cadena SER",
     "published_at": "2022-09-06",
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1199,7 +1241,7 @@
     "title": "0063 BOLETIN Panorama Electoral",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1213,7 +1255,7 @@
     "title": "ATLAS INTEL - Encuesta 2026 - Consejo Nacional Electoral - CNE",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1227,7 +1269,7 @@
     "title": "ATLASINTEL - Encuesta 2026 - Consejo Nacional Electoral - CNE",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1241,7 +1283,7 @@
     "title": "Acento Colombia | Semanario de análisis para entender el país",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1255,7 +1297,7 @@
     "title": "Acento Colombia | Semanario de análisis para entender el país",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1269,7 +1311,7 @@
     "title": "Análisis - Revista RAYA",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1283,7 +1325,7 @@
     "title": "Boletín Electoral - Observatorio legislativo | Universidad del Rosario",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1294,10 +1336,10 @@
     "source_tier": "established-media",
     "source_type": "topic-page",
     "url": "https://www.elcolombiano.com/especiales/elecciones-2026/candidatos-y-propuestas",
-    "title": "Candidatos y Propuestas",
+    "title": "Candidatos Elecciones 2026 y sus propuestas",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1311,7 +1353,7 @@
     "title": "Colombia Tierra de Jóvenes | Universidad del Rosario",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1325,7 +1367,7 @@
     "title": "Consejo Nacional Electoral",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1339,7 +1381,7 @@
     "title": "Descubra el candidato presidencial con el que piensa parecido | Uniandes",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1353,7 +1395,7 @@
     "title": "Dignidad &amp; Compromiso | Partido Dignidad &amp; Compromiso",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1367,7 +1409,7 @@
     "title": "ELECCIONES 2026",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1381,7 +1423,7 @@
     "title": "Elecciones 2026 | ColombiaCheck",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1395,7 +1437,7 @@
     "title": "Elecciones 2026 | ColombiaCheck",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1409,7 +1451,7 @@
     "title": "Elecciones Colombia 2026 | Política - ELTIEMPO.COM",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1423,7 +1465,7 @@
     "title": "Elecciones Presidencia 2026 - Colombia Humana",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1437,7 +1479,7 @@
     "title": "Elección de presidente y vicepresidente de la República 2026 - Colombia",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1451,7 +1493,7 @@
     "title": "Elección de presidente y vicepresidente de la República 2026 - Colombia",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1465,7 +1507,7 @@
     "title": "Elección de presidente y vicepresidente de la República 2026 - Colombia",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1479,7 +1521,7 @@
     "title": "Encuesta 2026 - Consejo Nacional Electoral - CNE",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1493,7 +1535,7 @@
     "title": "Fuerza Ciudadana",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1507,7 +1549,7 @@
     "title": "INFORMES DE INGRESOS Y GASTOS DE CAMPAÑA",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1521,7 +1563,7 @@
     "title": "L3P Hoja De Ruta Programatica Con Propuestas Para Transformar Colombia",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1535,7 +1577,7 @@
     "title": "Las propuestas más osadas y audaces de los candidatos presidenciales | El Nuevo Siglo",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1549,7 +1591,7 @@
     "title": "Los candidatos presidenciales se miden, frente a frente, en el debate de Noticias Caracol &#039;Colombia Decide su Energía&#039; para exponer sus propuestas en materia energética. Petróleo, minería, gas, energía y servicios públicos son los temas por los que lanzan propuestas los aspirantes a la Presidencia de Colombia. | Noticias Caracol",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1563,7 +1605,7 @@
     "title": "Noticias de Candidatos presidenciales | NTN24",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1577,7 +1619,7 @@
     "title": "Noticias de Elecciones en Colombia | NTN24",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1591,7 +1633,7 @@
     "title": "Periódico UNAL",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1605,7 +1647,7 @@
     "title": "Portal Pontificia Universidad Javeriana",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1619,7 +1661,7 @@
     "title": "Programa Gobierno 2026 2030",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1633,7 +1675,7 @@
     "title": "Programa de Gobierno 2026-2030 | Pacto Histórico",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1647,7 +1689,7 @@
     "title": "Propuestas presidenciales: retos y necesidades - ANIF",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1661,7 +1703,7 @@
     "title": "Publicaciones generales 2026 - Consejo Nacional Electoral - CNE",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1675,7 +1717,7 @@
     "title": "Resoluciones cne 2026 - Consejo Nacional Electoral - CNE",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1686,10 +1728,10 @@
     "source_tier": "institutional",
     "source_type": "document",
     "url": "https://transparenciacolombia.org.co/wp-content/uploads/2026/03/SEGUNDO-BALANCE-DE-SEGUIMIENTO-AL-FINANCIAMIENTO-DE-CAMPANAS.pdf",
-    "title": "SEGUNDO BALANCE DE SEGUIMIENTO AL FINANCIAMIENTO DE CAMPANAS",
+    "title": "SEGUNDO BALANCE DE SEGUIMIENTO AL FINANCIAMIENTO DE CAMPAÑAS",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1703,7 +1745,7 @@
     "title": "TPC FINANCIAMIENTO DE LOS ASPIRANTES PRESIDENCIALES en COLOMBIA",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
@@ -1717,7 +1759,7 @@
     "title": "Teleantioquia | Conectando futuro",
     "published_at": null,
     "status": "pending_classification",
-    "status_reason": "validated_by_http",
+    "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   }

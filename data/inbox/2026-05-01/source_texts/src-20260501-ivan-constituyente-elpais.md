@@ -15,7 +15,7 @@
 - `topic_id`: instituciones-anticorrupcion
 - `subtopic_id`: reforma-politica
 - `policy_key`: acuerdo-nacional-via-congreso-sobre-constituyente
-- `summary_text`: Prioriza un acuerdo nacional para tramitar reformas por el Congreso y no presenta la Constituyente como bandera central de su campana.
+- `summary_text`: Prioriza un acuerdo nacional para tramitar reformas por el Congreso y no presenta la Constituyente como bandera central de su campaña.
 - `position_text`: Toma distancia parcial de la insistencia de Petro en una Constituyente, sin descartarla por completo como posibilidad eventual.
 - `mechanism_text`: Construir acuerdos con aliados como la Alianza Verde y sectores liberales para impulsar reformas sociales, institucionales y economicas por la via legislativa.
 - `target_population`: Electorado de centro e izquierda y aliados de coalicion preocupados por estabilidad institucional.
