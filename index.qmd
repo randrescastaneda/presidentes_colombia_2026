@@ -72,7 +72,7 @@ cat(
   <h2 id="home-ai-disclaimer-title">El análisis y las conclusiones son generados por inteligencia artificial</h2>
   <p>
     Este sitio usa IA para sintetizar fuentes públicas, comparar propuestas y producir análisis político.
-    Sus conclusiones pueden contener errores, omisiones o interpretaciones discutibles. El responsable del sitio no asume responsabilidad por las conclusiones, inferencias o análisis publicados.
+    Sus conclusiones pueden contener errores, omisiones o interpretaciones discutibles. El dueño de esta página no asume responsabilidad por las conclusiones, inferencias o análisis publicados.
     Use esta página como una guía de lectura y revise las fuentes originales antes de formarse una opinión o tomar decisiones.
   </p>
 </section>
