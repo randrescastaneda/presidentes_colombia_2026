@@ -1,5 +1,7 @@
 ---
 title: "Comparador temático"
+toc: true
+toc-location: right
 ---
 
 ```{r}

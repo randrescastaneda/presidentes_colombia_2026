@@ -115,7 +115,22 @@ test_that("comparison page is no longer driven by a single output table", {
 
   expect_no_match(comparison_text, "safe_kable")
   expect_match(comparison_text, "build_comparison_view_model")
+  expect_match(comparison_text, "toc:\\s*true")
+  expect_match(comparison_text, "toc-location:\\s*right")
   expect_no_match(comparison_text, "read_processed_table\\(\"program_documents.csv\"\\)")
+})
+
+test_that("rendered comparison page exposes a TOC and plain prose sections", {
+  comparison_html_path <- file.path(project_root, "docs", "comparador.html")
+  skip_if_not(file.exists(comparison_html_path))
+
+  comparison_html <- paste(readLines(comparison_html_path, warn = FALSE), collapse = "\n")
+
+  expect_match(comparison_html, '<nav id="TOC"')
+  expect_match(comparison_html, 'id="topic-economia"')
+  expect_match(comparison_html, 'class="comparison-topic-text"')
+  expect_no_match(comparison_html, 'prose-card prose-card--comparison')
+  expect_no_match(comparison_html, '<section class="topic-section" data-topic-id=')
 })
 
 test_that("source library page is driven by a dedicated view model", {

@@ -525,13 +525,17 @@ comparison_topic_essay_html <- function(topic, sources, source_numbers) {
   }, character(1))
 
   paste0(
-    '<div class="prose-card prose-card--comparison">',
     '<p class="narrative-paragraph">',
     escape_html(topic$summary %||% ""),
     "</p>",
-    paste(candidate_paragraphs, collapse = ""),
-    "</div>"
+    paste(candidate_paragraphs, collapse = "")
   )
+}
+
+markdown_heading_text <- function(text) {
+  text <- as.character(text %||% "")
+  text <- gsub("\\\\", "\\\\\\\\", text)
+  gsub("([#`*_{}\\[\\]()!])", "\\\\\\1", text, perl = TRUE)
 }
 
 topic_policy_reading <- function(topic_id, claim_rows, candidate_name) {
@@ -1154,25 +1158,23 @@ emit_comparison_sections <- function(comparison_model, candidates = NULL, taxono
     rendered_topics <- vapply(comparison_model$topics, function(topic) {
       sources <- comparison_model$sources %||% tibble::tibble()
       source_numbers <- source_number_lookup(sources)
+      heading_id <- paste0("topic-", topic$topic_id %||% "")
+      topic_content <- if (!is.null(topic$body) && (topic$body %||% "") != "") {
+        editorial_markdown_body_html(topic$body, sources, source_numbers, external = TRUE)
+      } else {
+        comparison_topic_essay_html(topic, sources, source_numbers)
+      }
 
       paste0(
-        '<section class="topic-section" data-topic-id="', escape_html(topic$topic_id), '">',
-        "<h2>", escape_html(topic$topic_label), "</h2>",
+        "\n\n## ", markdown_heading_text(topic$topic_label), " {#", heading_id, "}\n\n",
+        '<div class="comparison-topic-text" data-topic-id="', escape_html(topic$topic_id), '">',
         if (!is.na(topic$topic_description) && topic$topic_description != "") {
           paste0('<p class="topic-section__intro">', escape_html(topic$topic_description), "</p>")
         } else {
           ""
         },
-        if (!is.null(topic$body) && (topic$body %||% "") != "") {
-          paste0(
-            '<div class="prose-card prose-card--comparison">',
-            editorial_markdown_body_html(topic$body, sources, source_numbers, external = TRUE),
-            "</div>"
-          )
-        } else {
-          comparison_topic_essay_html(topic, sources, source_numbers)
-        },
-        "</section>"
+        topic_content,
+        "</div>\n"
       )
     }, character(1))
 

@@ -362,6 +362,15 @@ h1, h2, h3, h4, .navbar-brand {
   margin-bottom: 1.25rem;
 }
 
+.comparison-topic-text {
+  margin-bottom: 2rem;
+  max-width: 78ch;
+}
+
+.comparison-topic-text .narrative-paragraph {
+  max-width: 76ch;
+}
+
 .topic-section__intro,
 .topic-section__footnote,
 .comparison-card__meta,
