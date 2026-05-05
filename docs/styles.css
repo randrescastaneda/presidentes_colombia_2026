@@ -64,6 +64,51 @@ h1, h2, h3, h4, .navbar-brand {
   padding: 2.2rem;
 }
 
+.home-ai-disclaimer {
+  background: linear-gradient(135deg, rgba(138, 45, 45, 0.98), rgba(23, 50, 77, 0.98));
+  border: 1px solid rgba(255, 250, 242, 0.42);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(24, 34, 46, 0.18);
+  color: #fffaf2;
+  margin: 0 0 2rem;
+  padding: 1.55rem 1.75rem;
+}
+
+.home-ai-disclaimer h2 {
+  color: #fffaf2;
+  font-size: 2rem;
+  line-height: 1.14;
+  margin: 0 0 0.85rem;
+}
+
+.home-ai-disclaimer p {
+  max-width: 980px;
+}
+
+.home-ai-disclaimer p:last-child {
+  font-size: 1.08rem;
+  line-height: 1.58;
+  margin-bottom: 0;
+}
+
+.home-ai-disclaimer__label {
+  color: #f4d58d;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .home-ai-disclaimer {
+    padding: 1.25rem;
+  }
+
+  .home-ai-disclaimer h2 {
+    font-size: 1.55rem;
+  }
+}
+
 .hero-shell__grid {
   display: grid;
   gap: 1.5rem;

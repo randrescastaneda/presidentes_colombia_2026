@@ -58,6 +58,9 @@ test_that("index page is driven by homepage view models instead of raw legacy ta
   index_text <- paste(index_lines, collapse = "\n")
 
   expect_match(index_text, "build_homepage_view_model\\(")
+  expect_match(index_text, "Aviso de responsabilidad")
+  expect_match(index_text, "El análisis y las conclusiones son generados por inteligencia artificial")
+  expect_match(index_text, "no asume responsabilidad")
   expect_no_match(index_text, "read_processed_table\\(\"claim_records.csv\"\\)")
   expect_no_match(index_text, "read_processed_table\\(\"analysis_notes.csv\"\\)")
   expect_match(index_text, "## Watchlist")
