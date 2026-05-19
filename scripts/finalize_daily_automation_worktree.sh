@@ -79,6 +79,9 @@ fi
 (
   cd "$worktree_path"
   Rscript scripts/run_daily_update.R
+  if git -C "$worktree_path" diff --name-only --diff-filter=D -- docs/solutions | grep -q .; then
+    git -C "$worktree_path" restore --source=HEAD --worktree -- docs/solutions
+  fi
   Rscript scripts/verify_daily_automation.R --date="$review_date" --notify
 )
 

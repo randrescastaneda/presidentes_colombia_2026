@@ -1,0 +1,84 @@
+{
+  "report_id": "daily-automation-2026-05-16",
+  "generated_at": "2026-05-16 18:19:51 UTC",
+  "review_date": "2026-05-16",
+  "project_dir": "/private/tmp/colombia-2026-automation-worktrees/presidentes_colombia_2026-2026-05-16",
+  "status": "pass",
+  "summary": "All automation checks passed.",
+  "checks": [
+    {
+      "check_id": "public_claim_topic_ids",
+      "status": "pass",
+      "message": "No public claims have empty topic_id.",
+      "details": {
+        "empty_topic_count": 0
+      }
+    },
+    {
+      "check_id": "validation_report_status",
+      "status": "pass",
+      "message": "validation_report status: pass",
+      "details": {
+        "summary": "Validation passed with no blocking issues."
+      }
+    },
+    {
+      "check_id": "public_internal_phrases",
+      "status": "pass",
+      "message": "No banned internal phrases were found in public artifacts.",
+      "details": {
+        "hits": []
+      }
+    },
+    {
+      "check_id": "daily_source_review_rendered",
+      "status": "pass",
+      "message": "Daily source review rendered for 2026-05-16",
+      "details": {
+        "review_md": true,
+        "review_csv": true,
+        "fuentes_evaluadas_html": true,
+        "heading_present": true
+      }
+    },
+    {
+      "check_id": "manual_sources_no_ambiguous_promotions",
+      "status": "pass",
+      "message": "No ambiguous manual sources were promoted.",
+      "details": {
+        "entries": []
+      }
+    },
+    {
+      "check_id": "daily_source_review_contract",
+      "status": "pass",
+      "message": "Daily source review CSV uses valid actions, candidates, and required fields.",
+      "details": {
+        "missing_columns": [],
+        "invalid_actions": [],
+        "invalid_candidates": [],
+        "blank_required_fields": []
+      }
+    },
+    {
+      "check_id": "daily_source_review_claim_reconciliation",
+      "status": "pass",
+      "message": "Incorporated curated sources reconcile with claim_records and non-incorporated review rows do not create claims.",
+      "details": {
+        "ambiguous_source_matches": [],
+        "provided_source_id_not_found": [],
+        "incorporate_without_source": [],
+        "non_incorporated_with_claims": [],
+        "curated_mismatches": []
+      }
+    },
+    {
+      "check_id": "oracle_browser_smoke",
+      "status": "pass",
+      "message": "Oracle browser smoke: skipped",
+      "details": {
+        "output": ""
+      }
+    }
+  ]
+}

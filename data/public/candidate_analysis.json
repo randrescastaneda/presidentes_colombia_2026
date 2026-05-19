@@ -1,10 +1,10 @@
 [
   {
-    "analysis_id": "candidate-analysis-ivan-cepeda-2026-05-02",
+    "analysis_id": "candidate-analysis-ivan-cepeda-2026-05-19",
     "candidate_id": "ivan-cepeda",
-    "source_ids": ["src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260418-ivan-economia", "src-20260501-ivan-constituyente-elpais", "src-20260502-ivan-trabajo-sindicatos-api", "src-20260421-ivan-vanguardia", "src-20260419-ivan-debate-elpais", "src-20260418-ivan-profile", "src-manual-195a1706"],
-    "claim_ids": ["claim-20260418-ivan-bio", "claim-20260418-ivan-paz-total", "claim-20260418-ivan-economia", "claim-20260418-ivan-transicion", "claim-20260418-ivan-anticorrupcion", "claim-20260418-ivan-tierras", "claim-20260418-ivan-tren", "claim-20260419-ivan-reto-debate", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-program-home-claim-1", "src-20260420-ivan-program-pdf-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260501-ivan-constituyente-elpais-claim-1", "src-20260501-ivan-constituyente-elpais-claim-2", "src-20260501-ivan-constituyente-elpais-claim-3", "src-20260502-ivan-trabajo-sindicatos-api-claim-1", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-ivan-profile-claim-1", "src-manual-195a1706-claim-1", "src-manual-195a1706-claim-2"],
-    "profile_overview": "Iván Cepeda Castro aparece públicamente con una agenda que gira principalmente alrededor de Reforma política, Trayectoria pública, Fiscal. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "source_ids": ["src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260507-ivan-software-electoral-oficial", "src-20260510-ivan-microempresas-vanguardia", "src-20260418-ivan-economia", "src-20260518-ivan-paz-rcn", "src-20260501-ivan-constituyente-elpais", "src-20260502-ivan-trabajo-sindicatos-api", "src-20260421-ivan-vanguardia", "src-20260518-ivan-lgbti-elpais", "src-20260419-ivan-debate-elpais", "src-20260418-ivan-profile", "src-manual-195a1706"],
+    "claim_ids": ["claim-20260418-ivan-bio", "claim-20260418-ivan-paz-total", "claim-20260418-ivan-economia", "claim-20260418-ivan-transicion", "claim-20260418-ivan-anticorrupcion", "claim-20260418-ivan-tierras", "claim-20260418-ivan-tren", "claim-20260419-ivan-reto-debate", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-program-home-claim-1", "src-20260420-ivan-program-pdf-claim-1", "src-20260507-ivan-software-electoral-oficial-claim-1", "src-20260510-ivan-microempresas-vanguardia-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260518-ivan-paz-rcn-claim-1", "src-20260501-ivan-constituyente-elpais-claim-1", "src-20260502-ivan-trabajo-sindicatos-api-claim-1", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260518-ivan-lgbti-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-ivan-profile-claim-1", "src-manual-195a1706-claim-1"],
+    "profile_overview": "Iván Cepeda Castro aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Fiscal, Empleo y empresa. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -16,7 +16,7 @@
       {
         "axis_id": "redistribucion_vs_libertad_economica",
         "placement": "Redistribucion",
-        "confidence": 0.93,
+        "confidence": 0.95,
         "rationale": "Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social"
       },
       {
@@ -39,21 +39,21 @@
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+        "placement": "Tecnocracia",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Tecnocracia: usa lenguaje de capacidad tecnica o gestion"
       },
       {
         "axis_id": "apertura_vs_soberanismo",
         "placement": "Soberanismo",
-        "confidence": 0.84,
-        "rationale": "Predominan señales compatibles con Soberanismo: privilegia integracion, alianzas o apertura externa; privilegia soberania defensiva o repliegue nacional"
+        "confidence": 0.86,
+        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional; privilegia integracion, alianzas o apertura externa"
       },
       {
         "axis_id": "conservadurismo_vs_progresismo_cultural",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta empuja una agenda cultural conservadora o progresista?"
+        "placement": "Progresismo cultural",
+        "confidence": 0.86,
+        "rationale": "Predominan señales compatibles con Progresismo cultural: se acerca a referencias culturales progresistas"
       },
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
@@ -64,25 +64,11 @@
       {
         "axis_id": "centralizacion_vs_territorializacion",
         "placement": "Territorializacion",
-        "confidence": 0.85,
+        "confidence": 0.95,
         "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
       }
     ],
     "thematic_analysis": [
-      {
-        "topic_id": "reforma-politica",
-        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. El articulo describe la tension entre la insistencia del presidente Petro en una Asamblea Nacional Constituyente y la necesidad de Ivan Cepeda de mantener un frente amplio con l... Su campaña prioriza un acuerdo nacional para tramitar reformas por el Congreso y no asume la Constituyente como bandera cerrada, aunque tampoco la descarta del todo.",
-        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
-        },
-        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
       {
         "topic_id": "trayectoria-publica",
         "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta que Cepeda retó a Paloma Valencia y Abelardo de la Espriella a debatir sobre propuestas de fondo RTVC ubica a Iván Cepeda como senador y defensor de derechos humanos.",
@@ -112,17 +98,45 @@
         "uncertainties": "Hay formulaciones ambiguas en la evidencia relevada."
       },
       {
-        "topic_id": "educacion-superior",
-        "description": "En Educación superior, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Iván Cepeda Castro: Iván Cepeda Senador de la República de Colombia.",
+        "topic_id": "empleo-empresa",
+        "description": "En Empleo y empresa, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone otorgar creditos de hasta 50 millones de pesos a 200.000 microempresas familiares para reactivar la economia popular y fronteriza. Se compromete a mantener concertacion permanente con las centrales obreras e impulsar un estatuto del trabajo con formalizacion justa, proteccion social y mejoras pensionales.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "instituciones-anticorrupcion",
+        "description": "En Instituciones y anticorrupción, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Reclama una auditoria real del software electoral con acceso tecnico suficiente, trazabilidad del codigo y acompanamiento independiente. Prioriza un acuerdo nacional para tramitar reformas por el Congreso y no presenta la Constituyente como bandera central de su campaña.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "Hay formulaciones ambiguas en la evidencia relevada."
+      },
+      {
+        "topic_id": "reforma-politica",
+        "description": "En Reforma política, la evidencia pública observada se concentra en posturas o prioridades generales. Anuncio que asistira a debates presidenciales y reto a Paloma Valencia y Abelardo de la Espriella a debatir propuestas de fondo. Anuncio que asistira a debates presidenciales y reto a Paloma Valencia y Abelardo de la Espriella a debatir propuestas de fondo",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
           "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
           "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
           "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
         },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
@@ -168,8 +182,8 @@
         "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
       },
       {
-        "topic_id": "empleo-empresa",
-        "description": "En Empleo y empresa, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Se compromete a mantener concertacion permanente con las centrales obreras e impulsar un estatuto del trabajo con formalizacion justa, proteccion social y mejoras pensionales.",
+        "topic_id": "derechos-genero",
+        "description": "En Derechos, aborto y género, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Promete prohibir las llamadas terapias de conversion y erradicar todas las formas de discriminacion contra la poblacion LGBTIQ+.",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -178,8 +192,22 @@
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
           "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
-        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "educacion-superior",
+        "description": "En Educación superior, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Iván Cepeda Castro: Iván Cepeda Senador de la República de Colombia.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
       },
       {
         "topic_id": "justicia",
@@ -205,6 +233,20 @@
           "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
           "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+        },
+        "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "politica-internacional-paz",
+        "description": "En Política internacional y paz, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Mantendria dialogos con grupos armados solo cuando puedan terminar en resultados concretos y eficaces, junto con la implementacion del Acuerdo de Paz de 2016.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
         "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
@@ -254,15 +296,15 @@
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, reforma-politica.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, empleo-empresa.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "weaknesses": [],
+    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-clara-lopez-2026-05-02",
+    "analysis_id": "candidate-analysis-clara-lopez-2026-05-19",
     "candidate_id": "clara-lopez",
     "source_ids": ["src-20260418-clara-renuncia", "src-20260418-clara-profile", "src-manual-2c779d51", "src-manual-6e32a8d5"],
-    "claim_ids": ["claim-20260418-clara-bio", "claim-20260418-clara-renuncia", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2", "src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-manual-2c779d51-claim-1", "src-manual-2c779d51-claim-2", "src-manual-6e32a8d5-claim-1", "src-manual-6e32a8d5-claim-2"],
+    "claim_ids": ["claim-20260418-clara-bio", "claim-20260418-clara-renuncia", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2", "src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-manual-2c779d51-claim-1", "src-manual-6e32a8d5-claim-1"],
     "profile_overview": "Clara Eugenia López Obregón aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Educación superior, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; apertura_vs_soberanismo: Apertura. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -331,16 +373,16 @@
       {
         "topic_id": "trayectoria-publica",
         "description": "En Trayectoria pública, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La renuncia fue formalizada ante la Registraduría y deja su casilla en blanco La fuente registra un hecho público asociado a Clara Eugenia López Obregón: Clara López inscribe oficialmente su candidatura presidencial 2026.",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
           "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
           "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
         "topic_id": "educacion-superior",
@@ -378,17 +420,17 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-claudia-lopez-2026-05-02",
+    "analysis_id": "candidate-analysis-claudia-lopez-2026-05-19",
     "candidate_id": "claudia-lopez",
-    "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf", "src-20260418-claudia-forbes", "src-20260424-claudia-debates-elpais", "src-20260422-claudia-infobae", "src-20260419-claudia-energia-elpais", "src-20260418-claudia-profile", "src-manual-05f40435", "src-manual-09f50ce0", "src-manual-1e42b541"],
-    "claim_ids": ["claim-20260418-claudia-bio", "claim-20260418-claudia-seguridad", "claim-20260418-claudia-justicia", "claim-20260418-claudia-cuidado", "claim-20260418-claudia-genero", "claim-20260418-claudia-educacion", "claim-20260418-claudia-vivienda", "claim-20260418-claudia-agua", "claim-20260418-claudia-fiscal", "claim-20260418-claudia-salud", "claim-20260419-claudia-mineria-social", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260424-claudia-debates-elpais-claim-1", "src-20260424-claudia-debates-elpais-claim-2", "src-20260424-claudia-debates-elpais-claim-3", "src-20260422-claudia-infobae-claim-1", "src-20260422-claudia-infobae-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-manual-05f40435-claim-1", "src-manual-05f40435-claim-2", "src-manual-09f50ce0-claim-1", "src-manual-09f50ce0-claim-2", "src-manual-1e42b541-claim-1", "src-manual-1e42b541-claim-2"],
+    "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf", "src-20260514-claudia-salud-caracol", "src-20260516-claudia-policia-local-caracoltv", "src-20260512-claudia-plan-gobierno-elespectador", "src-20260418-claudia-forbes", "src-20260424-claudia-debates-elpais", "src-20260422-claudia-infobae", "src-20260419-claudia-energia-elpais", "src-20260418-claudia-profile", "src-manual-05f40435", "src-manual-09f50ce0", "src-manual-1e42b541"],
+    "claim_ids": ["claim-20260418-claudia-bio", "claim-20260418-claudia-seguridad", "claim-20260418-claudia-justicia", "claim-20260418-claudia-cuidado", "claim-20260418-claudia-genero", "claim-20260418-claudia-educacion", "claim-20260418-claudia-vivienda", "claim-20260418-claudia-agua", "claim-20260418-claudia-fiscal", "claim-20260418-claudia-salud", "claim-20260419-claudia-mineria-social", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260514-claudia-salud-caracol-claim-1", "src-20260516-claudia-policia-local-caracoltv-claim-1", "src-20260512-claudia-plan-gobierno-elespectador-claim-1", "src-20260512-claudia-plan-gobierno-elespectador-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260424-claudia-debates-elpais-claim-1", "src-20260422-claudia-infobae-claim-1", "src-20260422-claudia-infobae-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-manual-05f40435-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-1e42b541-claim-1"],
     "profile_overview": "Claudia Nayibe López Hernández aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria, Educación superior. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
         "axis_id": "estado_vs_mercado",
         "placement": "Estado coordinador",
-        "confidence": 0.91,
+        "confidence": 0.86,
         "rationale": "Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia"
       },
       {
@@ -412,20 +454,20 @@
       {
         "axis_id": "gradualismo_vs_disrupcion",
         "placement": "Gradualismo",
-        "confidence": 0.95,
-        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental"
+        "confidence": 0.81,
+        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental; propone ruptura o reordenamiento abrupto"
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+        "placement": "Tecnocracia",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Tecnocracia: usa lenguaje de capacidad tecnica o gestion"
       },
       {
         "axis_id": "apertura_vs_soberanismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+        "placement": "Soberanismo",
+        "confidence": 0.94,
+        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional"
       },
       {
         "axis_id": "conservadurismo_vs_progresismo_cultural",
@@ -435,9 +477,9 @@
       },
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
-        "placement": "Seguridad negociada",
-        "confidence": 0.92,
-        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
+        "placement": "Mixto o tensionado",
+        "confidence": 0.62,
+        "rationale": "La evidencia relevante apunta en ambos sentidos; conviven señales hacia Seguridad negociada y Punitivismo. Señales observadas: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
@@ -504,20 +546,6 @@
         "uncertainties": "Hay formulaciones ambiguas en la evidencia relevada."
       },
       {
-        "topic_id": "reforma-politica",
-        "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Anunció que pedirá a las autoridades electorales organizar tres debates de una hora con todos los candidatos presidenciales. Anunció que pedirá a las autoridades electorales organizar tres debates de una hora con todos los candidatos presidenciales",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
-      {
         "topic_id": "agua-ambiente",
         "description": "En Agua y ambiente, la evidencia pública observada se concentra en posturas o prioridades generales. La campaña de Claudia López trata el agua como derecho y bien común. En el foro energético, Claudia López defendió formalizar la relación entre minería y comunidades.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
@@ -529,6 +557,34 @@
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Promete garantizar medicamentos de continuidad desde la primera semana de gobierno con verificacion territorial y uso del flujo existente de recursos de salud. Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "seguridad-justicia",
+        "description": "En Seguridad y justicia, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone una policia local, una Fiscalia antimafia y un nuevo regimen penitenciario para combatir inseguridad urbana, terrorismo y mafias. Propone una reforma de seguridad y justicia con Fiscalia Antimafia, reorganizacion judicial y recuperacion del control territorial.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
@@ -560,6 +616,20 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
+        "topic_id": "instituciones-anticorrupcion",
+        "description": "En Instituciones y anticorrupción, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Solicita que las autoridades electorales organicen tres debates de una hora con todos los candidatos presidenciales.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
         "topic_id": "justicia",
         "description": "En Justicia e instituciones penales, la evidencia pública observada se concentra en posturas o prioridades generales. La campaña de Claudia López combina sanción dura con segundas oportunidades.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
@@ -571,6 +641,20 @@
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "pobreza-desigualdad",
+        "description": "En Pobreza, desigualdad y protección social, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plantea crear un Sistema Nacional de Cuidado y Proteccion Social con corresponsabilidad estatal, privada y comunitaria.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
@@ -586,20 +670,6 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
-      },
-      {
-        "topic_id": "salud",
-        "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Continuidad selectiva de reformas, nueva regla fiscal y modelo mixto de salud",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
-        },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
-        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
       },
       {
         "topic_id": "seguridad-ciudadana",
@@ -634,10 +704,10 @@
     "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
     "strengths": ["Hay mayor desarrollo relativo en temas como vida-publica, fiscal.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": [],
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: tecnocracia_vs_populismo, apertura_vs_soberanismo.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "uncertainties": "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."
   },
   {
-    "analysis_id": "candidate-analysis-raul-botero-2026-05-02",
+    "analysis_id": "candidate-analysis-raul-botero-2026-05-19",
     "candidate_id": "raul-botero",
     "source_ids": ["src-20260418-santiago-caracol", "src-20260418-raul-profile"],
     "claim_ids": ["claim-20260418-raul-bio", "claim-20260418-santiago-pena-muerte", "claim-20260418-santiago-fuerza-publica", "src-20260418-santiago-caracol-claim-1", "src-20260418-santiago-caracol-claim-2", "src-20260418-raul-profile-claim-1", "src-20260418-raul-profile-claim-2"],
@@ -770,24 +840,24 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-05-02",
+    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-05-19",
     "candidate_id": "abelardo-de-la-espriella",
-    "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260424-abelardo-colpensiones-elpais", "src-20260418-abelardo-infobae", "src-20260422-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-abelardo-profile", "src-manual-21c82915"],
-    "claim_ids": ["claim-20260418-abelardo-bio", "claim-20260418-abelardo-estado", "claim-20260418-abelardo-jep", "claim-20260418-abelardo-impuestos", "claim-20260418-abelardo-carceles", "claim-20260418-abelardo-seguridad", "claim-20260418-abelardo-economia", "claim-20260418-abelardo-salud", "claim-20260419-abelardo-acepta-debate", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260424-abelardo-colpensiones-elpais-claim-1", "src-20260424-abelardo-colpensiones-elpais-claim-2", "src-20260424-abelardo-colpensiones-elpais-claim-3", "src-20260418-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-manual-21c82915-claim-1", "src-manual-21c82915-claim-2"],
-    "profile_overview": "Abelardo Gabriel de la Espriella aparece públicamente con una agenda que gira principalmente alrededor de Fiscal, Reforma política, Productividad y crecimiento. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
-    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260424-abelardo-colpensiones-elpais", "src-20260418-abelardo-infobae", "src-20260513-abelardo-protesta-infobae", "src-20260507-abelardo-char-elpais", "src-20260422-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-abelardo-profile", "src-manual-21c82915"],
+    "claim_ids": ["claim-20260418-abelardo-bio", "claim-20260418-abelardo-estado", "claim-20260418-abelardo-jep", "claim-20260418-abelardo-impuestos", "claim-20260418-abelardo-carceles", "claim-20260418-abelardo-seguridad", "claim-20260418-abelardo-economia", "claim-20260418-abelardo-salud", "claim-20260419-abelardo-acepta-debate", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260424-abelardo-colpensiones-elpais-claim-1", "src-20260418-abelardo-infobae-claim-1", "src-20260513-abelardo-protesta-infobae-claim-1", "src-20260507-abelardo-char-elpais-claim-1", "src-20260422-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-manual-21c82915-claim-1"],
+    "profile_overview": "Abelardo Gabriel de la Espriella aparece públicamente con una agenda que gira principalmente alrededor de Reforma política, Productividad y crecimiento, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
         "axis_id": "estado_vs_mercado",
         "placement": "Estado coordinador",
-        "confidence": 0.73,
+        "confidence": 0.81,
         "rationale": "Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia"
       },
       {
         "axis_id": "redistribucion_vs_libertad_economica",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+        "placement": "Redistribucion",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social"
       },
       {
         "axis_id": "universalismo_vs_focalizacion",
@@ -798,7 +868,7 @@
       {
         "axis_id": "institucionalismo_vs_personalismo",
         "placement": "Institucionalismo",
-        "confidence": 0.92,
+        "confidence": 0.95,
         "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
       },
       {
@@ -815,9 +885,9 @@
       },
       {
         "axis_id": "apertura_vs_soberanismo",
-        "placement": "Mixto o tensionado",
-        "confidence": 0.6,
-        "rationale": "La evidencia relevante apunta en ambos sentidos; conviven señales hacia Apertura y Soberanismo. Señales observadas: privilegia integracion, alianzas o apertura externa; privilegia soberania defensiva o repliegue nacional"
+        "placement": "Apertura",
+        "confidence": 0.75,
+        "rationale": "Predominan señales compatibles con Apertura: privilegia integracion, alianzas o apertura externa; privilegia soberania defensiva o repliegue nacional"
       },
       {
         "axis_id": "conservadurismo_vs_progresismo_cultural",
@@ -828,8 +898,8 @@
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
         "placement": "Punitivismo",
-        "confidence": 0.7,
-        "rationale": "Predominan señales compatibles con Punitivismo: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
+        "confidence": 0.77,
+        "rationale": "Predominan señales compatibles con Punitivismo: favorece coercion, expansion de fuerza o castigo; favorece salidas negociadas o restaurativas"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
@@ -839,20 +909,6 @@
       }
     ],
     "thematic_analysis": [
-      {
-        "topic_id": "fiscal",
-        "description": "En Fiscal, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Abelardo de la Espriella anuncio que demandara el decreto con el que el Gobierno de Petro ordena trasladar recursos desde los fondos privados a Colpensiones. Solicito la suspens... Infobae reporta que de la Espriella quiere reducir drásticamente la estructura estatal.",
-        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
-        },
-        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
       {
         "topic_id": "reforma-politica",
         "description": "En Reforma política, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Abelardo de la Espriella planteo limitar los debates a quienes considera con mayores opciones y dijo que incluir a todos impediria un debate de fondo. no va a haber debate': choque politico por restricciones en campaña presidencial",
@@ -882,6 +938,34 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
+        "topic_id": "vida-publica",
+        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. PRESIDENTE 2026 - 2030 EL MILAGRO DE LOS NUNCA PRIMERAS 13 PROPUESTAS PARA RECONSTRUIR LA PATRIA MILAGRO ¡ESTO SOMOS NOSOTROS! LOS QUE NUNCA NOS HEMOS ROBADO UN PESO DE LA PLATA... La familia Char prepara su respaldo oficial a la candidatura de Abelardo de la Espriella para fortalecerlo en el Caribe.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "fiscal",
+        "description": "En Fiscal, la evidencia pública observada se concentra en posturas o prioridades generales. Infobae reporta que de la Espriella quiere reducir drásticamente la estructura estatal. De la Espriella enlaza recorte del Estado con alivios tributarios.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Alivios económicos o incentivos pueden competir con metas de recaudo o gasto social.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
         "topic_id": "salud",
         "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. La campaña de de la Espriella promete un plan de choque sanitario. Recorte del Estado, megacárceles, choque de seguridad y emergencia en salud.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
@@ -893,20 +977,6 @@
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
-      {
-        "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Abelardo Gabriel de la Espriella: Así es el plan de Abelardo de la Espriella para recuperar el control territorial en 90 días.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
@@ -922,20 +992,6 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
-      },
-      {
-        "topic_id": "vida-publica",
-        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. PRESIDENTE 2026 - 2030 EL MILAGRO DE LOS NUNCA PRIMERAS 13 PROPUESTAS PARA RECONSTRUIR LA PATRIA MILAGRO ¡ESTO SOMOS NOSOTROS! LOS QUE NUNCA NOS HEMOS ROBADO UN PESO DE LA PLATA... Abelardo de la Espriella aceptó el reto de debate lanzado por Cepeda.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
         "topic_id": "controversias-publicas",
@@ -992,19 +1048,61 @@
         },
         "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "pobreza-desigualdad",
+        "description": "En Pobreza, desigualdad y protección social, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Anuncia una demanda y solicitud de suspension provisional contra el decreto que ordena trasladar recursos desde fondos privados a Colpensiones.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "seguridad-ciudadana",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Abelardo Gabriel de la Espriella: Así es el plan de Abelardo de la Espriella para recuperar el control territorial en 90 días.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "seguridad-justicia",
+        "description": "En Seguridad y justicia, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone permitir la protesta pacifica, pero impedir bloqueos y responder con fuerza inmediata y judicializacion a ataques contra la Fuerza Publica.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como fiscal, reforma-politica.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como reforma-politica, fiscal.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": [],
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-05-02",
+    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-05-19",
     "candidate_id": "mauricio-lizcano",
-    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
-    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-5d53f18f-claim-2", "src-manual-3f137281-claim-1", "src-manual-3f137281-claim-2", "src-manual-5a3d637e-claim-1", "src-manual-5a3d637e-claim-2", "src-manual-78dafdfc-claim-1", "src-manual-78dafdfc-claim-2"],
+    "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e"],
+    "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1"],
     "profile_overview": "Óscar Mauricio Lizcano Arango aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Productividad y crecimiento, Redes políticas y familiares. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; tecnocracia_vs_populismo: Populismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -1073,16 +1171,16 @@
       {
         "topic_id": "trayectoria-publica",
         "description": "En Trayectoria pública, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Seguridad con ministro activo, bloques élite y tecnología en taxis. Exministro TIC y exdirector del DAPRE; hijo del excongresista Óscar Tulio Lizcano",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
           "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
           "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
         "topic_id": "productividad",
@@ -1134,10 +1232,10 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-miguel-uribe-2026-05-02",
+    "analysis_id": "candidate-analysis-miguel-uribe-2026-05-19",
     "candidate_id": "miguel-uribe",
     "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
-    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-51298b3e-claim-2", "src-manual-15c36428-claim-1", "src-manual-15c36428-claim-2", "src-manual-40347029-claim-1", "src-manual-40347029-claim-2"],
+    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-15c36428-claim-1", "src-manual-40347029-claim-1"],
     "profile_overview": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -1239,11 +1337,11 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-sondra-macollins-2026-05-02",
+    "analysis_id": "candidate-analysis-sondra-macollins-2026-05-19",
     "candidate_id": "sondra-macollins",
     "source_ids": ["src-20260418-sondra-profile", "src-manual-62b0ca5e"],
-    "claim_ids": ["claim-20260418-sondra-bio", "src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2", "src-manual-62b0ca5e-claim-1", "src-manual-62b0ca5e-claim-2"],
-    "profile_overview": "Sondra Macollins Garvin Pinto aparece públicamente con una agenda que gira principalmente alrededor de Defensa y soberanía, Trayectoria pública, Controversias públicas. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "claim_ids": ["claim-20260418-sondra-bio", "src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2", "src-manual-62b0ca5e-claim-1"],
+    "profile_overview": "Sondra Macollins Garvin Pinto aparece públicamente con una agenda que gira principalmente alrededor de Defensa y soberanía, Controversias públicas, Trayectoria pública. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1323,8 +1421,8 @@
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
-        "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Sondra Macollins Garvin Pinto: Sondra Macollins presidencia: sus propuestas de gobierno en Cablenoticias.",
+        "topic_id": "controversias-publicas",
+        "description": "En Controversias públicas, la evidencia pública observada se concentra en posturas o prioridades generales. RTVC ubica a Sondra Macollins en el terreno de la abogacía penal de alto perfil.",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1334,11 +1432,11 @@
           "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
       },
       {
-        "topic_id": "controversias-publicas",
-        "description": "En Controversias públicas, la evidencia pública observada se concentra en posturas o prioridades generales. RTVC ubica a Sondra Macollins en el terreno de la abogacía penal de alto perfil.",
+        "topic_id": "trayectoria-publica",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. La fuente registra un hecho público asociado a Sondra Macollins Garvin Pinto: Sondra Macollins presidencia: sus propuestas de gobierno en Cablenoticias.",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
         "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
@@ -1354,14 +1452,14 @@
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
     "strengths": ["Hay mayor desarrollo relativo en temas como defensa.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
-    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "weaknesses": [],
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-roy-barreras-2026-05-02",
+    "analysis_id": "candidate-analysis-roy-barreras-2026-05-19",
     "candidate_id": "roy-barreras",
-    "source_ids": ["src-20260418-roy-efe", "src-20260418-roy-profile", "src-manual-3ba61356", "src-manual-1ce02e20", "src-manual-7087b35f", "src-manual-5aa471d6"],
-    "claim_ids": ["claim-20260418-roy-bio", "claim-20260418-roy-productividad", "claim-20260418-roy-paz", "src-20260418-roy-efe-claim-1", "src-20260418-roy-profile-claim-1", "src-manual-3ba61356-claim-1", "src-manual-3ba61356-claim-2", "src-manual-1ce02e20-claim-1", "src-manual-1ce02e20-claim-2", "src-manual-7087b35f-claim-1", "src-manual-7087b35f-claim-2", "src-manual-5aa471d6-claim-1", "src-manual-5aa471d6-claim-2"],
+    "source_ids": ["src-20260418-roy-efe", "src-20260418-roy-profile", "src-manual-3ba61356", "src-manual-1ce02e20", "src-manual-5aa471d6"],
+    "claim_ids": ["claim-20260418-roy-bio", "claim-20260418-roy-productividad", "claim-20260418-roy-paz", "src-20260418-roy-efe-claim-1", "src-20260418-roy-profile-claim-1", "src-manual-3ba61356-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-5aa471d6-claim-1"],
     "profile_overview": "Roy Leonardo Barreras Montealegre aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Justicia e instituciones penales, Paz y conflicto armado. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -1505,10 +1603,10 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-carlos-caicedo-2026-05-02",
+    "analysis_id": "candidate-analysis-carlos-caicedo-2026-05-19",
     "candidate_id": "carlos-caicedo",
     "source_ids": ["src-20260418-caicedo-caracol", "src-20260418-carlos-profile", "src-manual-20013e75", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95"],
-    "claim_ids": ["claim-20260418-carlos-bio", "claim-20260418-carlos-educacion", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2", "src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-manual-20013e75-claim-1", "src-manual-20013e75-claim-2", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-2", "src-manual-1dc39c95-claim-1", "src-manual-1dc39c95-claim-2"],
+    "claim_ids": ["claim-20260418-carlos-bio", "claim-20260418-carlos-educacion", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2", "src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-manual-20013e75-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1"],
     "profile_overview": "Carlos Eduardo Caicedo Omar aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Educación superior, Paz y conflicto armado. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -1638,10 +1736,10 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-05-02",
+    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-05-19",
     "candidate_id": "gustavo-matamoros",
     "source_ids": ["src-20260418-gustavo-profile", "src-manual-30548c04", "src-manual-25877365", "src-manual-5e114fad", "src-manual-4dc0f536"],
-    "claim_ids": ["claim-20260418-gustavo-bio", "src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2", "src-manual-30548c04-claim-1", "src-manual-30548c04-claim-2", "src-manual-25877365-claim-1", "src-manual-25877365-claim-2", "src-manual-5e114fad-claim-1", "src-manual-5e114fad-claim-2", "src-manual-4dc0f536-claim-1", "src-manual-4dc0f536-claim-2"],
+    "claim_ids": ["claim-20260418-gustavo-bio", "src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2", "src-manual-30548c04-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-4dc0f536-claim-1"],
     "profile_overview": "Gustavo Matamoros Camacho aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Paz y conflicto armado, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; seguridad_negociacion_vs_punitivismo: Seguridad negociada. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -1696,7 +1794,7 @@
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
         "placement": "Seguridad negociada",
-        "confidence": 0.81,
+        "confidence": 0.76,
         "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
       },
       {
@@ -1733,7 +1831,7 @@
           "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
         "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
         "topic_id": "vida-publica",
@@ -1753,15 +1851,15 @@
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
     "strengths": ["Hay mayor desarrollo relativo en temas como trayectoria-publica, paz.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
+    "weaknesses": [],
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-paloma-valencia-2026-05-02",
+    "analysis_id": "candidate-analysis-paloma-valencia-2026-05-19",
     "candidate_id": "paloma-valencia",
-    "source_ids": ["src-20260418-paloma-official", "src-20260420-paloma-program-pdf", "src-20260424-paloma-seguridad-elpais", "src-20260501-paloma-seguridad-api", "src-20260502-paloma-meta-infraestructura-api", "src-20260419-paloma-debate-elpais", "src-20260419-paloma-energia-elpais", "src-20260418-paloma-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-eltiempo", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-21c198da"],
-    "claim_ids": ["claim-20260418-paloma-bio", "claim-20260418-paloma-energia", "claim-20260418-paloma-vias", "claim-20260418-paloma-educacion", "claim-20260418-paloma-formalizacion", "claim-20260418-paloma-vivienda", "claim-20260418-paloma-seguridad", "claim-20260418-paloma-salud", "claim-20260418-paloma-carceles", "claim-20260419-paloma-energia-foro", "claim-20260419-paloma-acepta-debate", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260424-paloma-seguridad-elpais-claim-1", "src-20260424-paloma-seguridad-elpais-claim-2", "src-20260501-paloma-seguridad-api-claim-1", "src-20260501-paloma-seguridad-api-claim-2", "src-20260501-paloma-seguridad-api-claim-3", "src-20260502-paloma-meta-infraestructura-api-claim-1", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-eltiempo-claim-1", "src-manual-10314ccb-claim-1", "src-manual-10314ccb-claim-2", "src-manual-1cf85d8c-claim-1", "src-manual-1cf85d8c-claim-2", "src-manual-21c198da-claim-1", "src-manual-21c198da-claim-2"],
-    "profile_overview": "Paloma Susana Valencia Laserna aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria, Seguridad ciudadana. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "source_ids": ["src-20260418-paloma-official", "src-20260420-paloma-program-pdf", "src-20260512-paloma-medicamentos-caracol", "src-20260424-paloma-seguridad-elpais", "src-20260501-paloma-seguridad-api", "src-20260506-paloma-soat-regalias-bluradio", "src-20260502-paloma-meta-infraestructura-api", "src-20260507-paloma-prestamo-eeuu-infobae", "src-20260419-paloma-debate-elpais", "src-20260419-paloma-energia-elpais", "src-20260418-paloma-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-eltiempo", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-21c198da"],
+    "claim_ids": ["claim-20260418-paloma-bio", "claim-20260418-paloma-energia", "claim-20260418-paloma-vias", "claim-20260418-paloma-educacion", "claim-20260418-paloma-formalizacion", "claim-20260418-paloma-vivienda", "claim-20260418-paloma-seguridad", "claim-20260418-paloma-salud", "claim-20260418-paloma-carceles", "claim-20260419-paloma-energia-foro", "claim-20260419-paloma-acepta-debate", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260512-paloma-medicamentos-caracol-claim-1", "src-20260424-paloma-seguridad-elpais-claim-1", "src-20260501-paloma-seguridad-api-claim-1", "src-20260506-paloma-soat-regalias-bluradio-claim-1", "src-20260502-paloma-meta-infraestructura-api-claim-1", "src-20260507-paloma-prestamo-eeuu-infobae-claim-1", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-eltiempo-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-21c198da-claim-1"],
+    "profile_overview": "Paloma Susana Valencia Laserna aparece públicamente con una agenda que gira principalmente alrededor de Vida pública y trayectoria, Trayectoria pública, Salud. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1784,21 +1882,21 @@
       },
       {
         "axis_id": "institucionalismo_vs_personalismo",
-        "placement": "Personalismo",
-        "confidence": 0.7,
-        "rationale": "Predominan señales compatibles con Personalismo: descansa mas en impulso personal o voluntad del lider; apoya la solucion en reglas, instituciones o capacidades"
+        "placement": "Institucionalismo",
+        "confidence": 0.83,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades; descansa mas en impulso personal o voluntad del lider"
       },
       {
         "axis_id": "gradualismo_vs_disrupcion",
         "placement": "Gradualismo",
-        "confidence": 0.68,
+        "confidence": 0.75,
         "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental; propone ruptura o reordenamiento abrupto"
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
-        "placement": "Populismo",
-        "confidence": 0.95,
-        "rationale": "Predominan señales compatibles con Populismo: usa lenguaje antagonico o antiestablishment"
+        "placement": "Señales programáticas pendientes",
+        "confidence": 0,
+        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
       },
       {
         "axis_id": "apertura_vs_soberanismo",
@@ -1814,32 +1912,18 @@
       },
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
-        "placement": "Punitivismo",
-        "confidence": 0.73,
-        "rationale": "Predominan señales compatibles con Punitivismo: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
+        "placement": "Mixto o tensionado",
+        "confidence": 0.62,
+        "rationale": "La evidencia relevante apunta en ambos sentidos; conviven señales hacia Seguridad negociada y Punitivismo. Señales observadas: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
         "placement": "Territorializacion",
-        "confidence": 0.95,
-        "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
+        "confidence": 0.78,
+        "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales; concentra la solucion en el centro nacional"
       }
     ],
     "thematic_analysis": [
-      {
-        "topic_id": "trayectoria-publica",
-        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta que Paloma Valencia aceptó el reto y pidió un moderador independiente y un canal nacional La fuente aporta información pública trazable sobre la candidatura.",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
-        },
-        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
-      },
       {
         "topic_id": "vida-publica",
         "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. 111PUNTOS DEL PLAN DE GOBIERNO Paloma Valencia y Juan Daniel Oviedo Firmeza para estabilizar · Corazón para transformar ·Visión para el futuro Colombia Más Grande · 2026 NUESTRO... Programa Integrado de Gobierno publicado por la campaña.",
@@ -1855,8 +1939,22 @@
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
-        "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La candidata presidencial Paloma Valencia presento su plan de seguridad ante mas de 300 integrantes de la Fuerza Publica en retiro. Dijo que el eje central sera fortalecer la Fu... Plantea militarizar la via Cali-Popayan-Pasto-Rumichaca, recuperar el control de las carceles y reforzar inteligencia y tecnologia contra la extorsion",
+        "topic_id": "trayectoria-publica",
+        "description": "En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta que Paloma Valencia aceptó el reto y pidió un moderador independiente y un canal nacional La fuente aporta información pública trazable sobre la candidatura.",
+        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
+      },
+      {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone una compra extraordinaria de medicamentos por 3 billones, reconocer deudas del sistema y desatrasar atenciones en 100 dias sin eliminar las EPS. Plan 10 con seguridad, salud, energía y justicia rápida.",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -1865,21 +1963,7 @@
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
           "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
-        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
-      },
-      {
-        "topic_id": "defensa",
-        "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia. Paloma Valencia lanza desde Barranquilla su propuesta de \"seguridad total\" y promete reactivar todas las ordenes de captura. Acompañada por Alvaro Uribe, presento un borrador de...",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
@@ -1897,8 +1981,8 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
-        "topic_id": "salud",
-        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plan 10 con seguridad, salud, energía y justicia rápida. El Plan 10 de Valencia plantea un choque inicial sobre la crisis del sistema de salud.",
+        "topic_id": "seguridad-justicia",
+        "description": "En Seguridad y justicia, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone reactivar las ordenes de captura contra criminales nombrados gestores de paz como primer decreto de gobierno. Propone militarizar el corredor Cali-Popayan-Pasto-Rumichaca y reforzar el control carcelario como parte de su plan de seguridad.",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
         "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
@@ -1907,7 +1991,7 @@
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
           "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
@@ -1937,6 +2021,48 @@
         },
         "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "vivienda-infraestructura",
+        "description": "En Vivienda e infraestructura, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone que el Estado asuma el SOAT de motos hasta 250 cc y lo financie con regalías y recaudo. Prioriza resolver la Via al Llano con una nueva concesion integral, intervencion de mas de 100 puntos criticos y una ruta alterna por el Sisga.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "defensa",
+        "description": "En Defensa y soberanía, la evidencia pública observada se concentra en posturas o prioridades generales. EL PAÍS reporta un salto cuantitativo en gasto y pie de fuerza propuesto por Valencia.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "economia",
+        "description": "En Economía, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone pedir a Estados Unidos un prestamo cercano a US$50.000 millones para refinanciar la deuda y acompanar el ajuste con recorte del Estado.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
         "topic_id": "educacion-basica",
@@ -1981,20 +2107,6 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
-        "topic_id": "paz",
-        "description": "En Paz y conflicto armado, la evidencia pública observada se concentra en posturas o prioridades generales. Lanzó su propuesta de seguridad total y presentó un borrador de decreto para reactivar las órdenes de captura contra criminales nombrados gestores de paz.",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
-        },
-        "tradeoffs": "La negociación territorial o de paz suele intercambiar velocidad de implementación por estabilidad y legitimidad.",
-        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
-      },
-      {
         "topic_id": "redes-poder",
         "description": "En Redes políticas y familiares, la evidencia pública observada se concentra en posturas o prioridades generales. RTVC resalta el peso político y familiar de Paloma Valencia.",
         "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
@@ -2009,6 +2121,20 @@
         "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
       },
       {
+        "topic_id": "seguridad-ciudadana",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Mano firme contra la criminalidad: las propuestas de Paloma Valencia",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "feasibility": {
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
         "topic_id": "transporte",
         "description": "En Transporte e infraestructura, la evidencia pública observada se concentra en posturas o prioridades generales. La agenda de Paloma Valencia incluye infraestructura rural concreta.",
         "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
@@ -2021,47 +2147,33 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
-      },
-      {
-        "topic_id": "vivienda-infraestructura",
-        "description": "En Vivienda e infraestructura, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Prioriza resolver la Via al Llano con una nueva concesion integral, intervencion de mas de 100 puntos criticos y una ruta alterna por el Sisga.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
-        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
-    "mainstream_distance": "La evidencia sugiere una distancia relativamente alta frente al mainstream, sobre todo por el tono de ruptura o por apelaciones menos institucionales.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como vida-publica, seguridad-ciudadana.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
+    "strengths": ["Hay mayor desarrollo relativo en temas como vida-publica, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
     "weaknesses": [],
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-sergio-fajardo-2026-05-02",
+    "analysis_id": "candidate-analysis-sergio-fajardo-2026-05-19",
     "candidate_id": "sergio-fajardo",
-    "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf", "src-20260423-fajardo-espectador", "src-20260419-sergio-debate-elpais", "src-20260419-sergio-energia-elpais", "src-20260418-sergio-profile", "src-manual-4895df7e"],
-    "claim_ids": ["claim-20260418-sergio-bio", "claim-20260418-fajardo-seguridad", "claim-20260418-fajardo-paz", "claim-20260418-fajardo-anticorrupcion", "claim-20260418-fajardo-salud", "claim-20260418-fajardo-mujeres", "claim-20260419-sergio-energia-legalidad", "claim-20260419-fajardo-listo-debate", "src-20260418-fajardo-official-claim-1", "src-20260420-fajardo-program-pdf-claim-1", "src-20260423-fajardo-espectador-claim-1", "src-20260423-fajardo-espectador-claim-2", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-manual-4895df7e-claim-1", "src-manual-4895df7e-claim-2"],
-    "profile_overview": "Sergio Fajardo Valderrama aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Seguridad ciudadana, Anticorrupción y transparencia. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
-    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; institucionalismo_vs_personalismo: Institucionalismo; gradualismo_vs_disrupcion: Gradualismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
+    "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf", "src-20260514-fajardo-salud-caracol", "src-20260516-fajardo-50000-policias-caracoltv", "src-20260512-fajardo-plan-gobierno-elespectador", "src-20260423-fajardo-espectador", "src-20260506-fajardo-educacion-elpais", "src-20260507-fajardo-seguridad-infobae", "src-20260419-sergio-debate-elpais", "src-20260419-sergio-energia-elpais", "src-20260418-sergio-profile", "src-manual-4895df7e"],
+    "claim_ids": ["claim-20260418-sergio-bio", "claim-20260418-fajardo-seguridad", "claim-20260418-fajardo-paz", "claim-20260418-fajardo-anticorrupcion", "claim-20260418-fajardo-salud", "claim-20260418-fajardo-mujeres", "claim-20260419-sergio-energia-legalidad", "claim-20260419-fajardo-listo-debate", "src-20260418-fajardo-official-claim-1", "src-20260420-fajardo-program-pdf-claim-1", "src-20260514-fajardo-salud-caracol-claim-1", "src-20260516-fajardo-50000-policias-caracoltv-claim-1", "src-20260512-fajardo-plan-gobierno-elespectador-claim-1", "src-20260512-fajardo-plan-gobierno-elespectador-claim-2", "src-20260423-fajardo-espectador-claim-1", "src-20260423-fajardo-espectador-claim-2", "src-20260506-fajardo-educacion-elpais-claim-1", "src-20260507-fajardo-seguridad-infobae-claim-1", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-manual-4895df7e-claim-1"],
+    "profile_overview": "Sergio Fajardo Valderrama aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Salud, Seguridad ciudadana. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
         "axis_id": "estado_vs_mercado",
         "placement": "Estado coordinador",
-        "confidence": 0.86,
+        "confidence": 0.88,
         "rationale": "Predominan señales compatibles con Estado coordinador: prioriza coordinacion estatal, regulacion o expansion publica; prioriza mercado, alivio regulatorio o instrumentos de competencia"
       },
       {
         "axis_id": "redistribucion_vs_libertad_economica",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: El candidato prioriza correccion distributiva o expansion de libertad economica?"
+        "placement": "Redistribucion",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Redistribucion: acentua correccion distributiva o proteccion social"
       },
       {
         "axis_id": "universalismo_vs_focalizacion",
@@ -2072,7 +2184,7 @@
       {
         "axis_id": "institucionalismo_vs_personalismo",
         "placement": "Institucionalismo",
-        "confidence": 0.88,
+        "confidence": 0.95,
         "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
       },
       {
@@ -2083,15 +2195,15 @@
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La formulacion se apoya mas en capacidad tecnica o en movilizacion antagonica?"
+        "placement": "Tecnocracia",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Tecnocracia: usa lenguaje de capacidad tecnica o gestion"
       },
       {
         "axis_id": "apertura_vs_soberanismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta privilegia integracion externa o soberania defensiva?"
+        "placement": "Soberanismo",
+        "confidence": 0.94,
+        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional"
       },
       {
         "axis_id": "conservadurismo_vs_progresismo_cultural",
@@ -2102,13 +2214,13 @@
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
         "placement": "Seguridad negociada",
-        "confidence": 0.92,
-        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
+        "confidence": 0.69,
+        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas; favorece coercion, expansion de fuerza o castigo"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
         "placement": "Territorializacion",
-        "confidence": 0.85,
+        "confidence": 0.95,
         "rationale": "Predominan señales compatibles con Territorializacion: desplaza la solucion hacia escalas regionales o locales"
       }
     ],
@@ -2128,6 +2240,20 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
+        "topic_id": "salud",
+        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plantea iniciar en los primeros 100 dias un saneamiento del sistema de salud con puesto de mando presidencial, emergencia para medicamentos y recalculo de la UPC. Plantea ordenar y estabilizar el sistema de salud con liquidez, sostenibilidad financiera, APS y salud digital.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
         "topic_id": "seguridad-ciudadana",
         "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Planteo que la criminalidad se ha expandido por el pais y cuestiono que la campaña siga atrapada en la polarizacion en vez de discutir propuestas. La página oficial de Sergio Fajardo centra su apertura de campaña en seguridad.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
@@ -2137,6 +2263,34 @@
           "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
           "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+        },
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "educacion",
+        "description": "En Educación, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Presenta un plan educativo de cinco puntos con cobertura plena de educacion inicial, arte escolar, fortalecimiento de ICETEX, apoyo a docentes y seguimiento tecnico. Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+      },
+      {
+        "topic_id": "seguridad-justicia",
+        "description": "En Seguridad y justicia, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Plantea pasar 50.000 hombres del Ejercito a la Policia, reducir generales y cortar cualquier proceso de paz con grupos terroristas. Plantea un programa de Ciudades mas Seguras, un plan antiextorsion y presencia permanente del Estado en territorios criticos.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
         "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
@@ -2170,17 +2324,17 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
-        "topic_id": "educacion",
-        "description": "En Educación, la evidencia pública observada se concentra en posturas o prioridades generales. Exalcalde de Medellín y exgobernador de Antioquia; insiste en educación y transparencia.",
-        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "topic_id": "economia",
+        "description": "En Economía, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone un ajuste fiscal responsable y creible para estabilizar deuda, reducir deficit y reordenar el uso del gasto publico.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
@@ -2226,20 +2380,6 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
-        "topic_id": "salud",
-        "description": "En Salud, la evidencia pública observada se concentra en posturas o prioridades generales. Seguridad, cero corrupción, salud, mujeres y cultura en la página oficial.",
-        "inference": "La evidencia permite inferir una orientación general, más que un programa plenamente desarrollado.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
-        "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
-          "fiscal": "El impacto fiscal potencial existe, pero la fuente no ofrece costeo ni mecanismo suficiente para evaluarlo.",
-          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
-          "administrative": "La factibilidad administrativa es incierta porque el mecanismo no está desarrollado."
-        },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
-        "uncertainties": ["La evidencia para este tema sigue siendo limitada en número de registros.", "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."]
-      },
-      {
         "topic_id": "transicion-energetica",
         "description": "En Transición energética, la evidencia pública observada se concentra en posturas o prioridades generales. Fajardo vinculó la agenda energética con sostenibilidad y control criminal.",
         "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
@@ -2270,16 +2410,16 @@
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La evidencia disponible ubica al candidato relativamente cerca del mainstream político-programático, con énfasis más incremental e institucional.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como seguridad-ciudadana, trayectoria-publica.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, apertura_vs_soberanismo.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "strengths": ["Hay mayor desarrollo relativo en temas como educacion, salud.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "weaknesses": [],
+    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-05-02",
+    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-05-19",
     "candidate_id": "luis-gilberto-murillo",
-    "source_ids": ["src-20260420-murillo-program-home", "src-20260418-murillo-espectador", "src-20260501-murillo-coordinacion-territorial-elcolombiano", "src-20260421-murillo-tiempo", "src-20260418-murillo-elpais", "src-20260418-murillo-profile", "src-manual-5bbd0995", "src-manual-40921854"],
-    "claim_ids": ["claim-20260418-murillo-bio", "claim-20260418-murillo-educacion", "claim-20260418-murillo-seguridad", "claim-20260418-murillo-puertos", "claim-20260418-murillo-alianza", "claim-20260418-murillo-regiones", "src-20260420-murillo-program-home-claim-1", "src-20260418-murillo-espectador-claim-1", "src-20260501-murillo-coordinacion-territorial-elcolombiano-claim-1", "src-20260501-murillo-coordinacion-territorial-elcolombiano-claim-2", "src-20260501-murillo-coordinacion-territorial-elcolombiano-claim-3", "src-20260421-murillo-tiempo-claim-1", "src-20260421-murillo-tiempo-claim-2", "src-20260418-murillo-elpais-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-manual-5bbd0995-claim-1", "src-manual-5bbd0995-claim-2", "src-manual-40921854-claim-1", "src-manual-40921854-claim-2"],
-    "profile_overview": "Luis Gilberto Murillo Urrutia aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Desigualdad y movilidad, Relaciones exteriores. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "source_ids": ["src-20260420-murillo-program-home", "src-20260506-murillo-retiro-cepeda-elpais", "src-20260418-murillo-espectador", "src-20260507-murillo-adhesion-cepeda-elpais", "src-20260501-murillo-coordinacion-territorial-elcolombiano", "src-20260421-murillo-tiempo", "src-20260418-murillo-elpais", "src-20260418-murillo-profile", "src-manual-5bbd0995", "src-manual-40921854"],
+    "claim_ids": ["claim-20260418-murillo-bio", "claim-20260418-murillo-educacion", "claim-20260418-murillo-seguridad", "claim-20260418-murillo-puertos", "claim-20260418-murillo-alianza", "claim-20260418-murillo-regiones", "src-20260420-murillo-program-home-claim-1", "src-20260420-murillo-program-home-claim-2", "src-20260420-murillo-program-home-claim-3", "src-20260506-murillo-retiro-cepeda-elpais-claim-1", "src-20260418-murillo-espectador-claim-1", "src-20260507-murillo-adhesion-cepeda-elpais-claim-1", "src-20260501-murillo-coordinacion-territorial-elcolombiano-claim-1", "src-20260421-murillo-tiempo-claim-1", "src-20260421-murillo-tiempo-claim-2", "src-20260418-murillo-elpais-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-manual-5bbd0995-claim-1", "src-manual-40921854-claim-1"],
+    "profile_overview": "Luis Gilberto Murillo Urrutia aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria, Relaciones exteriores. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; universalismo_vs_focalizacion: Focalizacion. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -2302,9 +2442,9 @@
       },
       {
         "axis_id": "institucionalismo_vs_personalismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta depende de arreglos institucionales o del impulso del lider?"
+        "placement": "Institucionalismo",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Institucionalismo: apoya la solucion en reglas, instituciones o capacidades"
       },
       {
         "axis_id": "gradualismo_vs_disrupcion",
@@ -2320,9 +2460,9 @@
       },
       {
         "axis_id": "apertura_vs_soberanismo",
-        "placement": "Soberanismo",
-        "confidence": 0.68,
-        "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional; privilegia integracion, alianzas o apertura externa"
+        "placement": "Mixto o tensionado",
+        "confidence": 0.6,
+        "rationale": "La evidencia relevante apunta en ambos sentidos; conviven señales hacia Apertura y Soberanismo. Señales observadas: privilegia soberania defensiva o repliegue nacional; privilegia integracion, alianzas o apertura externa"
       },
       {
         "axis_id": "conservadurismo_vs_progresismo_cultural",
@@ -2332,9 +2472,9 @@
       },
       {
         "axis_id": "seguridad_negociacion_vs_punitivismo",
-        "placement": "Señales programáticas pendientes",
-        "confidence": 0,
-        "rationale": "No aparecen señales programáticas suficientes para ubicar este eje con seguridad: La propuesta se apoya mas en negociacion y prevencion o en coercion y castigo?"
+        "placement": "Seguridad negociada",
+        "confidence": 0.95,
+        "rationale": "Predominan señales compatibles con Seguridad negociada: favorece salidas negociadas o restaurativas"
       },
       {
         "axis_id": "centralizacion_vs_territorializacion",
@@ -2359,15 +2499,15 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
-        "topic_id": "desigualdad",
-        "description": "En Desigualdad y movilidad, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone un Consejo Nacional de Coordinacion Territorial con decisiones vinculantes entre presidente, gobernadores y alcaldes para cerrar brechas y responder a la violencia regio... El País Cali registra que Murillo pone las regiones olvidadas en el centro.",
-        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
-        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
+        "topic_id": "vida-publica",
+        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Ha sido gobernador, ministro, embajador y consultor internacional, siempre con un sello claro: impulsar la equidad en las regiones, el respeto y la sostenibilidad ambiental, y la paz en los territorios Sitio oficial accesible en HTML; se convirtió con MarkItDown desde la portada que enlaza categorías programáticas y recursos de campaña.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
         "feasibility": {
-          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
           "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
           "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
@@ -2401,18 +2541,18 @@
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
       },
       {
-        "topic_id": "seguridad-ciudadana",
-        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Luis Gilberto Murillo sostuvo que el pais sigue operando con una logica bogocentrica y que las regiones, en especial el Pacifico, permanecen marginadas. En su lectura, la exclus... Murillo propone una respuesta territorializada a la seguridad.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "topic_id": "desigualdad",
+        "description": "En Desigualdad y movilidad, la evidencia pública observada se concentra en posturas o prioridades generales. El País Cali registra que Murillo pone las regiones olvidadas en el centro.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
-        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
-        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
         "topic_id": "educacion-superior",
@@ -2426,6 +2566,20 @@
           "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
         "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
+      },
+      {
+        "topic_id": "instituciones-anticorrupcion",
+        "description": "En Instituciones y anticorrupción, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone crear un Consejo Nacional de Coordinacion Territorial con decisiones vinculantes entre presidente, gobernadores y alcaldes.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
@@ -2443,24 +2597,24 @@
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       },
       {
-        "topic_id": "salud",
-        "description": "En Salud, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. **Educacion para el desarrollo** La educacion sera el corazon de este gobierno: quien cuida a sus niños y apuesta por sus maestros, construye su futuro",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "topic_id": "seguridad-ciudadana",
+        "description": "En Seguridad ciudadana, la evidencia pública observada se concentra en posturas o prioridades generales. Murillo propone una respuesta territorializada a la seguridad.",
+        "inference": "La evidencia apunta a una prioridad temática real, pero todavía incompleta en diseño y secuencia.",
+        "evaluation": "El principal límite analítico del tema es la falta de detalle sobre mecanismo, costos o secuencia de implementación.",
         "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+          "political": "La viabilidad política no puede estimarse con firmeza porque el compromiso sigue formulado en términos generales.",
+          "fiscal": "No hay base suficiente para medir la carga fiscal asociada.",
+          "institutional": "La arquitectura institucional requerida no está suficientemente explicitada.",
+          "administrative": "Se puede inferir el tipo de despliegue administrativo, aunque faltan detalles de implementación."
         },
-        "tradeoffs": "Mayor cobertura o intervención puede exigir más recursos fiscales y capacidad de ejecución.",
+        "tradeoffs": "Más coerción o control puede tensionar garantías y requerir coordinación institucional sostenida.",
         "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como desigualdad, relaciones-exteriores.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
-    "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
-    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
+    "strengths": ["Hay mayor desarrollo relativo en temas como vida-publica, relaciones-exteriores.", "No se observan contradicciones internas fuertes en la evidencia disponible.", "La orientación programática ya muestra cierta consistencia en varios ejes analíticos."],
+    "weaknesses": [],
+    "uncertainties": ["Faltan señales programáticas comparables en varios ejes: gradualismo_vs_disrupcion, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   }
 ]

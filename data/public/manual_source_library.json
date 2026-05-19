@@ -224,34 +224,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-3f7a8a93",
-    "candidate_id": null,
-    "source_name": "Elpais Com",
-    "source_tier": "established-media",
-    "source_type": "article",
-    "url": "https://elpais.com/america-colombia/2026-04-18/valencia-fajardo-lopez-y-roy-coinciden-en-reactivar-el-sector-minero-energetico.html",
-    "title": "Valencia, Fajardo, López y Roy coinciden en reactivar el sector minero energético | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
-    "published_at": "2026-04-18",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|ambiguous_match",
-    "candidate_confidence": 0.4,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-69553ce9",
-    "candidate_id": null,
-    "source_name": "Elpais Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://elpais.com/america-colombia/elecciones-presidenciales/2026-04-21/de-la-espriella-recurre-a-la-mano-dura-de-bukele-y-la-motosierra-de-milei-para-apuntalar-su-programa-de-gobierno.html",
-    "title": "De la Espriella recurre a la mano dura de Bukele y la motosierra de Milei para apuntalar su programa de gobierno | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
-    "published_at": "2026-04-21",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|ambiguous_match",
-    "candidate_confidence": 0.2,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-5ec43518",
     "candidate_id": null,
     "source_name": "Bluradio Com",
@@ -300,7 +272,7 @@
     "source_tier": "established-media",
     "source_type": "article",
     "url": "https://www.las2orillas.co/estos-son-los-9-candidatos-que-junto-a-cepeda-y-de-la-espriella-estaran-en-la-pelea-por-la-presidencia-de-colombia/",
-    "title": "Estos son los 14 candidatos que junto a Cepeda y De la - Las2orillas.co",
+    "title": "Estos son los 14 candidatos que junto a Cepeda y De la Espriella estarán en la pelea por la Presidencia de Colombia",
     "published_at": "2026-03-09",
     "status": "pending_classification",
     "status_reason": "validated_by_http|ambiguous_match",
@@ -417,6 +389,34 @@
     "status": "pending_classification",
     "status_reason": "validated_by_http|ambiguous_match",
     "candidate_confidence": 0.2,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-7e55c295",
+    "candidate_id": null,
+    "source_name": "Defensoresdelapatria Com",
+    "source_tier": "reference",
+    "source_type": "webpage",
+    "url": "https://defensoresdelapatria.com/",
+    "title": "Defensores de la patria | Abelardo de la Espriella",
+    "published_at": "2026-05-16",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|no_match",
+    "candidate_confidence": 0,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-0b9a8c74",
+    "candidate_id": null,
+    "source_name": "Movimientopactohistorico Co",
+    "source_tier": "reference",
+    "source_type": "webpage",
+    "url": "https://www.movimientopactohistorico.co/",
+    "title": "Vota al Pacto Histórico e Iván Cepeda",
+    "published_at": "2026-05-07",
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|no_match",
+    "candidate_confidence": 0,
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
@@ -672,20 +672,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-7e55c295",
-    "candidate_id": null,
-    "source_name": "Defensoresdelapatria Com",
-    "source_tier": "reference",
-    "source_type": "webpage",
-    "url": "https://defensoresdelapatria.com/",
-    "title": "Defensores de la patria | Abelardo de la Espriella",
-    "published_at": "2026-04-06",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-106b1282",
     "candidate_id": null,
     "source_name": "Revistaraya Com",
@@ -784,20 +770,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-2dbdb863",
-    "candidate_id": null,
-    "source_name": "Elpais Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://elpais.com/america-colombia/elecciones-presidenciales/2026-03-16/el-camino-a-las-elecciones-presidenciales-colombia-2026-en-vivo.html",
-    "title": "Las campañas presidenciales en Colombia - 16 de marzo | Luis Carlos Reyes ya no será el compañero de fórmula de Mauricio Lizcano | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
-    "published_at": "2026-03-18",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-04f6a4df",
     "candidate_id": null,
     "source_name": "Portafolio Co",
@@ -820,20 +792,6 @@
     "url": "https://www.pares.com.co/los-14-candidatos-que-buscan-ser-presidente-de-colombia-en-este-2026/",
     "title": "Los 14 candidatos que buscan ser presidente de Colombia en este 2026 - Pares",
     "published_at": "2026-03-17",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-0b9a8c74",
-    "candidate_id": null,
-    "source_name": "Movimientopactohistorico Co",
-    "source_tier": "reference",
-    "source_type": "webpage",
-    "url": "https://www.movimientopactohistorico.co/",
-    "title": "Vota al Pacto Histórico e Iván Cepeda",
-    "published_at": "2026-03-16",
     "status": "pending_classification",
     "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
@@ -1582,20 +1540,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-40e48c71",
-    "candidate_id": null,
-    "source_name": "Facebook",
-    "source_tier": "social",
-    "source_type": "social-profile",
-    "url": "https://www.facebook.com/NoticiasCaracol/videos/colombia-decide-su-energ%c3%ada-debate-con-los-candidatos-presidenciales-en-noticias-/1676112483406944",
-    "title": "Los candidatos presidenciales se miden, frente a frente, en el debate de Noticias Caracol &#039;Colombia Decide su Energía&#039; para exponer sus propuestas en materia energética. Petróleo, minería, gas, energía y servicios públicos son los temas por los que lanzan propuestas los aspirantes a la Presidencia de Colombia. | Noticias Caracol",
-    "published_at": null,
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-707667e4",
     "candidate_id": null,
     "source_name": "Ntn24 Com",
@@ -1757,6 +1701,20 @@
     "source_type": "article",
     "url": "https://www.teleantioquia.co/noticias/candidatos-presidenciales-presentaron-sus-propuestas-en-cumbre-de-gobernadores-donde-el-tema-central-ha-sido-la-descentralizacion-564211",
     "title": "Teleantioquia | Conectando futuro",
+    "published_at": null,
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|no_match",
+    "candidate_confidence": 0,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-40e48c71",
+    "candidate_id": null,
+    "source_name": "Facebook",
+    "source_tier": "social",
+    "source_type": "social-profile",
+    "url": "https://www.facebook.com/NoticiasCaracol/videos/colombia-decide-su-energ%c3%ada-debate-con-los-candidatos-presidenciales-en-noticias-/1676112483406944",
+    "title": "Video",
     "published_at": null,
     "status": "pending_classification",
     "status_reason": "validated_by_http|no_match",

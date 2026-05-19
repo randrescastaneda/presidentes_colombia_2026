@@ -108,14 +108,8 @@
     "total_analysis_notes": 0
   },
   {
-    "digest_date": "2026-04-20",
-    "total_claims": 1,
-    "total_candidates": 1,
-    "total_analysis_notes": 0
-  },
-  {
     "digest_date": "2026-04-21",
-    "total_claims": 4,
+    "total_claims": 7,
     "total_candidates": 2,
     "total_analysis_notes": 0
   },
@@ -127,25 +121,19 @@
   },
   {
     "digest_date": "2026-04-23",
-    "total_claims": 65,
-    "total_candidates": 13,
-    "total_analysis_notes": 0
-  },
-  {
-    "digest_date": "2026-04-24",
-    "total_claims": 8,
-    "total_candidates": 3,
-    "total_analysis_notes": 0
-  },
-  {
-    "digest_date": "2026-04-30",
-    "total_claims": 1,
+    "total_claims": 2,
     "total_candidates": 1,
     "total_analysis_notes": 0
   },
   {
+    "digest_date": "2026-04-24",
+    "total_claims": 3,
+    "total_candidates": 3,
+    "total_analysis_notes": 0
+  },
+  {
     "digest_date": "2026-05-01",
-    "total_claims": 9,
+    "total_claims": 3,
     "total_candidates": 3,
     "total_analysis_notes": 0
   },
@@ -153,6 +141,60 @@
     "digest_date": "2026-05-02",
     "total_claims": 2,
     "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-06",
+    "total_claims": 3,
+    "total_candidates": 3,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-07",
+    "total_claims": 5,
+    "total_candidates": 5,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-10",
+    "total_claims": 1,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-12",
+    "total_claims": 5,
+    "total_candidates": 3,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-13",
+    "total_claims": 1,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-14",
+    "total_claims": 2,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-16",
+    "total_claims": 2,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-18",
+    "total_claims": 2,
+    "total_candidates": 1,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-19",
+    "total_claims": 31,
+    "total_candidates": 13,
     "total_analysis_notes": 0
   }
 ]
