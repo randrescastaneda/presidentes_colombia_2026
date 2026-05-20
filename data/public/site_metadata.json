@@ -1,10 +1,10 @@
 [
   {
-    "updated_at": "2026-05-19 10:07:41 UTC",
-    "latest_event_date": "2026-05-19",
-    "public_claim_count": 218,
-    "public_source_count": 109,
-    "public_source_analysis_count": 109,
+    "updated_at": "2026-05-20 10:01:48 UTC",
+    "latest_event_date": "2026-05-20",
+    "public_claim_count": 219,
+    "public_source_count": 110,
+    "public_source_analysis_count": 110,
     "public_analysis_note_count": 0,
     "candidate_analysis_count": 14,
     "comparison_report_count": 1,
@@ -13,12 +13,12 @@
     "comparison_essay_count": 10,
     "source_text_file_count": 33,
     "manual_source_registry_count": 205,
-    "promoted_manual_source_count": 34,
-    "pending_manual_source_count": 123,
+    "promoted_manual_source_count": 35,
+    "pending_manual_source_count": 125,
     "program_document_count": 6,
     "primary_program_document_count": 6,
-    "source_packet_count": 109,
-    "extraction_result_count": 110,
+    "source_packet_count": 110,
+    "extraction_result_count": 111,
     "pipeline_mode": "structured_extraction_auto",
     "validation_status": "pass"
   }
