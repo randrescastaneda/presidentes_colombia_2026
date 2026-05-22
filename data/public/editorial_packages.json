@@ -1,6 +1,6 @@
 {
   "ivan-cepeda": {
-    "artifact_id": "candidate-profile-ivan-cepeda-2026-05-21",
+    "artifact_id": "candidate-profile-ivan-cepeda-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Iván Cepeda Castro: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Iván Cepeda Castro.",
@@ -59,7 +59,7 @@
     ]
   },
   "clara-lopez": {
-    "artifact_id": "candidate-profile-clara-lopez-2026-05-21",
+    "artifact_id": "candidate-profile-clara-lopez-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Clara Eugenia López Obregón: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Clara Eugenia López Obregón.",
@@ -118,7 +118,7 @@
     ]
   },
   "claudia-lopez": {
-    "artifact_id": "candidate-profile-claudia-lopez-2026-05-21",
+    "artifact_id": "candidate-profile-claudia-lopez-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Claudia Nayibe López Hernández: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Claudia Nayibe López Hernández.",
@@ -177,7 +177,7 @@
     ]
   },
   "raul-botero": {
-    "artifact_id": "candidate-profile-raul-botero-2026-05-21",
+    "artifact_id": "candidate-profile-raul-botero-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Raúl Santiago Botero Jaramillo: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Raúl Santiago Botero Jaramillo.",
@@ -236,7 +236,7 @@
     ]
   },
   "abelardo-de-la-espriella": {
-    "artifact_id": "candidate-profile-abelardo-de-la-espriella-2026-05-21",
+    "artifact_id": "candidate-profile-abelardo-de-la-espriella-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Abelardo Gabriel de la Espriella: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Abelardo Gabriel de la Espriella.",
@@ -295,7 +295,7 @@
     ]
   },
   "mauricio-lizcano": {
-    "artifact_id": "candidate-profile-mauricio-lizcano-2026-05-21",
+    "artifact_id": "candidate-profile-mauricio-lizcano-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Óscar Mauricio Lizcano Arango: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Óscar Mauricio Lizcano Arango.",
@@ -354,19 +354,19 @@
     ]
   },
   "miguel-uribe": {
-    "artifact_id": "candidate-profile-miguel-uribe-2026-05-21",
+    "artifact_id": "candidate-profile-miguel-uribe-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Miguel Uribe Londoño: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Miguel Uribe Londoño.",
     "candidate_ids": "miguel-uribe",
-    "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
-    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-15c36428-claim-1", "src-manual-40347029-claim-1"],
+    "source_ids": ["src-20260418-miguel-profile", "src-manual-15c36428", "src-manual-40347029"],
+    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-15c36428-claim-1", "src-manual-40347029-claim-1"],
     "sections": [
       {
         "section_id": "profile_overview",
         "heading": "Perfil general",
         "content_type": "description",
-        "body": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas."
+        "body": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas."
       },
       {
         "section_id": "political_philosophy",
@@ -378,7 +378,7 @@
         "section_id": "thematic_proposals",
         "heading": "Propuestas por áreas",
         "content_type": "mixed",
-        "body": "trayectoria-publica: En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Economista, abogado, periodista y docente; compite desde la centroderecha Candidato Presidencial 2026 | Colombia vida-publica: En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La fuente registra un hecho público asociado a Miguel Uribe Londoño: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño."
+        "body": "trayectoria-publica: En Trayectoria pública, la evidencia pública observada se concentra en posturas o prioridades generales. Economista, abogado, periodista y docente; compite desde la centroderecha Candidato Presidencial 2026 | Colombia"
       },
       {
         "section_id": "internal_coherence",
@@ -402,7 +402,7 @@
         "section_id": "strengths",
         "heading": "Fortalezas programáticas",
         "content_type": "evaluation",
-        "body": "Hay mayor desarrollo relativo en temas como trayectoria-publica, vida-publica. No se observan contradicciones internas fuertes en la evidencia disponible."
+        "body": "Hay mayor desarrollo relativo en temas como trayectoria-publica. No se observan contradicciones internas fuertes en la evidencia disponible."
       },
       {
         "section_id": "weaknesses_and_uncertainties",
@@ -413,7 +413,7 @@
     ]
   },
   "sondra-macollins": {
-    "artifact_id": "candidate-profile-sondra-macollins-2026-05-21",
+    "artifact_id": "candidate-profile-sondra-macollins-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Sondra Macollins Garvin Pinto: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Sondra Macollins Garvin Pinto.",
@@ -472,7 +472,7 @@
     ]
   },
   "roy-barreras": {
-    "artifact_id": "candidate-profile-roy-barreras-2026-05-21",
+    "artifact_id": "candidate-profile-roy-barreras-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Roy Leonardo Barreras Montealegre: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Roy Leonardo Barreras Montealegre.",
@@ -531,7 +531,7 @@
     ]
   },
   "carlos-caicedo": {
-    "artifact_id": "candidate-profile-carlos-caicedo-2026-05-21",
+    "artifact_id": "candidate-profile-carlos-caicedo-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Carlos Eduardo Caicedo Omar: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Carlos Eduardo Caicedo Omar.",
@@ -590,7 +590,7 @@
     ]
   },
   "gustavo-matamoros": {
-    "artifact_id": "candidate-profile-gustavo-matamoros-2026-05-21",
+    "artifact_id": "candidate-profile-gustavo-matamoros-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Gustavo Matamoros Camacho: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Gustavo Matamoros Camacho.",
@@ -649,7 +649,7 @@
     ]
   },
   "paloma-valencia": {
-    "artifact_id": "candidate-profile-paloma-valencia-2026-05-21",
+    "artifact_id": "candidate-profile-paloma-valencia-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Paloma Susana Valencia Laserna: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Paloma Susana Valencia Laserna.",
@@ -708,7 +708,7 @@
     ]
   },
   "sergio-fajardo": {
-    "artifact_id": "candidate-profile-sergio-fajardo-2026-05-21",
+    "artifact_id": "candidate-profile-sergio-fajardo-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Sergio Fajardo Valderrama: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Sergio Fajardo Valderrama.",
@@ -767,7 +767,7 @@
     ]
   },
   "luis-gilberto-murillo": {
-    "artifact_id": "candidate-profile-luis-gilberto-murillo-2026-05-21",
+    "artifact_id": "candidate-profile-luis-gilberto-murillo-2026-05-22",
     "artifact_type": "candidate_profile",
     "title": "Luis Gilberto Murillo Urrutia: perfil politico-programatico",
     "dek": "Lectura estructurada y no partidista de la evidencia disponible sobre Luis Gilberto Murillo Urrutia.",
@@ -826,7 +826,7 @@
     ]
   },
   "15": {
-    "artifact_id": "comparison-report-2026-05-21",
+    "artifact_id": "comparison-report-2026-05-22",
     "artifact_type": "comparison_report",
     "title": "Comparativa transversal: Iván Cepeda Castro, Claudia Nayibe López Hernández, Abelardo Gabriel de la Espriella, Paloma Susana Valencia Laserna, Sergio Fajardo Valderrama, Luis Gilberto Murillo Urrutia",
     "dek": "Comparación simétrica de prioridades, instrumentos, especificidad, factibilidad y ejes ideológicos.",
@@ -885,19 +885,19 @@
     ]
   },
   "16": {
-    "artifact_id": "daily-update-2026-05-21",
+    "artifact_id": "daily-update-2026-05-22",
     "artifact_type": "daily_update",
-    "title": "Actualizacion diaria: 2026-05-21",
+    "title": "Actualizacion diaria: 2026-05-22",
     "dek": "Resumen breve de cambios, nuevas propuestas y preguntas abiertas del día.",
     "candidate_ids": ["ivan-cepeda", "luis-gilberto-murillo", "claudia-lopez", "gustavo-matamoros", "carlos-caicedo", "roy-barreras", "paloma-valencia", "mauricio-lizcano", "clara-lopez", "abelardo-de-la-espriella", "miguel-uribe", "sergio-fajardo"],
-    "source_ids": ["src-manual-195a1706", "src-manual-5bbd0995", "src-manual-05f40435", "src-manual-40921854", "src-manual-30548c04", "src-manual-20013e75", "src-manual-3ba61356", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-5d53f18f", "src-manual-25877365", "src-manual-5e114fad", "src-manual-2c779d51", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95", "src-manual-21c82915", "src-manual-51298b3e", "src-manual-09f50ce0", "src-manual-4dc0f536", "src-manual-1ce02e20", "src-manual-21c198da", "src-manual-15c36428", "src-manual-1e42b541", "src-manual-6e32a8d5", "src-manual-7087b35f", "src-manual-5aa471d6", "src-manual-4895df7e", "src-manual-40347029", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
-    "claim_ids": ["src-manual-195a1706-claim-1", "src-manual-5bbd0995-claim-1", "src-manual-05f40435-claim-1", "src-manual-40921854-claim-1", "src-manual-30548c04-claim-1", "src-manual-20013e75-claim-1", "src-manual-3ba61356-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-5d53f18f-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-2c779d51-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1", "src-manual-21c82915-claim-1", "src-manual-51298b3e-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-4dc0f536-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-21c198da-claim-1", "src-manual-15c36428-claim-1", "src-manual-1e42b541-claim-1", "src-manual-6e32a8d5-claim-1", "src-manual-7087b35f-claim-1", "src-manual-5aa471d6-claim-1", "src-manual-4895df7e-claim-1", "src-manual-40347029-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1", "src-manual-78dafdfc-claim-1"],
+    "source_ids": ["src-manual-195a1706", "src-manual-5bbd0995", "src-manual-05f40435", "src-manual-40921854", "src-manual-30548c04", "src-manual-20013e75", "src-manual-3ba61356", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-5d53f18f", "src-manual-25877365", "src-manual-5e114fad", "src-manual-2c779d51", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95", "src-manual-21c82915", "src-manual-09f50ce0", "src-manual-4dc0f536", "src-manual-1ce02e20", "src-manual-21c198da", "src-manual-15c36428", "src-manual-1e42b541", "src-manual-6e32a8d5", "src-manual-7087b35f", "src-manual-5aa471d6", "src-manual-4895df7e", "src-manual-40347029", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
+    "claim_ids": ["src-manual-195a1706-claim-1", "src-manual-5bbd0995-claim-1", "src-manual-05f40435-claim-1", "src-manual-40921854-claim-1", "src-manual-30548c04-claim-1", "src-manual-20013e75-claim-1", "src-manual-3ba61356-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-5d53f18f-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-2c779d51-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1", "src-manual-21c82915-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-4dc0f536-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-21c198da-claim-1", "src-manual-15c36428-claim-1", "src-manual-1e42b541-claim-1", "src-manual-6e32a8d5-claim-1", "src-manual-7087b35f-claim-1", "src-manual-5aa471d6-claim-1", "src-manual-4895df7e-claim-1", "src-manual-40347029-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1", "src-manual-78dafdfc-claim-1"],
     "sections": [
       {
         "section_id": "what_changed",
         "heading": "Qué cambió",
         "content_type": "description",
-        "body": "Se procesaron 32 afirmaciones nuevas o actualizadas."
+        "body": "Se procesaron 31 afirmaciones nuevas o actualizadas."
       },
       {
         "section_id": "new_proposals",
@@ -920,19 +920,19 @@
     ]
   },
   "17": {
-    "artifact_id": "homepage-brief-2026-05-21",
+    "artifact_id": "homepage-brief-2026-05-22",
     "artifact_type": "homepage_brief",
     "title": "Resumen ejecutivo",
     "dek": "Resumen breve para portada con los cambios más relevantes del seguimiento diario.",
     "candidate_ids": ["ivan-cepeda", "luis-gilberto-murillo", "claudia-lopez", "gustavo-matamoros", "carlos-caicedo", "roy-barreras", "paloma-valencia", "mauricio-lizcano", "clara-lopez", "abelardo-de-la-espriella", "miguel-uribe", "sergio-fajardo"],
-    "source_ids": ["src-manual-195a1706", "src-manual-5bbd0995", "src-manual-05f40435", "src-manual-40921854", "src-manual-30548c04", "src-manual-20013e75", "src-manual-3ba61356", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-5d53f18f", "src-manual-25877365", "src-manual-5e114fad", "src-manual-2c779d51", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95", "src-manual-21c82915", "src-manual-51298b3e", "src-manual-09f50ce0", "src-manual-4dc0f536", "src-manual-1ce02e20", "src-manual-21c198da", "src-manual-15c36428", "src-manual-1e42b541", "src-manual-6e32a8d5", "src-manual-7087b35f", "src-manual-5aa471d6", "src-manual-4895df7e", "src-manual-40347029", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
-    "claim_ids": ["src-manual-195a1706-claim-1", "src-manual-5bbd0995-claim-1", "src-manual-05f40435-claim-1", "src-manual-40921854-claim-1", "src-manual-30548c04-claim-1", "src-manual-20013e75-claim-1", "src-manual-3ba61356-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-5d53f18f-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-2c779d51-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1", "src-manual-21c82915-claim-1", "src-manual-51298b3e-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-4dc0f536-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-21c198da-claim-1", "src-manual-15c36428-claim-1", "src-manual-1e42b541-claim-1", "src-manual-6e32a8d5-claim-1", "src-manual-7087b35f-claim-1", "src-manual-5aa471d6-claim-1", "src-manual-4895df7e-claim-1", "src-manual-40347029-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1", "src-manual-78dafdfc-claim-1"],
+    "source_ids": ["src-manual-195a1706", "src-manual-5bbd0995", "src-manual-05f40435", "src-manual-40921854", "src-manual-30548c04", "src-manual-20013e75", "src-manual-3ba61356", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-5d53f18f", "src-manual-25877365", "src-manual-5e114fad", "src-manual-2c779d51", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95", "src-manual-21c82915", "src-manual-09f50ce0", "src-manual-4dc0f536", "src-manual-1ce02e20", "src-manual-21c198da", "src-manual-15c36428", "src-manual-1e42b541", "src-manual-6e32a8d5", "src-manual-7087b35f", "src-manual-5aa471d6", "src-manual-4895df7e", "src-manual-40347029", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
+    "claim_ids": ["src-manual-195a1706-claim-1", "src-manual-5bbd0995-claim-1", "src-manual-05f40435-claim-1", "src-manual-40921854-claim-1", "src-manual-30548c04-claim-1", "src-manual-20013e75-claim-1", "src-manual-3ba61356-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-5d53f18f-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-2c779d51-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1", "src-manual-21c82915-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-4dc0f536-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-21c198da-claim-1", "src-manual-15c36428-claim-1", "src-manual-1e42b541-claim-1", "src-manual-6e32a8d5-claim-1", "src-manual-7087b35f-claim-1", "src-manual-5aa471d6-claim-1", "src-manual-4895df7e-claim-1", "src-manual-40347029-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1", "src-manual-78dafdfc-claim-1"],
     "sections": [
       {
         "section_id": "top_changes",
         "heading": "Cambios principales",
         "content_type": "description",
-        "body": "Se procesaron 32 afirmaciones nuevas o actualizadas."
+        "body": "Se procesaron 31 afirmaciones nuevas o actualizadas."
       },
       {
         "section_id": "key_comparison_note",
