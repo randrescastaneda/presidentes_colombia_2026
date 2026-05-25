@@ -28,20 +28,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-51298b3e",
-    "candidate_id": "miguel-uribe",
-    "source_name": "Elcolombiano Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://www.elcolombiano.com/colombia/elecciones-2026-miguel-uribe-londono-entrevista-EF34759962",
-    "title": "Elecciones 2026 Miguel Uribe Londono Entrevista EF34759962",
-    "published_at": null,
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|alias_score",
-    "candidate_confidence": 0.99,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-34b1500b",
     "candidate_id": "paloma-valencia",
     "source_name": "Eloriente Com",
@@ -736,20 +722,6 @@
     "url": "https://www.lapatria.com/politica/conozca-las-razones-que-dan-para-votar-por-estos-candidatos-la-presidencia-tienen-fuerza",
     "title": "Conozca las razones que dan para votar por estos candidatos a la Presidencia: tienen fuerza en Caldas",
     "published_at": "2026-03-24",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-7cf5630b",
-    "candidate_id": null,
-    "source_name": "Razonpublica Com",
-    "source_tier": "reference",
-    "source_type": "webpage",
-    "url": "https://razonpublica.com/anatomia-las-candidaturas-presidenciales/",
-    "title": "Anatomía de las candidaturas presidenciales",
-    "published_at": "2026-03-22",
     "status": "pending_classification",
     "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
