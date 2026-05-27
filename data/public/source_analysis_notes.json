@@ -1027,6 +1027,19 @@
     "claim_ids": "src-20260526-claudia-fondo-rescate-salud-caracol-claim-1"
   },
   {
+    "source_analysis_id": "source-analysis-src-20260527-fajardo-vias-terciarias-elpais",
+    "source_id": "src-20260527-fajardo-vias-terciarias-elpais",
+    "candidate_id": "sergio-fajardo",
+    "topic_id": "vivienda-infraestructura",
+    "substantive_summary": "La fuente EL PAIS America Colombia aporta evidencia sobre Vivienda e infraestructura. En términos sustantivos, registra: Propone un Sistema Nacional Intermodal de Transporte e intervenir al menos 20.000 kilometros de vias terciarias con prioridad en territorios criticos..",
+    "policy_positions": "Propone un Sistema Nacional Intermodal de Transporte e intervenir al menos 20.000 kilometros de vias terciarias con prioridad en territorios criticos.",
+    "ideology_signals": "La fuente aporta contexto público, pero no deja una señal ideológica fuerte por sí sola.",
+    "chronology_summary": "Propone un Sistema Nacional Intermodal de Transporte e intervenir al menos 20.000 kilometros de vias terciarias con prioridad en territorios criticos.",
+    "evidence_state": "trazable_con_cautela",
+    "source_ids": "src-20260527-fajardo-vias-terciarias-elpais",
+    "claim_ids": "src-20260527-fajardo-vias-terciarias-elpais-claim-1"
+  },
+  {
     "source_analysis_id": "source-analysis-src-manual-05f40435",
     "source_id": "src-manual-05f40435",
     "candidate_id": "claudia-lopez",
@@ -1356,10 +1369,10 @@
     "source_id": "src-manual-5aa471d6",
     "candidate_id": "roy-barreras",
     "topic_id": "trayectoria-publica",
-    "substantive_summary": "La fuente Wradio Com Co aporta evidencia sobre Trayectoria pública. En términos sustantivos, registra: La fuente registra un hecho público asociado a Roy Leonardo Barreras Montealegre: Roy Barreras oficializó su candidatura presidencial y una de sus banderas será la “seguridad total”..",
-    "policy_positions": "La fuente registra un hecho público asociado a Roy Leonardo Barreras Montealegre: Roy Barreras oficializó su candidatura presidencial y una de sus banderas será la “seguridad total”.",
+    "substantive_summary": "La fuente Wradio Com Co aporta evidencia sobre Trayectoria pública. En términos sustantivos, registra: Roy Barreras Oficializo Su Candidatura Presidencial y Una De Sus Banderas Sera La Seguridad Total.",
+    "policy_positions": "Roy Barreras Oficializo Su Candidatura Presidencial y Una De Sus Banderas Sera La Seguridad Total",
     "ideology_signals": "seguridad, justicia y paz",
-    "chronology_summary": "La fuente registra un hecho público asociado a Roy Leonardo Barreras Montealegre: Roy Barreras oficializó su candidatura presidencial y una de sus banderas será la “seguridad total”.",
+    "chronology_summary": "Roy Barreras Oficializo Su Candidatura Presidencial y Una De Sus Banderas Sera La Seguridad Total",
     "evidence_state": "trazable_con_cautela",
     "source_ids": "src-manual-5aa471d6",
     "claim_ids": "src-manual-5aa471d6-claim-1"
