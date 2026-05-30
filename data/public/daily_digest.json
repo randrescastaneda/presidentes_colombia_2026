@@ -211,6 +211,12 @@
   },
   {
     "digest_date": "2026-05-29",
+    "total_claims": 2,
+    "total_candidates": 2,
+    "total_analysis_notes": 0
+  },
+  {
+    "digest_date": "2026-05-30",
     "total_claims": 32,
     "total_candidates": 12,
     "total_analysis_notes": 0
