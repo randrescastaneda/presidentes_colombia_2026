@@ -1,9 +1,9 @@
 [
   {
-    "analysis_id": "candidate-analysis-ivan-cepeda-2026-05-30",
+    "analysis_id": "candidate-analysis-ivan-cepeda-2026-05-31",
     "candidate_id": "ivan-cepeda",
-    "source_ids": ["src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260507-ivan-software-electoral-oficial", "src-20260529-ivan-velasquez-anticorrupcion-infobae", "src-20260510-ivan-microempresas-vanguardia", "src-20260418-ivan-economia", "src-20260518-ivan-paz-rcn", "src-20260501-ivan-constituyente-elpais", "src-20260502-ivan-trabajo-sindicatos-api", "src-20260421-ivan-vanguardia", "src-20260518-ivan-lgbti-elpais", "src-20260419-ivan-debate-elpais", "src-20260418-ivan-profile", "src-manual-195a1706"],
-    "claim_ids": ["claim-20260418-ivan-bio", "claim-20260418-ivan-paz-total", "claim-20260418-ivan-economia", "claim-20260418-ivan-transicion", "claim-20260418-ivan-anticorrupcion", "claim-20260418-ivan-tierras", "claim-20260418-ivan-tren", "claim-20260419-ivan-reto-debate", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-program-home-claim-1", "src-20260420-ivan-program-pdf-claim-1", "src-20260507-ivan-software-electoral-oficial-claim-1", "src-20260529-ivan-velasquez-anticorrupcion-infobae-claim-1", "src-20260510-ivan-microempresas-vanguardia-claim-1", "src-20260418-ivan-economia-claim-1", "src-20260518-ivan-paz-rcn-claim-1", "src-20260501-ivan-constituyente-elpais-claim-1", "src-20260502-ivan-trabajo-sindicatos-api-claim-1", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260518-ivan-lgbti-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-ivan-profile-claim-1", "src-manual-195a1706-claim-1"],
+    "source_ids": ["src-20260418-ivan-tunja", "src-20260418-ivan-anticorrup", "src-20260418-ivan-program-home", "src-20260420-ivan-program-pdf", "src-20260507-ivan-software-electoral-oficial", "src-20260529-ivan-velasquez-anticorrupcion-infobae", "src-20260510-ivan-microempresas-vanguardia", "src-20260531-ivan-pacto-fiscal-valora", "src-20260418-ivan-economia", "src-20260518-ivan-paz-rcn", "src-20260501-ivan-constituyente-elpais", "src-20260502-ivan-trabajo-sindicatos-api", "src-20260421-ivan-vanguardia", "src-20260518-ivan-lgbti-elpais", "src-20260419-ivan-debate-elpais", "src-20260418-ivan-profile", "src-manual-195a1706"],
+    "claim_ids": ["claim-20260418-ivan-bio", "claim-20260418-ivan-paz-total", "claim-20260418-ivan-economia", "claim-20260418-ivan-transicion", "claim-20260418-ivan-anticorrupcion", "claim-20260418-ivan-tierras", "claim-20260418-ivan-tren", "claim-20260419-ivan-reto-debate", "src-20260418-ivan-tunja-claim-1", "src-20260418-ivan-anticorrup-claim-1", "src-20260418-ivan-anticorrup-claim-2", "src-20260418-ivan-program-home-claim-1", "src-20260420-ivan-program-pdf-claim-1", "src-20260507-ivan-software-electoral-oficial-claim-1", "src-20260529-ivan-velasquez-anticorrupcion-infobae-claim-1", "src-20260510-ivan-microempresas-vanguardia-claim-1", "src-20260531-ivan-pacto-fiscal-valora-claim-1", "src-20260531-ivan-pacto-fiscal-valora-claim-2", "src-20260418-ivan-economia-claim-1", "src-20260518-ivan-paz-rcn-claim-1", "src-20260501-ivan-constituyente-elpais-claim-1", "src-20260502-ivan-trabajo-sindicatos-api-claim-1", "src-20260421-ivan-vanguardia-claim-1", "src-20260421-ivan-vanguardia-claim-2", "src-20260518-ivan-lgbti-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-1", "src-20260419-ivan-debate-elpais-claim-2", "src-20260418-ivan-profile-claim-1", "src-manual-195a1706-claim-1"],
     "profile_overview": "Iván Cepeda Castro aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Fiscal, Instituciones y anticorrupción. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador; redistribucion_vs_libertad_economica: Redistribucion; institucionalismo_vs_personalismo: Institucionalismo. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
@@ -34,8 +34,8 @@
       {
         "axis_id": "gradualismo_vs_disrupcion",
         "placement": "Gradualismo",
-        "confidence": 0.95,
-        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental"
+        "confidence": 0.85,
+        "rationale": "Predominan señales compatibles con Gradualismo: propone continuidad ajustada o cambio incremental; propone ruptura o reordenamiento abrupto"
       },
       {
         "axis_id": "tecnocracia_vs_populismo",
@@ -46,7 +46,7 @@
       {
         "axis_id": "apertura_vs_soberanismo",
         "placement": "Soberanismo",
-        "confidence": 0.87,
+        "confidence": 0.89,
         "rationale": "Predominan señales compatibles con Soberanismo: privilegia soberania defensiva o repliegue nacional; privilegia integracion, alianzas o apertura externa"
       },
       {
@@ -110,6 +110,20 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "Hay formulaciones ambiguas en la evidencia relevada."
+      },
+      {
+        "topic_id": "economia",
+        "description": "En Economía, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. Propone un pacto fiscal nacional bajo la premisa de \"todos ponen\" y una ley de austeridad republicana para corregir el deficit primario sin abrir una nueva reforma tributaria. Propone una revolucion agraria para volver al agro el motor de la economia y una meta de 12 millones de visitantes en 2030, duplicando el gasto turistico hasta US$14.000 millones.",
+        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
+        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
+        "feasibility": {
+          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
+          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
+          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
+          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
+        },
+        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
+        "uncertainties": "No se identificaron incertidumbres específicas adicionales a las ya visibles en la evidencia."
       },
       {
         "topic_id": "empleo-empresa",
@@ -301,7 +315,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-clara-lopez-2026-05-30",
+    "analysis_id": "candidate-analysis-clara-lopez-2026-05-31",
     "candidate_id": "clara-lopez",
     "source_ids": ["src-20260418-clara-renuncia", "src-20260418-clara-profile", "src-manual-2c779d51", "src-manual-6e32a8d5"],
     "claim_ids": ["claim-20260418-clara-bio", "claim-20260418-clara-renuncia", "src-20260418-clara-renuncia-claim-1", "src-20260418-clara-renuncia-claim-2", "src-20260418-clara-profile-claim-1", "src-20260418-clara-profile-claim-2", "src-manual-2c779d51-claim-1", "src-manual-6e32a8d5-claim-1"],
@@ -420,7 +434,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-claudia-lopez-2026-05-30",
+    "analysis_id": "candidate-analysis-claudia-lopez-2026-05-31",
     "candidate_id": "claudia-lopez",
     "source_ids": ["src-20260418-claudia-program", "src-20260420-claudia-program-pdf", "src-20260526-claudia-fondo-rescate-salud-caracol", "src-20260514-claudia-salud-caracol", "src-20260516-claudia-policia-local-caracoltv", "src-20260529-claudia-regalias-tarifa-caribe-elheraldo", "src-20260512-claudia-plan-gobierno-elespectador", "src-20260418-claudia-forbes", "src-20260424-claudia-debates-elpais", "src-20260422-claudia-infobae", "src-20260419-claudia-energia-elpais", "src-20260418-claudia-profile", "src-manual-05f40435", "src-manual-09f50ce0", "src-manual-1e42b541"],
     "claim_ids": ["claim-20260418-claudia-bio", "claim-20260418-claudia-seguridad", "claim-20260418-claudia-justicia", "claim-20260418-claudia-cuidado", "claim-20260418-claudia-genero", "claim-20260418-claudia-educacion", "claim-20260418-claudia-vivienda", "claim-20260418-claudia-agua", "claim-20260418-claudia-fiscal", "claim-20260418-claudia-salud", "claim-20260419-claudia-mineria-social", "src-20260418-claudia-program-claim-1", "src-20260418-claudia-program-claim-2", "src-20260420-claudia-program-pdf-claim-1", "src-20260526-claudia-fondo-rescate-salud-caracol-claim-1", "src-20260514-claudia-salud-caracol-claim-1", "src-20260516-claudia-policia-local-caracoltv-claim-1", "src-20260529-claudia-regalias-tarifa-caribe-elheraldo-claim-1", "src-20260512-claudia-plan-gobierno-elespectador-claim-1", "src-20260512-claudia-plan-gobierno-elespectador-claim-2", "src-20260418-claudia-forbes-claim-1", "src-20260418-claudia-forbes-claim-2", "src-20260424-claudia-debates-elpais-claim-1", "src-20260422-claudia-infobae-claim-1", "src-20260422-claudia-infobae-claim-2", "src-20260419-claudia-energia-elpais-claim-1", "src-20260419-claudia-energia-elpais-claim-2", "src-20260418-claudia-profile-claim-1", "src-20260418-claudia-profile-claim-2", "src-manual-05f40435-claim-1", "src-manual-09f50ce0-claim-1", "src-manual-1e42b541-claim-1"],
@@ -721,7 +735,7 @@
     "uncertainties": "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."
   },
   {
-    "analysis_id": "candidate-analysis-raul-botero-2026-05-30",
+    "analysis_id": "candidate-analysis-raul-botero-2026-05-31",
     "candidate_id": "raul-botero",
     "source_ids": ["src-20260418-santiago-caracol", "src-20260418-raul-profile"],
     "claim_ids": ["claim-20260418-raul-bio", "claim-20260418-santiago-pena-muerte", "claim-20260418-santiago-fuerza-publica", "src-20260418-santiago-caracol-claim-1", "src-20260418-santiago-caracol-claim-2", "src-20260418-raul-profile-claim-1", "src-20260418-raul-profile-claim-2"],
@@ -854,7 +868,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-05-30",
+    "analysis_id": "candidate-analysis-abelardo-de-la-espriella-2026-05-31",
     "candidate_id": "abelardo-de-la-espriella",
     "source_ids": ["src-20260420-abelardo-program-pdf", "src-20260528-abelardo-pais-propietarios-eltiempo", "src-20260424-abelardo-colpensiones-elpais", "src-20260418-abelardo-infobae", "src-20260513-abelardo-protesta-infobae", "src-20260507-abelardo-char-elpais", "src-20260422-abelardo-infobae", "src-20260419-abelardo-debate-elpais", "src-20260418-abelardo-profile", "src-manual-21c82915"],
     "claim_ids": ["claim-20260418-abelardo-bio", "claim-20260418-abelardo-estado", "claim-20260418-abelardo-jep", "claim-20260418-abelardo-impuestos", "claim-20260418-abelardo-carceles", "claim-20260418-abelardo-seguridad", "claim-20260418-abelardo-economia", "claim-20260418-abelardo-salud", "claim-20260419-abelardo-acepta-debate", "src-20260420-abelardo-program-pdf-claim-1", "src-20260420-abelardo-program-pdf-claim-2", "src-20260420-abelardo-program-pdf-claim-3", "src-20260528-abelardo-pais-propietarios-eltiempo-claim-1", "src-20260424-abelardo-colpensiones-elpais-claim-1", "src-20260418-abelardo-infobae-claim-1", "src-20260513-abelardo-protesta-infobae-claim-1", "src-20260507-abelardo-char-elpais-claim-1", "src-20260422-abelardo-infobae-claim-1", "src-20260422-abelardo-infobae-claim-2", "src-20260419-abelardo-debate-elpais-claim-1", "src-20260419-abelardo-debate-elpais-claim-2", "src-20260418-abelardo-profile-claim-1", "src-20260418-abelardo-profile-claim-2", "src-manual-21c82915-claim-1"],
@@ -1127,7 +1141,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-05-30",
+    "analysis_id": "candidate-analysis-mauricio-lizcano-2026-05-31",
     "candidate_id": "mauricio-lizcano",
     "source_ids": ["src-20260418-mauricio-caracol", "src-20260418-mauricio-espectador", "src-20260418-mauricio-profile", "src-manual-5d53f18f", "src-manual-3f137281", "src-manual-5a3d637e", "src-manual-78dafdfc"],
     "claim_ids": ["claim-20260418-mauricio-bio", "claim-20260418-mauricio-ingresos", "claim-20260418-mauricio-seguridad", "src-20260418-mauricio-caracol-claim-1", "src-20260418-mauricio-caracol-claim-2", "src-20260418-mauricio-espectador-claim-1", "src-20260418-mauricio-espectador-claim-2", "src-20260418-mauricio-profile-claim-1", "src-20260418-mauricio-profile-claim-2", "src-manual-5d53f18f-claim-1", "src-manual-3f137281-claim-1", "src-manual-5a3d637e-claim-1", "src-manual-78dafdfc-claim-1"],
@@ -1260,11 +1274,11 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-miguel-uribe-2026-05-30",
+    "analysis_id": "candidate-analysis-miguel-uribe-2026-05-31",
     "candidate_id": "miguel-uribe",
-    "source_ids": ["src-20260418-miguel-profile", "src-manual-51298b3e", "src-manual-15c36428", "src-manual-40347029"],
-    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-51298b3e-claim-1", "src-manual-15c36428-claim-1", "src-manual-40347029-claim-1"],
-    "profile_overview": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública, Vida pública y trayectoria. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
+    "source_ids": ["src-20260418-miguel-profile", "src-manual-15c36428", "src-manual-40347029"],
+    "claim_ids": ["claim-20260418-miguel-bio", "src-20260418-miguel-profile-claim-1", "src-20260418-miguel-profile-claim-2", "src-manual-15c36428-claim-1", "src-manual-40347029-claim-1"],
+    "profile_overview": "Miguel Uribe Londoño aparece públicamente con una agenda que gira principalmente alrededor de Trayectoria pública. Esa combinación permite leer la candidatura menos como una suma de noticias aisladas y más como una oferta política en construcción, con énfasis que deben contrastarse en las propuestas temáticas.",
     "political_philosophy": "La evidencia sugiere una filosofía política que puede resumirse, de forma tentativa, en estos ejes dominantes: estado_vs_mercado: Estado coordinador. Esta lectura sigue siendo analítica y no debe confundirse con una autodefinición ideológica del candidato.",
     "ideology_axes": [
       {
@@ -1342,30 +1356,16 @@
         },
         "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
         "uncertainties": "El nivel de especificidad todavía es bajo y no permite reconstruir un diseño completo."
-      },
-      {
-        "topic_id": "vida-publica",
-        "description": "En Vida pública y trayectoria, la evidencia pública observada se concentra en instrumentos o mecanismos parcialmente explicitados. La fuente registra un hecho público asociado a Miguel Uribe Londoño: “Uribe es el dueño del Centro Democrático y quería a Paloma, no a mí”: entrevista con Miguel Uribe Londoño.",
-        "inference": "La evidencia sugiere una prioridad programática relativamente desarrollada para este tema.",
-        "evaluation": "Comparativamente, este es uno de los temas mejor especificados dentro de la evidencia disponible.",
-        "feasibility": {
-          "political": "La viabilidad política puede discutirse con mayor precisión porque hay instrumentos más visibles en la evidencia.",
-          "fiscal": "Se observan mecanismos o instrumentos, aunque todavía faltan cifras y secuencia de financiamiento.",
-          "institutional": "La evidencia permite inferir que haría falta coordinación institucional identificable, aunque no siempre detallada.",
-          "administrative": "La ejecución administrativa parece imaginable, pero requeriría capacidades operativas aún no cuantificadas."
-        },
-        "tradeoffs": "La evidencia disponible no permite precisar todos los costos de oportunidad del tema.",
-        "uncertainties": "La evidencia para este tema sigue siendo limitada en número de registros."
       }
     ],
     "internal_coherence": "Con la evidencia disponible no aparecen contradicciones internas fuertes; aun así, la evaluación sigue condicionada al nivel de detalle público observado.",
     "mainstream_distance": "La distancia frente al mainstream parece intermedia: hay rasgos de continuidad con algunos énfasis diferenciadores, pero todavía no una ruptura programática plenamente demostrada.",
-    "strengths": ["Hay mayor desarrollo relativo en temas como trayectoria-publica, vida-publica.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
+    "strengths": ["Hay mayor desarrollo relativo en temas como trayectoria-publica.", "No se observan contradicciones internas fuertes en la evidencia disponible."],
     "weaknesses": "El nivel general de especificidad todavía es bajo para una evaluación programática robusta.",
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-sondra-macollins-2026-05-30",
+    "analysis_id": "candidate-analysis-sondra-macollins-2026-05-31",
     "candidate_id": "sondra-macollins",
     "source_ids": "src-20260418-sondra-profile",
     "claim_ids": ["claim-20260418-sondra-bio", "src-20260418-sondra-profile-claim-1", "src-20260418-sondra-profile-claim-2"],
@@ -1470,7 +1470,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, institucionalismo_vs_personalismo, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, seguridad_negociacion_vs_punitivismo, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-roy-barreras-2026-05-30",
+    "analysis_id": "candidate-analysis-roy-barreras-2026-05-31",
     "candidate_id": "roy-barreras",
     "source_ids": ["src-20260418-roy-efe", "src-20260418-roy-profile", "src-manual-3ba61356", "src-manual-1ce02e20", "src-manual-7087b35f", "src-manual-5aa471d6"],
     "claim_ids": ["claim-20260418-roy-bio", "claim-20260418-roy-productividad", "claim-20260418-roy-paz", "src-20260418-roy-efe-claim-1", "src-20260418-roy-profile-claim-1", "src-manual-3ba61356-claim-1", "src-manual-1ce02e20-claim-1", "src-manual-7087b35f-claim-1", "src-manual-5aa471d6-claim-1"],
@@ -1617,7 +1617,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-carlos-caicedo-2026-05-30",
+    "analysis_id": "candidate-analysis-carlos-caicedo-2026-05-31",
     "candidate_id": "carlos-caicedo",
     "source_ids": ["src-20260418-caicedo-caracol", "src-20260418-carlos-profile", "src-manual-20013e75", "src-manual-2df95543", "src-manual-2e1819df", "src-manual-1dc39c95"],
     "claim_ids": ["claim-20260418-carlos-bio", "claim-20260418-carlos-educacion", "src-20260418-caicedo-caracol-claim-1", "src-20260418-caicedo-caracol-claim-2", "src-20260418-carlos-profile-claim-1", "src-20260418-carlos-profile-claim-2", "src-manual-20013e75-claim-1", "src-manual-2df95543-claim-1", "src-manual-2e1819df-claim-1", "src-manual-1dc39c95-claim-1"],
@@ -1750,7 +1750,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-05-30",
+    "analysis_id": "candidate-analysis-gustavo-matamoros-2026-05-31",
     "candidate_id": "gustavo-matamoros",
     "source_ids": ["src-20260418-gustavo-profile", "src-manual-30548c04", "src-manual-25877365", "src-manual-5e114fad", "src-manual-4dc0f536"],
     "claim_ids": ["claim-20260418-gustavo-bio", "src-20260418-gustavo-profile-claim-1", "src-20260418-gustavo-profile-claim-2", "src-manual-30548c04-claim-1", "src-manual-25877365-claim-1", "src-manual-5e114fad-claim-1", "src-manual-4dc0f536-claim-1"],
@@ -1869,7 +1869,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: redistribucion_vs_libertad_economica, universalismo_vs_focalizacion, gradualismo_vs_disrupcion, tecnocracia_vs_populismo, apertura_vs_soberanismo, conservadurismo_vs_progresismo_cultural, centralizacion_vs_territorializacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-paloma-valencia-2026-05-30",
+    "analysis_id": "candidate-analysis-paloma-valencia-2026-05-31",
     "candidate_id": "paloma-valencia",
     "source_ids": ["src-20260418-paloma-official", "src-20260420-paloma-program-pdf", "src-20260512-paloma-medicamentos-caracol", "src-20260424-paloma-seguridad-elpais", "src-20260501-paloma-seguridad-api", "src-20260506-paloma-soat-regalias-bluradio", "src-20260502-paloma-meta-infraestructura-api", "src-20260507-paloma-prestamo-eeuu-infobae", "src-20260419-paloma-debate-elpais", "src-20260419-paloma-energia-elpais", "src-20260418-paloma-elpais", "src-20260418-paloma-profile", "src-20260418-paloma-eltiempo", "src-manual-10314ccb", "src-manual-1cf85d8c", "src-manual-21c198da"],
     "claim_ids": ["claim-20260418-paloma-bio", "claim-20260418-paloma-energia", "claim-20260418-paloma-vias", "claim-20260418-paloma-educacion", "claim-20260418-paloma-formalizacion", "claim-20260418-paloma-vivienda", "claim-20260418-paloma-seguridad", "claim-20260418-paloma-salud", "claim-20260418-paloma-carceles", "claim-20260419-paloma-energia-foro", "claim-20260419-paloma-acepta-debate", "src-20260418-paloma-official-claim-1", "src-20260418-paloma-official-claim-2", "src-20260420-paloma-program-pdf-claim-1", "src-20260420-paloma-program-pdf-claim-2", "src-20260420-paloma-program-pdf-claim-3", "src-20260512-paloma-medicamentos-caracol-claim-1", "src-20260424-paloma-seguridad-elpais-claim-1", "src-20260501-paloma-seguridad-api-claim-1", "src-20260506-paloma-soat-regalias-bluradio-claim-1", "src-20260502-paloma-meta-infraestructura-api-claim-1", "src-20260507-paloma-prestamo-eeuu-infobae-claim-1", "src-20260419-paloma-debate-elpais-claim-1", "src-20260419-paloma-debate-elpais-claim-2", "src-20260419-paloma-energia-elpais-claim-1", "src-20260419-paloma-energia-elpais-claim-2", "src-20260418-paloma-elpais-claim-1", "src-20260418-paloma-profile-claim-1", "src-20260418-paloma-profile-claim-2", "src-20260418-paloma-eltiempo-claim-1", "src-manual-10314ccb-claim-1", "src-manual-1cf85d8c-claim-1", "src-manual-21c198da-claim-1"],
@@ -2170,7 +2170,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: tecnocracia_vs_populismo, conservadurismo_vs_progresismo_cultural.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-sergio-fajardo-2026-05-30",
+    "analysis_id": "candidate-analysis-sergio-fajardo-2026-05-31",
     "candidate_id": "sergio-fajardo",
     "source_ids": ["src-20260418-fajardo-official", "src-20260420-fajardo-program-pdf", "src-20260514-fajardo-salud-caracol", "src-20260516-fajardo-50000-policias-caracoltv", "src-20260527-fajardo-vias-terciarias-elpais", "src-20260512-fajardo-plan-gobierno-elespectador", "src-20260423-fajardo-espectador", "src-20260506-fajardo-educacion-elpais", "src-20260507-fajardo-seguridad-infobae", "src-20260419-sergio-debate-elpais", "src-20260419-sergio-energia-elpais", "src-20260418-sergio-profile", "src-manual-4895df7e"],
     "claim_ids": ["claim-20260418-sergio-bio", "claim-20260418-fajardo-seguridad", "claim-20260418-fajardo-paz", "claim-20260418-fajardo-anticorrupcion", "claim-20260418-fajardo-salud", "claim-20260418-fajardo-mujeres", "claim-20260419-sergio-energia-legalidad", "claim-20260419-fajardo-listo-debate", "src-20260418-fajardo-official-claim-1", "src-20260420-fajardo-program-pdf-claim-1", "src-20260514-fajardo-salud-caracol-claim-1", "src-20260516-fajardo-50000-policias-caracoltv-claim-1", "src-20260527-fajardo-vias-terciarias-elpais-claim-1", "src-20260512-fajardo-plan-gobierno-elespectador-claim-1", "src-20260512-fajardo-plan-gobierno-elespectador-claim-2", "src-20260423-fajardo-espectador-claim-1", "src-20260423-fajardo-espectador-claim-2", "src-20260506-fajardo-educacion-elpais-claim-1", "src-20260507-fajardo-seguridad-infobae-claim-1", "src-20260419-sergio-debate-elpais-claim-1", "src-20260419-sergio-debate-elpais-claim-2", "src-20260419-sergio-energia-elpais-claim-1", "src-20260419-sergio-energia-elpais-claim-2", "src-20260418-sergio-profile-claim-1", "src-manual-4895df7e-claim-1"],
@@ -2443,7 +2443,7 @@
     "uncertainties": ["Faltan señales programáticas comparables en varios ejes: universalismo_vs_focalizacion.", "Varios temas ya permiten describir prioridades, pero aún falta detalle público sobre mecanismos, costos o secuencia de implementación."]
   },
   {
-    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-05-30",
+    "analysis_id": "candidate-analysis-luis-gilberto-murillo-2026-05-31",
     "candidate_id": "luis-gilberto-murillo",
     "source_ids": ["src-20260420-murillo-program-home", "src-20260506-murillo-retiro-cepeda-elpais", "src-20260418-murillo-espectador", "src-20260507-murillo-adhesion-cepeda-elpais", "src-20260501-murillo-coordinacion-territorial-elcolombiano", "src-20260421-murillo-tiempo", "src-20260418-murillo-elpais", "src-20260418-murillo-profile", "src-manual-5bbd0995", "src-manual-40921854"],
     "claim_ids": ["claim-20260418-murillo-bio", "claim-20260418-murillo-educacion", "claim-20260418-murillo-seguridad", "claim-20260418-murillo-puertos", "claim-20260418-murillo-alianza", "claim-20260418-murillo-regiones", "src-20260420-murillo-program-home-claim-1", "src-20260420-murillo-program-home-claim-2", "src-20260420-murillo-program-home-claim-3", "src-20260506-murillo-retiro-cepeda-elpais-claim-1", "src-20260418-murillo-espectador-claim-1", "src-20260507-murillo-adhesion-cepeda-elpais-claim-1", "src-20260501-murillo-coordinacion-territorial-elcolombiano-claim-1", "src-20260421-murillo-tiempo-claim-1", "src-20260421-murillo-tiempo-claim-2", "src-20260418-murillo-elpais-claim-1", "src-20260418-murillo-profile-claim-1", "src-20260418-murillo-profile-claim-2", "src-manual-5bbd0995-claim-1", "src-manual-40921854-claim-1"],
