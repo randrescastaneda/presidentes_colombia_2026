@@ -28,20 +28,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-51298b3e",
-    "candidate_id": "miguel-uribe",
-    "source_name": "Elcolombiano Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://www.elcolombiano.com/colombia/elecciones-2026-miguel-uribe-londono-entrevista-EF34759962",
-    "title": "Elecciones 2026 Miguel Uribe Londono Entrevista EF34759962",
-    "published_at": null,
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|alias_score",
-    "candidate_confidence": 0.99,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-34b1500b",
     "candidate_id": "paloma-valencia",
     "source_name": "Eloriente Com",
@@ -434,20 +420,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-7e55c295",
-    "candidate_id": null,
-    "source_name": "Defensoresdelapatria Com",
-    "source_tier": "reference",
-    "source_type": "webpage",
-    "url": "https://defensoresdelapatria.com/",
-    "title": "Home 2026 | Defensores de la Patria",
-    "published_at": "2026-05-21",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-4244b971",
     "candidate_id": null,
     "source_name": "Pares Com Co",
@@ -778,20 +750,6 @@
     "url": "https://www.portafolio.co/economia/gobierno/elecciones-presidenciales-2026-cuando-sera-el-sorteo-para-definir-como-quedara-el-tarjeton-de-la-primera-vuelta-490542",
     "title": "Elecciones presidenciales 2026 en Colombia: fecha del sorteo del tarjetón",
     "published_at": "2026-03-21",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
-    "entry_id": "manual-2dbdb863",
-    "candidate_id": null,
-    "source_name": "Elpais Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://elpais.com/america-colombia/elecciones-presidenciales/2026-03-16/el-camino-a-las-elecciones-presidenciales-colombia-2026-en-vivo.html",
-    "title": "Las campañas presidenciales en Colombia - 16 de marzo | Luis Carlos Reyes ya no será el compañero de fórmula de Mauricio Lizcano | Elecciones Presidenciales Colombia | EL PAÍS América Colombia",
-    "published_at": "2026-03-18",
     "status": "pending_classification",
     "status_reason": "validated_by_http|no_match",
     "candidate_confidence": 0,
@@ -1162,20 +1120,6 @@
     "source_files": "data/added_manually/chatgpt_pro.md"
   },
   {
-    "entry_id": "manual-76aded95",
-    "candidate_id": null,
-    "source_name": "Bluradio Com",
-    "source_tier": "established-media",
-    "source_type": "topic-page",
-    "url": "https://www.bluradio.com/noticias/elecciones-en-colombia-2026",
-    "title": "Elecciones en Colombia 2026: Últimas noticias en Blu Radio",
-    "published_at": "2024-07-22",
-    "status": "pending_classification",
-    "status_reason": "validated_by_http|no_match",
-    "candidate_confidence": 0,
-    "source_files": "data/added_manually/chatgpt_pro.md"
-  },
-  {
     "entry_id": "manual-5c7596e1",
     "candidate_id": null,
     "source_name": "Icpcolombia Org",
@@ -1435,6 +1379,20 @@
     "source_type": "webpage",
     "url": "https://www.colombiahumana.co/presidencia-2026/",
     "title": "Elecciones Presidencia 2026 - Colombia Humana",
+    "published_at": null,
+    "status": "pending_classification",
+    "status_reason": "validated_by_http|no_match",
+    "candidate_confidence": 0,
+    "source_files": "data/added_manually/chatgpt_pro.md"
+  },
+  {
+    "entry_id": "manual-76aded95",
+    "candidate_id": null,
+    "source_name": "Bluradio Com",
+    "source_tier": "established-media",
+    "source_type": "topic-page",
+    "url": "https://www.bluradio.com/noticias/elecciones-en-colombia-2026",
+    "title": "Elecciones en Colombia 2026",
     "published_at": null,
     "status": "pending_classification",
     "status_reason": "validated_by_http|no_match",
